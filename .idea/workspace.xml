@@ -5,15 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c38e96df-9d46-46c2-b7ff-1fb83565f7cb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/team/logica_populi/dragonscore/logic/BaseQuestion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/team/logica_populi/dragonscore/logic/generators/ExampleQuestionGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/team/logica_populi/dragonscore/logic/generators/QuestionGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/team/logica_populi/dragonscore/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team/logica_populi/dragonscore/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/team/logica_populi/dragonscore/logic/AbstractQuestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team/logica_populi/dragonscore/logic/AbstractQuestion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/team/logica_populi/dragonscore/logic/Answer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team/logica_populi/dragonscore/logic/Answer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/team/logica_populi/dragonscore/ui/controllers/ExampleQuestionPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team/logica_populi/dragonscore/ui/controllers/ExampleQuestionPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/team/logica_populi/dragonscore/logic/generators/ExampleQuestionGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team/logica_populi/dragonscore/logic/generators/ExampleQuestionGenerator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
