@@ -5,6 +5,7 @@ import java.util.UUID;
 /**
  * This class represents a possible answer to a question.
  * This answer may or may not be the correct one.
+ * It is important to note that iss is the job of the UI controller to make sure the questions are displayed in a random order.
  */
 public class Answer implements Cloneable {
     private String text;
@@ -64,5 +65,14 @@ public class Answer implements Cloneable {
     public boolean equals(Object obj) {
         if (obj == null || obj.getClass() != Answer.class) return false; // Not an Answer object
         return id.equals(((Answer) obj).id);
+    }
+
+    /**
+     * Returns this answer as a human-readable string.
+     * @return The human-readable string
+     */
+    @Override
+    public String toString() {
+        return text;
     }
 }

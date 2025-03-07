@@ -1,12 +1,11 @@
 package team.logica_populi.dragonscore.logic;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.logging.Logger;
 
 /**
- * A basic implimentation of the {@code Question} interface.
+ * A basic implementation of the {@code Question} interface.
  * @see Question The Question Interface
  */
 public abstract class AbstractQuestion implements Question {
@@ -25,7 +24,7 @@ public abstract class AbstractQuestion implements Question {
      * @param correctIndex The index into the answers of the correct answer
      * @param answers The answer choices for this question
      */
-    protected AbstractQuestion(String question, int correctIndex, Answer... answers) {
+    public AbstractQuestion(String question, int correctIndex, Answer... answers) {
         this.question = question;
         this.correctIndex = correctIndex;
         this.answers = Arrays.stream(answers).toList();
@@ -35,10 +34,6 @@ public abstract class AbstractQuestion implements Question {
         }
     }
 
-    /**
-     * Gets the question text.
-     * @return The text of the question
-     */
     @Override
     public String getQuestion() {
         return question;
@@ -52,22 +47,28 @@ public abstract class AbstractQuestion implements Question {
         this.question = question;
     }
 
-    /**
-     * Gets a reference to the correct answer for this question.
-     * @return The correct answer
-     */
     @Override
     public Answer getCorrectAnswer() {
         return answers.get(correctIndex);
     }
 
-    /**
-     * Gets a List of all answers for this question.
-     *
-     * @return The answers for this question
-     */
     @Override
     public List<Answer> getAnswers() {
         return answers;
+    }
+
+    /**
+     * Returns this question as a human-readable string.
+     * @return The human-readable string
+     */
+    @Override
+    public String toString() {
+        StringBuilder string = new StringBuilder(question + "\n");
+        int i = 0;
+        for (Answer answer : answers) {
+            string.append("  ").append(i).append(": ").append(answer).append("\n");
+            i++;
+        }
+        return string.toString();
     }
 }
