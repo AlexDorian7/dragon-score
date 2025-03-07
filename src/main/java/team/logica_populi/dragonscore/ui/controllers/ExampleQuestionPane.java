@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
+import team.logica_populi.dragonscore.logic.Question;
 
 /**
  * FXML Controller for /assets/views/ExampleQuestionPane.fxml
@@ -27,14 +28,18 @@ public class ExampleQuestionPane {
     @FXML
     private ToggleButton a4Button;
 
-//    public void setQuestion(Question question) {
-//        this.question = question;
-//        questionText.setText(question.question.getValue());
-//        a1Button.setText(question.answer1.getValue());
-//        a2Button.setText(question.answer2.getValue());
-//        a3Button.setText(question.answer3.getValue());
-//        a4Button.setText(question.answer4.getValue());
-//    }
+    private Question question;
+
+    public void setQuestion(Question question) {
+        // TODO: Make this support question with more or less than 4 answers
+        // TODO: Display answers in random order
+        this.question = question;
+        questionText.setText(question.getQuestion());
+        a1Button.setText(question.getAnswers().get(0).toString());
+        a2Button.setText(question.getAnswers().get(1).toString());
+        a3Button.setText(question.getAnswers().get(2).toString());
+        a4Button.setText(question.getAnswers().get(3).toString());
+    }
 
     private void deselectAll() {
         a1Button.setSelected(false);
