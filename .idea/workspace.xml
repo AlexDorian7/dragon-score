@@ -5,22 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c38e96df-9d46-46c2-b7ff-1fb83565f7cb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/team/logica_populi/dragonscore/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/team/logica_populi/dragonscore/ui/UiComponentCreator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/team/logica_populi/dragonscore/ui/controllers/ExampleQuestionPane.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/views/ExampleQuestionPane.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/logging.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/team/logica_populi/dragonscore/logic/BaseQuestion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/team/logica_populi/dragonscore/logic/generators/ExampleQuestionGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/team/logica_populi/dragonscore/logic/generators/QuestionGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/team/logica_populi/dragonscore/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team/logica_populi/dragonscore/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/team/logica_populi/dragonscore/logic/AbstractQuestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team/logica_populi/dragonscore/logic/AbstractQuestion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/team/logica_populi/dragonscore/logic/Answer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team/logica_populi/dragonscore/logic/Answer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/team/logica_populi/dragonscore/ui/controllers/ExampleQuestionPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team/logica_populi/dragonscore/ui/controllers/ExampleQuestionPane.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +24,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -45,9 +39,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2tauIrXsRKjkJWL5aevWXNMgY3j" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -58,7 +52,8 @@
   "keyToString": {
     "Maven.Run.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "alex",
     "kotlin-language-version-configured": "true"
   }
 }]]></component>

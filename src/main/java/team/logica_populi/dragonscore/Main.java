@@ -5,6 +5,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.util.Pair;
+import team.logica_populi.dragonscore.logic.Question;
+import team.logica_populi.dragonscore.logic.generators.ExampleQuestionGenerator;
 import team.logica_populi.dragonscore.ui.UiComponentCreator;
 import team.logica_populi.dragonscore.ui.controllers.ExampleQuestionPane;
 
@@ -21,6 +23,13 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         Pair<Parent, ExampleQuestionPane> pair = UiComponentCreator.createExampleQuestionPane();
+
+        // Create an example question and then put it in the example window
+        ExampleQuestionGenerator exampleQuestionGenerator = new ExampleQuestionGenerator();
+        Question nextQuestion = exampleQuestionGenerator.getNextQuestion();
+
+        pair.getValue().setQuestion(nextQuestion);
+
         Scene scene = new Scene(pair.getKey(), 600, 400);
         stage.setScene(scene);
         stage.setTitle("EXAMPLE");
