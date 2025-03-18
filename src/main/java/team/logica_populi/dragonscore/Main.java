@@ -7,6 +7,8 @@ import javafx.stage.Stage;
 import javafx.util.Pair;
 import team.logica_populi.dragonscore.logic.Question;
 import team.logica_populi.dragonscore.logic.generators.ExampleQuestionGenerator;
+import team.logica_populi.dragonscore.logic.generators.QuestionGenerator;
+import team.logica_populi.dragonscore.logic.generators.QuestionGeneratorRegistry;
 import team.logica_populi.dragonscore.ui.UiComponentCreator;
 import team.logica_populi.dragonscore.ui.controllers.ExampleQuestionPane;
 
@@ -20,13 +22,21 @@ import java.util.logging.Logger;
  * For now all this does is create a example window
  */
 public class Main extends Application {
+
+    private static Logger logger;
+
     @Override
     public void start(Stage stage) throws Exception {
         Pair<Parent, ExampleQuestionPane> pair = UiComponentCreator.createExampleQuestionPane();
 
         // Create an example question and then put it in the example window
-        ExampleQuestionGenerator exampleQuestionGenerator = new ExampleQuestionGenerator();
-        Question nextQuestion = exampleQuestionGenerator.getNextQuestion();
+        QuestionGenerator questionGenerator = QuestionGeneratorRegistry.getInstance().getQuestionGenerator("team.logica_populi.dragonscore.logic.generators.ExampleQuestionGenerator");
+        if (questionGenerator == null) {
+            throw new IllegalStateException("Question generator is null");
+        }
+        Question nextQuestion = questionGenerator.getNextQuestion();
+
+        logger.info(questionGenerator.getId());
 
         pair.getValue().setQuestion(nextQuestion);
 
@@ -37,8 +47,6 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) {
-        Logger logger;
-
         // Set up the logger
         try {
             InputStream stream = Main.class.getResourceAsStream("/logging.properties");

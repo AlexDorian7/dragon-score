@@ -10,13 +10,24 @@ import java.util.UUID;
 public class Answer implements Cloneable {
     private String text;
     private UUID id;
+    private boolean correct;
 
     /**
-     * Constructor to make an Answer using the provided text.
+     * Constructor to make an Answer using the provided text. The answer defaults to being incorrect.
      * @param text The text for this answer's label
      */
     public Answer(String text) {
+        this(text, false);
+    }
+
+    /**
+     * Constructor to make an Answer using the provided text and the provided correctness.
+     * @param text The text for this answer's label
+     * @param correct Is this answer correct or not.
+     */
+    public Answer(String text, boolean correct) {
         this.text = text;
+        this.correct = correct;
         id = UUID.randomUUID();
     }
 
@@ -74,5 +85,21 @@ public class Answer implements Cloneable {
     @Override
     public String toString() {
         return text;
+    }
+
+    /**
+     * Is this answer marked as correct?
+     * @return Is Correct
+     */
+    public boolean isCorrect() {
+        return correct;
+    }
+
+    /**
+     * Sets the correct state of this answer.
+     * @param correct The state to set to
+     */
+    public void setCorrect(boolean correct) {
+        this.correct = correct;
     }
 }

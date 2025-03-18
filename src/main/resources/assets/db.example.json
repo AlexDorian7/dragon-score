@@ -11,7 +11,7 @@
     {
       "id": "Lesson 1",
       "questionGenerators": [
-        "ExampleQuestionGenerator"
+        "team.logica_populi.dragonscore.logic.generators.ExampleQuestionGenerator"
       ],
       "staticQuestions": [
         {
@@ -28,6 +28,22 @@
           ]
         }
       ]
+    }
+  ],
+  "forms": [
+    {
+      "id": "Form_1",
+      "fields": [
+        {
+          "id": "noun1",
+          "type": 0
+        },
+        {
+          "id": "noun2",
+          "type": 0
+        }
+      ],
+      "form": "${noun1} is ${noun2}."
     }
   ]
 }
