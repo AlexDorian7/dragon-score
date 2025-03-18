@@ -8,6 +8,7 @@ target/
 .idea/jarRepositories.xml
 .idea/compiler.xml
 .idea/libraries/
+.idea/workspace.xml
 *.iws
 *.iml
 *.ipr
@@ -21,7 +22,7 @@ target/
 .springBeans
 .sts4-cache
 
-### NetBeans ###
+### NetBeans ###null
 /nbproject/private/
 /nbbuild/
 /dist/
