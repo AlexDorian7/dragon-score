@@ -24,7 +24,7 @@ public abstract class AbstractQuestion implements Question {
      * @param correctIndex The index into the answers of the correct answer
      * @param answers The answer choices for this question
      */
-    public AbstractQuestion(String question, int correctIndex, Answer... answers) {
+    protected AbstractQuestion(String question, int correctIndex, Answer... answers) {
         this.question = question;
         this.correctIndex = correctIndex;
         this.answers = Arrays.stream(answers).toList();
