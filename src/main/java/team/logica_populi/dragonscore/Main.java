@@ -8,6 +8,7 @@ import javafx.util.Pair;
 import org.json.JSONObject;
 import org.json.JSONTokener;
 import team.logica_populi.dragonscore.logic.BaseQuestion;
+import team.logica_populi.dragonscore.logic.Lesson;
 import team.logica_populi.dragonscore.logic.Question;
 import team.logica_populi.dragonscore.logic.generators.ExampleQuestionGenerator;
 import team.logica_populi.dragonscore.logic.generators.QuestionGenerator;
@@ -33,6 +34,12 @@ public class Main extends Application {
     public void start(Stage stage) throws Exception {
         Pair<Parent, ExampleQuestionPane> pair = UiComponentCreator.createExampleQuestionPane();
 
+        // Example code to load the example lesson
+        JSONObject parsed = new JSONObject(new JSONTokener(Objects.requireNonNull(Main.class.getResourceAsStream("/assets/db.example.json"))));
+        Lesson parsedLesson = Lesson.loadFromJSON(parsed.getJSONArray("lessons").getJSONObject(0));
+        assert parsedLesson != null;
+        logger.info(parsedLesson.toString());
+
         // Create an example question and then put it in the example window
         QuestionGenerator questionGenerator = QuestionGeneratorRegistry.getInstance().getQuestionGenerator("team.logica_populi.dragonscore.logic.generators.ExampleQuestionGenerator");
         if (questionGenerator == null) {
@@ -42,17 +49,15 @@ public class Main extends Application {
 
         logger.info(questionGenerator.getId());
 
+        pair.getValue().setCallback(() -> {
+            pair.getValue().setQuestion(parsedLesson.getNextQuestion());
+        });
         pair.getValue().setQuestion(nextQuestion);
 
         Scene scene = new Scene(pair.getKey(), 600, 400);
         stage.setScene(scene);
         stage.setTitle("EXAMPLE");
         stage.show();
-
-        JSONObject parsed = new JSONObject(new JSONTokener(Objects.requireNonNull(Main.class.getResourceAsStream("/assets/db.example.json"))));
-        BaseQuestion parsedQuestion = BaseQuestion.loadFromJSON(parsed.getJSONArray("lessons").getJSONObject(0).getJSONArray("staticQuestions").getJSONObject(0));
-        assert parsedQuestion != null;
-        logger.info(parsedQuestion.toString());
 
     }
 
