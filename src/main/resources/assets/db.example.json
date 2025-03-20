@@ -1,17 +1,23 @@
 {
   "terms": {
-    "nouns": [
+    "nouns_s": [
       {
-        "word": "Car",
+        "word": "The car",
+        "type": 0
+      },
+      {
+        "word": "Person",
         "type": 0
       }
     ]
   },
   "lessons": [
     {
-      "id": "Lesson 1",
+      "id": "lesson_1",
+      "name": "Lesson 1",
+      "description": "Lesson 1 description",
       "questionGenerators": [
-        "ExampleQuestionGenerator"
+        "team.logica_populi.dragonscore.logic.generators.ExampleQuestionGenerator"
       ],
       "staticQuestions": [
         {
@@ -24,10 +30,55 @@
             {
               "answer": "3",
               "correct": false
+            },
+            {
+              "answer": "2",
+              "correct": false
+            },
+            {
+              "answer": "1",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Who is our client",
+          "answers": [
+            {
+              "answer": "We are",
+              "correct": false
+            },
+            {
+              "answer": "Dr. Blythe",
+              "correct": false
+            },
+            {
+              "answer": "Dr. Steineger",
+              "correct": true
+            },
+            {
+              "answer": "idk",
+              "correct": false
             }
           ]
         }
       ]
+    }
+  ],
+  "forms": [
+    {
+      "id": "form_1",
+      "fields": [
+        {
+          "id": "noun_1",
+          "type": 0
+        },
+        {
+          "id": "noun_2",
+          "type": 0
+        }
+      ],
+      "form": "${noun_1} is ${noun_2}."
     }
   ]
 }

@@ -4,6 +4,8 @@ module team.logica_populi.dragonscore {
 
     requires org.controlsfx.controls;
     requires java.logging;
+    requires org.jetbrains.annotations;
+    requires org.json;
 
     opens team.logica_populi.dragonscore to javafx.fxml;
     opens team.logica_populi.dragonscore.ui to javafx.fxml;
