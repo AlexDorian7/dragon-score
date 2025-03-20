@@ -9,10 +9,12 @@ target/
 .idea/compiler.xml
 .idea/libraries/
 .idea/workspace.xml
-
 *.iws
 *.iml
 *.ipr
+
+### Java Docs
+docs/
 
 ### Eclipse ###
 .apt_generated
@@ -23,7 +25,7 @@ target/
 .springBeans
 .sts4-cache
 
-### NetBeans ###
+### NetBeans ###null
 /nbproject/private/
 /nbbuild/
 /dist/
