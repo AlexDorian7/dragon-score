@@ -9,7 +9,9 @@
   },
   "lessons": [
     {
-      "id": "Lesson 1",
+      "id": "lesson_1",
+      "name": "Lesson 1",
+      "description": "Lesson 1 description",
       "questionGenerators": [
         "team.logica_populi.dragonscore.logic.generators.ExampleQuestionGenerator"
       ],
@@ -32,18 +34,18 @@
   ],
   "forms": [
     {
-      "id": "Form_1",
+      "id": "form_1",
       "fields": [
         {
-          "id": "noun1",
+          "id": "noun_1",
           "type": 0
         },
         {
-          "id": "noun2",
+          "id": "noun_2",
           "type": 0
         }
       ],
-      "form": "${noun1} is ${noun2}."
+      "form": "${noun_1} is ${noun_2}."
     }
   ]
 }
