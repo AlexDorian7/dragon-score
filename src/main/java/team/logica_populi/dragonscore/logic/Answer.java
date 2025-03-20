@@ -1,6 +1,10 @@
 package team.logica_populi.dragonscore.logic;
 
+import org.jetbrains.annotations.Nullable;
+import org.json.JSONObject;
+
 import java.util.UUID;
+import java.util.logging.Logger;
 
 /**
  * This class represents a possible answer to a question.
@@ -8,6 +12,9 @@ import java.util.UUID;
  * It is important to note that iss is the job of the UI controller to make sure the questions are displayed in a random order.
  */
 public class Answer implements Cloneable {
+
+    private static final Logger logger  = Logger.getLogger(Answer.class.getName());
+
     private String text;
     private UUID id;
     private boolean correct;
@@ -101,5 +108,21 @@ public class Answer implements Cloneable {
      */
     public void setCorrect(boolean correct) {
         this.correct = correct;
+    }
+
+    /**
+     * Loads an Answer from a JSON object.
+     * @param object The object to load from
+     * @return The loaded answer or null if something failed.
+     */
+    @Nullable
+    public static Answer loadFromJSON(JSONObject object) {
+        String answerText = object.getString("answer");
+        boolean correct = object.getBoolean("correct");
+        if (answerText == null || answerText.isEmpty()) {
+            logger.warning("Failed to load answer. Empty or null answer text.");
+            return null;
+        }
+        return new Answer(answerText, correct);
     }
 }

@@ -1,8 +1,12 @@
 {
   "terms": {
-    "nouns": [
+    "nouns_s": [
       {
-        "word": "Car",
+        "word": "The car",
+        "type": 0
+      },
+      {
+        "word": "Person",
         "type": 0
       }
     ]

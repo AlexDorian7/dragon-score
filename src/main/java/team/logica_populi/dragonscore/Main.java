@@ -5,6 +5,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.util.Pair;
+import org.json.JSONObject;
+import org.json.JSONTokener;
+import team.logica_populi.dragonscore.logic.BaseQuestion;
 import team.logica_populi.dragonscore.logic.Question;
 import team.logica_populi.dragonscore.logic.generators.ExampleQuestionGenerator;
 import team.logica_populi.dragonscore.logic.generators.QuestionGenerator;
@@ -14,6 +17,7 @@ import team.logica_populi.dragonscore.ui.controllers.ExampleQuestionPane;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Objects;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
@@ -44,6 +48,12 @@ public class Main extends Application {
         stage.setScene(scene);
         stage.setTitle("EXAMPLE");
         stage.show();
+
+        JSONObject parsed = new JSONObject(new JSONTokener(Objects.requireNonNull(Main.class.getResourceAsStream("/assets/db.example.json"))));
+        BaseQuestion parsedQuestion = BaseQuestion.loadFromJSON(parsed.getJSONArray("lessons").getJSONObject(0).getJSONArray("staticQuestions").getJSONObject(0));
+        assert parsedQuestion != null;
+        logger.info(parsedQuestion.toString());
+
     }
 
     public static void main(String[] args) {

@@ -1,5 +1,6 @@
 package team.logica_populi.dragonscore.logic;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.logging.Logger;
@@ -14,7 +15,7 @@ public abstract class AbstractQuestion implements Question {
 
     private String question;
 
-    private final List<Answer> answers;
+    protected final List<Answer> answers;
 
 
     /**
@@ -24,7 +25,7 @@ public abstract class AbstractQuestion implements Question {
      */
     protected AbstractQuestion(String question, Answer... answers) {
         this.question = question;
-        this.answers = Arrays.stream(answers).toList();
+        this.answers = new ArrayList<>(Arrays.stream(answers).toList());
     }
 
     @Override
