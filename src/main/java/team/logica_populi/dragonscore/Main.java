@@ -5,13 +5,19 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.util.Pair;
+import org.json.JSONObject;
+import org.json.JSONTokener;
+import team.logica_populi.dragonscore.logic.BaseQuestion;
 import team.logica_populi.dragonscore.logic.Question;
 import team.logica_populi.dragonscore.logic.generators.ExampleQuestionGenerator;
+import team.logica_populi.dragonscore.logic.generators.QuestionGenerator;
+import team.logica_populi.dragonscore.logic.generators.QuestionGeneratorRegistry;
 import team.logica_populi.dragonscore.ui.UiComponentCreator;
 import team.logica_populi.dragonscore.ui.controllers.ExampleQuestionPane;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Objects;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
@@ -20,13 +26,21 @@ import java.util.logging.Logger;
  * For now all this does is create a example window
  */
 public class Main extends Application {
+
+    private static Logger logger;
+
     @Override
     public void start(Stage stage) throws Exception {
         Pair<Parent, ExampleQuestionPane> pair = UiComponentCreator.createExampleQuestionPane();
 
         // Create an example question and then put it in the example window
-        ExampleQuestionGenerator exampleQuestionGenerator = new ExampleQuestionGenerator();
-        Question nextQuestion = exampleQuestionGenerator.getNextQuestion();
+        QuestionGenerator questionGenerator = QuestionGeneratorRegistry.getInstance().getQuestionGenerator("team.logica_populi.dragonscore.logic.generators.ExampleQuestionGenerator");
+        if (questionGenerator == null) {
+            throw new IllegalStateException("Question generator is null");
+        }
+        Question nextQuestion = questionGenerator.getNextQuestion();
+
+        logger.info(questionGenerator.getId());
 
         pair.getValue().setQuestion(nextQuestion);
 
@@ -34,11 +48,15 @@ public class Main extends Application {
         stage.setScene(scene);
         stage.setTitle("EXAMPLE");
         stage.show();
+
+        JSONObject parsed = new JSONObject(new JSONTokener(Objects.requireNonNull(Main.class.getResourceAsStream("/assets/db.example.json"))));
+        BaseQuestion parsedQuestion = BaseQuestion.loadFromJSON(parsed.getJSONArray("lessons").getJSONObject(0).getJSONArray("staticQuestions").getJSONObject(0));
+        assert parsedQuestion != null;
+        logger.info(parsedQuestion.toString());
+
     }
 
     public static void main(String[] args) {
-        Logger logger;
-
         // Set up the logger
         try {
             InputStream stream = Main.class.getResourceAsStream("/logging.properties");

@@ -14,12 +14,13 @@ public class TrueFalseQuestion extends AbstractQuestion {
      * @param isTrue       Is the question true
      */
     public TrueFalseQuestion(String question, boolean isTrue) {
-        super(question, isTrue ? 0 : 1, TRUE_ANSWER, FALSE_ANSWER);
+        super(question, new Answer("True", isTrue), new Answer("False", !isTrue));
         this.isTrue = isTrue;
     }
 
     /**
      * Is this true false question true.
+     * It is important to note that this may not always reflect the correctness of the answers
      * @return The truth value of this question
      */
     public Boolean getTrue() {
