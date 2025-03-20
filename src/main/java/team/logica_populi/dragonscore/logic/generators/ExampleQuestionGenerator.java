@@ -35,9 +35,9 @@ public class ExampleQuestionGenerator implements QuestionGenerator {
         Answer answer0 = new Answer(String.valueOf(incorrectAnswer0));
         Answer answer1 = new Answer(String.valueOf(incorrectAnswer1));
         Answer answer2 = new Answer(String.valueOf(incorrectAnswer2));
-        Answer answer3 = new Answer(String.valueOf(correctAnswer));
+        Answer answer3 = new Answer(String.valueOf(correctAnswer), true);
 
         // Return the new question
-        return new BaseQuestion("What is " + number0 + " + " + number1 + "?", 3, answer0, answer1, answer2, answer3);
+        return new BaseQuestion("What is " + number0 + " + " + number1 + "?", answer0, answer1, answer2, answer3);
     }
 }

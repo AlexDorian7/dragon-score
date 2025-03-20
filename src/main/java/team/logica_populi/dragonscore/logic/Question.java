@@ -16,12 +16,6 @@ public interface Question {
     String getQuestion();
 
     /**
-     * Gets a reference to the correct answer for this question.
-     * @return The correct answer
-     */
-    Answer getCorrectAnswer();
-
-    /**
      * Gets a List of all answers for this question.
      *
      * @return The answers for this question
