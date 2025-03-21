@@ -1,0 +1,6 @@
+module:team.logica_populi.dragonscore
+team.logica_populi.dragonscore
+team.logica_populi.dragonscore.logic
+team.logica_populi.dragonscore.logic.generators
+team.logica_populi.dragonscore.ui
+team.logica_populi.dragonscore.ui.controllers
