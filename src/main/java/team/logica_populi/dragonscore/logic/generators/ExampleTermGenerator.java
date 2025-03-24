@@ -1,9 +1,7 @@
 package team.logica_populi.dragonscore.logic.generators;
 
-import team.logica_populi.dragonscore.logic.Term;
+import team.logica_populi.dragonscore.base.Term;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 public class ExampleTermGenerator implements TermGenerator{

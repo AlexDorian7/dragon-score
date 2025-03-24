@@ -1,5 +1,7 @@
 module:team.logica_populi.dragonscore
 team.logica_populi.dragonscore
+team.logica_populi.dragonscore.base
+team.logica_populi.dragonscore.base.registries
 team.logica_populi.dragonscore.logic
 team.logica_populi.dragonscore.logic.generators
 team.logica_populi.dragonscore.ui

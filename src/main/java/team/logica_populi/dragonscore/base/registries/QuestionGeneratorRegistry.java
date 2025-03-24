@@ -1,12 +1,16 @@
-package team.logica_populi.dragonscore.logic.generators;
+package team.logica_populi.dragonscore.base.registries;
 
 import org.jetbrains.annotations.Nullable;
+import team.logica_populi.dragonscore.logic.generators.QuestionGenerator;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * Singleton registry for dynamically loading and storing question generators
+ */
 public class QuestionGeneratorRegistry {
 
     private static final Logger logger = Logger.getLogger(QuestionGeneratorRegistry.class.getName());

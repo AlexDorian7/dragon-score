@@ -7,12 +7,11 @@ import javafx.stage.Stage;
 import javafx.util.Pair;
 import org.json.JSONObject;
 import org.json.JSONTokener;
-import team.logica_populi.dragonscore.logic.BaseQuestion;
-import team.logica_populi.dragonscore.logic.Lesson;
+import team.logica_populi.dragonscore.base.Lesson;
+import team.logica_populi.dragonscore.base.registries.TermRegistry;
 import team.logica_populi.dragonscore.logic.Question;
-import team.logica_populi.dragonscore.logic.generators.ExampleQuestionGenerator;
 import team.logica_populi.dragonscore.logic.generators.QuestionGenerator;
-import team.logica_populi.dragonscore.logic.generators.QuestionGeneratorRegistry;
+import team.logica_populi.dragonscore.base.registries.QuestionGeneratorRegistry;
 import team.logica_populi.dragonscore.ui.UiComponentCreator;
 import team.logica_populi.dragonscore.ui.controllers.ExampleQuestionPane;
 
@@ -39,6 +38,9 @@ public class Main extends Application {
         Lesson parsedLesson = Lesson.loadFromJSON(parsed.getJSONArray("lessons").getJSONObject(0));
         assert parsedLesson != null;
         logger.info(parsedLesson.toString());
+
+        TermRegistry.getInstance().loadTermLists(parsed.getJSONObject("terms"));
+        logger.info(TermRegistry.getInstance().toString());
 
         // Create an example question and then put it in the example window
         QuestionGenerator questionGenerator = QuestionGeneratorRegistry.getInstance().getQuestionGenerator("team.logica_populi.dragonscore.logic.generators.ExampleQuestionGenerator");

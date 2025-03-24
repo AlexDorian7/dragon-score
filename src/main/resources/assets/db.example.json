@@ -3,11 +3,11 @@
     "nouns_s": [
       {
         "word": "The car",
-        "type": 0
+        "type": "NOUN_S"
       },
       {
         "word": "Person",
-        "type": 0
+        "type": "NOUN_S"
       }
     ]
   },

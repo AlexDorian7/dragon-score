@@ -1,11 +1,12 @@
-package team.logica_populi.dragonscore.logic;
+package team.logica_populi.dragonscore.base;
 
 import org.jetbrains.annotations.Nullable;
 import org.json.JSONArray;
 import org.json.JSONObject;
-import org.json.JSONString;
+import team.logica_populi.dragonscore.base.registries.QuestionGeneratorRegistry;
+import team.logica_populi.dragonscore.logic.BaseQuestion;
+import team.logica_populi.dragonscore.logic.Question;
 import team.logica_populi.dragonscore.logic.generators.QuestionGenerator;
-import team.logica_populi.dragonscore.logic.generators.QuestionGeneratorRegistry;
 
 import java.util.ArrayList;
 import java.util.List;
