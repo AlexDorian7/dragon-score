@@ -8,7 +8,6 @@ import java.util.logging.Logger;
 /**
  * Represents a word and what type it is.
  */
-
 public class Term {
 
     private static final Logger logger = Logger.getLogger(Term.class.getName());
@@ -16,6 +15,11 @@ public class Term {
     private final String word;
     private final TermType type;
 
+    /**
+     * Create a term using a word and type.
+     * @param word The word this term represents
+     * @param type The type of this term
+     */
     public Term(String word, TermType type) {
         this.word = word;
         this.type = type;

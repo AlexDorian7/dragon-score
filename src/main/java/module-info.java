@@ -1,3 +1,7 @@
+/**
+ * The main Dragon Score module.
+ * This is required for JavaFX.
+ */
 module team.logica_populi.dragonscore {
     requires javafx.controls;
     requires javafx.fxml;

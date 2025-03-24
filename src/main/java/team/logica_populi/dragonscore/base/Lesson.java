@@ -12,6 +12,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
+/**
+ * A lesson represents a set of questions or question generators that fit a common theme.
+ * A lesson also contains a name, description, and internal id.
+ */
 public class Lesson {
     private static final Logger logger = Logger.getLogger(Lesson.class.getName());
 
@@ -21,22 +25,54 @@ public class Lesson {
     private final List<Question> staticQuestions;
     private final List<QuestionGenerator> questionGenerators;
 
+    /**
+     * Create a lesson using only an internal id.
+     * The name and description will be empty strings.
+     * @param id The lesson's is
+     */
     public Lesson(String id) {
         this(id, "", "", new ArrayList<>(), new ArrayList<>());
     }
 
+    /**
+     * Create a lesson using only an internal id and a name.
+     * The description will be an empty string.
+     * @param id The lesson's id
+     * @param name The lesson's name
+     */
     public Lesson(String id, String name) {
         this(id, name, "", new ArrayList<>(), new ArrayList<>());
     }
 
+    /**
+     * Create a lesson using an internal id and lists for static questions and question generators.
+     * @param id The lesson's id
+     * @param staticQuestions The static questions assigned to this lesson
+     * @param questionGenerators The question generators assigned to this lesson
+     */
     public Lesson(String id, List<Question> staticQuestions, List<QuestionGenerator> questionGenerators) {
         this(id, "", "", staticQuestions, questionGenerators);
     }
 
+    /**
+     * Create a lesson using an internal id, name, and lists for static questions and question generators.
+     * @param id The lesson's id
+     * @param name The lesson's name
+     * @param staticQuestions The static questions assigned to this lesson
+     * @param questionGenerators The question generators assigned to this lesson
+     */
     public Lesson(String id, String name, List<Question> staticQuestions, List<QuestionGenerator> questionGenerators) {
         this(id, name, "", staticQuestions, questionGenerators);
     }
 
+    /**
+     * Create a lesson using an internal id, name, description, and lists for static questions and question generators.
+     * @param id The lesson's id
+     * @param name The lesson's name
+     * @param description The lesson's description
+     * @param staticQuestions The static questions assigned to this lesson
+     * @param questionGenerators The question generators assigned to this lesson
+     */
     public Lesson(String id, String name, String description, List<Question> staticQuestions, List<QuestionGenerator> questionGenerators) {
         this.id = id;
         this.name = name;
@@ -46,13 +82,15 @@ public class Lesson {
     }
 
     /**
-     * @return The lesson's id
+     * Gets the lesson's id.
+     * @return the lesson's id
      */
     public String getId() {
         return id;
     }
 
     /**
+     * Gets the lesson's name.
      * @return The lesson's name
      */
     public String getName() {
@@ -68,6 +106,7 @@ public class Lesson {
     }
 
     /**
+     * Gets the lesson's description.
      * @return The lesson's description
      */
     public String getDescription() {
@@ -83,6 +122,7 @@ public class Lesson {
     }
 
     /**
+     * Get the list of static questions assigned to this lesson.
      * @return The list of static questions for this lesson
      */
     public List<Question> getStaticQuestions() {
@@ -90,6 +130,7 @@ public class Lesson {
     }
 
     /**
+     * Gets the list of question generators assigned to this lesson.
      * @return The list of question generators for this lesson
      */
     public List<QuestionGenerator> getQuestionGenerators() {

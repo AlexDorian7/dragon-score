@@ -63,6 +63,10 @@ public class Main extends Application {
 
     }
 
+    /**
+     * The main entry point to the program. Currently, this contains a lot of debug and example code.
+     * @param args The command line args
+     */
     public static void main(String[] args) {
         // Set up the logger
         try {

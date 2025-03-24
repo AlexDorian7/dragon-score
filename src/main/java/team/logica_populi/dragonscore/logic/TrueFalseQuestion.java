@@ -1,5 +1,8 @@
 package team.logica_populi.dragonscore.logic;
 
+/**
+ * A simple implementation of {@link AbstractQuestion} with only ywo answers being true and false
+ */
 public class TrueFalseQuestion extends AbstractQuestion {
 
     private static final Answer TRUE_ANSWER = new Answer("True");
