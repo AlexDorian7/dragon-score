@@ -1,13 +1,13 @@
 package team.logica_populi.dragonscore.logic;
 
 import org.json.JSONObject;
-import org.json.JSONArray;
+
 import java.util.logging.Logger;
 
 public class PointSystem {
     private static final Logger logger = Logger.getLogger(PointSystem.class.getName());
-    private String id;
-    private static String name;
+    private final String id;
+    private String name;
     private int selected_points;
     private int current_points;
 
@@ -26,8 +26,18 @@ public class PointSystem {
         this.current_points = current_points;
     }
 
+    public String getId() {return id;}
+
+    public String getName() {return name;}
+
+    public int getSelected_points() {return selected_points;}
+
+    public int getCurrent_points() {return current_points;}
+
     /**
-     * Send Point to data file
+     * Set the total points for the lesson
+     * @param object get the currents points stored
+     * @return new total points inside the lesson
      */
     public int setPoints(JSONObject object){
         String id = object.getString("id");
@@ -47,9 +57,11 @@ public class PointSystem {
     }
 
     /**
-     * Get the total points which the user has
+     * Gets the current total points in the lesson
+     * @param object the object to load
+     * @return the loaded data or returns 0
      */
-    public static int getPoints(JSONObject object) {
+    public int getTotalPoints(JSONObject object) {
         String id = object.getString("id");
 
         if(id == null || id.isEmpty()){
@@ -57,7 +69,9 @@ public class PointSystem {
             return 0;
         }
 
-        return object.getInt("total_points");
+        this.current_points = object.getInt("total_points");
+
+        return current_points;
     }
 
 
@@ -68,6 +82,11 @@ public class PointSystem {
         return "0";
     }
 
+    /**
+     * Load the Point system from JSON object.
+     * @param object the object to load from
+     * @return the loaded data or returns null if something fails
+     */
     public static PointSystem loadFromJSON(JSONObject object){
         String id = object.getString("id");
         if(id == null || id.isEmpty()){
@@ -79,7 +98,6 @@ public class PointSystem {
         if(name == null)  name = "";
 
         int current_points = object.getInt("total_points");
-
 
         return new PointSystem(id, name, 0, current_points);
 

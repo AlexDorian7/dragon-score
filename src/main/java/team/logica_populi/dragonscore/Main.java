@@ -38,8 +38,8 @@ public class Main extends Application {
         // Example code to load the example lesson
         JSONObject parsed = new JSONObject(new JSONTokener(Objects.requireNonNull(Main.class.getResourceAsStream("/assets/db.example.json"))));
         Lesson parsedLesson = Lesson.loadFromJSON(parsed.getJSONArray("lessons").getJSONObject(0));
-        JSONObject psParesed = new JSONObject(new JSONTokener(Objects.requireNonNull(Main.class.getResourceAsStream("/assets/pointsystem.example.json"))));
-        PointSystem parsedPointSystem = PointSystem.loadFromJSON(psParesed.getJSONArray("lessons").getJSONObject(0));
+        JSONObject psParsed = new JSONObject(new JSONTokener(Objects.requireNonNull(Main.class.getResourceAsStream("/assets/pointsystem.example.json"))));
+        PointSystem parsedPointSystem = PointSystem.loadFromJSON(psParsed.getJSONArray("lessons").getJSONObject(0));
         assert parsedLesson != null;
         assert parsedPointSystem != null;
         logger.info(parsedLesson.toString());
