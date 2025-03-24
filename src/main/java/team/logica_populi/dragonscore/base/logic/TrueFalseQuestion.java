@@ -1,4 +1,4 @@
-package team.logica_populi.dragonscore.logic;
+package team.logica_populi.dragonscore.base.logic;
 
 /**
  * A simple implementation of {@link AbstractQuestion} with only ywo answers being true and false

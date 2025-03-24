@@ -1,8 +1,8 @@
-package team.logica_populi.dragonscore.logic.generators;
+package team.logica_populi.dragonscore.base.logic.generators;
 
-import team.logica_populi.dragonscore.logic.Answer;
-import team.logica_populi.dragonscore.logic.BaseQuestion;
-import team.logica_populi.dragonscore.logic.Question;
+import team.logica_populi.dragonscore.base.logic.Answer;
+import team.logica_populi.dragonscore.base.logic.BaseQuestion;
+import team.logica_populi.dragonscore.base.logic.Question;
 
 /**
  * An example question generator to construct addition problems

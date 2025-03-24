@@ -1,7 +1,7 @@
 package team.logica_populi.dragonscore.base.registries;
 
 import org.jetbrains.annotations.Nullable;
-import team.logica_populi.dragonscore.logic.generators.QuestionGenerator;
+import team.logica_populi.dragonscore.base.logic.generators.QuestionGenerator;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;

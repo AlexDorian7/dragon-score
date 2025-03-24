@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="dc.created" content="2025-03-24">
-<meta name="description" content="declaration: module: team.logica_populi.dragonscore, package: team.logica_populi.dragonscore.logic, class: AbstractQuestion">
+<meta name="description" content="declaration: module: team.logica_populi.dragonscore, package: team.logica_populi.dragonscore.base.logic, class: AbstractQuestion">
 <meta name="generator" content="javadoc/ClassWriter">
 <link rel="stylesheet" type="text/css" href="../../../../../resource-files/jquery-ui.min.css" title="Style">
 <link rel="stylesheet" type="text/css" href="../../../../../resource-files/stylesheet.css" title="Style">
@@ -41,7 +41,7 @@ loadScripts(document, 'script');</script>
 <div class="nav-content">
 <ol class="sub-nav-list">
 <li><a href="../../../../module-summary.html">team.logica_populi.dragonscore</a></li>
-<li><a href="package-summary.html">team.logica_populi.dragonscore.logic</a></li>
+<li><a href="package-summary.html">team.logica_populi.dragonscore.base.logic</a></li>
 <li><a href="AbstractQuestion.html" class="current-selection">AbstractQuestion</a></li>
 </ol>
 <div class="nav-list-search">
@@ -91,28 +91,28 @@ loadScripts(document, 'script');</script>
 <h1 title="Class AbstractQuestion" class="title">Class AbstractQuestion</h1>
 </div>
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
-<div class="inheritance">team.logica_populi.dragonscore.logic.AbstractQuestion</div>
+<div class="inheritance">team.logica_populi.dragonscore.base.logic.AbstractQuestion</div>
 </div>
 <section class="class-description" id="class-description">
 <div class="horizontal-scroll">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="Question.html" title="interface in team.logica_populi.dragonscore.logic">Question</a></code></dd>
+<dd><code><a href="Question.html" title="interface in team.logica_populi.dragonscore.base.logic">Question</a></code></dd>
 </dl>
 <dl class="notes">
 <dt>Direct Known Subclasses:</dt>
-<dd><code><a href="BaseQuestion.html" title="class in team.logica_populi.dragonscore.logic">BaseQuestion</a></code>, <code><a href="TrueFalseQuestion.html" title="class in team.logica_populi.dragonscore.logic">TrueFalseQuestion</a></code></dd>
+<dd><code><a href="BaseQuestion.html" title="class in team.logica_populi.dragonscore.base.logic">BaseQuestion</a></code>, <code><a href="TrueFalseQuestion.html" title="class in team.logica_populi.dragonscore.base.logic">TrueFalseQuestion</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public abstract class </span><span class="element-name type-name-label">AbstractQuestion</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
-implements <a href="Question.html" title="interface in team.logica_populi.dragonscore.logic">Question</a></span></div>
+implements <a href="Question.html" title="interface in team.logica_populi.dragonscore.base.logic">Question</a></span></div>
 <div class="block">A basic implementation of the <code>Question</code> interface.</div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd>
 <ul class="tag-list">
-<li><a href="Question.html" title="interface in team.logica_populi.dragonscore.logic">The Question Interface</a></li>
+<li><a href="Question.html" title="interface in team.logica_populi.dragonscore.base.logic">The Question Interface</a></li>
 </ul>
 </dd>
 </dl>
@@ -129,7 +129,7 @@ implements <a href="Question.html" title="interface in team.logica_populi.dragon
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code>protected final <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="Answer.html" title="class in team.logica_populi.dragonscore.logic">Answer</a>&gt;</code></div>
+<div class="col-first even-row-color"><code>protected final <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="Answer.html" title="class in team.logica_populi.dragonscore.base.logic">Answer</a>&gt;</code></div>
 <div class="col-second even-row-color"><code><a href="#answers" class="member-name-link">answers</a></code></div>
 <div class="col-last even-row-color">
 <div class="block">THe internal List of answers for this question</div>
@@ -148,7 +148,7 @@ implements <a href="Question.html" title="interface in team.logica_populi.dragon
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>protected </code></div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.lang.String,team.logica_populi.dragonscore.logic.Answer...)" class="member-name-link">AbstractQuestion</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;question,
- <a href="Answer.html" title="class in team.logica_populi.dragonscore.logic">Answer</a>...&nbsp;answers)</code></div>
+ <a href="Answer.html" title="class in team.logica_populi.dragonscore.base.logic">Answer</a>...&nbsp;answers)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Constructor to make a question given the text, correct answer index, and the answer choices.</div>
 </div>
@@ -166,7 +166,7 @@ implements <a href="Question.html" title="interface in team.logica_populi.dragon
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="Answer.html" title="class in team.logica_populi.dragonscore.logic">Answer</a>&gt;</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="Answer.html" title="class in team.logica_populi.dragonscore.base.logic">Answer</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAnswers()" class="member-name-link">getAnswers</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Gets a List of all answers for this question.</div>
@@ -207,7 +207,7 @@ implements <a href="Question.html" title="interface in team.logica_populi.dragon
 <section class="detail" id="answers">
 <h3>answers</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">protected final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Answer.html" title="class in team.logica_populi.dragonscore.logic">Answer</a>&gt;</span>&nbsp;<span class="element-name">answers</span></div>
+<div class="member-signature"><span class="modifiers">protected final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Answer.html" title="class in team.logica_populi.dragonscore.base.logic">Answer</a>&gt;</span>&nbsp;<span class="element-name">answers</span></div>
 <div class="block">THe internal List of answers for this question</div>
 </div>
 </section>
@@ -225,7 +225,7 @@ implements <a href="Question.html" title="interface in team.logica_populi.dragon
 <h3>AbstractQuestion</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="element-name">AbstractQuestion</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;question,
- <a href="Answer.html" title="class in team.logica_populi.dragonscore.logic">Answer</a>...&nbsp;answers)</span></div>
+ <a href="Answer.html" title="class in team.logica_populi.dragonscore.base.logic">Answer</a>...&nbsp;answers)</span></div>
 <div class="block">Constructor to make a question given the text, correct answer index, and the answer choices.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -252,7 +252,7 @@ implements <a href="Question.html" title="interface in team.logica_populi.dragon
 <div class="block">Gets the question text.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="Question.html#getQuestion()">getQuestion</a></code>&nbsp;in interface&nbsp;<code><a href="Question.html" title="interface in team.logica_populi.dragonscore.logic">Question</a></code></dd>
+<dd><code><a href="Question.html#getQuestion()">getQuestion</a></code>&nbsp;in interface&nbsp;<code><a href="Question.html" title="interface in team.logica_populi.dragonscore.base.logic">Question</a></code></dd>
 <dt>Returns:</dt>
 <dd>The text of the question</dd>
 </dl>
@@ -276,12 +276,12 @@ implements <a href="Question.html" title="interface in team.logica_populi.dragon
 <section class="detail" id="getAnswers()">
 <h3>getAnswers</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Answer.html" title="class in team.logica_populi.dragonscore.logic">Answer</a>&gt;</span>&nbsp;<span class="element-name">getAnswers</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Answer.html" title="class in team.logica_populi.dragonscore.base.logic">Answer</a>&gt;</span>&nbsp;<span class="element-name">getAnswers</span>()</div>
 <div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="Question.html#getAnswers()">Question</a></code></span></div>
 <div class="block">Gets a List of all answers for this question.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="Question.html#getAnswers()">getAnswers</a></code>&nbsp;in interface&nbsp;<code><a href="Question.html" title="interface in team.logica_populi.dragonscore.logic">Question</a></code></dd>
+<dd><code><a href="Question.html#getAnswers()">getAnswers</a></code>&nbsp;in interface&nbsp;<code><a href="Question.html" title="interface in team.logica_populi.dragonscore.base.logic">Question</a></code></dd>
 <dt>Returns:</dt>
 <dd>The answers for this question</dd>
 </dl>

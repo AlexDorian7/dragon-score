@@ -4,9 +4,9 @@ import org.jetbrains.annotations.Nullable;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import team.logica_populi.dragonscore.base.registries.QuestionGeneratorRegistry;
-import team.logica_populi.dragonscore.logic.BaseQuestion;
-import team.logica_populi.dragonscore.logic.Question;
-import team.logica_populi.dragonscore.logic.generators.QuestionGenerator;
+import team.logica_populi.dragonscore.base.logic.BaseQuestion;
+import team.logica_populi.dragonscore.base.logic.Question;
+import team.logica_populi.dragonscore.base.logic.generators.QuestionGenerator;
 
 import java.util.ArrayList;
 import java.util.List;

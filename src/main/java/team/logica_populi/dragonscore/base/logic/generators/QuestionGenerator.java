@@ -1,6 +1,6 @@
-package team.logica_populi.dragonscore.logic.generators;
+package team.logica_populi.dragonscore.base.logic.generators;
 
-import team.logica_populi.dragonscore.logic.Question;
+import team.logica_populi.dragonscore.base.logic.Question;
 
 /**
  * Every question generator should implement this interface.
