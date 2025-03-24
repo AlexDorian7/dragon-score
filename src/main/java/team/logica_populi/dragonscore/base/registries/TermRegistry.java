@@ -78,6 +78,18 @@ public class TermRegistry {
     }
 
     /**
+     * Gets a random term from the registered list with given name.
+     * @param name The name of the registered list
+     * @return A random term in the list, or null if the list does not exist
+     */
+    @Nullable
+    public Term getRandomTerm(String name) {
+        List<Term> list = getTermList(name);
+        if (list == null) return null;
+        return list.get((int) (Math.random()*list.size()));
+    }
+
+    /**
      * Get the singleton instance of this class.
      * @return The instance
      */
