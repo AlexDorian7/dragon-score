@@ -15,6 +15,9 @@ public abstract class AbstractQuestion implements Question {
 
     private String question;
 
+    /**
+     * THe internal List of answers for this question
+     */
     protected final List<Answer> answers;
 
 
