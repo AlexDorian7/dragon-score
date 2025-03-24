@@ -15,6 +15,7 @@ import team.logica_populi.dragonscore.logic.generators.QuestionGenerator;
 import team.logica_populi.dragonscore.logic.generators.QuestionGeneratorRegistry;
 import team.logica_populi.dragonscore.ui.UiComponentCreator;
 import team.logica_populi.dragonscore.ui.controllers.ExampleQuestionPane;
+import team.logica_populi.dragonscore.logic.PointSystem;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -37,8 +38,12 @@ public class Main extends Application {
         // Example code to load the example lesson
         JSONObject parsed = new JSONObject(new JSONTokener(Objects.requireNonNull(Main.class.getResourceAsStream("/assets/db.example.json"))));
         Lesson parsedLesson = Lesson.loadFromJSON(parsed.getJSONArray("lessons").getJSONObject(0));
+        JSONObject psParesed = new JSONObject(new JSONTokener(Objects.requireNonNull(Main.class.getResourceAsStream("/assets/pointsystem.example.json"))));
+        PointSystem parsedPointSystem = PointSystem.loadFromJSON(psParesed.getJSONArray("lessons").getJSONObject(0));
         assert parsedLesson != null;
+        assert parsedPointSystem != null;
         logger.info(parsedLesson.toString());
+        logger.info(parsedPointSystem.toString());
 
         // Create an example question and then put it in the example window
         QuestionGenerator questionGenerator = QuestionGeneratorRegistry.getInstance().getQuestionGenerator("team.logica_populi.dragonscore.logic.generators.ExampleQuestionGenerator");

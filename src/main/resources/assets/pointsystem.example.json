@@ -2,10 +2,12 @@
   "lessons" : [
     {
       "id": "lesson_1",
+      "name": "Lesson 1",
       "total_points": 0
     },
     {
       "id": "lesson_2",
+      "name": "Lesson 2",
       "total_points": 0
     }
   ]
