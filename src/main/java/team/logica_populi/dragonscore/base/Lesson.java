@@ -169,52 +169,6 @@ public class Lesson {
         return staticQuestions.get((int) (Math.random() * staticQuestions.size()));
     }
 
-//    /**
-//     * Loads a lesson from the provided JSON object.
-//     * @param object The object to load from
-//     * @return The loaded less or null if something failed
-//     */
-//    @Nullable
-//    public static Lesson loadFromJSON(JSONObject object) {
-//        String id = object.getString("id");
-//        if (id == null || id.isEmpty()) {
-//            logger.warning("Failed to load lesson. id is empty or null.");
-//            return null;
-//        }
-//        String name = object.getString("name");
-//        if (name == null) name = "";
-//        String description = object.getString("description");
-//        if (description == null) description = "";
-//        ArrayList<Question> staticQuestions = new ArrayList<>();
-//        ArrayList<QuestionGenerator> questionGenerators = new ArrayList<>();
-//
-//        JSONArray staticQuestionArray = object.getJSONArray("staticQuestions");
-//        for (Object questionObject : staticQuestionArray) {
-//            if (!(questionObject instanceof JSONObject)) continue;
-//            Question question = BaseQuestion.loadFromJSON((JSONObject) questionObject);
-//            if (question == null) {
-//                logger.warning("Failed to load lesson. A static question failed to load.");
-//                return null;
-//            }
-//            staticQuestions.add(question);
-//        }
-//        JSONArray questionGeneratorArray = object.getJSONArray("questionGenerators");
-//        for (Object generatorObject : questionGeneratorArray) {
-//            if (!(generatorObject instanceof String generatorId)) continue;
-//            if (generatorId.isEmpty()) {
-//                logger.warning("Lesson failed to load. Generator id was empty.");
-//                return null;
-//            }
-//            QuestionGenerator generator = QuestionGeneratorRegistry.getInstance().getQuestionGenerator(generatorId);
-//            if (generator == null) {
-//                logger.warning("Lesson Failed to load. A generator failed to load.");
-//                return null;
-//            }
-//            questionGenerators.add(generator);
-//        }
-//        return new Lesson(id, name, description, staticQuestions, questionGenerators);
-//    }
-
     @Override
     public String toString() {
         return id + ": " + name + "\n> " + description + "\nStatic Questions: " + staticQuestions.size() + "\nQuestion Generators: " + questionGenerators.size();

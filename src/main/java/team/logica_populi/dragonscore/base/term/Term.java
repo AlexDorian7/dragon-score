@@ -40,33 +40,6 @@ public class Term {
         return word;
     }
 
-//    /**
-//     * Loads a term from the provided JSON object.
-//     * @param object The JSON object to load from
-//     * @return The loaded term or null on failure
-//     */
-//    @Nullable
-//    public static Term loadFromJSON(JSONObject object) {
-//        String word = object.getString("word");
-//        if (word == null || word.isEmpty()) {
-//            logger.warning("Failed to load term. Word was empty or null!");
-//            return null;
-//        }
-//        String typeS = object.getString("type");
-//        if (typeS == null || typeS.isEmpty()) {
-//            logger.warning("Failed to load term. Type was null or empty!");
-//            return null;
-//        }
-//        TermType type;
-//        try {
-//            type = TermType.valueOf(typeS);
-//        } catch (IllegalArgumentException e) {
-//            logger.warning("Failed to load term. " + typeS + " is not a valid term type!");
-//            return null;
-//        }
-//        return new Term(word, type);
-//    }
-
     @Override
     public String toString() {
         return "\"" + word + "\": " + type.toString();

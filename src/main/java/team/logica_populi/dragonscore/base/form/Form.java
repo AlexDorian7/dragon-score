@@ -80,39 +80,4 @@ public class Form {
         }
         return form1;
     }
-
-//    /**
-//     * Loads a form from the provided JSON object.
-//     * @param object The object to load from
-//     * @return The loaded form or null if something failed
-//     */
-//    @Nullable
-//    public static Form loadFromJSON(JSONObject object) {
-//        String id = object.getString("id");
-//        if (id == null || id.isEmpty()) {
-//            logger.warning("Failed to load Form. Id was null or empty!");
-//            return null;
-//        }
-//        String form = object.getString("form");
-//        if (form == null || form.isEmpty()) {
-//            logger.warning("Failed to load Form. Form was null or empty!");
-//            return null;
-//        }
-//        HashSet<FormField> fields = new HashSet<>();
-//        JSONArray fieldsArray = object.getJSONArray("fields");
-//        if (fieldsArray == null || fieldsArray.isEmpty()) {
-//            logger.warning("Failed to load Form. fields was null or empty!");
-//            return null;
-//        }
-//        for (Object obj : fieldsArray) {
-//            if (!(obj instanceof JSONObject)) continue;
-//            FormField field = FormField.loadFromJSON((JSONObject) obj);
-//            if (field == null) {
-//                logger.info("Failed to load form field for form " + id + ".");
-//            } else {
-//                fields.add(field);
-//            }
-//        }
-//        return new Form(id, form, fields);
-//    }
 }
