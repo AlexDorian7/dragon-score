@@ -1,7 +1,6 @@
 package team.logica_populi.dragonscore.base.form;
 
 import org.jetbrains.annotations.Nullable;
-import org.json.JSONObject;
 import team.logica_populi.dragonscore.base.registries.TermRegistry;
 import team.logica_populi.dragonscore.base.term.Term;
 
@@ -68,23 +67,23 @@ public class FormField {
         word = TermRegistry.getInstance().getRandomTerm(list);
     }
 
-    /**
-     * Loads a form field from the provided JSON object.
-     * @param object The object to load from
-     * @return The loaded form field or null if something failed.
-     */
-    @Nullable
-    public static FormField loadFromJSON(JSONObject object) {
-        String id = object.getString("id");
-        if (id == null || id.isEmpty()) {
-            logger.warning("Failed to load Form Field. Id was null or empty!");
-            return null;
-        }
-        String list = object.getString("list");
-        if (list == null || list.isEmpty()) {
-            logger.warning("Failed to load Form Field. List was null or empty!");
-            return null;
-        }
-        return new FormField(id, list);
-    }
+//    /**
+//     * Loads a form field from the provided JSON object.
+//     * @param object The object to load from
+//     * @return The loaded form field or null if something failed.
+//     */
+//    @Nullable
+//    public static FormField loadFromJSON(JSONObject object) {
+//        String id = object.getString("id");
+//        if (id == null || id.isEmpty()) {
+//            logger.warning("Failed to load Form Field. Id was null or empty!");
+//            return null;
+//        }
+//        String list = object.getString("list");
+//        if (list == null || list.isEmpty()) {
+//            logger.warning("Failed to load Form Field. List was null or empty!");
+//            return null;
+//        }
+//        return new FormField(id, list);
+//    }
 }

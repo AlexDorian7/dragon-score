@@ -5,11 +5,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.util.Pair;
-import org.json.JSONObject;
-import org.json.JSONTokener;
-import team.logica_populi.dragonscore.base.Lesson;
-import team.logica_populi.dragonscore.base.form.Form;
-import team.logica_populi.dragonscore.base.registries.TermRegistry;
+import team.logica_populi.dragonscore.base.registries.JsonRegistry;
 import team.logica_populi.dragonscore.base.logic.Question;
 import team.logica_populi.dragonscore.base.logic.generators.QuestionGenerator;
 import team.logica_populi.dragonscore.base.registries.QuestionGeneratorRegistry;
@@ -18,7 +14,6 @@ import team.logica_populi.dragonscore.ui.controllers.ExampleQuestionPane;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Objects;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
@@ -35,20 +30,20 @@ public class Main extends Application {
         Pair<Parent, ExampleQuestionPane> pair = UiComponentCreator.createExampleQuestionPane();
 
         // Example code to load the example lesson
-        JSONObject parsed = new JSONObject(new JSONTokener(Objects.requireNonNull(Main.class.getResourceAsStream("/assets/db.example.json"))));
-        Lesson parsedLesson = Lesson.loadFromJSON(parsed.getJSONArray("lessons").getJSONObject(0));
-        assert parsedLesson != null;
-        logger.info(parsedLesson.toString());
-
-        TermRegistry.getInstance().loadTermLists(parsed.getJSONObject("terms"));
-        logger.info(TermRegistry.getInstance().toString());
-
-        Form form = Form.loadFromJSON(parsed.getJSONArray("forms").getJSONObject(0));
-        if (form != null) {
-            logger.info(form.toString());
-            form.setFields();
-            logger.info(form.toString());
-        }
+//        JSONObject parsed = new JSONObject(new JSONTokener(Objects.requireNonNull(Main.class.getResourceAsStream("/assets/db.example.json"))));
+//        Lesson parsedLesson = Lesson.loadFromJSON(parsed.getJSONArray("lessons").getJSONObject(0));
+//        assert parsedLesson != null;
+//        logger.info(parsedLesson.toString());
+//
+//        TermRegistry.getInstance().loadTermLists(parsed.getJSONObject("terms"));
+//        logger.info(TermRegistry.getInstance().toString());
+//
+//        Form form = Form.loadFromJSON(parsed.getJSONArray("forms").getJSONObject(0));
+//        if (form != null) {
+//            logger.info(form.toString());
+//            form.setFields();
+//            logger.info(form.toString());
+//        }
 
         // Create an example question and then put it in the example window
         QuestionGenerator questionGenerator = QuestionGeneratorRegistry.getInstance().getQuestionGenerator("team.logica_populi.dragonscore.base.logic.generators.ExampleQuestionGenerator");
@@ -59,9 +54,9 @@ public class Main extends Application {
 
         logger.info(questionGenerator.getId());
 
-        pair.getValue().setCallback(() -> {
-            pair.getValue().setQuestion(parsedLesson.getNextQuestion());
-        });
+//        pair.getValue().setCallback(() -> {
+//            pair.getValue().setQuestion(parsedLesson.getNextQuestion());
+//        });
         pair.getValue().setQuestion(nextQuestion);
 
         Scene scene = new Scene(pair.getKey(), 600, 400);
@@ -86,6 +81,8 @@ public class Main extends Application {
             logger = Logger.getLogger(Main.class.getName());
             logger.warning("Failed to load logging.properties");
         }
+
+        JsonRegistry.getInstance();
 
         launch(args); // Tell JavaFX to launch
     }
