@@ -30,7 +30,7 @@ public class Term {
      *
      * @return The term Type
      */
-    TermType getTermType() {
+    public TermType getTermType() {
         return type;
     }
 
@@ -39,7 +39,7 @@ public class Term {
      *
      * @return The word for this term
      */
-    String getWord() {
+    public String getWord() {
         return word;
     }
 

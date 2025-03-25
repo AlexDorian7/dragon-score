@@ -1,8 +1,10 @@
 module:team.logica_populi.dragonscore
 team.logica_populi.dragonscore
 team.logica_populi.dragonscore.base
+team.logica_populi.dragonscore.base.form
 team.logica_populi.dragonscore.base.logic
 team.logica_populi.dragonscore.base.logic.generators
 team.logica_populi.dragonscore.base.registries
+team.logica_populi.dragonscore.base.term
 team.logica_populi.dragonscore.ui
 team.logica_populi.dragonscore.ui.controllers
