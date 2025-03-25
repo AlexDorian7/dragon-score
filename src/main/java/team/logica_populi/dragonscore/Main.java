@@ -14,7 +14,7 @@ import team.logica_populi.dragonscore.base.logic.generators.QuestionGenerator;
 import team.logica_populi.dragonscore.base.registries.QuestionGeneratorRegistry;
 import team.logica_populi.dragonscore.ui.UiComponentCreator;
 import team.logica_populi.dragonscore.ui.controllers.ExampleQuestionPane;
-import team.logica_populi.dragonscore.logic.PointSystem;
+import team.logica_populi.dragonscore.base.PointSystem;
 
 import java.io.IOException;
 import java.io.InputStream;
