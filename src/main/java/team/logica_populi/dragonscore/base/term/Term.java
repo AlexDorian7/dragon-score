@@ -1,4 +1,4 @@
-package team.logica_populi.dragonscore.base;
+package team.logica_populi.dragonscore.base.term;
 
 import org.jetbrains.annotations.Nullable;
 import org.json.JSONObject;

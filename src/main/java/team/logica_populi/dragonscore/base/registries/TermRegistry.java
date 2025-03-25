@@ -3,7 +3,7 @@ package team.logica_populi.dragonscore.base.registries;
 import org.jetbrains.annotations.Nullable;
 import org.json.JSONArray;
 import org.json.JSONObject;
-import team.logica_populi.dragonscore.base.Term;
+import team.logica_populi.dragonscore.base.term.Term;
 
 import java.util.ArrayList;
 import java.util.HashMap;
