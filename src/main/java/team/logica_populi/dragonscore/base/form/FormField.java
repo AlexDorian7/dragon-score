@@ -1,14 +1,19 @@
 package team.logica_populi.dragonscore.base.form;
 
 import org.jetbrains.annotations.Nullable;
+import org.json.JSONObject;
 import team.logica_populi.dragonscore.base.registries.TermRegistry;
 import team.logica_populi.dragonscore.base.term.Term;
+
+import java.util.logging.Logger;
 
 /**
  * A form Field is a placeholder for a word inside a form.
  * It can be filled with a random word from a loaded term list.
  */
 public class FormField {
+    private static final Logger logger = Logger.getLogger(FormField.class.getName());
+
     private final String id;
     private final String list;
 
@@ -61,5 +66,25 @@ public class FormField {
      */
     public void pickWord() {
         word = TermRegistry.getInstance().getRandomTerm(list);
+    }
+
+    /**
+     * Loads a form field from the provided JSON object.
+     * @param object The object to load from
+     * @return The loaded form field or null if something failed.
+     */
+    @Nullable
+    public static FormField loadFromJSON(JSONObject object) {
+        String id = object.getString("id");
+        if (id == null || id.isEmpty()) {
+            logger.warning("Failed to load Form Field. Id was null or empty!");
+            return null;
+        }
+        String list = object.getString("list");
+        if (list == null || list.isEmpty()) {
+            logger.warning("Failed to load Form Field. List was null or empty!");
+            return null;
+        }
+        return new FormField(id, list);
     }
 }
