@@ -8,6 +8,9 @@ import team.logica_populi.dragonscore.ui.controllers.ExampleQuestionPane;
 import java.io.IOException;
 import java.util.logging.Logger;
 
+/**
+ * A static class that is used to help create and demo how to create FXML components
+ */
 public class UiComponentCreator {
     private static final Logger logger = Logger.getLogger(UiComponentCreator.class.getName());
 

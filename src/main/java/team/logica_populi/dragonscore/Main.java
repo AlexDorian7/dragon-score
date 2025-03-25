@@ -7,12 +7,11 @@ import javafx.stage.Stage;
 import javafx.util.Pair;
 import org.json.JSONObject;
 import org.json.JSONTokener;
-import team.logica_populi.dragonscore.logic.BaseQuestion;
-import team.logica_populi.dragonscore.logic.Lesson;
-import team.logica_populi.dragonscore.logic.Question;
-import team.logica_populi.dragonscore.logic.generators.ExampleQuestionGenerator;
-import team.logica_populi.dragonscore.logic.generators.QuestionGenerator;
-import team.logica_populi.dragonscore.logic.generators.QuestionGeneratorRegistry;
+import team.logica_populi.dragonscore.base.Lesson;
+import team.logica_populi.dragonscore.base.registries.TermRegistry;
+import team.logica_populi.dragonscore.base.logic.Question;
+import team.logica_populi.dragonscore.base.logic.generators.QuestionGenerator;
+import team.logica_populi.dragonscore.base.registries.QuestionGeneratorRegistry;
 import team.logica_populi.dragonscore.ui.UiComponentCreator;
 import team.logica_populi.dragonscore.ui.controllers.ExampleQuestionPane;
 import team.logica_populi.dragonscore.logic.PointSystem;
@@ -45,8 +44,11 @@ public class Main extends Application {
         logger.info(parsedLesson.toString());
         logger.info(parsedPointSystem.toString());
 
+        TermRegistry.getInstance().loadTermLists(parsed.getJSONObject("terms"));
+        logger.info(TermRegistry.getInstance().toString());
+
         // Create an example question and then put it in the example window
-        QuestionGenerator questionGenerator = QuestionGeneratorRegistry.getInstance().getQuestionGenerator("team.logica_populi.dragonscore.logic.generators.ExampleQuestionGenerator");
+        QuestionGenerator questionGenerator = QuestionGeneratorRegistry.getInstance().getQuestionGenerator("team.logica_populi.dragonscore.base.logic.generators.ExampleQuestionGenerator");
         if (questionGenerator == null) {
             throw new IllegalStateException("Question generator is null");
         }
@@ -66,6 +68,10 @@ public class Main extends Application {
 
     }
 
+    /**
+     * The main entry point to the program. Currently, this contains a lot of debug and example code.
+     * @param args The command line args
+     */
     public static void main(String[] args) {
         // Set up the logger
         try {

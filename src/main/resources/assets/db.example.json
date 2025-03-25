@@ -3,11 +3,11 @@
     "nouns_s": [
       {
         "word": "The car",
-        "type": 0
+        "type": "NOUN_S"
       },
       {
         "word": "Person",
-        "type": 0
+        "type": "NOUN_S"
       }
     ]
   },
@@ -17,7 +17,7 @@
       "name": "Lesson 1",
       "description": "Lesson 1 description",
       "questionGenerators": [
-        "team.logica_populi.dragonscore.logic.generators.ExampleQuestionGenerator"
+        "team.logica_populi.dragonscore.base.logic.generators.ExampleQuestionGenerator"
       ],
       "staticQuestions": [
         {
@@ -71,11 +71,11 @@
       "fields": [
         {
           "id": "noun_1",
-          "type": 0
+          "list": "nouns_s"
         },
         {
           "id": "noun_2",
-          "type": 0
+          "list": "nouns_s"
         }
       ],
       "form": "${noun_1} is ${noun_2}."
