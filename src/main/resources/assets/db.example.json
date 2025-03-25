@@ -71,11 +71,11 @@
       "fields": [
         {
           "id": "noun_1",
-          "type": 0
+          "list": "nouns_s"
         },
         {
           "id": "noun_2",
-          "type": 0
+          "list": "nouns_s"
         }
       ],
       "form": "${noun_1} is ${noun_2}."
