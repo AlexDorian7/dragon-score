@@ -4,7 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
-import team.logica_populi.dragonscore.logic.Question;
+import team.logica_populi.dragonscore.base.logic.Question;
 
 /**
  * FXML Controller for /assets/views/ExampleQuestionPane.fxml
