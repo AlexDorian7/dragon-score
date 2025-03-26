@@ -8,9 +8,6 @@ import javafx.util.Pair;
 import team.logica_populi.dragonscore.base.DataFile;
 import team.logica_populi.dragonscore.base.Lesson;
 import team.logica_populi.dragonscore.base.registries.JsonRegistry;
-import team.logica_populi.dragonscore.base.logic.Question;
-import team.logica_populi.dragonscore.base.logic.generators.QuestionGenerator;
-import team.logica_populi.dragonscore.base.registries.QuestionGeneratorRegistry;
 import team.logica_populi.dragonscore.ui.UiComponentCreator;
 import team.logica_populi.dragonscore.ui.controllers.ExampleQuestionPane;
 
@@ -39,23 +36,13 @@ public class Main extends Application {
     public void start(Stage stage) throws Exception {
         Pair<Parent, ExampleQuestionPane> pair = UiComponentCreator.createExampleQuestionPane();
 
-        DataFile dataFile = JsonRegistry.getInstance().loadDataFile(Objects.requireNonNull(getClass().getResourceAsStream("/assets/db.example.json")));
+        DataFile dataFile = JsonRegistry.getInstance().loadDataFile(Objects.requireNonNull(getClass().getResourceAsStream("/data/lessons/syllogistic_translations.json")));
         Lesson lesson = dataFile.getLessons().getFirst();
-
-
-        // Create an example question and then put it in the example window
-        QuestionGenerator questionGenerator = QuestionGeneratorRegistry.getInstance().getQuestionGenerator("team.logica_populi.dragonscore.base.logic.generators.ExampleQuestionGenerator");
-        if (questionGenerator == null) {
-            throw new IllegalStateException("Question generator is null");
-        }
-        Question nextQuestion = questionGenerator.getNextQuestion();
-
-        logger.info(questionGenerator.getId());
 
         pair.getValue().setCallback(() -> {
             pair.getValue().setQuestion(lesson.getNextQuestion());
         });
-        pair.getValue().setQuestion(nextQuestion);
+        pair.getValue().setQuestion(lesson.getNextQuestion());
 
         Scene scene = new Scene(pair.getKey(), 600, 400);
         stage.setScene(scene);

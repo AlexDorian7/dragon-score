@@ -2,22 +2,15 @@ package team.logica_populi.dragonscore.base.registries;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import org.jetbrains.annotations.Nullable;
 import team.logica_populi.dragonscore.base.DataFile;
-import team.logica_populi.dragonscore.base.Lesson;
 import team.logica_populi.dragonscore.base.form.Form;
-import team.logica_populi.dragonscore.base.form.FormField;
-import team.logica_populi.dragonscore.base.json.AnswerDeserializer;
-import team.logica_populi.dragonscore.base.json.AnswerSerializer;
-import team.logica_populi.dragonscore.base.json.QuestionGeneratorDeserializer;
-import team.logica_populi.dragonscore.base.json.QuestionGeneratorSerializer;
+import team.logica_populi.dragonscore.base.json.*;
 import team.logica_populi.dragonscore.base.logic.Answer;
-import team.logica_populi.dragonscore.base.logic.generators.ExampleQuestionGenerator;
 import team.logica_populi.dragonscore.base.logic.generators.QuestionGenerator;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.logging.Logger;
 
 /**
@@ -33,6 +26,8 @@ public class JsonRegistry {
 
     private final GsonBuilder builder;
 
+    private DataFile dataFile;
+
     /**
      * Constructor to set up Gson and register helpers for it.
      */
@@ -42,6 +37,8 @@ public class JsonRegistry {
         builder.registerTypeAdapter(Answer.class, new AnswerDeserializer());
         builder.registerTypeAdapter(QuestionGenerator.class, new QuestionGeneratorSerializer());
         builder.registerTypeAdapter(QuestionGenerator.class, new QuestionGeneratorDeserializer());
+        builder.registerTypeAdapter(Form.class, new FormSerializer());
+        builder.registerTypeAdapter(Form.class, new FormDeserializer());
 
         gson = builder.create();
 
@@ -58,7 +55,7 @@ public class JsonRegistry {
 //
 //        String json = null;
 //        try {
-//            json = new String(getClass().getResourceAsStream("/assets/db.example.json").readAllBytes());
+//            json = new String(getClass().getResourceAsStream("/assets/db.syllogistic_translations.json").readAllBytes());
 //        } catch (IOException e) {
 //            throw new RuntimeException(e);
 //        }
@@ -96,7 +93,7 @@ public class JsonRegistry {
      * Loads a data file from the provided input stream.
      * The provided data must be valid data file JSON.
      * @param stream The stream to load from
-     * @return The loaded data file
+     * @return The loaded {@link DataFile}
      */
     public DataFile loadDataFile(InputStream stream) {
         try {
@@ -109,11 +106,20 @@ public class JsonRegistry {
     /**
      * Loads a data file from the provided JSON data.
      * @param data The JSON data to load
-     * @return The loaded data file
+     * @return The loaded {@link DataFile}
      */
     public DataFile loadDataFile(String data) {
-        DataFile dataFile = gson.fromJson(data, DataFile.class);
+        dataFile = gson.fromJson(data, DataFile.class);
         TermRegistry.getInstance().loadDataFile(dataFile);
+        return dataFile;
+    }
+
+    /**
+     * Gets the currently loaded {@link DataFile}.
+     * @return The loaded data file, or null if none have been loaded.
+     */
+    @Nullable
+    public DataFile getDataFile() {
         return dataFile;
     }
 }
