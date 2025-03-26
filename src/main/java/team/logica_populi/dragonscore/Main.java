@@ -5,6 +5,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.util.Pair;
+import team.logica_populi.dragonscore.base.DataFile;
+import team.logica_populi.dragonscore.base.Lesson;
 import team.logica_populi.dragonscore.base.registries.JsonRegistry;
 import team.logica_populi.dragonscore.base.logic.Question;
 import team.logica_populi.dragonscore.base.logic.generators.QuestionGenerator;
@@ -14,36 +16,32 @@ import team.logica_populi.dragonscore.ui.controllers.ExampleQuestionPane;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Objects;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
 /**
  * This is the main entrypoint to the application.
- * For now all this does is create a example window
+ * This code sets up the logger and other required systems as well as providing some example code.
+ * @see Main#start(Stage)
  */
 public class Main extends Application {
 
     private static Logger logger;
 
+    /**
+     * JavaFX Start Method.
+     * Currently, this contains mostly example code.
+     * @param stage The default stage created by JavaFX for us
+     * @throws Exception Any exception thrown by our code to be sent back to JavaFX
+     */
     @Override
     public void start(Stage stage) throws Exception {
         Pair<Parent, ExampleQuestionPane> pair = UiComponentCreator.createExampleQuestionPane();
 
-        // Example code to load the example lesson
-//        JSONObject parsed = new JSONObject(new JSONTokener(Objects.requireNonNull(Main.class.getResourceAsStream("/assets/db.example.json"))));
-//        Lesson parsedLesson = Lesson.loadFromJSON(parsed.getJSONArray("lessons").getJSONObject(0));
-//        assert parsedLesson != null;
-//        logger.info(parsedLesson.toString());
-//
-//        TermRegistry.getInstance().loadTermLists(parsed.getJSONObject("terms"));
-//        logger.info(TermRegistry.getInstance().toString());
-//
-//        Form form = Form.loadFromJSON(parsed.getJSONArray("forms").getJSONObject(0));
-//        if (form != null) {
-//            logger.info(form.toString());
-//            form.setFields();
-//            logger.info(form.toString());
-//        }
+        DataFile dataFile = JsonRegistry.getInstance().loadDataFile(Objects.requireNonNull(getClass().getResourceAsStream("/assets/db.example.json")));
+        Lesson lesson = dataFile.getLessons().getFirst();
+
 
         // Create an example question and then put it in the example window
         QuestionGenerator questionGenerator = QuestionGeneratorRegistry.getInstance().getQuestionGenerator("team.logica_populi.dragonscore.base.logic.generators.ExampleQuestionGenerator");
@@ -54,9 +52,9 @@ public class Main extends Application {
 
         logger.info(questionGenerator.getId());
 
-//        pair.getValue().setCallback(() -> {
-//            pair.getValue().setQuestion(parsedLesson.getNextQuestion());
-//        });
+        pair.getValue().setCallback(() -> {
+            pair.getValue().setQuestion(lesson.getNextQuestion());
+        });
         pair.getValue().setQuestion(nextQuestion);
 
         Scene scene = new Scene(pair.getKey(), 600, 400);
@@ -67,7 +65,8 @@ public class Main extends Application {
     }
 
     /**
-     * The main entry point to the program. Currently, this contains a lot of debug and example code.
+     * The main entry point to the program.
+     * This code sets up the logger properties and then starts JavaFX.
      * @param args The command line args
      */
     public static void main(String[] args) {
@@ -81,8 +80,6 @@ public class Main extends Application {
             logger = Logger.getLogger(Main.class.getName());
             logger.warning("Failed to load logging.properties");
         }
-
-        JsonRegistry.getInstance();
 
         launch(args); // Tell JavaFX to launch
     }

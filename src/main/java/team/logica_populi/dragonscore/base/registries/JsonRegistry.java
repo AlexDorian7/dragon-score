@@ -15,7 +15,7 @@ import team.logica_populi.dragonscore.base.logic.generators.ExampleQuestionGener
 import team.logica_populi.dragonscore.base.logic.generators.QuestionGenerator;
 
 import java.io.IOException;
-import java.lang.reflect.Array;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.logging.Logger;
@@ -45,26 +45,27 @@ public class JsonRegistry {
 
         gson = builder.create();
 
-        // TEST CODE BELOW
-        logger.info(gson.toJson(new ExampleQuestionGenerator().getNextQuestion()));
-        ArrayList<QuestionGenerator> list = new ArrayList<>();
-        list.add(new ExampleQuestionGenerator());
-        logger.info(gson.toJson(new Lesson("test", "Test", "Hello World", new ArrayList<>(), list)));
-        FormField field1 = new FormField("n1", "nl");
-        HashSet<FormField> fields = new HashSet<>();
-        fields.add(field1);
-        Form form = new Form("form1", "${n1}", fields);
-        logger.info(gson.toJson(form));
-
-        String json = null;
-        try {
-            json = new String(getClass().getResourceAsStream("/assets/db.example.json").readAllBytes());
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        logger.info(json);
-        DataFile dataFile = gson.fromJson(json, DataFile.class);
-        logger.info(gson.toJson(dataFile));
+//        // TEST CODE BELOW
+//        logger.info(gson.toJson(new ExampleQuestionGenerator().getNextQuestion()));
+//        ArrayList<QuestionGenerator> list = new ArrayList<>();
+//        list.add(new ExampleQuestionGenerator());
+//        logger.info(gson.toJson(new Lesson("test", "Test", "Hello World", new ArrayList<>(), list)));
+//        FormField field1 = new FormField("n1", "nl");
+//        HashSet<FormField> fields = new HashSet<>();
+//        fields.add(field1);
+//        Form form = new Form("form1", "${n1}", fields);
+//        logger.info(gson.toJson(form));
+//
+//        String json = null;
+//        try {
+//            json = new String(getClass().getResourceAsStream("/assets/db.example.json").readAllBytes());
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
+//        logger.info(json);
+//        DataFile dataFile = gson.fromJson(json, DataFile.class);
+//        logger.info(gson.toJson(dataFile));
+//        // END TEST CODE
     }
 
     /**
@@ -89,5 +90,30 @@ public class JsonRegistry {
      */
     public Gson getGson() {
         return gson;
+    }
+
+    /**
+     * Loads a data file from the provided input stream.
+     * The provided data must be valid data file JSON.
+     * @param stream The stream to load from
+     * @return The loaded data file
+     */
+    public DataFile loadDataFile(InputStream stream) {
+        try {
+            return loadDataFile(new String(stream.readAllBytes()));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    /**
+     * Loads a data file from the provided JSON data.
+     * @param data The JSON data to load
+     * @return The loaded data file
+     */
+    public DataFile loadDataFile(String data) {
+        DataFile dataFile = gson.fromJson(data, DataFile.class);
+        TermRegistry.getInstance().loadDataFile(dataFile);
+        return dataFile;
     }
 }
