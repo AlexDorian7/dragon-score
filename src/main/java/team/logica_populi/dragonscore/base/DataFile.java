@@ -19,8 +19,9 @@ public class DataFile {
      * @param terms The term lists for this data file
      * @param lessons The lessons for this data file
      * @param forms the forms for this data file
+     * @see team.logica_populi.dragonscore.base.registries.JsonRegistry#loadDataFile(String) 
      */
-    public DataFile(HashMap<String, List<Term>> terms, List<Lesson> lessons, List<Form> forms) {
+    private DataFile(HashMap<String, List<Term>> terms, List<Lesson> lessons, List<Form> forms) {
         this.terms = terms;
         this.lessons = lessons;
         this.forms = forms;
