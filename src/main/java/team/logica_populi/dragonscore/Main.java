@@ -10,6 +10,7 @@ import team.logica_populi.dragonscore.base.Lesson;
 import team.logica_populi.dragonscore.base.registries.JsonRegistry;
 import team.logica_populi.dragonscore.ui.UiComponentCreator;
 import team.logica_populi.dragonscore.ui.controllers.ExampleQuestionPane;
+import team.logica_populi.dragonscore.base.PointSystem;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -38,7 +39,6 @@ public class Main extends Application {
 
         DataFile dataFile = JsonRegistry.getInstance().loadDataFile(Objects.requireNonNull(getClass().getResourceAsStream("/data/lessons/syllogistic_translations.json")));
         Lesson lesson = dataFile.getLessons().getFirst();
-
         pair.getValue().setCallback(() -> {
             pair.getValue().setQuestion(lesson.getNextQuestion());
         });
