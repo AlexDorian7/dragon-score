@@ -17,6 +17,7 @@ public class PointSystem {
         this(id, "", selected_points, 0);
     }
 
+
     public PointSystem(String id, String name, int selected_points, int current_points){
         this.id = id;
         this.name = name;

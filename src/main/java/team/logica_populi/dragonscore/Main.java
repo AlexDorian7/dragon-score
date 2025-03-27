@@ -37,7 +37,7 @@ public class Main extends Application {
     public void start(Stage stage) throws Exception {
         Pair<Parent, ExampleQuestionPane> pair = UiComponentCreator.createExampleQuestionPane();
 
-        DataFile dataFile = JsonRegistry.getInstance().loadDataFile(Objects.requireNonNull(getClass().getResourceAsStream("/data/lessons/syllogistic_translations.json")));
+        DataFile dataFile = JsonRegistry.getInstance().loadDataFile(Objects.requireNonNull(getClass().getResourceAsStream("/data/lessons/syllogistic_translations.json")), true);
         Lesson lesson = dataFile.getLessons().getFirst();
         pair.getValue().setCallback(() -> {
             pair.getValue().setQuestion(lesson.getNextQuestion());
