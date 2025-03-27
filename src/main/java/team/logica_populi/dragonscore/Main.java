@@ -5,13 +5,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.util.Pair;
-import org.json.JSONObject;
-import org.json.JSONTokener;
+import team.logica_populi.dragonscore.base.DataFile;
 import team.logica_populi.dragonscore.base.Lesson;
-import team.logica_populi.dragonscore.base.registries.TermRegistry;
-import team.logica_populi.dragonscore.base.logic.Question;
-import team.logica_populi.dragonscore.base.logic.generators.QuestionGenerator;
-import team.logica_populi.dragonscore.base.registries.QuestionGeneratorRegistry;
+import team.logica_populi.dragonscore.base.registries.JsonRegistry;
 import team.logica_populi.dragonscore.ui.UiComponentCreator;
 import team.logica_populi.dragonscore.ui.controllers.ExampleQuestionPane;
 import team.logica_populi.dragonscore.base.PointSystem;
@@ -24,42 +20,29 @@ import java.util.logging.Logger;
 
 /**
  * This is the main entrypoint to the application.
- * For now all this does is create a example window
+ * This code sets up the logger and other required systems as well as providing some example code.
+ * @see Main#start(Stage)
  */
 public class Main extends Application {
 
     private static Logger logger;
 
+    /**
+     * JavaFX Start Method.
+     * Currently, this contains mostly example code.
+     * @param stage The default stage created by JavaFX for us
+     * @throws Exception Any exception thrown by our code to be sent back to JavaFX
+     */
     @Override
     public void start(Stage stage) throws Exception {
         Pair<Parent, ExampleQuestionPane> pair = UiComponentCreator.createExampleQuestionPane();
 
-        // Example code to load the example lesson
-        JSONObject parsed = new JSONObject(new JSONTokener(Objects.requireNonNull(Main.class.getResourceAsStream("/assets/db.example.json"))));
-        Lesson parsedLesson = Lesson.loadFromJSON(parsed.getJSONArray("lessons").getJSONObject(0));
-        JSONObject psParsed = new JSONObject(new JSONTokener(Objects.requireNonNull(Main.class.getResourceAsStream("/assets/pointsystem.example.json"))));
-        PointSystem parsedPointSystem = PointSystem.loadFromJSON(psParsed.getJSONArray("lessons").getJSONObject(0));
-        assert parsedLesson != null;
-        assert parsedPointSystem != null;
-        logger.info(parsedLesson.toString());
-        logger.info(parsedPointSystem.toString());
-
-        TermRegistry.getInstance().loadTermLists(parsed.getJSONObject("terms"));
-        logger.info(TermRegistry.getInstance().toString());
-
-        // Create an example question and then put it in the example window
-        QuestionGenerator questionGenerator = QuestionGeneratorRegistry.getInstance().getQuestionGenerator("team.logica_populi.dragonscore.base.logic.generators.ExampleQuestionGenerator");
-        if (questionGenerator == null) {
-            throw new IllegalStateException("Question generator is null");
-        }
-        Question nextQuestion = questionGenerator.getNextQuestion();
-
-        logger.info(questionGenerator.getId());
-
+        DataFile dataFile = JsonRegistry.getInstance().loadDataFile(Objects.requireNonNull(getClass().getResourceAsStream("/data/lessons/syllogistic_translations.json")));
+        Lesson lesson = dataFile.getLessons().getFirst();
         pair.getValue().setCallback(() -> {
-            pair.getValue().setQuestion(parsedLesson.getNextQuestion());
+            pair.getValue().setQuestion(lesson.getNextQuestion());
         });
-        pair.getValue().setQuestion(nextQuestion);
+        pair.getValue().setQuestion(lesson.getNextQuestion());
 
         Scene scene = new Scene(pair.getKey(), 600, 400);
         stage.setScene(scene);
@@ -69,7 +52,8 @@ public class Main extends Application {
     }
 
     /**
-     * The main entry point to the program. Currently, this contains a lot of debug and example code.
+     * The main entry point to the program.
+     * This code sets up the logger properties and then starts JavaFX.
      * @param args The command line args
      */
     public static void main(String[] args) {
