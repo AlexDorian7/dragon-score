@@ -40,7 +40,7 @@ public class Main extends Application {
     public void start(Stage stage) throws Exception {
         Pair<Parent, DefinitionsExampleController> pair = UiComponentCreator.createDefinitionExamplePane();
 
-        DataFile dataFile = JsonRegistry.getInstance().loadDataFile(Objects.requireNonNull(getClass().getResourceAsStream("/data/lessons/syllogistic_translations.json")), true);
+        DataFile dataFile = JsonRegistry.getInstance().loadDataFile(Objects.requireNonNull(getClass().getResourceAsStream("/data/lessons/definitions.json")), true);
         Lesson lesson = dataFile.getLessons().getFirst();
         pair.getValue().setSubmitCallback((List<Answer> selectedAnswers) -> {
             pair.getValue().setQuestion(lesson.getNextQuestion());
