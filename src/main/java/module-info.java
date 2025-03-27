@@ -20,4 +20,5 @@ module team.logica_populi.dragonscore {
     opens team.logica_populi.dragonscore.base.form to com.google.gson;
     opens team.logica_populi.dragonscore.base.term to com.google.gson;
     exports team.logica_populi.dragonscore;
+    opens team.logica_populi.dragonscore.base.points to com.google.gson;
 }
