@@ -1,4 +1,4 @@
-package team.logica_populi.javafxdemo.ui.controllers;
+package team.logica_populi.dragonscore.ui.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -6,14 +6,14 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.layout.HBox;
-import team.logica_populi.dragonscore.logic.Answer;
-import team.logica_populi.dragonscore.logic.Question;
+import team.logica_populi.dragonscore.base.logic.Answer;
+import team.logica_populi.dragonscore.base.logic.Question;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
 
-public class DefinitionsExample {
+public class DefinitionsExampleController {
     @FXML
     public Label questionArea;
     @FXML
