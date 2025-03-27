@@ -1,9 +1,5 @@
 package team.logica_populi.dragonscore.base;
 
-import org.jetbrains.annotations.Nullable;
-import org.json.JSONArray;
-import org.json.JSONObject;
-import team.logica_populi.dragonscore.base.registries.QuestionGeneratorRegistry;
 import team.logica_populi.dragonscore.base.logic.BaseQuestion;
 import team.logica_populi.dragonscore.base.logic.Question;
 import team.logica_populi.dragonscore.base.logic.generators.QuestionGenerator;
@@ -22,7 +18,7 @@ public class Lesson {
     private final String id;
     private String name;
     private String description;
-    private final List<Question> staticQuestions;
+    private final List<BaseQuestion> staticQuestions;
     private final List<QuestionGenerator> questionGenerators;
 
     /**
@@ -45,12 +41,23 @@ public class Lesson {
     }
 
     /**
+     * Create a lesson using only an internal id, a name, and a description.
+     * The description will be an empty string.
+     * @param id The lesson's id
+     * @param name The lesson's name
+     * @param description The lesson's description
+     */
+    public Lesson(String id, String name, String description) {
+        this(id, name, description, new ArrayList<>(), new ArrayList<>());
+    }
+
+    /**
      * Create a lesson using an internal id and lists for static questions and question generators.
      * @param id The lesson's id
      * @param staticQuestions The static questions assigned to this lesson
      * @param questionGenerators The question generators assigned to this lesson
      */
-    public Lesson(String id, List<Question> staticQuestions, List<QuestionGenerator> questionGenerators) {
+    public Lesson(String id, List<BaseQuestion> staticQuestions, List<QuestionGenerator> questionGenerators) {
         this(id, "", "", staticQuestions, questionGenerators);
     }
 
@@ -61,7 +68,7 @@ public class Lesson {
      * @param staticQuestions The static questions assigned to this lesson
      * @param questionGenerators The question generators assigned to this lesson
      */
-    public Lesson(String id, String name, List<Question> staticQuestions, List<QuestionGenerator> questionGenerators) {
+    public Lesson(String id, String name, List<BaseQuestion> staticQuestions, List<QuestionGenerator> questionGenerators) {
         this(id, name, "", staticQuestions, questionGenerators);
     }
 
@@ -73,7 +80,7 @@ public class Lesson {
      * @param staticQuestions The static questions assigned to this lesson
      * @param questionGenerators The question generators assigned to this lesson
      */
-    public Lesson(String id, String name, String description, List<Question> staticQuestions, List<QuestionGenerator> questionGenerators) {
+    public Lesson(String id, String name, String description, List<BaseQuestion> staticQuestions, List<QuestionGenerator> questionGenerators) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -125,7 +132,7 @@ public class Lesson {
      * Get the list of static questions assigned to this lesson.
      * @return The list of static questions for this lesson
      */
-    public List<Question> getStaticQuestions() {
+    public List<BaseQuestion> getStaticQuestions() {
         return staticQuestions;
     }
 
@@ -160,52 +167,6 @@ public class Lesson {
             return questionGenerator.getNextQuestion();
         }
         return staticQuestions.get((int) (Math.random() * staticQuestions.size()));
-    }
-
-    /**
-     * Loads a lesson from the provided JSON object.
-     * @param object The object to load from
-     * @return The loaded less or null if something failed
-     */
-    @Nullable
-    public static Lesson loadFromJSON(JSONObject object) {
-        String id = object.getString("id");
-        if (id == null || id.isEmpty()) {
-            logger.warning("Failed to load lesson. id is empty or null.");
-            return null;
-        }
-        String name = object.getString("name");
-        if (name == null) name = "";
-        String description = object.getString("description");
-        if (description == null) description = "";
-        ArrayList<Question> staticQuestions = new ArrayList<>();
-        ArrayList<QuestionGenerator> questionGenerators = new ArrayList<>();
-
-        JSONArray staticQuestionArray = object.getJSONArray("staticQuestions");
-        for (Object questionObject : staticQuestionArray) {
-            if (!(questionObject instanceof JSONObject)) continue;
-            Question question = BaseQuestion.loadFromJSON((JSONObject) questionObject);
-            if (question == null) {
-                logger.warning("Failed to load lesson. A static question failed to load.");
-                return null;
-            }
-            staticQuestions.add(question);
-        }
-        JSONArray questionGeneratorArray = object.getJSONArray("questionGenerators");
-        for (Object generatorObject : questionGeneratorArray) {
-            if (!(generatorObject instanceof String generatorId)) continue;
-            if (generatorId.isEmpty()) {
-                logger.warning("Lesson failed to load. Generator id was empty.");
-                return null;
-            }
-            QuestionGenerator generator = QuestionGeneratorRegistry.getInstance().getQuestionGenerator(generatorId);
-            if (generator == null) {
-                logger.warning("Lesson Failed to load. A generator failed to load.");
-                return null;
-            }
-            questionGenerators.add(generator);
-        }
-        return new Lesson(id, name, description, staticQuestions, questionGenerators);
     }
 
     @Override

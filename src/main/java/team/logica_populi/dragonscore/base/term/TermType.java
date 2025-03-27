@@ -6,14 +6,14 @@ package team.logica_populi.dragonscore.base.term;
  */
 public enum TermType {
     /**
-     * A singular noun
+     * A noun
      */
-    NOUN_S,
+    NOUN,
 
     /**
-     * A plural noun
+     * A proper noun
      */
-    NOUN_P,
+    PRO_NOUN,
 
     /**
      * A verb
@@ -24,4 +24,14 @@ public enum TermType {
      * An adjective
      */
     ADJ,
+
+    /**
+     * A singular article
+     */
+    ART_S,
+
+    /**
+     * A plural article
+     */
+    ART_P,
 }
