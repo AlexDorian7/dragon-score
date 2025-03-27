@@ -4,11 +4,15 @@ import org.jetbrains.annotations.Nullable;
 import team.logica_populi.dragonscore.base.registries.TermRegistry;
 import team.logica_populi.dragonscore.base.term.Term;
 
+import java.util.logging.Logger;
+
 /**
  * A form Field is a placeholder for a word inside a form.
  * It can be filled with a random word from a loaded term list.
  */
 public class FormField {
+    private static final Logger logger = Logger.getLogger(FormField.class.getName());
+
     private final String id;
     private final String list;
 
