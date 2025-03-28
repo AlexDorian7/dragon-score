@@ -4,10 +4,13 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import org.jetbrains.annotations.Nullable;
 import team.logica_populi.dragonscore.base.DataFile;
+import team.logica_populi.dragonscore.base.Lesson;
 import team.logica_populi.dragonscore.base.form.Form;
 import team.logica_populi.dragonscore.base.json.*;
 import team.logica_populi.dragonscore.base.logic.Answer;
 import team.logica_populi.dragonscore.base.logic.generators.QuestionGenerator;
+import team.logica_populi.dragonscore.base.points.LessonRecord;
+import team.logica_populi.dragonscore.base.points.PointSystem;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -27,6 +30,8 @@ public class JsonRegistry {
     private final GsonBuilder builder;
 
     private DataFile dataFile;
+
+    private PointSystem lessonRecordFile;
 
     /**
      * Constructor to set up Gson and register helpers for it.
@@ -112,6 +117,24 @@ public class JsonRegistry {
         dataFile = gson.fromJson(data, DataFile.class);
         TermRegistry.getInstance().loadDataFile(dataFile);
         return dataFile;
+    }
+
+    public PointSystem loadLessonRecords(InputStream stream){
+        try {
+            return loadLessonRecords(new String(stream.readAllBytes()));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public PointSystem loadLessonRecords(String data){
+        lessonRecordFile = gson.fromJson(data, PointSystem.class);
+        return lessonRecordFile;
+    }
+
+    @Nullable
+    public PointSystem getLessonRecordFile(){
+        return lessonRecordFile;
     }
 
     /**

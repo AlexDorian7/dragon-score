@@ -7,9 +7,12 @@ import javafx.stage.Stage;
 import javafx.util.Pair;
 import team.logica_populi.dragonscore.base.DataFile;
 import team.logica_populi.dragonscore.base.Lesson;
+import team.logica_populi.dragonscore.base.points.PointSystem;
 import team.logica_populi.dragonscore.base.registries.JsonRegistry;
 import team.logica_populi.dragonscore.ui.UiComponentCreator;
 import team.logica_populi.dragonscore.ui.controllers.ExampleQuestionPane;
+
+import team.logica_populi.dragonscore.base.points.LessonRecord;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -37,6 +40,8 @@ public class Main extends Application {
         Pair<Parent, ExampleQuestionPane> pair = UiComponentCreator.createExampleQuestionPane();
 
         DataFile dataFile = JsonRegistry.getInstance().loadDataFile(Objects.requireNonNull(getClass().getResourceAsStream("/data/lessons/syllogistic_translations.json")));
+        PointSystem records = JsonRegistry.getInstance().loadLessonRecords(Objects.requireNonNull(getClass().getResourceAsStream("/data/pointsystem.example.json")));
+        LessonRecord rec = records.getLessonRecords().getFirst();
         Lesson lesson = dataFile.getLessons().getFirst();
         pair.getValue().setCallback(() -> {
             pair.getValue().setQuestion(lesson.getNextQuestion());

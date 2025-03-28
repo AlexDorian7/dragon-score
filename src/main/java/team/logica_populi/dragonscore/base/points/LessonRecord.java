@@ -1,22 +1,14 @@
 package team.logica_populi.dragonscore.base.points;
 
+import java.util.List;
 
 public class LessonRecord {
-    private String id;
-    private String userName;
+    private final String id;
+    private final String userName;
     private int totalPoints;
 
-
     /**
-     *
-     * @param id
-     */
-    public LessonRecord(String id){
-        this(id, "", 0);
-    }
-
-    /**
-     *
+     * Default constructor
      * @param id
      * @param userName
      */
