@@ -119,6 +119,12 @@ public class JsonRegistry {
         return dataFile;
     }
 
+    /**
+     * Loads Lesson records file from input stream.
+     * The provided file must be in valid JSON format.
+     * @param stream The stream to load from
+     * @return The loaded {@link PointSystem}
+     */
     public PointSystem loadLessonRecords(InputStream stream){
         try {
             return loadLessonRecords(new String(stream.readAllBytes()));
@@ -127,6 +133,11 @@ public class JsonRegistry {
         }
     }
 
+    /**
+     * Loads the lesson records data from provided JSON data.
+     * @param data The JSON data to load.
+     * @return The loaded {@link PointSystem}
+     */
     public PointSystem loadLessonRecords(String data){
         lessonRecordFile = gson.fromJson(data, PointSystem.class);
         return lessonRecordFile;

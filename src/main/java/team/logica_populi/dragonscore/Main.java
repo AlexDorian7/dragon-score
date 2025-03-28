@@ -41,8 +41,10 @@ public class Main extends Application {
 
         DataFile dataFile = JsonRegistry.getInstance().loadDataFile(Objects.requireNonNull(getClass().getResourceAsStream("/data/lessons/syllogistic_translations.json")));
         PointSystem records = JsonRegistry.getInstance().loadLessonRecords(Objects.requireNonNull(getClass().getResourceAsStream("/data/pointsystem.example.json")));
-        LessonRecord rec = records.getLessonRecords().getFirst();
         Lesson lesson = dataFile.getLessons().getFirst();
+        if(lesson.getId() != records.getLessonRecords().getLast().getId()){
+            logger.info("These are not the same lesson!");
+        }
         pair.getValue().setCallback(() -> {
             pair.getValue().setQuestion(lesson.getNextQuestion());
         });

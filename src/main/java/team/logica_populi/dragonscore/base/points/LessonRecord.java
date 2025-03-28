@@ -1,41 +1,58 @@
 package team.logica_populi.dragonscore.base.points;
 
-import java.util.List;
-
 public class LessonRecord {
     private final String id;
-    private final String userName;
+    private final String username;
     private int totalPoints;
 
     /**
      * Default constructor
-     * @param id
-     * @param userName
      */
-    public LessonRecord(String id, String userName){
-        this(id, userName, 0);
+    public LessonRecord(){
+        this("", "", 0);
     }
 
     /**
-     *
-     * @param id
-     * @param userName
-     * @param points
+     * Constructor to set up LessonRecord with parameters
+     * @param id lesson id
+     * @param username username of the user of lesson
      */
-    public LessonRecord(String id, String userName, int points){
+    public LessonRecord(String id, String username){
+        this(id, username, 0);
+    }
+
+    /**
+     * Constructor to set up LessonRecord with parameters
+     * @param id lessons id
+     * @param username username of the user of lesson
+     * @param points the points that user have collected in the lesson
+     */
+    public LessonRecord(String id, String username, int points){
         this.id = id;
-        this.userName = userName;
+        this.username = username;
         this.totalPoints = points;
     }
 
+    /**
+     *  Gets the lesson id
+     * @return the lesson id
+     */
     public String getId(){
         return id;
     }
 
+    /**
+     * Gets the username
+     * @return username of the lesson
+     */
     public String getUserName(){
-        return userName;
+        return username;
     }
 
+    /**
+     * Gets the total points in the current lesson
+     * @return total points the lesson
+     */
     public int getTotalPoints(){
         return totalPoints;
     }
