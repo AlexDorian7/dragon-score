@@ -11,8 +11,6 @@ import team.logica_populi.dragonscore.base.logic.Answer;
 import team.logica_populi.dragonscore.base.registries.JsonRegistry;
 import team.logica_populi.dragonscore.ui.UiComponentCreator;
 import team.logica_populi.dragonscore.ui.controllers.DefinitionsExampleController;
-import team.logica_populi.dragonscore.ui.controllers.ExampleQuestionPane;
-import team.logica_populi.dragonscore.base.PointSystem;
 
 import java.io.IOException;
 import java.io.InputStream;
