@@ -1,0 +1,295 @@
+{
+  "requires": [],
+  "terms": {
+    "nouns": [
+      {
+        "word": "car",
+        "type": "NOUN"
+      },
+      {
+        "word": "person",
+        "type": "NOUN"
+      },
+      {
+        "word": "dog",
+        "type": "NOUN"
+      },
+      {
+        "word": "criminal",
+        "type": "NOUN"
+      },
+      {
+        "word": "tree",
+        "type": "NOUN"
+      },
+      {
+        "word": "actor",
+        "type": "NOUN"
+      },
+      {
+        "word": "advertisement",
+        "type": "NOUN"
+      },
+      {
+        "word": "actor",
+        "type": "NOUN"
+      },
+      {
+        "word": "animal",
+        "type": "NOUN"
+      },
+      {
+        "word": "boy",
+        "type": "NOUN"
+      },
+      {
+        "word": "girl",
+        "type": "NOUN"
+      },
+      {
+        "word": "man",
+        "type": "NOUN"
+      },
+      {
+        "word": "woman",
+        "type": "NOUN"
+      },
+      {
+        "word": "iron",
+        "type": "NOUN"
+      },
+      {
+        "word": "jelly",
+        "type": "NOUN"
+      },
+      {
+        "word": "door",
+        "type": "NOUN"
+      },
+      {
+        "word": "ghost",
+        "type": "NOUN"
+      },
+      {
+        "word": "lion",
+        "type": "NOUN"
+      },
+      {
+        "word": "dragon",
+        "type": "NOUN"
+      },
+      {
+        "word": "can",
+        "type": "NOUN"
+      },
+      {
+        "word": "table",
+        "type": "NOUN"
+      },
+      {
+        "word": "horse",
+        "type": "NOUN"
+      }
+    ],
+    "pro_nouns": [
+      {
+        "word": "America",
+        "type": "PRO_NOUN"
+      },
+      {
+        "word": "Finland",
+        "type": "PRO_NOUN"
+      },
+      {
+        "word": "Sweden",
+        "type": "PRO_NOUN"
+      },
+      {
+        "word": "Poland",
+        "type": "PRO_NOUN"
+      },
+      {
+        "word": "Czech Republic",
+        "type": "PRO_NOUN"
+      },
+      {
+        "word": "Dr. Steineger",
+        "type": "PRO_NOUN"
+      },
+      {
+        "word": "you",
+        "type": "PRO_NOUN"
+      }
+    ],
+    "adjectives": [
+      {
+        "word": "fast",
+        "type": "ADJ"
+      },
+      {
+        "word": "slow",
+        "type": "ADJ"
+      },
+      {
+        "word": "colorful",
+        "type": "ADJ"
+      },
+      {
+        "word": "bumpy",
+        "type": "ADJ"
+      },
+      {
+        "word": "smooth",
+        "type": "ADJ"
+      },
+      {
+        "word": "flat",
+        "type": "ADJ"
+      },
+      {
+        "word": "long",
+        "type": "NOUN"
+      },
+      {
+        "word": "short",
+        "type": "NOUN"
+      },
+      {
+        "word": "powerful",
+        "type": "ADJ"
+      },
+      {
+        "word": "weak",
+        "type": "ADJ"
+      },
+      {
+        "word": "wet",
+        "type": "ADJ"
+      },
+      {
+        "word": "dry",
+        "type": "ADJ"
+      },
+      {
+        "word": "red",
+        "type": "ADJ"
+      },
+      {
+        "word": "orange",
+        "type": "ADJ"
+      },
+      {
+        "word": "yellow",
+        "type": "ADJ"
+      },
+      {
+        "word": "green",
+        "type": "ADJ"
+      },
+      {
+        "word": "blue",
+        "type": "ADJ"
+      },
+      {
+        "word": "indigo",
+        "type": "ADJ"
+      },
+      {
+        "word": "violet",
+        "type": "ADJ"
+      },
+      {
+        "word": "purple",
+        "type": "NOUN"
+      },
+      {
+        "word": "pink",
+        "type": "NOUN"
+      },
+      {
+        "word": "grey",
+        "type": "ADJ"
+      },
+      {
+        "word": "normal",
+        "type": "ADJ"
+      },
+      {
+        "word": "huge",
+        "type": "ADJ"
+      },
+      {
+        "word": "large",
+        "type": "ADJ"
+      },
+      {
+        "word": "small",
+        "type": "ADJ"
+      },
+      {
+        "word": "tiny",
+        "type": "ADJ"
+      },
+      {
+        "word": "striped",
+        "type": "NOUN"
+      },
+      {
+        "word": "spotted",
+        "type": "NOUN"
+      },
+      {
+        "word": "clean",
+        "type": "NOUN"
+      },
+      {
+        "word": "dirty",
+        "type": "NOUN"
+      },
+      {
+        "word": "fluffy",
+        "type": "NOUN"
+      },
+      {
+        "word": "soft",
+        "type": "NOUN"
+      },
+      {
+        "word": "hard",
+        "type": "NOUN"
+      },
+      {
+        "word": "coarse",
+        "type": "NOUN"
+      }
+    ],
+    "verbs": [
+      {
+        "word": "running",
+        "type": "VERB"
+      }
+    ],
+    "articles_s": [
+      {
+        "word": "the",
+        "type": "ART_S"
+      },
+      {
+        "word": "that",
+        "type": "ART_S"
+      },
+      {
+        "word": "this",
+        "type": "ART_S"
+      }
+    ],
+    "articles_p": [
+      {
+        "word": "a",
+        "type": "ART_P"
+      }
+    ]
+  },
+  "lessons": [],
+  "forms": []
+}

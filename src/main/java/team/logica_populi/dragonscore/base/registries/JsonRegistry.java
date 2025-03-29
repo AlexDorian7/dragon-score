@@ -100,9 +100,9 @@ public class JsonRegistry {
      * @param stream The stream to load from
      * @return The loaded {@link DataFile}
      */
-    public DataFile loadDataFile(InputStream stream) {
+    public DataFile loadDataFile(InputStream stream, boolean set) {
         try {
-            return loadDataFile(new String(stream.readAllBytes()));
+            return loadDataFile(new String(stream.readAllBytes()), set);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -113,9 +113,13 @@ public class JsonRegistry {
      * @param data The JSON data to load
      * @return The loaded {@link DataFile}
      */
-    public DataFile loadDataFile(String data) {
-        dataFile = gson.fromJson(data, DataFile.class);
-        TermRegistry.getInstance().loadDataFile(dataFile);
+    public DataFile loadDataFile(String data, boolean set) {
+        DataFile dataFile = gson.fromJson(data, DataFile.class);
+        dataFile.loadRequires();
+        if (set) {
+            this.dataFile = dataFile;
+            TermRegistry.getInstance().loadDataFile(dataFile);
+        }
         return dataFile;
     }
 
