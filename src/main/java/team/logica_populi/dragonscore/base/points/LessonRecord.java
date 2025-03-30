@@ -6,12 +6,13 @@ public class LessonRecord {
     private final String id;
     private final String username;
     private String totalPoints;
+    private static final EncryptionRegistry encryptionRegistry = new EncryptionRegistry();
 
     /**
      * Default constructor
      */
     public LessonRecord(){
-        this("", "", "0");
+        this("", "", encryptionRegistry.encrypt("0"));
     }
 
     /**
@@ -20,7 +21,7 @@ public class LessonRecord {
      * @param username username of the user of lesson
      */
     public LessonRecord(String id, String username){
-        this(id, username, "0");
+        this(id, username, encryptionRegistry.encrypt("0"));
     }
 
     /**
@@ -32,7 +33,7 @@ public class LessonRecord {
     public LessonRecord(String id, String username, String points){
         this.id = id;
         this.username = username;
-        this.totalPoints = points;
+        this.totalPoints = encryptionRegistry.encrypt(points);
     }
 
     /**
@@ -57,7 +58,7 @@ public class LessonRecord {
      */
     public String getTotalPoints(){
         // Decrypt totalPoints data here
-        return totalPoints;
+        return encryptionRegistry.decrypt(totalPoints);
     }
 
 }
