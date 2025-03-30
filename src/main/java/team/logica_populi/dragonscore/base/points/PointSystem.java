@@ -1,9 +1,14 @@
 package team.logica_populi.dragonscore.base.points;
 
 import java.util.List;
+import java.util.logging.Logger;
+
+import team.logica_populi.dragonscore.base.registries.EncryptionRegistry;
 
 public class PointSystem {
+    private static final Logger logger = Logger.getLogger(PointSystem.class.getName());
     private List<LessonRecord> lessons;
+    private static final EncryptionRegistry encryptionRegistry = new EncryptionRegistry();
 
     /**
      * Default constructor
@@ -27,6 +32,17 @@ public class PointSystem {
         return lessons;
     }
 
+
+    public List<LessonRecord> encryptPoints(){
+        for (LessonRecord lesson : lessons) {
+            if (lesson.getTotalPoints().equals("0")) {
+                String encryptedPoints = encryptionRegistry.encrypt(lesson.getTotalPoints());
+                logger.info(encryptedPoints);
+            }
+        }
+
+        return lessons;
+    }
 
     /**
      * Overrides toString() to message for showing data from a LessonRecord

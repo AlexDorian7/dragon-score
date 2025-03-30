@@ -11,6 +11,7 @@ import team.logica_populi.dragonscore.base.logic.Answer;
 import team.logica_populi.dragonscore.base.registries.JsonRegistry;
 import team.logica_populi.dragonscore.ui.UiComponentCreator;
 import team.logica_populi.dragonscore.ui.controllers.DefinitionsExampleController;
+import team.logica_populi.dragonscore.base.points.PointSystem;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -39,6 +40,8 @@ public class Main extends Application {
         Pair<Parent, DefinitionsExampleController> pair = UiComponentCreator.createDefinitionExamplePane();
 
         DataFile dataFile = JsonRegistry.getInstance().loadDataFile(Objects.requireNonNull(getClass().getResourceAsStream("/data/lessons/definitions.json")), true);
+        PointSystem records = JsonRegistry.getInstance().loadLessonRecords(Objects.requireNonNull(getClass().getResourceAsStream("/data/pointsystem.example.json")));
+        records.encryptPoints();
         Lesson lesson = dataFile.getLessons().getFirst();
         pair.getValue().setSubmitCallback((List<Answer> selectedAnswers) -> {
             pair.getValue().setQuestion(lesson.getNextQuestion());

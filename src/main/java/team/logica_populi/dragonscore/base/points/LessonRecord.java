@@ -1,15 +1,17 @@
 package team.logica_populi.dragonscore.base.points;
 
+import team.logica_populi.dragonscore.base.registries.EncryptionRegistry;
+
 public class LessonRecord {
     private final String id;
     private final String username;
-    private int totalPoints;
+    private String totalPoints;
 
     /**
      * Default constructor
      */
     public LessonRecord(){
-        this("", "", 0);
+        this("", "", "0");
     }
 
     /**
@@ -18,7 +20,7 @@ public class LessonRecord {
      * @param username username of the user of lesson
      */
     public LessonRecord(String id, String username){
-        this(id, username, 0);
+        this(id, username, "0");
     }
 
     /**
@@ -27,7 +29,7 @@ public class LessonRecord {
      * @param username username of the user of lesson
      * @param points the points that user have collected in the lesson
      */
-    public LessonRecord(String id, String username, int points){
+    public LessonRecord(String id, String username, String points){
         this.id = id;
         this.username = username;
         this.totalPoints = points;
@@ -53,7 +55,8 @@ public class LessonRecord {
      * Gets the total points in the current lesson
      * @return total points the lesson
      */
-    public int getTotalPoints(){
+    public String getTotalPoints(){
+        // Decrypt totalPoints data here
         return totalPoints;
     }
 
