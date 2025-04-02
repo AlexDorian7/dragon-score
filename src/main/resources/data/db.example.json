@@ -1,4 +1,7 @@
 {
+  "requires": [
+    "/data/lessons/syllogistic_translations.json"
+  ],
   "terms": {
     "nouns": [
       {
