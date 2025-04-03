@@ -2,6 +2,9 @@ package team.logica_populi.dragonscore.base.points;
 
 import team.logica_populi.dragonscore.base.registries.EncryptionRegistry;
 
+/**
+ * TODO: Please comment me!
+ */
 public class LessonRecord {
     private final String id;
     private final String username;
@@ -11,7 +14,7 @@ public class LessonRecord {
     /**
      * Default constructor
      */
-    public LessonRecord(){
+    public LessonRecord() {
         this("", "", encryptionRegistry.encrypt("0"));
     }
 
@@ -20,7 +23,7 @@ public class LessonRecord {
      * @param id lesson id
      * @param username username of the user of lesson
      */
-    public LessonRecord(String id, String username){
+    public LessonRecord(String id, String username) {
         this(id, username, encryptionRegistry.encrypt("0"));
     }
 
@@ -30,7 +33,7 @@ public class LessonRecord {
      * @param username username of the user of lesson
      * @param points the points that user have collected in the lesson
      */
-    public LessonRecord(String id, String username, String points){
+    public LessonRecord(String id, String username, String points) {
         this.id = id;
         this.username = username;
         this.totalPoints = encryptionRegistry.encrypt(points);
