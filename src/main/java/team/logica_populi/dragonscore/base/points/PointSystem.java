@@ -1,8 +1,10 @@
 package team.logica_populi.dragonscore.base.points;
 
 import java.util.List;
+import java.util.logging.Logger;
 
 public class PointSystem {
+    private static final Logger logger = Logger.getLogger(PointSystem.class.getName());
     private List<LessonRecord> lessons;
 
     /**
@@ -26,7 +28,6 @@ public class PointSystem {
     public List<LessonRecord> getLessonRecords(){
         return lessons;
     }
-
 
     /**
      * Overrides toString() to message for showing data from a LessonRecord
