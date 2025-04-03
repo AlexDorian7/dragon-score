@@ -49,9 +49,9 @@
             <Button fx:id="submitButton" maxWidth="100" onMouseClicked="#onSubmit" style="-fx-background-color: black;-fx-text-fill: white; -fx-font-weight: bold;" text="Submit" />
         </HBox>
         <HBox alignment="BASELINE_LEFT" spacing="15">
-            <ToggleButton fx:id="easyDif" onMouseClicked="onDifficultySelect" style="-fx-background-radius: 30; -fx-background-color: #cbb26a; -fx-text-fill: black; -fx-pref-width: 40; -fx-pref-height: 40;" text="0" />
-            <ToggleButton fx:id="normDif" onMouseClicked="onDifficultySelect" style="-fx-background-radius: 30; -fx-background-color: #cbb26a; -fx-text-fill: black; -fx-pref-width: 40; -fx-pref-height: 40;" text="10" />
-            <ToggleButton fx:id="hardDif" onMouseClicked="onDifficultySelect" style="-fx-background-radius: 30; -fx-background-color: #cbb26a; -fx-text-fill: black; -fx-pref-width: 40; -fx-pref-height: 40;" text="15" />
+            <ToggleButton fx:id="easyDif" onMouseClicked="#onDifficultySelect" style="-fx-background-radius: 30; -fx-background-color: #cbb26a; -fx-text-fill: black; -fx-pref-width: 40; -fx-pref-height: 40;" text="0" />
+            <ToggleButton fx:id="normDif" onMouseClicked="#onDifficultySelect" style="-fx-background-radius: 30; -fx-background-color: #cbb26a; -fx-text-fill: black; -fx-pref-width: 40; -fx-pref-height: 40;" text="10" />
+            <ToggleButton fx:id="hardDif" onMouseClicked="#onDifficultySelect" style="-fx-background-radius: 30; -fx-background-color: #cbb26a; -fx-text-fill: black; -fx-pref-width: 40; -fx-pref-height: 40;" text="15" />
         </HBox>
     </VBox>
 
