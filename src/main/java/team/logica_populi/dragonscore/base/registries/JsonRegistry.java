@@ -12,6 +12,8 @@ import team.logica_populi.dragonscore.base.logic.generators.QuestionGenerator;
 import team.logica_populi.dragonscore.base.points.LessonRecord;
 import team.logica_populi.dragonscore.base.points.PointSystem;
 
+import team.logica_populi.dragonscore.base.registries.EncryptionRegistry;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.logging.Logger;
@@ -44,6 +46,9 @@ public class JsonRegistry {
         builder.registerTypeAdapter(QuestionGenerator.class, new QuestionGeneratorDeserializer());
         builder.registerTypeAdapter(Form.class, new FormSerializer());
         builder.registerTypeAdapter(Form.class, new FormDeserializer());
+        builder.registerTypeAdapter(LessonRecord.class, new LessonRecordSerializer());
+        builder.registerTypeAdapter(LessonRecord.class, new LessonRecordDeserializer());
+
 
         gson = builder.create();
 
@@ -129,9 +134,9 @@ public class JsonRegistry {
      * @param stream The stream to load from
      * @return The loaded {@link PointSystem}
      */
-    public PointSystem loadLessonRecords(InputStream stream){
+    public PointSystem loadLessonRecords(InputStream stream, boolean set){
         try {
-            return loadLessonRecords(new String(stream.readAllBytes()));
+            return loadLessonRecords(new String(stream.readAllBytes()), set);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -142,11 +147,22 @@ public class JsonRegistry {
      * @param data The JSON data to load.
      * @return The loaded {@link PointSystem}
      */
-    public PointSystem loadLessonRecords(String data){
-        lessonRecordFile = gson.fromJson(data, PointSystem.class);
+    public PointSystem loadLessonRecords(String data, boolean set){
+        PointSystem lessonRecordFile = gson.fromJson(data, PointSystem.class);
+
+        for(int i=0; i < lessonRecordFile.getLessonRecords().size(); i++){
+            if(lessonRecordFile.getLessonRecords().get(i).getTotalPoints() == 0){
+                //gson.toJson(encryptionRegistry.encrypt(lessonRecordFile.getLessonRecords().get(i).getTotalPoints()));
+            }
+        }
+
         return lessonRecordFile;
     }
 
+    /**
+     * Gets the currently loaded {@link PointSystem}
+     * @return The loaded {@link PointSystem} file, or null if none have been loaded.
+     */
     @Nullable
     public PointSystem getLessonRecordFile(){
         return lessonRecordFile;
