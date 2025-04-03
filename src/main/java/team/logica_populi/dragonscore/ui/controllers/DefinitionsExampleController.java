@@ -42,6 +42,26 @@ public class DefinitionsExampleController {
     private Consumer<List<Answer>> callback;
     private Question question;
 
+    // Initialize the controller
+    @FXML
+    public void initialize() {
+        // Set default text
+        questionArea.setText("Click Submit to see an example response.");
+    }
+
+    @FXML
+    private void onSubmit(MouseEvent event) {
+        // Example: Change the text of the question area when clicked
+        questionArea.setText("You clicked Submit!");
+    }
+
+    @FXML
+    private void onDifficultySelect(MouseEvent event) {
+        ToggleButton clickedButton = (ToggleButton) event.getSource();
+        String difficulty = clickedButton.getText();
+        questionArea.setText("Difficulty set to: " + difficulty);
+    }
+
     /**
      * Sets the question that this view is to display.
      * @param question The question to display
