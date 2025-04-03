@@ -35,8 +35,6 @@ public class JsonRegistry {
 
     private PointSystem lessonRecordFile;
 
-    private static final EncryptionRegistry encryptionRegistry = new EncryptionRegistry();
-
     /**
      * Constructor to set up Gson and register helpers for it.
      */
@@ -153,7 +151,7 @@ public class JsonRegistry {
         PointSystem lessonRecordFile = gson.fromJson(data, PointSystem.class);
 
         for(int i=0; i < lessonRecordFile.getLessonRecords().size(); i++){
-            if(lessonRecordFile.getLessonRecords().get(i).getTotalPoints() == "0"){
+            if(lessonRecordFile.getLessonRecords().get(i).getTotalPoints() == 0){
                 //gson.toJson(encryptionRegistry.encrypt(lessonRecordFile.getLessonRecords().get(i).getTotalPoints()));
             }
         }
@@ -162,8 +160,8 @@ public class JsonRegistry {
     }
 
     /**
-     * Gets the currently loaded {@ PointSystem}
-     * @return The loaded pointsystem file, or null if none have been loaded.
+     * Gets the currently loaded {@link PointSystem}
+     * @return The loaded {@link PointSystem} file, or null if none have been loaded.
      */
     @Nullable
     public PointSystem getLessonRecordFile(){

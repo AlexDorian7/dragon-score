@@ -6,7 +6,7 @@
 
     <groupId>team.logica_populi</groupId>
     <artifactId>dragonscore</artifactId>
-    <version>1.3.3.0-alpha</version>
+    <version>1.3.4.0-alpha</version>
     <name>DragonScore</name>
 
     <properties>

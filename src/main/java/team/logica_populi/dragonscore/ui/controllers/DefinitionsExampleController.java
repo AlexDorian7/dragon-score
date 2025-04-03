@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ProgressBar;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
@@ -39,6 +40,8 @@ public class DefinitionsExampleController {
     private ToggleButton normDif;
     @FXML
     private ToggleButton hardDif;
+    @FXML
+    private ProgressBar progressBar;
 
     private Consumer<List<Answer>> callback;
     private Question question;
