@@ -48,6 +48,9 @@ public class JsonRegistry {
         builder.registerTypeAdapter(QuestionGenerator.class, new QuestionGeneratorDeserializer());
         builder.registerTypeAdapter(Form.class, new FormSerializer());
         builder.registerTypeAdapter(Form.class, new FormDeserializer());
+        builder.registerTypeAdapter(LessonRecord.class, new LessonRecordSerializer());
+        builder.registerTypeAdapter(LessonRecord.class, new LessonRecordDeserializer());
+
 
         gson = builder.create();
 
