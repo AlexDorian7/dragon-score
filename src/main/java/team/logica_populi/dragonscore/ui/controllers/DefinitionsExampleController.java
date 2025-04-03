@@ -18,19 +18,19 @@ public class DefinitionsExampleController {
     @FXML
     public Label questionArea;
     @FXML
-    private HBox answer1;
+    private ToggleButton answer1;
     @FXML
-    private HBox answer2;
+    private ToggleButton answer2;
     @FXML
-    private HBox answer3;
+    private ToggleButton answer3;
     @FXML
-    private HBox answer4;
+    private ToggleButton answer4;
     @FXML
-    private HBox answer5;
+    private ToggleButton answer5;
     @FXML
-    private HBox answer6;
+    private ToggleButton answer6;
     @FXML
-    private HBox answer7;
+    private ToggleButton answer7;
     @FXML
     private Button submitButton;
     @FXML
@@ -51,15 +51,9 @@ public class DefinitionsExampleController {
     }
 
     @FXML
-    private void onSubmit(MouseEvent event) {
-        // Example: Change the text of the question area when clicked
-        questionArea.setText("You clicked Submit!");
-    }
-
-    @FXML
-    private void onDifficultySelect(MouseEvent event) {
+    private void onDifficultySelect(ActionEvent event) {
         ToggleButton clickedButton = (ToggleButton) event.getSource();
-        String difficulty = clickedButton.getText();
+        int difficulty = Integer.parseInt(clickedButton.getText());
         questionArea.setText("Difficulty set to: " + difficulty);
     }
 
@@ -89,5 +83,22 @@ public class DefinitionsExampleController {
         if (callback != null) {
             callback.accept(new ArrayList<>()); // TODO: Actually send back the selected answers
         }
+    }
+
+    private void deselectAll() {
+        answer1.setSelected(false);
+        answer2.setSelected(false);
+        answer3.setSelected(false);
+        answer4.setSelected(false);
+        answer5.setSelected(false);
+        answer6.setSelected(false);
+        answer7.setSelected(false);
+    }
+
+    public void selectAnswer(ActionEvent event) {
+        deselectAll();
+        ToggleButton clickedButton = (ToggleButton) event.getSource();
+        clickedButton.setSelected(true);
+        questionArea.setText("Selected answer: " + clickedButton.getText());
     }
 }
