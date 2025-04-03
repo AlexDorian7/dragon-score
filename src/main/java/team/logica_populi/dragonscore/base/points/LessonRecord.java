@@ -82,7 +82,7 @@ public class LessonRecord {
      * @return The loaded LessonRecord or null if something failed
      */
     @Nullable
-    public LessonRecord loadRecord(String data) {
+    public static LessonRecord loadRecord(String data) {
         String recordStr = EncryptionRegistry.getInstance().decrypt(data);
         String[] split = recordStr.split(": ");
         try {
