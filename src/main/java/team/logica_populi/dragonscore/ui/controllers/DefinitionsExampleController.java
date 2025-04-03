@@ -5,7 +5,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ToggleButton;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import team.logica_populi.dragonscore.base.logic.Answer;
 import team.logica_populi.dragonscore.base.logic.Question;
@@ -42,26 +41,6 @@ public class DefinitionsExampleController {
 
     private Consumer<List<Answer>> callback;
     private Question question;
-
-    // Initialize the controller for text
-    @FXML
-    public void initialize() {
-        // Set default text
-        questionArea.setText("Click Submit to see an example response.");
-    }
-
-    @FXML
-    private void onSubmit(MouseEvent event) {
-        // Example: Change the text of the question area when clicked
-        questionArea.setText("You clicked Submit!");
-    }
-
-    @FXML
-    private void onDifficultySelect(MouseEvent event) {
-        ToggleButton clickedButton = (ToggleButton) event.getSource();
-        String difficulty = clickedButton.getText();
-        questionArea.setText("Difficulty set to: " + difficulty);
-    }
 
     /**
      * Sets the question that this view is to display.
