@@ -1,0 +1,30 @@
+/* Difficulty toggles */
+.diff-toggle {
+    -fx-background-radius: 30;
+    -fx-background-color: #cbb26a;
+    -fx-text-fill: black;
+    -fx-pref-width: 40;
+    -fx-pref-height: 40;
+    -fx-font-weight: bold;
+}
+
+.diff-toggle:selected {
+    -fx-background-color: #a68c34;
+    -fx-text-fill: white;
+}
+
+/* Answer toggles */
+.answer-toggle {
+    -fx-font-size: 14px;
+    -fx-background-color: #fef9d4;
+    -fx-border-color: black;
+    -fx-text-fill: black;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 10;
+}
+
+.answer-toggle:selected {
+    -fx-background-color: #ffd54f;
+    -fx-text-fill: black;
+    -fx-border-color: #555;
+}

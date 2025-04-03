@@ -5,7 +5,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ToggleButton;
-import javafx.scene.layout.HBox;
 import team.logica_populi.dragonscore.base.logic.Answer;
 import team.logica_populi.dragonscore.base.logic.Question;
 
@@ -17,19 +16,19 @@ public class DefinitionsExampleController {
     @FXML
     public Label questionArea;
     @FXML
-    private HBox answer1;
+    private ToggleButton answer1;
     @FXML
-    private HBox answer2;
+    private ToggleButton answer2;
     @FXML
-    private HBox answer3;
+    private ToggleButton answer3;
     @FXML
-    private HBox answer4;
+    private ToggleButton answer4;
     @FXML
-    private HBox answer5;
+    private ToggleButton answer5;
     @FXML
-    private HBox answer6;
+    private ToggleButton answer6;
     @FXML
-    private HBox answer7;
+    private ToggleButton answer7;
     @FXML
     private Button submitButton;
     @FXML
