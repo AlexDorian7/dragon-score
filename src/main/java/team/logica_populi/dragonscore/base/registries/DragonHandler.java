@@ -1,6 +1,8 @@
 package team.logica_populi.dragonscore.base.registries;
 
 import org.jetbrains.annotations.Nullable;
+import team.logica_populi.dragonscore.base.Lesson;
+import team.logica_populi.dragonscore.base.points.PointSystem;
 
 import java.util.logging.Logger;
 
@@ -15,6 +17,9 @@ public class DragonHandler {
 
     private final String name;
     private int points = 0;
+    private Lesson lesson;
+
+    private final PointSystem pointSystem = new PointSystem();
 
     /**
      * Default constructor.
@@ -58,7 +63,7 @@ public class DragonHandler {
      * @param points The amount of points to add
      */
     protected void addPoints(int points) {
-        this.points += points;
+        setPoints(points + getPoints());
     }
 
     /**
@@ -66,7 +71,12 @@ public class DragonHandler {
      * @param points The new point count
      */
     protected void setPoints(int points) {
+        if (lesson == null) {
+            logger.warning("You need to load a lesson before trying to set points");
+            return;
+        }
         this.points = points;
+        pointSystem.setPoints(name, lesson, points);
     }
 
     /**
@@ -77,5 +87,19 @@ public class DragonHandler {
         return points;
     }
 
+    /**
+     * Gets the selected lesson for this session.
+     * @return The selected lesson
+     */
+    public Lesson getLesson() {
+        return lesson;
+    }
 
+    /**
+     * Sets the selected lesson for this session.
+     * @param lesson The lesson to select
+     */
+    public void setLesson(Lesson lesson) {
+        this.lesson = lesson;
+    }
 }

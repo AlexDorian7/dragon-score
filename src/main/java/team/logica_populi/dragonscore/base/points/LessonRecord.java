@@ -61,7 +61,15 @@ public class LessonRecord {
     }
 
     /**
-     * Gets the total points in the current lesson
+     * Sets the total points in the current record
+     * @param points the point amount to set
+     */
+    public void setTotalPoints(int points) {
+        this.totalPoints = points;
+    }
+
+    /**
+     * Gets the total points in the current record
      * @return total points the lesson
      */
     public int getTotalPoints(){
