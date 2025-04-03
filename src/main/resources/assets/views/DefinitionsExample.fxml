@@ -33,13 +33,13 @@
 
         <!-- Answer Block -->
         <VBox spacing="10" style="-fx-border-color: black; -fx-border-radius: 8; -fx-background-color: white; -fx-background-radius: 8; -fx-padding: 15;">
-            <ToggleButton fx:id="answer1" text="1) Too broad" styleClass="answer-toggle" style="-fx-background-radius: 80; -fx-background-color: #fce6a4; -fx-text-fill: black;"/>
-            <ToggleButton fx:id="answer2" text="2) Too narrow" styleClass="answer-toggle" style="-fx-background-radius: 80; -fx-background-color: #fce6a4; -fx-text-fill: black;"/>
-            <ToggleButton fx:id="answer3" text="3) Circular" styleClass="answer-toggle" style="-fx-background-radius: 80; -fx-background-color: #fce6a4; -fx-text-fill: black;"/>
-            <ToggleButton fx:id="answer4" text="4) Uses poorly understood terms" styleClass="answer-toggle" style="-fx-background-radius: 80; -fx-background-color: #fce6a4; -fx-text-fill: black;"/>
-            <ToggleButton fx:id="answer5" text="5) Poor match in vagueness" styleClass="answer-toggle" style="-fx-background-radius: 80; -fx-background-color: #fce6a4; -fx-text-fill: black;"/>
-            <ToggleButton fx:id="answer6" text="6) Poor match in emotional tone" styleClass="answer-toggle" style="-fx-background-radius: 80; -fx-background-color: #fce6a4; -fx-text-fill: black;"/>
-            <ToggleButton fx:id="answer7" text="7) Has non-essential properties" styleClass="answer-toggle" style="-fx-background-radius: 80; -fx-background-color: #fce6a4; -fx-text-fill: black;"/>
+            <ToggleButton onAction="#selectAnswer" fx:id="answer1" text="1) Too broad" styleClass="answer-toggle" style="-fx-background-radius: 80; -fx-background-color: #fce6a4; -fx-text-fill: black;"/>
+            <ToggleButton onAction="#selectAnswer" fx:id="answer2" text="2) Too narrow" styleClass="answer-toggle" style="-fx-background-radius: 80; -fx-background-color: #fce6a4; -fx-text-fill: black;"/>
+            <ToggleButton onAction="#selectAnswer" fx:id="answer3" text="3) Circular" styleClass="answer-toggle" style="-fx-background-radius: 80; -fx-background-color: #fce6a4; -fx-text-fill: black;"/>
+            <ToggleButton onAction="#selectAnswer" fx:id="answer4" text="4) Uses poorly understood terms" styleClass="answer-toggle" style="-fx-background-radius: 80; -fx-background-color: #fce6a4; -fx-text-fill: black;"/>
+            <ToggleButton onAction="#selectAnswer" fx:id="answer5" text="5) Poor match in vagueness" styleClass="answer-toggle" style="-fx-background-radius: 80; -fx-background-color: #fce6a4; -fx-text-fill: black;"/>
+            <ToggleButton onAction="#selectAnswer" fx:id="answer6" text="6) Poor match in emotional tone" styleClass="answer-toggle" style="-fx-background-radius: 80; -fx-background-color: #fce6a4; -fx-text-fill: black;"/>
+            <ToggleButton onAction="#selectAnswer" fx:id="answer7" text="7) Has non-essential properties" styleClass="answer-toggle" style="-fx-background-radius: 80; -fx-background-color: #fce6a4; -fx-text-fill: black;"/>
         </VBox>
 
         <!-- Submit Button -->
@@ -54,9 +54,9 @@
 
     <!-- Diff Buttons -->
     <HBox alignment="CENTER_LEFT" spacing="15" AnchorPane.leftAnchor="50" AnchorPane.bottomAnchor="20">
-        <ToggleButton fx:id="easyDif" style="-fx-background-radius: 30; -fx-background-color: #D2B48C; -fx-text-fill: black; -fx-pref-width: 40; -fx-pref-height: 40;" text="0" />
-        <ToggleButton fx:id="normDif" style="-fx-background-radius: 30; -fx-background-color: #D2B48C; -fx-text-fill: black; -fx-pref-width: 40; -fx-pref-height: 40;" text="10" />
-        <ToggleButton fx:id="hardDif" style="-fx-background-radius: 30; -fx-background-color: #D2B48C; -fx-text-fill: black; -fx-pref-width: 40; -fx-pref-height: 40;" text="15" />
+        <ToggleButton onAction="#onDifficultySelect" fx:id="easyDif" style="-fx-background-radius: 30; -fx-background-color: #D2B48C; -fx-text-fill: black; -fx-pref-width: 40; -fx-pref-height: 40;" text="0" />
+        <ToggleButton onAction="#onDifficultySelect" fx:id="normDif" style="-fx-background-radius: 30; -fx-background-color: #D2B48C; -fx-text-fill: black; -fx-pref-width: 40; -fx-pref-height: 40;" text="10" />
+        <ToggleButton onAction="#onDifficultySelect" fx:id="hardDif" style="-fx-background-radius: 30; -fx-background-color: #D2B48C; -fx-text-fill: black; -fx-pref-width: 40; -fx-pref-height: 40;" text="15" />
     </HBox>
 
 </AnchorPane>
