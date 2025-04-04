@@ -4,23 +4,14 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import org.jetbrains.annotations.Nullable;
 import team.logica_populi.dragonscore.base.DataFile;
-import team.logica_populi.dragonscore.base.Lesson;
 import team.logica_populi.dragonscore.base.form.Form;
 import team.logica_populi.dragonscore.base.json.*;
 import team.logica_populi.dragonscore.base.logic.Answer;
 import team.logica_populi.dragonscore.base.logic.generators.QuestionGenerator;
-import team.logica_populi.dragonscore.base.points.LessonRecord;
 import team.logica_populi.dragonscore.base.points.PointSystem;
 
-import team.logica_populi.dragonscore.base.registries.EncryptionRegistry;
-
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.Writer;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.Objects;
 import java.util.logging.Logger;
 
 /**
@@ -38,7 +29,7 @@ public class JsonRegistry {
 
     private DataFile dataFile;
 
-    private PointSystem lessonRecordFile;
+    private PointSystem pointSystemFile;
 
     /**
      * Constructor to set up Gson and register helpers for it.
@@ -51,8 +42,6 @@ public class JsonRegistry {
         builder.registerTypeAdapter(QuestionGenerator.class, new QuestionGeneratorDeserializer());
         builder.registerTypeAdapter(Form.class, new FormSerializer());
         builder.registerTypeAdapter(Form.class, new FormDeserializer());
-        builder.registerTypeAdapter(LessonRecord.class, new LessonRecordSerializer());
-        builder.registerTypeAdapter(LessonRecord.class, new LessonRecordDeserializer());
 
 
         gson = builder.create();
@@ -162,7 +151,7 @@ public class JsonRegistry {
      */
     @Nullable
     public PointSystem getLessonRecordFile(){
-        return lessonRecordFile;
+        return pointSystemFile;
     }
 
     /**
