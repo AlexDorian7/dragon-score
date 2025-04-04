@@ -14,8 +14,13 @@ import team.logica_populi.dragonscore.base.points.PointSystem;
 
 import team.logica_populi.dragonscore.base.registries.EncryptionRegistry;
 
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.Writer;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.Objects;
 import java.util.logging.Logger;
 
 /**
@@ -147,16 +152,8 @@ public class JsonRegistry {
      * @param data The JSON data to load.
      * @return The loaded {@link PointSystem}
      */
-    public PointSystem loadLessonRecords(String data, boolean set){
-        PointSystem lessonRecordFile = gson.fromJson(data, PointSystem.class);
-
-        for(int i=0; i < lessonRecordFile.getLessonRecords().size(); i++){
-            if(lessonRecordFile.getLessonRecords().get(i).getTotalPoints() == 0){
-                //gson.toJson(encryptionRegistry.encrypt(lessonRecordFile.getLessonRecords().get(i).getTotalPoints()));
-            }
-        }
-
-        return lessonRecordFile;
+    public PointSystem loadLessonRecords(String data, boolean set) throws IOException {
+        return gson.fromJson(data, PointSystem.class);
     }
 
     /**

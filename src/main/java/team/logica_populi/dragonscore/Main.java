@@ -42,9 +42,9 @@ public class Main extends Application {
 
         DataFile dataFile = JsonRegistry.getInstance().loadDataFile(Objects.requireNonNull(getClass().getResourceAsStream("/data/lessons/definitions.json")), true);
         PointSystem records = JsonRegistry.getInstance().loadLessonRecords(Objects.requireNonNull(getClass().getResourceAsStream("/data/pointsystem.example.json")), true);
-        LessonRecord lessonRecord = records.getLessonRecords().getFirst();
         Lesson lesson = dataFile.getLessons().getFirst();
-        lessonRecord.getTotalPoints();
+        records.setPoints("eric", lesson , 0);
+        records.setPoints("alex", lesson , 0);
         pair.getValue().setSubmitCallback((List<Answer> selectedAnswers) -> {
             pair.getValue().setQuestion(lesson.getNextQuestion());
         });

@@ -1,8 +1,14 @@
 package team.logica_populi.dragonscore.base.points;
 
 import team.logica_populi.dragonscore.base.Lesson;
+import com.google.gson.Gson;
 
+import java.io.IOException;
+import java.io.Writer;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -64,7 +70,19 @@ public class PointSystem {
              }
          }
          if (flag) {
+             Gson gson = new Gson();
              records.add(new LessonRecord(lesson.getId(), name, points));
+             try {
+                 Writer writer = Files.newBufferedWriter(Paths.get("src/main/resources/data/pointsystem.example.json"));
+                 Collection collection = new ArrayList<>();
+                 for(LessonRecord record : records){
+                     collection.add(record.makeRecord());
+                 }
+                 gson.toJson(collection, writer);
+                 writer.close();
+             } catch (IOException e) {
+                 throw new RuntimeException(e);
+             }
          }
     }
 }
