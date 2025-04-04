@@ -74,11 +74,7 @@ public class PointSystem {
              records.add(new LessonRecord(lesson.getId(), name, points));
              try {
                  Writer writer = Files.newBufferedWriter(Paths.get("src/main/resources/data/pointsystem.example.json"));
-                 Collection collection = new ArrayList<>();
-                 for(LessonRecord record : records){
-                     collection.add(record.makeRecord());
-                 }
-                 gson.toJson(collection, writer);
+                 gson.toJson(records, writer);
                  writer.close();
              } catch (IOException e) {
                  throw new RuntimeException(e);
