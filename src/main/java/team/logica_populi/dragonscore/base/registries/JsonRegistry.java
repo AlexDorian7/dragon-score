@@ -42,6 +42,8 @@ public class JsonRegistry {
         builder.registerTypeAdapter(QuestionGenerator.class, new QuestionGeneratorDeserializer());
         builder.registerTypeAdapter(Form.class, new FormSerializer());
         builder.registerTypeAdapter(Form.class, new FormDeserializer());
+        builder.registerTypeAdapter(PointSystem.class, new PointSystemSerializer());
+        builder.registerTypeAdapter(PointSystem.class, new PointSystemDeserializer());
 
 
         gson = builder.create();
@@ -128,9 +130,9 @@ public class JsonRegistry {
      * @param stream The stream to load from
      * @return The loaded {@link PointSystem}
      */
-    public PointSystem loadLessonRecords(InputStream stream, boolean set){
+    public PointSystem loadPointSystem(InputStream stream, boolean set){
         try {
-            return loadLessonRecords(new String(stream.readAllBytes()), set);
+            return loadPointSystem(new String(stream.readAllBytes()), set);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -141,7 +143,7 @@ public class JsonRegistry {
      * @param data The JSON data to load.
      * @return The loaded {@link PointSystem}
      */
-    public PointSystem loadLessonRecords(String data, boolean set) throws IOException {
+    public PointSystem loadPointSystem(String data, boolean set) throws IOException {
         return gson.fromJson(data, PointSystem.class);
     }
 

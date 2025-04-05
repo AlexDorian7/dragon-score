@@ -65,19 +65,14 @@ public class PointSystem {
      */
     public void setPoints(String name, Lesson lesson, int points) {
         boolean flag = true;
-        /*
-         for (LessonRecord record : records) {
-             if (record.getUserName().equals(name) && record.getId().equals(lesson.getId())) {
-                 flag = false;
-                 record.setTotalPoints(points);
-             }
-         }
-         */
+        HashMap<String, Integer> map = new HashMap<>();
+        map.put(lesson.getId(), points);
+        records.put(name, map);
+
          for(Map.Entry<String, HashMap<String, Integer>> e : records.entrySet()){
-             logger.info(e.toString());
+             logger.info(e.getValue().toString());
         }
          if (flag) {
-             //records.put(new LessonRecord(lesson.getId(), name, points));
              try {
                  Gson gson = JsonRegistry.getInstance().getGson();
                  Writer writer = Files.newBufferedWriter(Paths.get("src/main/resources/data/pointsystem.example.json"));

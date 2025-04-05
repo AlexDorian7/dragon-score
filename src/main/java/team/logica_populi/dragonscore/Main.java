@@ -15,10 +15,7 @@ import team.logica_populi.dragonscore.base.points.PointSystem;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
+import java.util.*;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
@@ -42,8 +39,10 @@ public class Main extends Application {
         Pair<Parent, DefinitionsExampleController> pair = UiComponentCreator.createDefinitionExamplePane();
 
         DataFile dataFile = JsonRegistry.getInstance().loadDataFile(Objects.requireNonNull(getClass().getResourceAsStream("/data/lessons/definitions.json")), true);
-        PointSystem records = JsonRegistry.getInstance().loadLessonRecords(Objects.requireNonNull(getClass().getResourceAsStream("/data/pointsystem.example.json")), true);
+        PointSystem records = JsonRegistry.getInstance().loadPointSystem(Objects.requireNonNull(getClass().getResourceAsStream("/data/pointsystem.example.json")), true);
         Lesson lesson = dataFile.getLessons().getFirst();
+
+        logger.info(records.getLessonRecords().toString());
 
         pair.getValue().setSubmitCallback((List<Answer> selectedAnswers) -> {
             pair.getValue().setQuestion(lesson.getNextQuestion());
