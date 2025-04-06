@@ -42,7 +42,7 @@ public class Main extends Application {
         PointSystem records = JsonRegistry.getInstance().loadPointSystem(Objects.requireNonNull(getClass().getResourceAsStream("/data/pointsystem.example.json")), true);
         Lesson lesson = dataFile.getLessons().getFirst();
 
-        logger.info(records.getLessonRecords().toString());
+        records.setPoints("eric", lesson, 0);
 
         pair.getValue().setSubmitCallback((List<Answer> selectedAnswers) -> {
             pair.getValue().setQuestion(lesson.getNextQuestion());

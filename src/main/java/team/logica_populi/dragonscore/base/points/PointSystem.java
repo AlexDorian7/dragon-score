@@ -65,15 +65,21 @@ public class PointSystem {
      */
     public void setPoints(String name, Lesson lesson, int points) {
         boolean flag = true;
-        HashMap<String, Integer> map = new HashMap<>();
-        map.put(lesson.getId(), points);
-        records.put(name, map);
-
          for(Map.Entry<String, HashMap<String, Integer>> e : records.entrySet()){
+            if(!e.getKey().isEmpty() && name.equals(e.getKey())){
+                flag = false;
+                HashMap<String, Integer> map = new HashMap<>();
+                map.put(lesson.getId(), points);
+                records.put(name,map);
+            }
              logger.info(e.getValue().toString());
         }
          if (flag) {
              try {
+                 HashMap<String, Integer> map = new HashMap<>();
+                 map.put(lesson.getId(), points);
+                 records.put(name, map);
+
                  Gson gson = JsonRegistry.getInstance().getGson();
                  Writer writer = Files.newBufferedWriter(Paths.get("src/main/resources/data/pointsystem.example.json"));
                  gson.toJson(records, writer);
