@@ -153,11 +153,4 @@ public class EncryptionRegistry {
             return null;
         }
     }
-
-    public void main() {
-        String encrypted = encrypt("Hello World");
-        String decrypted = decrypt(encrypted);
-        logger.info(encrypted);
-        logger.info(decrypted);
-    }
 }

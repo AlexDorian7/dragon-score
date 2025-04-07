@@ -1,9 +1,14 @@
 package team.logica_populi.dragonscore.base.points;
 
+import com.google.gson.Gson;
 import team.logica_populi.dragonscore.base.Lesson;
+import team.logica_populi.dragonscore.base.registries.JsonRegistry;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.io.IOException;
+import java.io.Writer;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.*;
 import java.util.logging.Logger;
 
 /**
@@ -12,21 +17,21 @@ import java.util.logging.Logger;
 public class PointSystem {
     private static final Logger logger = Logger.getLogger(PointSystem.class.getName());
 
-    private final List<LessonRecord> records;
+    private final HashMap<String, HashMap<String, Integer>> records;
 
     /**
      * Default constructor
      * TODO: COMMENT ME BETTER!
      */
     public PointSystem() {
-        this.records = new ArrayList<>();
+        this(new HashMap<>());
     }
 
     /**
      * Constructor which takes in a list of lesson records
      * @param records - lesson records that has info about each lesson
      */
-    public PointSystem(List<LessonRecord> records) {
+    public PointSystem(HashMap<String, HashMap<String, Integer>> records) {
         this.records = records;
     }
 
@@ -34,7 +39,7 @@ public class PointSystem {
      * Gets the list of lessonRecords
      * @return Return all the lesson records
      */
-    public List<LessonRecord> getLessonRecords(){
+    public HashMap<String, HashMap<String, Integer>> getLessonRecords(){
         return records;
     }
 
@@ -44,7 +49,10 @@ public class PointSystem {
      */
     @Override
     public String toString() {
-        return "Here is what you are looking for: \n" + getLessonRecords().getLast().getId() + "\n" + getLessonRecords().getLast().getUserName() + "\n" + getLessonRecords().getLast().getTotalPoints();
+        return records.toString();
+    }
+
+    private void mergePointSystem(PointSystem other){
     }
 
     /**
@@ -57,14 +65,28 @@ public class PointSystem {
      */
     public void setPoints(String name, Lesson lesson, int points) {
         boolean flag = true;
-         for (LessonRecord record : records) {
-             if (record.getUserName().equals(name) && record.getId().equals(lesson.getId())) {
-                 flag = false;
-                 record.setTotalPoints(points);
-             }
-         }
+         for(Map.Entry<String, HashMap<String, Integer>> e : records.entrySet()){
+            if(!e.getKey().isEmpty() && name.equals(e.getKey())){
+                flag = false;
+                HashMap<String, Integer> map = new HashMap<>();
+                map.put(lesson.getId(), points);
+                records.put(name,map);
+            }
+            logger.info(e.getKey());
+        }
          if (flag) {
-             records.add(new LessonRecord(lesson.getId(), name, points));
+             try {
+                 HashMap<String, Integer> map = new HashMap<>();
+                 map.put(lesson.getId(), points);
+                 records.put(name, map);
+                 Gson gson = JsonRegistry.getInstance().getGson();
+                 // PLEASE NOTE: THIS PATH SHOULD BE CHOSEN WITH A BETTER IDEA OF WHERE THE PROJECT WILL BE ONCE IT IS FINALLY BUILT
+                 Writer writer = Files.newBufferedWriter(Paths.get("src/main/resources/data/pointsystem.example.json"));
+                 gson.toJson(records, writer);
+                 writer.close();
+             } catch (IOException e) {
+                 throw new RuntimeException(e);
+             }
          }
     }
 }
