@@ -9,6 +9,7 @@ import org.jetbrains.annotations.Nullable;
 import team.logica_populi.dragonscore.base.Lesson;
 import team.logica_populi.dragonscore.base.points.PointSystem;
 import team.logica_populi.dragonscore.ui.UiComponentCreator;
+import team.logica_populi.dragonscore.ui.controllers.MainMenuController;
 import team.logica_populi.dragonscore.ui.controllers.NameFormController;
 
 import java.io.File;
@@ -129,7 +130,15 @@ public class DragonHandler {
      * Create the main menu scene
      */
     private void setupMainMenu() {
-        mainMenuScene = new Scene(new VBox(), 600, 400);
+        Pair<Parent, MainMenuController> mainMenuPane = UiComponentCreator.createMainMenuPane();
+        assert JsonRegistry.getInstance().getDataFile() != null; // If there is no loaded data file we should not even be here
+        mainMenuPane.getValue().setLessons(JsonRegistry.getInstance().getDataFile().getLessons());
+        mainMenuPane.getValue().setName(name);
+        mainMenuPane.getValue().setStartCallback((Lesson lesson) -> {
+            // TODO: MAKE ME LOAD THE LESSON
+            logger.info("Attempt to load " + lesson);
+        });
+        mainMenuScene = new Scene(mainMenuPane.getKey(), 600, 400);
     }
 
     /**
