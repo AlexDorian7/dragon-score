@@ -24,7 +24,7 @@ public class PointSystem {
      * TODO: COMMENT ME BETTER!
      */
     public PointSystem() {
-        this(new HashMap<String, HashMap<String, Integer>>());
+        this(new HashMap<>());
     }
 
     /**

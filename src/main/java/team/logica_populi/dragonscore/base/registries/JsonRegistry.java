@@ -29,7 +29,7 @@ public class JsonRegistry {
 
     private DataFile dataFile;
 
-    private PointSystem pointSystemFile;
+    private PointSystem pointSystem;
 
     /**
      * Constructor to set up Gson and register helpers for it.
@@ -99,6 +99,7 @@ public class JsonRegistry {
      * Loads a data file from the provided input stream.
      * The provided data must be valid data file JSON.
      * @param stream The stream to load from
+     * @param set Set the data file as the main data file
      * @return The loaded {@link DataFile}
      */
     public DataFile loadDataFile(InputStream stream, boolean set) {
@@ -112,6 +113,7 @@ public class JsonRegistry {
     /**
      * Loads a data file from the provided JSON data.
      * @param data The JSON data to load
+     * @param set Set the data file as the main data file
      * @return The loaded {@link DataFile}
      */
     public DataFile loadDataFile(String data, boolean set) {
@@ -128,9 +130,10 @@ public class JsonRegistry {
      * Loads Lesson records file from input stream.
      * The provided file must be in valid JSON format.
      * @param stream The stream to load from
+     * @param set Set the data file as the main data file
      * @return The loaded {@link PointSystem}
      */
-    public PointSystem loadPointSystem(InputStream stream, boolean set){
+    public PointSystem loadPointSystem(InputStream stream, boolean set) {
         try {
             return loadPointSystem(new String(stream.readAllBytes()), set);
         } catch (IOException e) {
@@ -141,10 +144,15 @@ public class JsonRegistry {
     /**
      * Loads the lesson records data from provided JSON data.
      * @param data The JSON data to load.
+     * @param set Set the data file as the main data file
      * @return The loaded {@link PointSystem}
      */
-    public PointSystem loadPointSystem(String data, boolean set) throws IOException {
-        return gson.fromJson(data, PointSystem.class);
+    public PointSystem loadPointSystem(String data, boolean set) {
+        PointSystem pointSystem = gson.fromJson(data, PointSystem.class);
+        if (set) {
+            this.pointSystem = pointSystem;
+        }
+        return pointSystem;
     }
 
     /**
@@ -152,8 +160,8 @@ public class JsonRegistry {
      * @return The loaded {@link PointSystem} file, or null if none have been loaded.
      */
     @Nullable
-    public PointSystem getLessonRecordFile(){
-        return pointSystemFile;
+    public PointSystem getPointSystem() {
+        return pointSystem;
     }
 
     /**
@@ -163,5 +171,14 @@ public class JsonRegistry {
     @Nullable
     public DataFile getDataFile() {
         return dataFile;
+    }
+
+    /**
+     * Creates a new point system
+     * @return The newly created point system
+     */
+    public PointSystem createNewPointSystem() {
+        pointSystem = new PointSystem();
+        return pointSystem;
     }
 }
