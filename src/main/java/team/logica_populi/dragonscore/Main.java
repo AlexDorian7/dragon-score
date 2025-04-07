@@ -22,7 +22,7 @@ import java.util.logging.Logger;
 
 /**
  * This is the main entrypoint to the application.
- * This code sets up the logger and other required systems as well as providing some example code.
+ * This code sets up the logger and other required systems.
  * @see Main#start(Stage)
  */
 public class Main extends Application {
@@ -31,7 +31,6 @@ public class Main extends Application {
 
     /**
      * JavaFX Start Method.
-     * Currently, this contains mostly example code.
      * @param stage The default stage created by JavaFX for us
      * @throws Exception Any exception thrown by our code to be sent back to JavaFX
      */
