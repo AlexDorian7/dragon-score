@@ -29,6 +29,7 @@ public class DragonHandler {
 
     private String name;
     private int points = 0;
+    private int pointsToGive = 10;
     private Lesson lesson;
 
     private final PointSystem pointSystem = new PointSystem();
@@ -195,5 +196,21 @@ public class DragonHandler {
         nameFormPane.getValue().setSubmitCallback(this::handleOnName);
         stage.setScene(new Scene(nameFormPane.getKey(), 400, 400));
         stage.show();
+    }
+
+    /**
+     * Gets the amount of points given per question answered.
+     * @return The amount of points given
+     */
+    public int getPointsToGive() {
+        return pointsToGive;
+    }
+
+    /**
+     * Sets the amount of points given per question answered.
+     * @param pointsToGive The amount of points to give per question
+     */
+    public void setPointsToGive(int pointsToGive) {
+        this.pointsToGive = pointsToGive;
     }
 }
