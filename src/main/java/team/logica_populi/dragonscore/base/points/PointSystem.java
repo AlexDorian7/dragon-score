@@ -79,8 +79,8 @@ public class PointSystem {
                  HashMap<String, Integer> map = new HashMap<>();
                  map.put(lesson.getId(), points);
                  records.put(name, map);
-
                  Gson gson = JsonRegistry.getInstance().getGson();
+                 // PLEASE NOTE: THIS PATH SHOULD BE CHOSEN WITH A BETTER IDEA OF WHERE THE PROJECT WILL BE ONCE IT IS FINALLY BUILT
                  Writer writer = Files.newBufferedWriter(Paths.get("src/main/resources/data/pointsystem.example.json"));
                  gson.toJson(records, writer);
                  writer.close();
