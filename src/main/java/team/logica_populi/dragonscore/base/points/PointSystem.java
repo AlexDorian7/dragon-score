@@ -72,7 +72,7 @@ public class PointSystem {
                 map.put(lesson.getId(), points);
                 records.put(name,map);
             }
-             logger.info(e.getValue().toString());
+            logger.info(e.getKey());
         }
          if (flag) {
              try {
