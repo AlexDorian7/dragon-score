@@ -43,10 +43,10 @@ public class Main extends Application {
         Lesson lesson = dataFile.getLessons().getFirst();
         Lesson lesson2 = dataFile.getLessons().getLast();
 
-        records.setPoints("eric", lesson, 80);
+        records.setPoints("eric", lesson, 90);
         records.setPoints("alex", lesson, 50);
-        records.setPoints("alex", lesson2, 40);
-        records.setPoints("lance", lesson2, 0);
+        records.setPoints("alex", lesson2, 30);
+        records.setPoints("lance", lesson2, 10);
 
         pair.getValue().setSubmitCallback((List<Answer> selectedAnswers) -> {
             pair.getValue().setQuestion(lesson.getNextQuestion());
