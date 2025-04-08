@@ -2,13 +2,11 @@ package team.logica_populi.dragonscore.base.registries;
 
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.util.Pair;
 import org.jetbrains.annotations.Nullable;
 import team.logica_populi.dragonscore.base.Lesson;
 import team.logica_populi.dragonscore.base.logic.Answer;
-import team.logica_populi.dragonscore.base.points.PointSystem;
 import team.logica_populi.dragonscore.ui.UiComponentCreator;
 import team.logica_populi.dragonscore.ui.controllers.MainMenuController;
 import team.logica_populi.dragonscore.ui.controllers.NameFormController;
