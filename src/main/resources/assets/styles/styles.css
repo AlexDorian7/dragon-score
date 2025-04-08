@@ -1,0 +1,116 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #FFFDEE;
+    margin: 0;
+    padding-left: 44px;
+    padding-right: 44px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 28px;
+    margin-bottom: 28px;
+}
+
+header .title {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+header nav a {
+    margin-left: 40px;
+    font-size: 24px;
+    text-decoration: none;
+    color: #282828;
+    font-weight: 500;
+}
+
+.content {
+    max-width: 1040px;
+    margin: 0 auto;
+}
+
+.instructions {
+    font-size: 24px;
+    line-height: 32px;
+    margin-top: 48px;
+    margin-bottom: 28px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 28px;
+    text-align: center;
+    font-weight: 600;
+    color: #282828;
+}
+.question-box {
+    background-color: #FDFDFD;
+    border: 1px solid #a5a5a5;
+    padding: 24px 20px;
+    margin-bottom: 28px;
+    border-radius: 10px;
+}
+
+.question-lead {
+    font-weight: 500;
+    font-size: 20px;
+    margin: 0 0 32px 0;
+    line-height: 28px;
+}
+
+.question-detail {
+    font-weight: 400;
+    font-size: 18px;
+    margin: 0 0 32px 0;
+    line-height: 26px;
+}
+
+.question-box textarea {
+    width: 100%;
+    height: 100px;
+    box-sizing: border-box;
+    font-size: 18px;
+    padding: 8px;
+    border: 1px solid #bebebe;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.actions {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+
+.difficulty {
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    background-color: #e0c97d;
+    cursor: pointer;
+    color: #282828;
+    transition: background-color 0.2s ease;
+}
+
+.difficulty:hover {
+    background-color: #635325;
+    color: white;
+}
+
+.submit {
+    margin-left: auto;
+    padding: 8px 44px;
+    height: 50px;
+    background-color: #282828;
+    font-size: 20px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}

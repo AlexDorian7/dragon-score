@@ -1,0 +1,1996 @@
+{
+  "requires": [],
+  "terms": [],
+  "lessons": [
+    {
+      "id": "lesson_definitions",
+      "name": "Definitions",
+      "description": "This lesson with the \"Meaning and Definitions\" chapter of Harry J.Gensler's Introduction to Logic (Routledge Press).\nAssume that these definitions try to explain current usage and don't stipulate how a term will be used.\n\nSOMEONE PLEASE UPDATE THIS DESC",
+      "randomize": false,
+      "questionGenerators": [],
+      "staticQuestions": [
+        {
+          "question": "Science is that cold and empty worship of experiments.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": false
+            },
+            {
+              "answer": "Too narrow",
+              "correct": false
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": true
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": true
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "A tent is a movable dwelling made of canvas.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": false
+            },
+            {
+              "answer": "Too narrow",
+              "correct": true
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": false
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Philosophy is the study of the human condition.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": true
+            },
+            {
+              "answer": "Too narrow",
+              "correct": false
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": false
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Logic is that dreadful discipline that analyses reasoning.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": false
+            },
+            {
+              "answer": "Too narrow",
+              "correct": false
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": true
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "An old person is anyone over seventy.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": false
+            },
+            {
+              "answer": "Too narrow",
+              "correct": false
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": true
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": false
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "A game is an amusing competition between various players.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": false
+            },
+            {
+              "answer": "Too narrow",
+              "correct": true
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": false
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "A logician is an obnoxious hair-splitter.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": false
+            },
+            {
+              "answer": "Too narrow",
+              "correct": false
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": true
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "A fish is an animal that lives mainly in the water.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": true
+            },
+            {
+              "answer": "Too narrow",
+              "correct": false
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": false
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "A male is whatever has male reproductive organs.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": false
+            },
+            {
+              "answer": "Too narrow",
+              "correct": true
+            },
+            {
+              "answer": "Circular",
+              "correct": true
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": false
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "A police officer is a mere cop.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": false
+            },
+            {
+              "answer": "Too narrow",
+              "correct": false
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": true
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "\"Uncle\" means \"brother of a parent\".",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": false
+            },
+            {
+              "answer": "Too narrow",
+              "correct": true
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": false
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Knowledge is a true belief that is absolutely certain.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": false
+            },
+            {
+              "answer": "Too narrow",
+              "correct": true
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": false
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "A bachelor is an unmarried man who weighs over 50 pounds.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": false
+            },
+            {
+              "answer": "Too narrow",
+              "correct": false
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": false
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "Triangles are what you study in geometry.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": true
+            },
+            {
+              "answer": "Too narrow",
+              "correct": false
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": false
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Architecture is frozen music.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": false
+            },
+            {
+              "answer": "Too narrow",
+              "correct": false
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": true
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": false
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "An apple is a red fruit.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": true
+            },
+            {
+              "answer": "Too narrow",
+              "correct": true
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": false
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "A warm day is one that is over 86 degrees Fahrenheit.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": false
+            },
+            {
+              "answer": "Too narrow",
+              "correct": false
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": true
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": false
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Religion is a way of life based on belief in a supreme being.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": false
+            },
+            {
+              "answer": "Too narrow",
+              "correct": true
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": false
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "A university instructor is just an egghead.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": false
+            },
+            {
+              "answer": "Too narrow",
+              "correct": false
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": true
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "\"True\" means \"proved to be true\".",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": false
+            },
+            {
+              "answer": "Too narrow",
+              "correct": true
+            },
+            {
+              "answer": "Circular",
+              "correct": true
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": false
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "A chair is whatever is used as a chair.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": false
+            },
+            {
+              "answer": "Too narrow",
+              "correct": false
+            },
+            {
+              "answer": "Circular",
+              "correct": true
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": false
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "A teacher is one who instructs children.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": false
+            },
+            {
+              "answer": "Too narrow",
+              "correct": true
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": false
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "A net is anything with interstitial vacuities.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": false
+            },
+            {
+              "answer": "Too narrow",
+              "correct": false
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": true
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": false
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Cars are vehicles powered by gasoline.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": true
+            },
+            {
+              "answer": "Too narrow",
+              "correct": true
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": false
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Bread is the staff of life.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": false
+            },
+            {
+              "answer": "Too narrow",
+              "correct": false
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": true
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": false
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "\"God\" means \"object of ultimate concern\".",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": true
+            },
+            {
+              "answer": "Too narrow",
+              "correct": true
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": false
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "A piano is any musical instrument with keys to select notes.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": true
+            },
+            {
+              "answer": "Too narrow",
+              "correct": false
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": false
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "A pro football player is someone who works for a pro football team.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": true
+            },
+            {
+              "answer": "Too narrow",
+              "correct": false
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": false
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "A man is a featherless biped.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": true
+            },
+            {
+              "answer": "Too narrow",
+              "correct": true
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": false
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "Punishment is anything unpleasant done to a person.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": true
+            },
+            {
+              "answer": "Too narrow",
+              "correct": false
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": false
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "A king is the ruler of a country.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": true
+            },
+            {
+              "answer": "Too narrow",
+              "correct": false
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": false
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Backpacking is the enduring of misery by living out of doors.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": true
+            },
+            {
+              "answer": "Too narrow",
+              "correct": true
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": true
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Knowledge is true belief.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": true
+            },
+            {
+              "answer": "Too narrow",
+              "correct": false
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": false
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "A belief is the closing of a phase of an intellectual symphony.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": false
+            },
+            {
+              "answer": "Too narrow",
+              "correct": false
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": true
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": false
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "A politician is a scoundrel involved in politics.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": false
+            },
+            {
+              "answer": "Too narrow",
+              "correct": true
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": true
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Philosophy is the attempt to transcend cognitive subjectivity.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": false
+            },
+            {
+              "answer": "Too narrow",
+              "correct": false
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": true
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": false
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "A doctor is a man who is licensed to practice medicine.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": false
+            },
+            {
+              "answer": "Too narrow",
+              "correct": true
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": false
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "\"Human being\" means \"whatever is descended from human beings\".",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": false
+            },
+            {
+              "answer": "Too narrow",
+              "correct": false
+            },
+            {
+              "answer": "Circular",
+              "correct": true
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": false
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "A computer is a box made by Dell that has a keyboard and a screen.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": false
+            },
+            {
+              "answer": "Too narrow",
+              "correct": true
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": false
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "A lie is a falsehood that you assert to be true.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": true
+            },
+            {
+              "answer": "Too narrow",
+              "correct": false
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": false
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Philosophy is the discipline developed by Aristotle and Plato.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": false
+            },
+            {
+              "answer": "Too narrow",
+              "correct": false
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": false
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "An adolescent is a person between 9 and 19 years-old.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": false
+            },
+            {
+              "answer": "Too narrow",
+              "correct": false
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": true
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": false
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "An adult is anyone over 17.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": false
+            },
+            {
+              "answer": "Too narrow",
+              "correct": false
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": true
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": false
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Philosophy is what you study in philosophy classes.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": false
+            },
+            {
+              "answer": "Too narrow",
+              "correct": false
+            },
+            {
+              "answer": "Circular",
+              "correct": true
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": false
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "A cold day is one that is under 20 degrees Fahrenheit.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": false
+            },
+            {
+              "answer": "Too narrow",
+              "correct": false
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": true
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": false
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "An honest person is one who doesn't steal.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": false
+            },
+            {
+              "answer": "Too narrow",
+              "correct": true
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": false
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "\"Murder\" means \"killing of a human being.\"",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": true
+            },
+            {
+              "answer": "Too narrow",
+              "correct": false
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": false
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "A liberal is a permissive do-gooder who knows nothing.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": true
+            },
+            {
+              "answer": "Too narrow",
+              "correct": true
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": true
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Logic is that wonderful discipline that analyses reasoning.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": false
+            },
+            {
+              "answer": "Too narrow",
+              "correct": false
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": true
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "\"Chair\" means \"what you sit on.\"",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": true
+            },
+            {
+              "answer": "Too narrow",
+              "correct": true
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": false
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "A conservative is an inflexible person who never thinks.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": true
+            },
+            {
+              "answer": "Too narrow",
+              "correct": true
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": true
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "A wrong action is one that is against the law.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": true
+            },
+            {
+              "answer": "Too narrow",
+              "correct": true
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": false
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "A child is anyone between 2 and 12 years old.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": false
+            },
+            {
+              "answer": "Too narrow",
+              "correct": false
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": true
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": false
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "A football game is whatever is played by the rules of football.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": false
+            },
+            {
+              "answer": "Too narrow",
+              "correct": false
+            },
+            {
+              "answer": "Circular",
+              "correct": true
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": false
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "A kitten is a young female cat.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": false
+            },
+            {
+              "answer": "Too narrow",
+              "correct": true
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": false
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Logic is defined as that subject that is treated by LogiCola.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": false
+            },
+            {
+              "answer": "Too narrow",
+              "correct": false
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": false
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "Knowledge is the cognizance of a reality by an intellect.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": false
+            },
+            {
+              "answer": "Too narrow",
+              "correct": false
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": true
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": false
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "A bird is an animal that can fly.",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": true
+            },
+            {
+              "answer": "Too narrow",
+              "correct": true
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": false
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "\"Metaphysics\" means \"any sleep-inducing subject\".",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": true
+            },
+            {
+              "answer": "Too narrow",
+              "correct": true
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": true
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "\"Tall person\" means \"person over 6 feet tall.\"",
+          "answers": [
+            {
+              "answer": "Too broad",
+              "correct": false
+            },
+            {
+              "answer": "Too narrow",
+              "correct": false
+            },
+            {
+              "answer": "Circular",
+              "correct": false
+            },
+            {
+              "answer": "Uses poorly understood terms",
+              "correct": false
+            },
+            {
+              "answer": "Poor match in vagueness",
+              "correct": true
+            },
+            {
+              "answer": "Poor match in emotional tone",
+              "correct": false
+            },
+            {
+              "answer": "Has non-essential properties",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "forms": []
+}

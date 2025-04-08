@@ -1,0 +1,154 @@
+{
+  "requires": [
+    "/data/lessons/syllogistic_translations.json"
+  ],
+  "terms": {
+    "nouns": [
+      {
+        "word": "car",
+        "type": "NOUN"
+      },
+      {
+        "word": "person",
+        "type": "NOUN"
+      },
+      {
+        "word": "dog",
+        "type": "NOUN"
+      },
+      {
+        "word": "criminal",
+        "type": "NOUN"
+      },
+      {
+        "word": "tree",
+        "type": "NOUN"
+      },
+      {
+        "word": "actor",
+        "type": "NOUN"
+      }
+    ],
+    "pro_nouns": [
+      {
+        "word": "America",
+        "type": "PRO_NOUN"
+      }
+    ],
+    "adjectives": [
+      {
+        "word": "fast",
+        "type": "ADJ"
+      }
+    ],
+    "verbs": [
+      {
+        "word": "running",
+        "type": "VERB"
+      }
+    ],
+    "articles_s": [
+      {
+        "word": "the",
+        "type": "ART_S"
+      }
+    ],
+    "articles_p": [
+      {
+        "word": "a",
+        "type": "ART_P"
+      }
+    ]
+  },
+  "lessons": [
+    {
+      "id": "lesson_1",
+      "name": "Lesson 1",
+      "description": "Lesson 1 description",
+      "randomize": true,
+      "questionGenerators": [
+        "team.logica_populi.dragonscore.base.logic.generators.ExampleQuestionGenerator",
+        "team.logica_populi.dragonscore.base.logic.generators.ExampleFormQuestionGenerator"
+      ],
+      "staticQuestions": [
+        {
+          "question": "What is 2 + 2?",
+          "answers": [
+            {
+              "answer": "4",
+              "correct": true
+            },
+            {
+              "answer": "3",
+              "correct": false
+            },
+            {
+              "answer": "2",
+              "correct": false
+            },
+            {
+              "answer": "1",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Who is our client",
+          "answers": [
+            {
+              "answer": "We are",
+              "correct": false
+            },
+            {
+              "answer": "Dr. Blythe",
+              "correct": false
+            },
+            {
+              "answer": "Dr. Steineger",
+              "correct": true
+            },
+            {
+              "answer": "idk",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "forms": [
+    {
+      "id": "form_1",
+      "fields": [
+        {
+          "id": "noun_1",
+          "list": "nouns"
+        },
+        {
+          "id": "pro_noun_1",
+          "list": "pro_nouns"
+        },
+        {
+          "id": "noun_2",
+          "list": "nouns"
+        },
+        {
+          "id": "art_1",
+          "list": "articles_s"
+        },
+        {
+          "id": "art_2",
+          "list": "articles_s"
+        },{
+          "id": "adj_1",
+          "list": "adjectives"
+        },
+        {
+          "id": "adj_2",
+          "list": "adjectives"
+        }
+      ],
+      "form": "${art_1} ${adj_1} ${noun_1|pro_noun_1} is ${art_2} ${adj_2} ${noun_2}."
+    }
+  ]
+}

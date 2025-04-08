@@ -3,18 +3,21 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
+points
+
 ### IntelliJ IDEA ###
+.idea/
 .idea/modules.xml
 .idea/jarRepositories.xml
 .idea/compiler.xml
 .idea/libraries/
 .idea/workspace.xml
+.idea/misc.xml
 *.iws
 *.iml
 *.ipr
 
-### Java Docs
-docs/
+
 
 ### Eclipse ###
 .apt_generated
