@@ -10,6 +10,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import team.logica_populi.dragonscore.base.logic.Answer;
 import team.logica_populi.dragonscore.base.logic.Question;
+import team.logica_populi.dragonscore.base.registries.DragonHandler;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -57,7 +58,9 @@ public class DefinitionsExampleController {
     private void onDifficultySelect(ActionEvent event) {
         ToggleButton clickedButton = (ToggleButton) event.getSource();
         int difficulty = Integer.parseInt(clickedButton.getText());
-        questionArea.setText("Difficulty set to: " + difficulty);
+        if (DragonHandler.getCurrentSession() != null) {
+            DragonHandler.getCurrentSession().setPointsToGive(difficulty);
+        }
     }
 
     /**

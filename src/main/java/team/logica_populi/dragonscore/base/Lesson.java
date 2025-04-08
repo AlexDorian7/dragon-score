@@ -171,6 +171,6 @@ public class Lesson {
 
     @Override
     public String toString() {
-        return id + ": " + name + "\n> " + description + "\nStatic Questions: " + staticQuestions.size() + "\nQuestion Generators: " + questionGenerators.size();
+        return name;
     }
 }

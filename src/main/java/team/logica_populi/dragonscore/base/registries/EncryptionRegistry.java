@@ -8,7 +8,6 @@ import javax.crypto.spec.PBEKeySpec;
 import javax.crypto.spec.SecretKeySpec;
 import java.io.InputStream;
 import java.nio.ByteBuffer;
-import java.nio.CharBuffer;
 import java.nio.charset.StandardCharsets;
 import java.security.SecureRandom;
 import java.security.spec.KeySpec;
@@ -28,7 +27,10 @@ public class EncryptionRegistry {
     private static final int KEY_LENGTH = 256;
     private static final int ITERATION_COUNT = 65536;
 
-    public EncryptionRegistry() {
+    /**
+     * @see EncryptionRegistry#getInstance()
+     */
+    private EncryptionRegistry() {
 
     }
 
@@ -150,12 +152,5 @@ public class EncryptionRegistry {
             logger.log(Level.WARNING, "FAILED TO DECRYPT DATA!", e);
             return null;
         }
-    }
-
-    public void main() {
-        String encrypted = encrypt("Hello World");
-        String decrypted = decrypt(encrypted);
-        logger.info(encrypted);
-        logger.info(decrypted);
     }
 }
