@@ -1,6 +1,5 @@
 package team.logica_populi.dragonscore.ui;
 
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.util.Pair;
