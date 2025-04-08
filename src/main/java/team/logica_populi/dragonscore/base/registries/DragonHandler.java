@@ -17,6 +17,7 @@ import team.logica_populi.dragonscore.ui.controllers.QuestionFormController;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Objects;
 import java.util.logging.Logger;
@@ -35,7 +36,6 @@ public class DragonHandler {
     private int pointsToGive = 10;
     private Lesson lesson;
 
-    private final PointSystem pointSystem = new PointSystem();
     private Stage stage;
     private Scene mainMenuScene;
     private Scene questionScene;
@@ -95,7 +95,20 @@ public class DragonHandler {
             return;
         }
         this.points = points;
-        pointSystem.setPoints(name, lesson, points);
+        JsonRegistry.getInstance().getPointSystem().setPoints(name, lesson, points);
+    }
+
+    private void updatePoints() {
+        HashMap<String, HashMap<String, Integer>> records = JsonRegistry.getInstance().getPointSystem().getLessonRecords();
+        if (records.containsKey(name)) {
+            logger.finer("User Record Found for name");
+            HashMap<String, Integer> userRecords = records.get(name);
+            if (userRecords.containsKey(lesson.getId())) {
+                points = userRecords.get(lesson.getId());
+                return;
+            }
+        }
+        points = 0;
     }
 
     /**
@@ -141,6 +154,7 @@ public class DragonHandler {
             throw new IllegalStateException("Attempt to show question menu before session was set up!");
         }
         setLesson(lesson);
+        updatePoints();
         if (questionScene == null) {
             Pair<Parent, QuestionFormController> questionFormPane = UiComponentCreator.createQuestionFormPane();
             questionController = questionFormPane.getValue();
@@ -208,7 +222,7 @@ public class DragonHandler {
 
         File file = new File("./points");
         if (!file.exists()) {
-            logger.fine("Creating new Point System.");
+            logger.info("Creating new Point System.");
             JsonRegistry.getInstance().createNewPointSystem();
             return;
         }
@@ -218,7 +232,7 @@ public class DragonHandler {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        logger.fine("Loaded existing Point System.");
+        logger.info("Loaded existing Point System.");
         JsonRegistry.getInstance().loadPointSystem(contents, true);
     }
 
