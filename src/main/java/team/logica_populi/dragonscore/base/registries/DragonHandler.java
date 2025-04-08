@@ -148,6 +148,7 @@ public class DragonHandler {
         }
 
         questionController.setNextQuestionCallback(() -> {
+            // TODO: Make it so if user has at last 100 points, they complete the lesson!
             questionController.setQuestion(lesson.getNextQuestion());
         });
         questionController.setSubmitCallback((List<Answer> selectedAnswers) -> {
