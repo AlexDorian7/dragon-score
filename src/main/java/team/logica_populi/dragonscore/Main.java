@@ -34,15 +34,6 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws Exception {
 
-//        ExampleQuestionGenerator generator = new ExampleQuestionGenerator();
-//        Question nextQuestion = generator.getNextQuestion();
-//
-//        Pair<Parent, QuestionFormController> definitionExamplePane = UiComponentCreator.createQuestionFormPane();
-//        definitionExamplePane.getValue().setQuestion(nextQuestion);
-//        stage.setScene(new Scene(definitionExamplePane.getKey(), 800, 600));
-//        stage.show();
-
-
         DragonHandler dragonHandler = DragonHandler.newSession();
         dragonHandler.setupSession(stage, "/data/index.json");
         dragonHandler.start();
