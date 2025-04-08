@@ -76,8 +76,11 @@ public class PointSystem {
             if(name.equals(id)){
 
                 if(user.containsKey(lesson.getId())){
-                    user.replace(lesson.getId(), points);
-                    records.replace(name, user);
+                    user.forEach((String lesson_name, Integer currPoints) ->{
+                        currPoints += points;
+                        user.replace(lesson.getId(), currPoints);
+                    });
+;                   records.replace(name, user);
                 }
 
                 else{

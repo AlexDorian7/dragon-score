@@ -41,12 +41,9 @@ public class Main extends Application {
         DataFile dataFile = JsonRegistry.getInstance().loadDataFile(Objects.requireNonNull(getClass().getResourceAsStream("/data/lessons/definitions.json")), true);
         PointSystem records = JsonRegistry.getInstance().loadPointSystem(Objects.requireNonNull(getClass().getResourceAsStream("/data/pointsystem.example.json")), true);
         Lesson lesson = dataFile.getLessons().getFirst();
-        Lesson lesson2 = dataFile.getLessons().getLast();
 
-        records.setPoints("eric", lesson, 90);
-        records.setPoints("alex", lesson, 50);
-        records.setPoints("alex", lesson2, 30);
-        records.setPoints("lance", lesson2, 10);
+        records.setPoints("eric", lesson, -5);
+        records.setPoints("alex", lesson, -10);
 
         pair.getValue().setSubmitCallback((List<Answer> selectedAnswers) -> {
             pair.getValue().setQuestion(lesson.getNextQuestion());
