@@ -86,14 +86,14 @@ public class EncryptionRegistry {
             SecretKeySpec secretKeySpec = new SecretKeySpec(tmp.getEncoded(), "AES");
 
 
-            Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
-            cipher.init(Cipher.ENCRYPT_MODE, secretKeySpec, ivspec);
+            Cipher cipher = Cipher.getInstance("AES/GCM/NoPadding");
+            GCMParameterSpec gcmParameterSpec = new GCMParameterSpec(128, iv);
+            cipher.init(Cipher.ENCRYPT_MODE, secretKeySpec, gcmParameterSpec);
 
             byte[] cipherText = cipher.doFinal(data.getBytes(StandardCharsets.UTF_8));
             byte[] encryptedData = new byte[iv.length + cipherText.length + nowBuffer.length];
             System.arraycopy(nowBuffer, 0, encryptedData, 0, nowBuffer.length);
             System.arraycopy(iv, 0, encryptedData, nowBuffer.length, iv.length);
-            System.arraycopy(cipherText, 0, encryptedData, iv.length+nowBuffer.length, cipherText.length);
 
             logger.info(new String(iv));
             logger.info(new String(nowBuffer));
