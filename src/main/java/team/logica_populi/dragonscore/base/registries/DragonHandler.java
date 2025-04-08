@@ -163,6 +163,7 @@ public class DragonHandler {
 
         File file = new File("./points");
         if (!file.exists()) {
+            logger.fine("Creating new Point System.");
             JsonRegistry.getInstance().createNewPointSystem();
             return;
         }
@@ -172,6 +173,7 @@ public class DragonHandler {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+        logger.fine("Loaded existing Point System.");
         JsonRegistry.getInstance().loadPointSystem(contents, true);
     }
 
@@ -185,6 +187,7 @@ public class DragonHandler {
         this.stage = stage;
         stage.setTitle("LogiQuest"); // Do other future stage set up here.
         JsonRegistry.getInstance().loadDataFile(Objects.requireNonNull(getClass().getResourceAsStream(dataFilePath)), true);
+        loadOrCreatePointFile();
     }
 
     /**
