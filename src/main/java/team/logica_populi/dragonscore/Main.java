@@ -25,9 +25,14 @@ public class Main extends Application {
      */
     @Override
     public void start(Stage stage) throws Exception {
+
+
+
+        /*
         DragonHandler dragonHandler = DragonHandler.newSession();
         dragonHandler.setupSession(stage, "/data/index.json");
         dragonHandler.start();
+         */
     }
 
     /**
