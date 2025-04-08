@@ -5,9 +5,12 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.util.Pair;
+import team.logica_populi.dragonscore.base.logic.Question;
+import team.logica_populi.dragonscore.base.logic.generators.ExampleQuestionGenerator;
 import team.logica_populi.dragonscore.base.registries.DragonHandler;
 import team.logica_populi.dragonscore.ui.UiComponentCreator;
 import team.logica_populi.dragonscore.ui.controllers.DefinitionsExampleController;
+import team.logica_populi.dragonscore.ui.controllers.QuestionFormController;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -31,15 +34,19 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws Exception {
 
-        Pair<Parent, DefinitionsExampleController> definitionExamplePane = UiComponentCreator.createDefinitionExamplePane();
-        stage.setScene(new Scene(definitionExamplePane.getKey(), 800, 600));
-        stage.show();
+//        ExampleQuestionGenerator generator = new ExampleQuestionGenerator();
+//        Question nextQuestion = generator.getNextQuestion();
+//
+//        Pair<Parent, QuestionFormController> definitionExamplePane = UiComponentCreator.createQuestionFormPane();
+//        definitionExamplePane.getValue().setQuestion(nextQuestion);
+//        stage.setScene(new Scene(definitionExamplePane.getKey(), 800, 600));
+//        stage.show();
 
-        /*
+
         DragonHandler dragonHandler = DragonHandler.newSession();
         dragonHandler.setupSession(stage, "/data/index.json");
         dragonHandler.start();
-         */
+
     }
 
     /**

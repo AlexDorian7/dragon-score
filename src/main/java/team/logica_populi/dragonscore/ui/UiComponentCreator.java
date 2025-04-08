@@ -3,10 +3,7 @@ package team.logica_populi.dragonscore.ui;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.util.Pair;
-import team.logica_populi.dragonscore.ui.controllers.DefinitionsExampleController;
-import team.logica_populi.dragonscore.ui.controllers.ExampleQuestionPane;
-import team.logica_populi.dragonscore.ui.controllers.MainMenuController;
-import team.logica_populi.dragonscore.ui.controllers.NameFormController;
+import team.logica_populi.dragonscore.ui.controllers.*;
 
 import java.io.IOException;
 import java.util.logging.Logger;
@@ -30,6 +27,18 @@ public class UiComponentCreator {
             throw new RuntimeException(e); // If we failed to load the View then it is likely the rest of the program will not work. Throw error.
         }
         ExampleQuestionPane controller = fxmlLoader.getController();
+        return new Pair<>(parent, controller);
+    }
+
+    public static Pair<Parent, QuestionFormController> createQuestionFormPane() {
+        FXMLLoader fxmlLoader = new FXMLLoader(UiComponentCreator.class.getResource("/assets/views/QuestionForm.fxml"));
+        Parent parent;
+        try {
+            parent = fxmlLoader.load();
+        } catch (IOException e) {
+            throw new RuntimeException(e); // If we failed to load the View then it is likely the rest of the program will not work. Throw error.
+        }
+        QuestionFormController controller = fxmlLoader.getController();
         return new Pair<>(parent, controller);
     }
 
