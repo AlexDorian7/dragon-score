@@ -14,7 +14,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.logging.Logger;
 
 /**
- * TODO: Please Comment me!
+ * Point System handles all the point which is assigned for each lesson
  */
 public class PointSystem {
     private static final Logger logger = Logger.getLogger(PointSystem.class.getName());
@@ -23,7 +23,8 @@ public class PointSystem {
 
     /**
      * Default constructor
-     * TODO: COMMENT ME BETTER!
+     * creates a new HashMap which stores users and their lessons which hold their current
+     * points in their lesson
      */
     public PointSystem() {
         this(new HashMap<String, HashMap<String, Integer>>());
