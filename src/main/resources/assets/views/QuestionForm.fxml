@@ -37,7 +37,7 @@
 
         <!-- Submit Button -->
         <HBox alignment="CENTER">
-            <Button fx:id="submitButton" maxWidth="100" onAction="#onSubmit" style="-fx-background-color: black; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 8 20;" text="Submit" />
+            <Button fx:id="submitButton" maxWidth="200.0" minWidth="100.0" onAction="#onSubmit" prefWidth="150.0" style="-fx-background-color: black; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 8 20;" text="Submit" />
         </HBox>
     </VBox>
 

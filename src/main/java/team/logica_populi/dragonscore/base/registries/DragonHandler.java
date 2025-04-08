@@ -7,14 +7,17 @@ import javafx.stage.Stage;
 import javafx.util.Pair;
 import org.jetbrains.annotations.Nullable;
 import team.logica_populi.dragonscore.base.Lesson;
+import team.logica_populi.dragonscore.base.logic.Answer;
 import team.logica_populi.dragonscore.base.points.PointSystem;
 import team.logica_populi.dragonscore.ui.UiComponentCreator;
 import team.logica_populi.dragonscore.ui.controllers.MainMenuController;
 import team.logica_populi.dragonscore.ui.controllers.NameFormController;
+import team.logica_populi.dragonscore.ui.controllers.QuestionFormController;
 
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.util.List;
 import java.util.Objects;
 import java.util.logging.Logger;
 
@@ -35,6 +38,8 @@ public class DragonHandler {
     private final PointSystem pointSystem = new PointSystem();
     private Stage stage;
     private Scene mainMenuScene;
+    private Scene questionScene;
+    private QuestionFormController questionController;
 
     /**
      * Default constructor.
@@ -77,7 +82,7 @@ public class DragonHandler {
      * @param points The amount of points to add
      */
     protected void addPoints(int points) {
-        setPoints(points + getPoints());
+        setPoints(Integer.max(0, points + getPoints())); // Using max call here to make sure points can never go negative
     }
 
     /**
@@ -128,6 +133,44 @@ public class DragonHandler {
     }
 
     /**
+     * Sets up a lesson and displays it to the user.
+     * @param lesson The lesson to load and run
+     */
+    private void loadLesson(Lesson lesson) {
+        if (stage == null) {
+            throw new IllegalStateException("Attempt to show question menu before session was set up!");
+        }
+        setLesson(lesson);
+        if (questionScene == null) {
+            Pair<Parent, QuestionFormController> questionFormPane = UiComponentCreator.createQuestionFormPane();
+            questionController = questionFormPane.getValue();
+            questionScene = new Scene(questionFormPane.getKey(), 800, 600);
+        }
+
+        questionController.setNextQuestionCallback(() -> {
+            questionController.setQuestion(lesson.getNextQuestion());
+        });
+        questionController.setSubmitCallback((List<Answer> selectedAnswers) -> {
+            boolean correct = true;
+            for (Answer answer : selectedAnswers) {
+                if (!answer.isCorrect()) {
+                    correct = false;
+                    break;
+                }
+            }
+            addPoints(getPointsToGive() * (correct ? 1 : -1));
+            questionController.setProgress((double) getPoints() / 100);
+            questionController.showCorrect();
+        });
+
+        questionController.setProgress((double) getPoints() / 100); // Update the progress bar for the first time
+        questionController.setQuestion(lesson.getNextQuestion()); // Display the first question
+
+        stage.setScene(questionScene); // Add the scene to the stage
+        stage.show(); // Show the stage
+    }
+
+    /**
      * Create the main menu scene
      */
     private void setupMainMenu() {
@@ -138,6 +181,7 @@ public class DragonHandler {
         mainMenuPane.getValue().setStartCallback((Lesson lesson) -> {
             // TODO: MAKE ME LOAD THE LESSON
             logger.info("Attempt to load " + lesson);
+            loadLesson(lesson);
         });
         mainMenuScene = new Scene(mainMenuPane.getKey(), 600, 400);
     }
@@ -147,7 +191,7 @@ public class DragonHandler {
      */
     public void showMainMenu() {
         if (stage == null) {
-            throw new IllegalStateException("Attempt to show main menu before session was set up");
+            throw new IllegalStateException("Attempt to show main menu before session was set up!");
         }
         if (mainMenuScene == null) {
             setupMainMenu();

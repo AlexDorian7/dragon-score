@@ -29,8 +29,11 @@ public class QuestionFormController {
     private ProgressBar progressBar;
 
     private Consumer<List<Answer>> callback;
+    private Runnable nextQuestionCallback;
     private Question question;
     private ArrayList<RadioButton> answerButtons = new ArrayList<>();
+
+    private boolean resultsShown = false;
 
     // Initialize the controller
     @FXML
@@ -54,6 +57,7 @@ public class QuestionFormController {
      */
     public void setQuestion(Question question) {
         this.question = question;
+        resultsShown = false;
         questionArea.setText(question.getQuestion());
         answerButtons.clear();
         answerArea.getChildren().clear();
@@ -63,7 +67,33 @@ public class QuestionFormController {
             answerButtons.add(button);
             button.setOnAction(this::selectAnswer);
         }
+        submitButton.setText("Submit");
+    }
 
+    /**
+     * Sets the progress bar value.
+     * @param progress The value to display in the progress bar
+     */
+    public void setProgress(double progress) {
+        if (progress > 1) progress = 1;
+        if (progress < 0) progress = 0;
+        progressBar.setProgress(progress);
+    }
+
+    /**
+     * Shows the correct answer(s) to the user and prevents any additional answers from being recorded.
+     */
+    public void showCorrect() {
+        resultsShown = true;
+        for (int i=0; i<answerButtons.size(); i++) {
+            if (answerButtons.get(i).isSelected()) {
+                answerButtons.get(i).setStyle("-fx-background-color: #FF7F7F");
+            }
+            if (question.getAnswers().get(i).isCorrect()) {
+                answerButtons.get(i).setStyle("-fx-background-color: #7FFF7F");
+            }
+        }
+        submitButton.setText("Next Question");
     }
 
     /**
@@ -80,6 +110,11 @@ public class QuestionFormController {
      */
     @FXML
     public void onSubmit(ActionEvent actionEvent) {
+        if (resultsShown) {
+            if (nextQuestionCallback != null)
+                nextQuestionCallback.run();
+            return;
+        }
         if (callback != null) {
             ArrayList<Answer> answers = new ArrayList<>();
             for (int i=0; i<answerButtons.size(); i++) {
@@ -99,10 +134,17 @@ public class QuestionFormController {
 
     }
 
-    public void selectAnswer(ActionEvent event) {
+    private void selectAnswer(ActionEvent event) {
         deselectAll();
         RadioButton clickedButton = (RadioButton) event.getSource();
         clickedButton.setSelected(true);
-        questionArea.setText("Selected answer: " + clickedButton.getText());
+    }
+
+    /**
+     * Sets the callback that will be called when the user wants to go to the next question.
+     * @param nextQuestionCallback The callback to be executed
+     */
+    public void setNextQuestionCallback(Runnable nextQuestionCallback) {
+        this.nextQuestionCallback = nextQuestionCallback;
     }
 }
