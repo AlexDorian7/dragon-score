@@ -130,7 +130,7 @@ public class EncryptionRegistry {
             byte[] salt = new byte[Long.BYTES];
             System.arraycopy(encryptedData, 0, salt, 0, salt.length);
             System.arraycopy(encryptedData, salt.length, iv, 0, iv.length);
-            IvParameterSpec ivspec = new IvParameterSpec(iv);
+            GCMParameterSpec gcmParameterSpec = new GCMParameterSpec(128, iv);
 
             logger.info(new String(iv));
             logger.info(new String(salt));
@@ -140,8 +140,8 @@ public class EncryptionRegistry {
             SecretKey tmp = factory.generateSecret(spec);
             SecretKeySpec secretKeySpec = new SecretKeySpec(tmp.getEncoded(), "AES");
 
-            Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
-            cipher.init(Cipher.DECRYPT_MODE, secretKeySpec, ivspec);
+            Cipher cipher = Cipher.getInstance("AES/GCM/NoPadding");
+            cipher.init(Cipher.DECRYPT_MODE, secretKeySpec, gcmParameterSpec);
 
             byte[] cipherText = new byte[encryptedData.length - iv.length - salt.length];
             System.arraycopy(encryptedData, iv.length + salt.length, cipherText, 0, cipherText.length);
