@@ -1455,4 +1455,14 @@ set.subSets[1].questions.forEach(question => {
   ret.lessons[1].staticQuestions.push(ret1);
 });
 
-console.log(JSON.stringify(ret, null, 2));
+let str = JSON.stringify(ret, null, 2);
+
+str = str.replace(/\$ /g, "");
+str = str.replace(/ \$/g, "");
+str = str.replace(/\\\\cdot/g, "\\u00B7")
+str = str.replace(/\\\\vee/g, "\\u2228")
+str = str.replace(/\\\\sim/g, "~");
+str = str.replace(/\\\\supset/g, "\\u2283")
+str = str.replace(/\\\\equiv/g, "\\u2261")
+
+console.log(str);
