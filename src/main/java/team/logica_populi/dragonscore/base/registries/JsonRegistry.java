@@ -47,28 +47,6 @@ public class JsonRegistry {
 
 
         gson = builder.create();
-
-//        // TEST CODE BELOW
-//        logger.info(gson.toJson(new ExampleQuestionGenerator().getNextQuestion()));
-//        ArrayList<QuestionGenerator> list = new ArrayList<>();
-//        list.add(new ExampleQuestionGenerator());
-//        logger.info(gson.toJson(new Lesson("test", "Test", "Hello World", new ArrayList<>(), list)));
-//        FormField field1 = new FormField("n1", "nl");
-//        HashSet<FormField> fields = new HashSet<>();
-//        fields.add(field1);
-//        Form form = new Form("form1", "${n1}", fields);
-//        logger.info(gson.toJson(form));
-//
-//        String json = null;
-//        try {
-//            json = new String(getClass().getResourceAsStream("/assets/db.syllogistic_translations.json").readAllBytes());
-//        } catch (IOException e) {
-//            throw new RuntimeException(e);
-//        }
-//        logger.info(json);
-//        DataFile dataFile = gson.fromJson(json, DataFile.class);
-//        logger.info(gson.toJson(dataFile));
-//        // END TEST CODE
     }
 
     /**

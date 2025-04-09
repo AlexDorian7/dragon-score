@@ -108,9 +108,9 @@ public class DefinitionsExampleController {
 
     public void selectAnswer(ActionEvent event) {
         deselectAll();
-        RadioButton clickedButton = (RadioButton) event.getSource();
+        ToggleButton clickedButton = (ToggleButton) event.getSource();
         clickedButton.setSelected(true);
         questionArea.setText("Selected answer: " + clickedButton.getText());
-
+        clickedButton.setStyle(String.format("-fx-background-color: #C2B280;", clickedButton.getStyle()));
     }
 }

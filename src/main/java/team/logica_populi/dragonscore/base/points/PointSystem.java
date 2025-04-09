@@ -3,12 +3,14 @@ package team.logica_populi.dragonscore.base.points;
 import com.google.gson.Gson;
 import team.logica_populi.dragonscore.base.Lesson;
 import team.logica_populi.dragonscore.base.registries.JsonRegistry;
+import team.logica_populi.dragonscore.base.registries.EncryptionRegistry;
 
 import java.io.IOException;
 import java.io.Writer;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
+import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.logging.Logger;
 
 /**
@@ -65,39 +67,37 @@ public class PointSystem {
      */
     public void setPoints(String name, Lesson lesson, int points) {
         Gson gson = JsonRegistry.getInstance().getGson();
-        boolean flag = true;
-         for(Map.Entry<String, HashMap<String, Integer>> e : records.entrySet()){
-            if(name.equals(e.getKey())){
-                flag = false;
+        EncryptionRegistry crypt = EncryptionRegistry.getInstance();
 
-                HashMap<String, Integer> map = e.getValue();
-                if(lesson.getId().equals(map.get(lesson.getId()))){
-                    map.replace(lesson.getId(), points);
-                    records.replace(name, map);
-                }
-                else{
-                  map.put(lesson.getId(), points);
-                  records.put(name, map);
-                }
+        AtomicBoolean flag = new AtomicBoolean(true);
 
-                try{
-                    Writer writer = Files.newBufferedWriter(Paths.get("src/main/resources/data/pointsystem.example.json"));
+        records.forEach((String id, HashMap<String, Integer> user) ->{
+            if(name.equals(id)){
+                flag.set(false);
+                if(user.containsKey(lesson.getId())) {
+                    user.replace(lesson.getId(), points);
+                    records.replace(name, user);
+                } else {
+                    HashMap<String, Integer> map = new HashMap<>();
+                    map.put(lesson.getId(), points);
+                    records.put(name, map);
+                }
+                try {
+                    Writer writer = Files.newBufferedWriter(Paths.get("./points"));
                     gson.toJson(records, writer);
                     writer.close();
-                }
-                catch (IOException i){
+                } catch (IOException i) {
                     throw new RuntimeException(i);
                 }
             }
-            logger.info(records.toString());
-        }
-         if (flag) {
+        });
+         if (flag.get()) {
              try {
                  HashMap<String, Integer> map = new HashMap<>();
                  map.put(lesson.getId(), points);
                  records.put(name, map);
                  // PLEASE NOTE: THIS PATH SHOULD BE CHOSEN WITH A BETTER IDEA OF WHERE THE PROJECT WILL BE ONCE IT IS FINALLY BUILT
-                 Writer writer = Files.newBufferedWriter(Paths.get("src/main/resources/data/pointsystem.example.json"));
+                 Writer writer = Files.newBufferedWriter(Paths.get("./points"));
                  gson.toJson(records, writer);
 
                  writer.close();
