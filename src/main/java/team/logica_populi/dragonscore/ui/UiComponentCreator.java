@@ -1,11 +1,9 @@
 package team.logica_populi.dragonscore.ui;
 
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.util.Pair;
-import team.logica_populi.dragonscore.ui.controllers.DefinitionsExampleController;
-import team.logica_populi.dragonscore.ui.controllers.ExampleQuestionPane;
+import team.logica_populi.dragonscore.ui.controllers.*;
 
 import java.io.IOException;
 import java.util.logging.Logger;
@@ -32,6 +30,18 @@ public class UiComponentCreator {
         return new Pair<>(parent, controller);
     }
 
+    public static Pair<Parent, QuestionFormController> createQuestionFormPane() {
+        FXMLLoader fxmlLoader = new FXMLLoader(UiComponentCreator.class.getResource("/assets/views/QuestionForm.fxml"));
+        Parent parent;
+        try {
+            parent = fxmlLoader.load();
+        } catch (IOException e) {
+            throw new RuntimeException(e); // If we failed to load the View then it is likely the rest of the program will not work. Throw error.
+        }
+        QuestionFormController controller = fxmlLoader.getController();
+        return new Pair<>(parent, controller);
+    }
+
     public static Pair<Parent, DefinitionsExampleController> createDefinitionExamplePane() {
         FXMLLoader fxmlLoader = new FXMLLoader(UiComponentCreator.class.getResource("/assets/views/DefinitionsExample.fxml"));
         Parent parent;
@@ -41,6 +51,30 @@ public class UiComponentCreator {
             throw new RuntimeException(e); // If we failed to load the View then it is likely the rest of the program will not work. Throw error.
         }
         DefinitionsExampleController controller = fxmlLoader.getController();
+        return new Pair<>(parent, controller);
+    }
+
+    public static Pair<Parent, NameFormController> createNameFormPane() {
+        FXMLLoader fxmlLoader = new FXMLLoader(UiComponentCreator.class.getResource("/assets/views/NameForm.fxml"));
+        Parent parent;
+        try {
+            parent = fxmlLoader.load();
+        } catch (IOException e) {
+            throw new RuntimeException(e); // If we failed to load the View then it is likely the rest of the program will not work. Throw error.
+        }
+        NameFormController controller = fxmlLoader.getController();
+        return new Pair<>(parent, controller);
+    }
+
+    public static Pair<Parent, MainMenuController> createMainMenuPane() {
+        FXMLLoader fxmlLoader = new FXMLLoader(UiComponentCreator.class.getResource("/assets/views/MainMenu.fxml"));
+        Parent parent;
+        try {
+            parent = fxmlLoader.load();
+        } catch (IOException e) {
+            throw new RuntimeException(e); // If we failed to load the View then it is likely the rest of the program will not work. Throw error.
+        }
+        MainMenuController controller = fxmlLoader.getController();
         return new Pair<>(parent, controller);
     }
 }

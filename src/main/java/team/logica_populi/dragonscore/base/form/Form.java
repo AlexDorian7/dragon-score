@@ -2,7 +2,6 @@ package team.logica_populi.dragonscore.base.form;
 
 import team.logica_populi.dragonscore.base.term.Term;
 
-import java.nio.Buffer;
 import java.util.*;
 import java.util.logging.Logger;
 import java.util.regex.Matcher;

@@ -7,7 +7,6 @@ import team.logica_populi.dragonscore.base.form.FormField;
 
 import java.lang.reflect.Type;
 import java.util.HashSet;
-import java.util.Set;
 
 /**
  * Used to Deserialize an {@link Form} object

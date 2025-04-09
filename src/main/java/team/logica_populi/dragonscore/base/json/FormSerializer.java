@@ -3,7 +3,6 @@ package team.logica_populi.dragonscore.base.json;
 import com.google.gson.*;
 import team.logica_populi.dragonscore.base.form.Form;
 import team.logica_populi.dragonscore.base.form.FormField;
-import team.logica_populi.dragonscore.base.logic.Answer;
 
 import java.lang.reflect.Type;
 

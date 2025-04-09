@@ -95,7 +95,7 @@ public class DataFile {
      * @param requires The list of path names to load
      */
     private void loadRequires(List<String> requires) {
-        logger.info(requires.toString());
+        logger.finer(requires.toString());
         for (String path : requires) {
             logger.fine("Loading require from" + path);
             InputStream stream = getClass().getResourceAsStream(path);

@@ -2,14 +2,10 @@ package team.logica_populi.dragonscore.ui.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.ProgressBar;
-import javafx.scene.control.ToggleButton;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.HBox;
+import javafx.scene.control.*;
 import team.logica_populi.dragonscore.base.logic.Answer;
 import team.logica_populi.dragonscore.base.logic.Question;
+import team.logica_populi.dragonscore.base.registries.DragonHandler;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,19 +15,19 @@ public class DefinitionsExampleController {
     @FXML
     public Label questionArea;
     @FXML
-    private ToggleButton answer1;
+    private RadioButton answer1;
     @FXML
-    private ToggleButton answer2;
+    private RadioButton answer2;
     @FXML
-    private ToggleButton answer3;
+    private RadioButton answer3;
     @FXML
-    private ToggleButton answer4;
+    private RadioButton answer4;
     @FXML
-    private ToggleButton answer5;
+    private RadioButton answer5;
     @FXML
-    private ToggleButton answer6;
+    private RadioButton answer6;
     @FXML
-    private ToggleButton answer7;
+    private RadioButton answer7;
     @FXML
     private Button submitButton;
     @FXML
@@ -57,7 +53,9 @@ public class DefinitionsExampleController {
     private void onDifficultySelect(ActionEvent event) {
         ToggleButton clickedButton = (ToggleButton) event.getSource();
         int difficulty = Integer.parseInt(clickedButton.getText());
-        questionArea.setText("Difficulty set to: " + difficulty);
+        if (DragonHandler.getCurrentSession() != null) {
+            DragonHandler.getCurrentSession().setPointsToGive(difficulty);
+        }
     }
 
     /**
@@ -83,6 +81,7 @@ public class DefinitionsExampleController {
      */
     @FXML
     public void onSubmit(ActionEvent actionEvent) {
+        deselectAll();
         if (callback != null) {
             callback.accept(new ArrayList<>()); // TODO: Actually send back the selected answers
         }
@@ -100,7 +99,7 @@ public class DefinitionsExampleController {
 
     public void selectAnswer(ActionEvent event) {
         deselectAll();
-        ToggleButton clickedButton = (ToggleButton) event.getSource();
+        RadioButton clickedButton = (RadioButton) event.getSource();
         clickedButton.setSelected(true);
         questionArea.setText("Selected answer: " + clickedButton.getText());
     }

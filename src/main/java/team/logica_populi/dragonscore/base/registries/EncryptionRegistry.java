@@ -3,6 +3,7 @@ package team.logica_populi.dragonscore.base.registries;
 import javax.crypto.Cipher;
 import javax.crypto.SecretKey;
 import javax.crypto.SecretKeyFactory;
+import javax.crypto.spec.GCMParameterSpec;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.PBEKeySpec;
 import javax.crypto.spec.SecretKeySpec;
@@ -86,14 +87,14 @@ public class EncryptionRegistry {
             SecretKeySpec secretKeySpec = new SecretKeySpec(tmp.getEncoded(), "AES");
 
 
-            Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
-            cipher.init(Cipher.ENCRYPT_MODE, secretKeySpec, ivspec);
+            Cipher cipher = Cipher.getInstance("AES/GCM/NoPadding");
+            GCMParameterSpec gcmParameterSpec = new GCMParameterSpec(128, iv);
+            cipher.init(Cipher.ENCRYPT_MODE, secretKeySpec, gcmParameterSpec);
 
             byte[] cipherText = cipher.doFinal(data.getBytes(StandardCharsets.UTF_8));
             byte[] encryptedData = new byte[iv.length + cipherText.length + nowBuffer.length];
             System.arraycopy(nowBuffer, 0, encryptedData, 0, nowBuffer.length);
             System.arraycopy(iv, 0, encryptedData, nowBuffer.length, iv.length);
-            System.arraycopy(cipherText, 0, encryptedData, iv.length+nowBuffer.length, cipherText.length);
 
             logger.info(new String(iv));
             logger.info(new String(nowBuffer));
@@ -129,7 +130,7 @@ public class EncryptionRegistry {
             byte[] salt = new byte[Long.BYTES];
             System.arraycopy(encryptedData, 0, salt, 0, salt.length);
             System.arraycopy(encryptedData, salt.length, iv, 0, iv.length);
-            IvParameterSpec ivspec = new IvParameterSpec(iv);
+            GCMParameterSpec gcmParameterSpec = new GCMParameterSpec(128, iv);
 
             logger.info(new String(iv));
             logger.info(new String(salt));
@@ -139,8 +140,8 @@ public class EncryptionRegistry {
             SecretKey tmp = factory.generateSecret(spec);
             SecretKeySpec secretKeySpec = new SecretKeySpec(tmp.getEncoded(), "AES");
 
-            Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
-            cipher.init(Cipher.DECRYPT_MODE, secretKeySpec, ivspec);
+            Cipher cipher = Cipher.getInstance("AES/GCM/NoPadding");
+            cipher.init(Cipher.DECRYPT_MODE, secretKeySpec, gcmParameterSpec);
 
             byte[] cipherText = new byte[encryptedData.length - iv.length - salt.length];
             System.arraycopy(encryptedData, iv.length + salt.length, cipherText, 0, cipherText.length);
@@ -152,12 +153,5 @@ public class EncryptionRegistry {
             logger.log(Level.WARNING, "FAILED TO DECRYPT DATA!", e);
             return null;
         }
-    }
-
-    public void main() {
-        String encrypted = encrypt("Hello World");
-        String decrypted = decrypt(encrypted);
-        logger.info(encrypted);
-        logger.info(decrypted);
     }
 }
