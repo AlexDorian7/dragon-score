@@ -122,7 +122,7 @@ public class QuestionFormController {
                     answers.add(question.getAnswers().get(i));
                 }
             }
-
+            if (answers.isEmpty()) return; // The user did not select an answer. Do nothing.
             callback.accept(answers); // TODO: Actually send back the selected answers
         }
     }

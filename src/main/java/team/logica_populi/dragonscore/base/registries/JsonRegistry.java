@@ -12,6 +12,7 @@ import team.logica_populi.dragonscore.base.points.PointSystem;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
@@ -95,6 +96,7 @@ public class JsonRegistry {
      * @return The loaded {@link DataFile}
      */
     public DataFile loadDataFile(String data, boolean set) {
+        logger.finest("Attempting to parse:\n" + data);
         DataFile dataFile = gson.fromJson(data, DataFile.class);
         dataFile.loadRequires();
         if (set) {

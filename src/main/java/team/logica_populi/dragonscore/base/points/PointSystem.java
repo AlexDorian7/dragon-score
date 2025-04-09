@@ -26,7 +26,7 @@ public class PointSystem {
      * TODO: COMMENT ME BETTER!
      */
     public PointSystem() {
-        this(new HashMap<String, HashMap<String, Integer>>());
+        this(new HashMap<>());
     }
 
     /**
@@ -72,38 +72,32 @@ public class PointSystem {
         AtomicBoolean flag = new AtomicBoolean(true);
 
         records.forEach((String id, HashMap<String, Integer> user) ->{
-            flag.set(false);
             if(name.equals(id)){
-
-                if(user.containsKey(lesson.getId())){
+                flag.set(false);
+                if(user.containsKey(lesson.getId())) {
                     user.replace(lesson.getId(), points);
                     records.replace(name, user);
-                }
-
-                else{
+                } else {
                     HashMap<String, Integer> map = new HashMap<>();
                     map.put(lesson.getId(), points);
                     records.put(name, map);
                 }
-                try{
-                    Writer writer = Files.newBufferedWriter(Paths.get("src/main/resources/data/pointsystem.example.json"));
+                try {
+                    Writer writer = Files.newBufferedWriter(Paths.get("./points"));
                     gson.toJson(records, writer);
                     writer.close();
-                }
-                catch (IOException i){
+                } catch (IOException i) {
                     throw new RuntimeException(i);
                 }
-
             }
-
         });
          if (flag.get()) {
              try {
                  HashMap<String, Integer> map = new HashMap<>();
                  map.put(lesson.getId(), points);
                  records.put(name, map);
-
-                 Writer writer = Files.newBufferedWriter(Paths.get("src/main/resources/data/pointsystem.example.json"));
+                 // PLEASE NOTE: THIS PATH SHOULD BE CHOSEN WITH A BETTER IDEA OF WHERE THE PROJECT WILL BE ONCE IT IS FINALLY BUILT
+                 Writer writer = Files.newBufferedWriter(Paths.get("./points"));
                  gson.toJson(records, writer);
 
                  writer.close();
