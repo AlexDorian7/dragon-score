@@ -14,7 +14,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.logging.Logger;
 
 /**
- * TODO: Please Comment me!
+ *  Point System handles setting points and writing it to a file for storage
  */
 public class PointSystem {
     private static final Logger logger = Logger.getLogger(PointSystem.class.getName());
@@ -23,7 +23,7 @@ public class PointSystem {
 
     /**
      * Default constructor
-     * TODO: COMMENT ME BETTER!
+     * returns a new Hashmap
      */
     public PointSystem() {
         this(new HashMap<>());
@@ -54,9 +54,6 @@ public class PointSystem {
         return records.toString();
     }
 
-    private void mergePointSystem(PointSystem other){
-    }
-
     /**
      * Finds the correct record and sets the points for that record.
      * <p>
@@ -71,6 +68,7 @@ public class PointSystem {
 
         AtomicBoolean flag = new AtomicBoolean(true);
 
+        // decrypt on loading the data file
         records.forEach((String id, HashMap<String, Integer> user) ->{
             if(name.equals(id)){
                 flag.set(false);
@@ -84,6 +82,7 @@ public class PointSystem {
                 }
                 try {
                     Writer writer = Files.newBufferedWriter(Paths.get("./points"));
+                    // encrypt here?
                     gson.toJson(records, writer);
                     writer.close();
                 } catch (IOException i) {
@@ -98,6 +97,7 @@ public class PointSystem {
                  records.put(name, map);
                  // PLEASE NOTE: THIS PATH SHOULD BE CHOSEN WITH A BETTER IDEA OF WHERE THE PROJECT WILL BE ONCE IT IS FINALLY BUILT
                  Writer writer = Files.newBufferedWriter(Paths.get("./points"));
+                 // encrypt here?
                  gson.toJson(records, writer);
 
                  writer.close();

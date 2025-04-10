@@ -227,6 +227,7 @@ public class DragonHandler {
         String contents;
         try {
             contents = Files.readString(file.toPath());
+            //contents = EncryptionRegistry.getInstance().decrypt(contents);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
