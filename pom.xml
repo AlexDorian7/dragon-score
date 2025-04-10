@@ -6,8 +6,8 @@
 
     <groupId>team.logica_populi</groupId>
     <artifactId>dragonscore</artifactId>
-    <version>1.3.6.0-alpha</version>
-    <name>DragonScore</name>
+    <version>1.3.7.0-alpha</version>
+    <name>LogiQuest</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -185,9 +185,9 @@
                         <configuration>
                             <mainClass>team.logica_populi.dragonscore/team.logica_populi.dragonscore.Main
                             </mainClass>
-                            <launcher>DragonScore</launcher>
-                            <jlinkZipName>DragonScore</jlinkZipName>
-                            <jlinkImageName>DragonScore</jlinkImageName>
+                            <launcher>Start_LogiQuest</launcher>
+                            <jlinkZipName>LogiQuest</jlinkZipName>
+                            <jlinkImageName>LogiQuest</jlinkImageName>
                             <noManPages>true</noManPages>
                             <stripDebug>true</stripDebug>
                             <noHeaderFiles>true</noHeaderFiles>
