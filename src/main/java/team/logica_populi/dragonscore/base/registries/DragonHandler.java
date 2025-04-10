@@ -193,7 +193,7 @@ public class DragonHandler {
         mainMenuPane.getValue().setName(name);
         mainMenuPane.getValue().setStartCallback((Lesson lesson) -> {
             // TODO: MAKE ME LOAD THE LESSON
-            logger.info("Attempt to load " + lesson);
+            logger.finest("Attempt to load " + lesson);
             loadLesson(lesson);
         });
         mainMenuScene = new Scene(mainMenuPane.getKey(), 600, 400);
@@ -220,7 +220,7 @@ public class DragonHandler {
 
         File file = new File("./points");
         if (!file.exists()) {
-            logger.info("Creating new Point System.");
+            logger.fine("Creating new Point System.");
             JsonRegistry.getInstance().createNewPointSystem();
             return;
         }
@@ -230,7 +230,7 @@ public class DragonHandler {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        logger.info("Loaded existing Point System.");
+        logger.fine("Loaded existing Point System.");
         JsonRegistry.getInstance().loadPointSystem(contents, true);
     }
 
