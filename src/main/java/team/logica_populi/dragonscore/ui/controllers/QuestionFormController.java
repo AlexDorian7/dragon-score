@@ -57,7 +57,7 @@ public class QuestionFormController {
     public void setQuestion(Question question) {
         this.question = question;
         resultsShown = false;
-        questionArea.getEngine().loadContent("<html><head></head><body style='font-size:1em;'>" + question.getQuestion() + "</body></html>");
+        questionArea.getEngine().loadContent("<html><head></head><body style='font-size:1.5em;'>" + question.getQuestion() + "</body></html>");
         answerButtons.clear();
         answerArea.getChildren().clear();
         for (Answer answer : question.getAnswers()) {
