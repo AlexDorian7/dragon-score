@@ -13,7 +13,7 @@ import java.util.Objects;
  * An example {@link QuestionGenerator} to show off the new forms system.
  * @see Form
  */
-public class ExampleFormQuestionGenerator implements QuestionGenerator {
+public class SyllogisticTranslationsGenerator implements QuestionGenerator {
 
     @Override
     public Question getNextQuestion() {
