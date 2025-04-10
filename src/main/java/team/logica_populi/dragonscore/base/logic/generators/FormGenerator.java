@@ -1,7 +1,6 @@
 package team.logica_populi.dragonscore.base.logic.generators;
 
 import team.logica_populi.dragonscore.base.DataFile;
-import team.logica_populi.dragonscore.base.form.AnswerForm;
 import team.logica_populi.dragonscore.base.form.Form;
 import team.logica_populi.dragonscore.base.logic.Answer;
 import team.logica_populi.dragonscore.base.logic.BaseQuestion;
@@ -15,7 +14,7 @@ import java.util.Objects;
  * A {@link QuestionGenerator} for the Syllogistic Translations lesson.
  * @see Form
  */
-public class SyllogisticTranslationsGenerator implements QuestionGenerator {
+public class FormGenerator implements QuestionGenerator {
 
     @Override
     public Question getNextQuestion() {

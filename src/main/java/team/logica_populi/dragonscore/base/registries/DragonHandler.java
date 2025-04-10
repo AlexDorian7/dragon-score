@@ -1,11 +1,13 @@
 package team.logica_populi.dragonscore.base.registries;
 
+import com.google.gson.reflect.TypeToken;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.util.Pair;
 import org.jetbrains.annotations.Nullable;
 import team.logica_populi.dragonscore.base.Lesson;
+import team.logica_populi.dragonscore.base.json.LessonHeader;
 import team.logica_populi.dragonscore.base.logic.Answer;
 import team.logica_populi.dragonscore.ui.UiComponentCreator;
 import team.logica_populi.dragonscore.ui.controllers.MainMenuController;
@@ -26,6 +28,7 @@ import java.util.logging.Logger;
  */
 public class DragonHandler {
     private static final Logger logger = Logger.getLogger(DragonHandler.class.getName());
+    private static final TypeToken<List<LessonHeader>> LESSON_HEADERS_TYPE = new TypeToken<>(){};
 
     private static DragonHandler currentSession;
 
@@ -38,6 +41,8 @@ public class DragonHandler {
     private Scene mainMenuScene;
     private Scene questionScene;
     private QuestionFormController questionController;
+
+    private List<LessonHeader> lessonHeaders;
 
     /**
      * Default constructor.
@@ -189,12 +194,20 @@ public class DragonHandler {
     private void setupMainMenu() {
         Pair<Parent, MainMenuController> mainMenuPane = UiComponentCreator.createMainMenuPane();
         assert JsonRegistry.getInstance().getDataFile() != null; // If there is no loaded data file we should not even be here
-        mainMenuPane.getValue().setLessons(JsonRegistry.getInstance().getDataFile().getLessons());
+        mainMenuPane.getValue().setLessons(lessonHeaders);
         mainMenuPane.getValue().setName(name);
-        mainMenuPane.getValue().setStartCallback((Lesson lesson) -> {
+        mainMenuPane.getValue().setStartCallback((LessonHeader lessonHeader) -> {
+            JsonRegistry.getInstance().loadDataFile(Objects.requireNonNull(getClass().getResourceAsStream(lessonHeader.location)), true);
             // TODO: MAKE ME LOAD THE LESSON
-            logger.finest("Attempt to load " + lesson);
-            loadLesson(lesson);
+            logger.finest("Attempt to load " + lessonHeader);
+            List<Lesson> lessons = JsonRegistry.getInstance().getDataFile().getLessons();
+            for (Lesson lesson : lessons) {
+                if (lesson.getId().equals(lessonHeader.id)) {
+                    loadLesson(lesson);
+                    return;
+                }
+            }
+            logger.warning("No lesson found with id: " + lessonHeader.id);
         });
         mainMenuScene = new Scene(mainMenuPane.getKey(), 600, 400);
     }
@@ -238,12 +251,16 @@ public class DragonHandler {
      * Sets us this session with JavaFX and the back end.
      * This should be the first thing you call on a new session
      * @param stage The state that everything will be displayed to
-     * @param dataFilePath The path to the data file resource that will be loaded for this session
+     * @param lessonHeadersPath The path to the {@link team.logica_populi.dragonscore.base.json.LessonHeader} list resource that will be loaded for this session
      */
-    public void setupSession(Stage stage, String dataFilePath) {
+    public void setupSession(Stage stage, String lessonHeadersPath) {
         this.stage = stage;
         stage.setTitle("LogiQuest"); // Do other future stage set up here.
-        JsonRegistry.getInstance().loadDataFile(Objects.requireNonNull(getClass().getResourceAsStream(dataFilePath)), true);
+        try {
+            lessonHeaders = JsonRegistry.getInstance().getGson().fromJson(new String(getClass().getResourceAsStream(lessonHeadersPath).readAllBytes()), LESSON_HEADERS_TYPE.getType());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
         loadOrCreatePointFile();
     }
 

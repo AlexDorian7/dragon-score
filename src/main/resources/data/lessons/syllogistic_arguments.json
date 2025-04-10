@@ -1,0 +1,84 @@
+{
+  "requires": [
+    "/data/requires/letters.json"
+  ],
+  "terms": {},
+  "lessons": [
+    {
+      "id": "lesson_syllogistic_arguments_how_to_star",
+      "name": "Syllogistic Arguments - How to Star",
+      "description": "Syllogistic Arguments - How to star will test you knowledge of the star test.",
+      "randomize": false,
+      "questionGenerators": [
+        "team.logica_populi.dragonscore.base.logic.generators.FormGenerator"
+      ],
+      "staticQuestions": []
+    }
+  ],
+  "forms": [
+    {
+      "id": "form_1",
+      "fields": [
+        {
+          "id": "letter_1",
+          "list": "l_letters"
+        },
+        {
+          "id": "letter_2",
+          "list": "l_letters"
+        }
+      ],
+      "form": "<p>Which letters are distributed here?</p><pre>  _____\n  _____\n\u2234 ${letter_1} is not ${letter_2}",
+      "answerForms": [
+        {
+          "form": "Neither letter is distributed",
+          "correct": false
+        },
+        {
+          "form": "Just the first letter is distributed",
+          "correct": false
+        },
+        {
+          "form": "Just the second letter is distributed",
+          "correct": true
+        },
+        {
+          "form": "Both letters are distributed",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "form_2",
+      "fields": [
+        {
+          "id": "letter_1",
+          "list": "l_letters"
+        },
+        {
+          "id": "letter_2",
+          "list": "l_letters"
+        }
+      ],
+      "form": "<p>Which letters are starred here?</p><pre>  _____\n  _____\n\u2234 ${letter_1} is not <span style='text-decoration:underline;'>${letter_2}</span>",
+      "answerForms": [
+        {
+          "form": "Neither letter is starred",
+          "correct": false
+        },
+        {
+          "form": "Just the first letter is starred",
+          "correct": true
+        },
+        {
+          "form": "Just the second letter is starred",
+          "correct": false
+        },
+        {
+          "form": "Both letters are starred",
+          "correct": false
+        }
+      ]
+    }
+  ]
+}
