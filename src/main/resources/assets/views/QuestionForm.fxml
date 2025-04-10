@@ -8,6 +8,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.web.WebView?>
 
 <AnchorPane prefHeight="600" prefWidth="800" style="-fx-background-color: #fffce8;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="team.logica_populi.dragonscore.ui.controllers.QuestionFormController">
 
@@ -26,7 +27,7 @@
 
         <!-- Question frame -->
         <HBox alignment="CENTER">
-            <Label fx:id="questionArea" minHeight="100" prefWidth="700" style="-fx-background-color: #fce6a4; -fx-padding: 15; -fx-border-radius: 30; -fx-font-size: 22px; -fx-alignment: center; -fx-text-alignment: center;" text="Place holder for hardcoded question." wrapText="true" />
+            <WebView fx:id="questionArea" minHeight="100" prefHeight="200.0" prefWidth="700" style="-fx-background-color: #fce6a4; -fx-padding: 15; -fx-border-radius: 30; -fx-font-size: 22px; -fx-alignment: center; -fx-text-alignment: center;" text="Place holder for hardcoded question." wrapText="true" />
         </HBox>
 
         <!-- ProgressBAr ////// need to style in implement -->

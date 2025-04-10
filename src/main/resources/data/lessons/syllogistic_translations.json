@@ -36,7 +36,17 @@
           "list": "adjectives"
         }
       ],
-      "form": "The ${adj_1} ${noun_1|pro_noun_1} is ${adj_2}."
+      "form": "<b>The ${adj_1} ${noun_1|pro_noun_1} is ${adj_2}.</b>",
+      "answerForms": [
+        {
+          "form": "$L{adj_1} is $L{adj_2}",
+          "correct": true
+        },
+        {
+          "form": "$U{adj_1} is $U{adj_2}",
+          "correct": false
+        }
+      ]
     },
     {
       "id": "form_2",
@@ -65,7 +75,17 @@
           "list": "adjectives"
         }
       ],
-      "form": "The ${adj_1} ${noun_1} is a ${adj_2} ${noun_2}."
+      "form": "The ${adj_1} ${noun_1} is a ${adj_2} ${noun_2}.",
+      "answerForms": [
+        {
+          "form": "$L{adj_1} is $U{adj_2}",
+          "correct": true
+        },
+        {
+          "form": "$L{adj_1} is $L{adj_2}",
+          "correct": false
+        }
+      ]
     }
   ]
 }
