@@ -36,7 +36,7 @@
           "list": "adjectives"
         }
       ],
-      "form": "<b>The ${adj_1} ${noun_1|pro_noun_1} is ${adj_2}.</b>",
+      "form": "<p'>The ${adj_1} ${noun_1|pro_noun_1} is ${adj_2}.</p>",
       "answerForms": [
         {
           "form": "$L{adj_1} is $L{adj_2}",
@@ -75,7 +75,7 @@
           "list": "adjectives"
         }
       ],
-      "form": "The ${adj_1} ${noun_1} is a ${adj_2} ${noun_2}.",
+      "form": "<p>The ${adj_1} ${noun_1} is a ${adj_2} ${noun_2}.</p>",
       "answerForms": [
         {
           "form": "$L{adj_1} is $U{adj_2}",

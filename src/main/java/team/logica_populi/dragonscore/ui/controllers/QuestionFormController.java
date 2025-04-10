@@ -124,7 +124,7 @@ public class QuestionFormController {
                 }
             }
             if (answers.isEmpty()) return; // The user did not select an answer. Do nothing.
-            callback.accept(answers); // TODO: Actually send back the selected answers
+            callback.accept(answers);
         }
     }
 
