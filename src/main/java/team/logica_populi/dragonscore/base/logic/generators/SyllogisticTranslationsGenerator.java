@@ -1,19 +1,21 @@
 package team.logica_populi.dragonscore.base.logic.generators;
 
 import team.logica_populi.dragonscore.base.DataFile;
+import team.logica_populi.dragonscore.base.form.AnswerForm;
 import team.logica_populi.dragonscore.base.form.Form;
 import team.logica_populi.dragonscore.base.logic.Answer;
 import team.logica_populi.dragonscore.base.logic.BaseQuestion;
 import team.logica_populi.dragonscore.base.logic.Question;
 import team.logica_populi.dragonscore.base.registries.JsonRegistry;
 
+import java.util.List;
 import java.util.Objects;
 
 /**
- * An example {@link QuestionGenerator} to show off the new forms system.
+ * A {@link QuestionGenerator} for the Syllogistic Translations lesson.
  * @see Form
  */
-public class ExampleFormQuestionGenerator implements QuestionGenerator {
+public class SyllogisticTranslationsGenerator implements QuestionGenerator {
 
     @Override
     public Question getNextQuestion() {
@@ -24,10 +26,7 @@ public class ExampleFormQuestionGenerator implements QuestionGenerator {
         }
         Form form = dataFile.getForms().get((int) (Math.random() * dataFile.getForms().size()));
         form.setFields();
-        Answer answer1 = new Answer("Correct", true);
-        Answer answer2 = new Answer("Incorrect", false);
-        Answer answer3 = new Answer("Incorrect", false);
-        Answer answer4 = new Answer("Incorrect", false);
-        return new BaseQuestion(form.toString(), answer1, answer2, answer3, answer4);
+        List<Answer> answers = form.getAnswers();
+        return new BaseQuestion(form.toString(), answers);
     }
 }

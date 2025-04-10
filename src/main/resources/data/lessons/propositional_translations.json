@@ -1,0 +1,2419 @@
+{
+  "requires": [],
+  "terms": [],
+  "lessons": [
+    {
+      "id": "lesson_propositional_translations_easy",
+      "name": "Propositional Translations Easy",
+      "description": "PLEASE CHANGE ME",
+      "randomize": true,
+      "questionGenerators": [],
+      "staticQuestions": [
+        {
+          "question": "Both P and either L or D",
+          "answers": [
+            {
+              "answer": "(P \u00B7 (L \u2228 D))",
+              "correct": true
+            },
+            {
+              "answer": "(P \u00B7 L) \u2228 D",
+              "correct": false
+            },
+            {
+              "answer": "P \u00B7 L \u2228 D",
+              "correct": false
+            },
+            {
+              "answer": "((P \u00B7 L) \u2228 D)",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Not either not B or N",
+          "answers": [
+            {
+              "answer": "(B \u2228 N)",
+              "correct": false
+            },
+            {
+              "answer": "B \u2228 N",
+              "correct": false
+            },
+            {
+              "answer": "~~ B \u2228 N",
+              "correct": false
+            },
+            {
+              "answer": "~(~ B \u2228 N)",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "You aren't either smart or filthy",
+          "answers": [
+            {
+              "answer": "~(S \u2228 F)",
+              "correct": true
+            },
+            {
+              "answer": "~ S \u2228 F",
+              "correct": false
+            },
+            {
+              "answer": "(~ S \u2228 ~ F)",
+              "correct": false
+            },
+            {
+              "answer": "(~ S \u2228 F)",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "You aren't both not forgetful and confident",
+          "answers": [
+            {
+              "answer": "(F \u00B7 C)",
+              "correct": false
+            },
+            {
+              "answer": "F \u00B7 C",
+              "correct": false
+            },
+            {
+              "answer": "~(~ F \u00B7 C)",
+              "correct": true
+            },
+            {
+              "answer": "~~ F \u00B7 C",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Not if not S then L",
+          "answers": [
+            {
+              "answer": "~(~ S \u2283 L)",
+              "correct": true
+            },
+            {
+              "answer": "~~ S \u2283 L",
+              "correct": false
+            },
+            {
+              "answer": "S \u2283 L",
+              "correct": false
+            },
+            {
+              "answer": "(S \u2283 L)",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Not either not C or L",
+          "answers": [
+            {
+              "answer": "~~ C \u2228 L",
+              "correct": false
+            },
+            {
+              "answer": "(C \u2228 L)",
+              "correct": false
+            },
+            {
+              "answer": "C \u2228 L",
+              "correct": false
+            },
+            {
+              "answer": "~(~ C \u2228 L)",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "If you're dull then you're logical, and you're persistent",
+          "answers": [
+            {
+              "answer": "(D \u2283 L) \u00B7 P",
+              "correct": false
+            },
+            {
+              "answer": "(D \u2283 (L \u00B7 P))",
+              "correct": false
+            },
+            {
+              "answer": "((D \u2283 L) \u00B7 P)",
+              "correct": true
+            },
+            {
+              "answer": "D \u2283 L \u00B7 P",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "You're either not mean or not curious",
+          "answers": [
+            {
+              "answer": "(~ M \u2228 C)",
+              "correct": false
+            },
+            {
+              "answer": "~ M \u2228 ~ C",
+              "correct": false
+            },
+            {
+              "answer": "(~ M \u2228 ~ C)",
+              "correct": true
+            },
+            {
+              "answer": "~(M \u2228 ~ C)",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "You're both not bashful and not careful",
+          "answers": [
+            {
+              "answer": "(~ B \u00B7 C)",
+              "correct": false
+            },
+            {
+              "answer": "~(B \u00B7 ~ C)",
+              "correct": false
+            },
+            {
+              "answer": "~ B \u00B7 ~ C",
+              "correct": false
+            },
+            {
+              "answer": "(~ B \u00B7 ~ C)",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "You aren't both charitable and frightened",
+          "answers": [
+            {
+              "answer": "(~ C \u00B7 F)",
+              "correct": false
+            },
+            {
+              "answer": "~ C \u00B7 F",
+              "correct": false
+            },
+            {
+              "answer": "(~ C \u00B7 ~ F)",
+              "correct": false
+            },
+            {
+              "answer": "~(C \u00B7 F)",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "If you're bright then you're cheerful, or you're powerful",
+          "answers": [
+            {
+              "answer": "(B \u2283 (C \u2228 P))",
+              "correct": false
+            },
+            {
+              "answer": "((B \u2283 C) \u2228 P)",
+              "correct": true
+            },
+            {
+              "answer": "B \u2283 C \u2228 P",
+              "correct": false
+            },
+            {
+              "answer": "(B \u2283 C) \u2228 P",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Either both W and C or D",
+          "answers": [
+            {
+              "answer": "((W \u00B7 C) \u2228 D)",
+              "correct": true
+            },
+            {
+              "answer": "(W \u00B7 (C \u2228 D))",
+              "correct": false
+            },
+            {
+              "answer": "(W \u00B7 C) \u2228 D",
+              "correct": false
+            },
+            {
+              "answer": "W \u00B7 C \u00B7 D",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "If you're strong, then you're famous or courageous",
+          "answers": [
+            {
+              "answer": "S \u2283 F \u2228 C",
+              "correct": false
+            },
+            {
+              "answer": "((S \u2283 F) \u2228 C)",
+              "correct": false
+            },
+            {
+              "answer": "(S \u2283 (F \u2228 C))",
+              "correct": true
+            },
+            {
+              "answer": "(S \u2283 F) \u2228 C",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Not if C then F",
+          "answers": [
+            {
+              "answer": "(~ C \u2283 F)",
+              "correct": false
+            },
+            {
+              "answer": "(~ C \u2283 ~ F)",
+              "correct": false
+            },
+            {
+              "answer": "~(C \u2283 F)",
+              "correct": true
+            },
+            {
+              "answer": "~ C \u2283 F",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "If you're short then you're greedy, or you're hideous",
+          "answers": [
+            {
+              "answer": "S \u2283 G \u2228 H",
+              "correct": false
+            },
+            {
+              "answer": "(S \u2283 G) \u2228 H",
+              "correct": false
+            },
+            {
+              "answer": "(S \u2283 (G \u2228 H))",
+              "correct": false
+            },
+            {
+              "answer": "((S \u2283 G) \u2228 H)",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "If you aren't poor then you aren't beautiful",
+          "answers": [
+            {
+              "answer": "~(P \u2283 ~ B)",
+              "correct": false
+            },
+            {
+              "answer": "~ P \u2283 ~ B",
+              "correct": false
+            },
+            {
+              "answer": "(~ P \u2283 ~ B)",
+              "correct": true
+            },
+            {
+              "answer": "(~ P \u2228 B)",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Either not B or L",
+          "answers": [
+            {
+              "answer": "(~ B \u2228 ~ L)",
+              "correct": false
+            },
+            {
+              "answer": "~ B \u2228 L",
+              "correct": false
+            },
+            {
+              "answer": "~(B \u2228 L)",
+              "correct": false
+            },
+            {
+              "answer": "(~ B \u2228 L)",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "If S, then H and L",
+          "answers": [
+            {
+              "answer": "(S \u2283 (H \u00B7 L))",
+              "correct": true
+            },
+            {
+              "answer": "S \u2283 H \u00B7 L",
+              "correct": false
+            },
+            {
+              "answer": "((S \u2283 H) \u00B7 L)",
+              "correct": false
+            },
+            {
+              "answer": "(S \u2283 H) \u00B7 L",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "You're tall and naive, or else dangerous",
+          "answers": [
+            {
+              "answer": "((T \u2228 N) \u2228 D)",
+              "correct": true
+            },
+            {
+              "answer": "T \u00B7 N \u2228 D",
+              "correct": false
+            },
+            {
+              "answer": "(T \u00B7 N) \u2228 D",
+              "correct": false
+            },
+            {
+              "answer": "(T \u00B7 (N \u2228 D))",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "W, and D or S",
+          "answers": [
+            {
+              "answer": "((W \u00B7 D) \u2228 S)",
+              "correct": false
+            },
+            {
+              "answer": "(W \u00B7 (D \u2228 S))",
+              "correct": true
+            },
+            {
+              "answer": "(W \u00B7 D) \u2228 S",
+              "correct": false
+            },
+            {
+              "answer": "W \u00B7 D \u2228 S",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Either not M or B",
+          "answers": [
+            {
+              "answer": "(~ M \u2228 ~ B)",
+              "correct": false
+            },
+            {
+              "answer": "(~ M \u2228 B)",
+              "correct": true
+            },
+            {
+              "answer": "~(M \u2228 B)",
+              "correct": false
+            },
+            {
+              "answer": "~ M \u2228 B",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Either not B or not C",
+          "answers": [
+            {
+              "answer": "(~ B \u2228 C)",
+              "correct": false
+            },
+            {
+              "answer": "~(B \u2228 ~ C)",
+              "correct": false
+            },
+            {
+              "answer": "(~ B \u2228 ~ C)",
+              "correct": true
+            },
+            {
+              "answer": "~ B \u2228 ~ C",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "If R then P, and C",
+          "answers": [
+            {
+              "answer": "((R \u2283 P) \u00B7 C)",
+              "correct": true
+            },
+            {
+              "answer": "R \u2283 P \u00B7 C",
+              "correct": false
+            },
+            {
+              "answer": "(R \u2283 (P \u00B7 C))",
+              "correct": false
+            },
+            {
+              "answer": "(R \u2283 P) \u00B7 C",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Not both R and C",
+          "answers": [
+            {
+              "answer": "~ R \u00B7 C",
+              "correct": false
+            },
+            {
+              "answer": "(~ R \u00B7 ~ C)",
+              "correct": false
+            },
+            {
+              "answer": "~(R \u00B7 C)",
+              "correct": true
+            },
+            {
+              "answer": "(~ R \u00B7 C)",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Either not C or N",
+          "answers": [
+            {
+              "answer": "~ C \u2228 N",
+              "correct": false
+            },
+            {
+              "answer": "~(C \u2228 N)",
+              "correct": false
+            },
+            {
+              "answer": "(~ C \u2228 ~ N)",
+              "correct": false
+            },
+            {
+              "answer": "(~ C \u2228 N)",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "If not C then H",
+          "answers": [
+            {
+              "answer": "~ C \u2283 H",
+              "correct": false
+            },
+            {
+              "answer": "(~ C \u2283 H)",
+              "correct": true
+            },
+            {
+              "answer": "(~ C \u2283 ~ H)",
+              "correct": false
+            },
+            {
+              "answer": "~(C \u2283 H)",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Not either not W or C",
+          "answers": [
+            {
+              "answer": "~~ W \u2228 C",
+              "correct": false
+            },
+            {
+              "answer": "W \u2228 C",
+              "correct": false
+            },
+            {
+              "answer": "(W \u2228 C)",
+              "correct": false
+            },
+            {
+              "answer": "~(~ W \u2228 C)",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "Both not M and L",
+          "answers": [
+            {
+              "answer": "(~ M \u00B7 L)",
+              "correct": true
+            },
+            {
+              "answer": "(~ M \u00B7 ~ L)",
+              "correct": false
+            },
+            {
+              "answer": "~(M \u00B7 L)",
+              "correct": false
+            },
+            {
+              "answer": "~ M \u00B7 L",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "You're both not miserable and not comical",
+          "answers": [
+            {
+              "answer": "(~ M \u00B7 C)",
+              "correct": false
+            },
+            {
+              "answer": "~ M \u00B7 ~ C",
+              "correct": false
+            },
+            {
+              "answer": "(~ M \u00B7 ~ C)",
+              "correct": true
+            },
+            {
+              "answer": "~(M \u00B7 ~ C)",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Either both R and L or N",
+          "answers": [
+            {
+              "answer": "(R \u00B7 (L \u2228 N))",
+              "correct": false
+            },
+            {
+              "answer": "(R \u00B7 L) \u2228 N",
+              "correct": false
+            },
+            {
+              "answer": "R \u00B7 L \u2228 N",
+              "correct": false
+            },
+            {
+              "answer": "((R \u00B7 L) \u2228 N)",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "If you're bright, then you're polite or demented",
+          "answers": [
+            {
+              "answer": "(B \u2283 P) \u2228 D",
+              "correct": false
+            },
+            {
+              "answer": "B \u2283 P \u2228 D",
+              "correct": false
+            },
+            {
+              "answer": "((B \u2283 P) \u2228 D)",
+              "correct": false
+            },
+            {
+              "answer": "(B \u2283 (P \u2228 D))",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "If you're smart, then you're bashful and careful",
+          "answers": [
+            {
+              "answer": "(S \u2283 (B \u00B7 C))",
+              "correct": true
+            },
+            {
+              "answer": "((S \u2283 B) \u00B7 C)",
+              "correct": false
+            },
+            {
+              "answer": "(S \u2283 B) \u00B7 C",
+              "correct": false
+            },
+            {
+              "answer": "S \u2283 B \u00B7 C",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "You're cheap and frivolous, or else generous",
+          "answers": [
+            {
+              "answer": "((C \u00B7 F) \u2228 G)",
+              "correct": true
+            },
+            {
+              "answer": "C \u00B7 F \u2228 G",
+              "correct": false
+            },
+            {
+              "answer": "(C \u00B7 (F \u2228 G))",
+              "correct": false
+            },
+            {
+              "answer": "(C \u00B7 F) \u2228 G",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "You're either both wild and gentle or else cheerful",
+          "answers": [
+            {
+              "answer": "W \u00B7 G \u2228 C",
+              "correct": false
+            },
+            {
+              "answer": "(W \u00B7 (G \u2228 C))",
+              "correct": false
+            },
+            {
+              "answer": "(W \u00B7 G) \u2228 C",
+              "correct": false
+            },
+            {
+              "answer": "((W \u00B7 G) \u2228 C)",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "You aren't either dull or boastful",
+          "answers": [
+            {
+              "answer": "(~ D \u2228 ~ B)",
+              "correct": false
+            },
+            {
+              "answer": "(~ D \u2228 B)",
+              "correct": false
+            },
+            {
+              "answer": "~ D \u2228 B",
+              "correct": false
+            },
+            {
+              "answer": "~(D \u2228 B)",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "You aren't both not creative and notorious",
+          "answers": [
+            {
+              "answer": "~(~ C \u00B7 N)",
+              "correct": true
+            },
+            {
+              "answer": "(C \u00B7 N)",
+              "correct": false
+            },
+            {
+              "answer": "~~ C \u00B7 N",
+              "correct": false
+            },
+            {
+              "answer": "C \u00B7 N",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Not if not B then C",
+          "answers": [
+            {
+              "answer": "~~ B \u2283 C",
+              "correct": false
+            },
+            {
+              "answer": "B \u2283 C",
+              "correct": false
+            },
+            {
+              "answer": "~(~ B \u2283 C)",
+              "correct": true
+            },
+            {
+              "answer": "(B \u2283 C)",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "You're both bright and either forgetful or confident",
+          "answers": [
+            {
+              "answer": "((B \u00B7 F) \u2228 C)",
+              "correct": false
+            },
+            {
+              "answer": "(B \u00B7 F) \u2228 C",
+              "correct": false
+            },
+            {
+              "answer": "B \u00B7 F \u2228 C",
+              "correct": false
+            },
+            {
+              "answer": "(B \u00B7 (F \u2228 C))",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "Not either W or C",
+          "answers": [
+            {
+              "answer": "(~ W \u2228 ~ C)",
+              "correct": false
+            },
+            {
+              "answer": "~ W \u2228 C",
+              "correct": false
+            },
+            {
+              "answer": "(~ W \u2228 C)",
+              "correct": false
+            },
+            {
+              "answer": "~(W \u2228 C)",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "You're tall, and mediocre or colorful",
+          "answers": [
+            {
+              "answer": "(T \u00B7 M) \u2228 C",
+              "correct": false
+            },
+            {
+              "answer": "(T \u00B7 (M \u2228 C))",
+              "correct": true
+            },
+            {
+              "answer": "((T \u00B7 M) \u2228 C)",
+              "correct": false
+            },
+            {
+              "answer": "T \u00B7 M \u2228 C",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "If D then M, and L",
+          "answers": [
+            {
+              "answer": "D \u2283 M \u00B7 L",
+              "correct": false
+            },
+            {
+              "answer": "(D \u2283 M) \u00B7 L",
+              "correct": false
+            },
+            {
+              "answer": "(D \u2283 (M \u00B7 L))",
+              "correct": false
+            },
+            {
+              "answer": "((D \u2283 M) \u00B7 L)",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "Not both L and N",
+          "answers": [
+            {
+              "answer": "(~ L \u00B7 ~ N)",
+              "correct": false
+            },
+            {
+              "answer": "~ L \u00B7 N",
+              "correct": false
+            },
+            {
+              "answer": "~(L \u00B7 N)",
+              "correct": true
+            },
+            {
+              "answer": "(~ L \u00B7 N)",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Either not B or P",
+          "answers": [
+            {
+              "answer": "~(B\\, \u2228 P)",
+              "correct": false
+            },
+            {
+              "answer": "~ B \u2228 P",
+              "correct": false
+            },
+            {
+              "answer": "(~ B \u2228 P)",
+              "correct": true
+            },
+            {
+              "answer": "(~ B \u2228 ~ P)",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "You're both not sarcastic and not bashful",
+          "answers": [
+            {
+              "answer": "(~ S \u00B7 B)",
+              "correct": false
+            },
+            {
+              "answer": "(~ S \u00B7 ~ B)",
+              "correct": true
+            },
+            {
+              "answer": "~(S \u00B7 ~ B)",
+              "correct": false
+            },
+            {
+              "answer": "~ S \u00B7 ~ B",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "If C then S, and B",
+          "answers": [
+            {
+              "answer": "(C \u2283 S) \u00B7 B",
+              "correct": false
+            },
+            {
+              "answer": "(C \u2283 (S \u00B7 B))",
+              "correct": false
+            },
+            {
+              "answer": "C \u2283 S \u00B7 B",
+              "correct": false
+            },
+            {
+              "answer": "((C \u2283 S) \u00B7 B)",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "If you're strong then you're talented, or you're cautious",
+          "answers": [
+            {
+              "answer": "(S \u2283 T) \u2228 C",
+              "correct": false
+            },
+            {
+              "answer": "(S \u2283 (T \u2228 C))",
+              "correct": false
+            },
+            {
+              "answer": "S \u2283 T \u2228 C",
+              "correct": false
+            },
+            {
+              "answer": "((S \u2283 T) \u2228 C)",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "If you aren't tall then you aren't frightened",
+          "answers": [
+            {
+              "answer": "(~ T \u2283 ~ F)",
+              "correct": true
+            },
+            {
+              "answer": "~(T \u2283 ~ F)",
+              "correct": false
+            },
+            {
+              "answer": "~ T \u2283 ~ F",
+              "correct": false
+            },
+            {
+              "answer": "(~ T \u2283 F)",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Both not P and not B",
+          "answers": [
+            {
+              "answer": "~ P \u00B7 ~ B",
+              "correct": false
+            },
+            {
+              "answer": "~(P \u00B7 ~ B)",
+              "correct": false
+            },
+            {
+              "answer": "(~ P \u00B7 ~ B)",
+              "correct": true
+            },
+            {
+              "answer": "(~ P \u00B7 B)",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "If P, then C or D",
+          "answers": [
+            {
+              "answer": "(P \u2283 (C \u2228 D))",
+              "correct": true
+            },
+            {
+              "answer": "((P \u2283 C) \u2228 D)",
+              "correct": false
+            },
+            {
+              "answer": "P \u2283 C \u2228 D",
+              "correct": false
+            },
+            {
+              "answer": "(P \u2283 C) \u2228 D",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Both not C and F",
+          "answers": [
+            {
+              "answer": "~ C \u00B7 F",
+              "correct": false
+            },
+            {
+              "answer": "(~ C \u00B7 ~ F)",
+              "correct": false
+            },
+            {
+              "answer": "~(C \u00B7 F)",
+              "correct": false
+            },
+            {
+              "answer": "(~ C \u00B7 F)",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "If you aren't tough then you're greedy",
+          "answers": [
+            {
+              "answer": "(~ T \u2283 G)",
+              "correct": true
+            },
+            {
+              "answer": "~ T \u2283 G",
+              "correct": false
+            },
+            {
+              "answer": "(~ T \u2283 ~ G)",
+              "correct": false
+            },
+            {
+              "answer": "~(T \u2283 G)",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "If you're weak and hideous, then you're candid",
+          "answers": [
+            {
+              "answer": "W \u00B7 H \u2283 C",
+              "correct": false
+            },
+            {
+              "answer": "(W \u00B7 (H \u2283 C))",
+              "correct": false
+            },
+            {
+              "answer": "((W \u00B7 H) \u2283 C)",
+              "correct": true
+            },
+            {
+              "answer": "(W \u00B7 H) \u2283 C",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "You aren't both not fortunate and loveable",
+          "answers": [
+            {
+              "answer": "F \u00B7 L",
+              "correct": false
+            },
+            {
+              "answer": "(F \u00B7 L)",
+              "correct": false
+            },
+            {
+              "answer": "~(~ F \u00B7 L)",
+              "correct": true
+            },
+            {
+              "answer": "~~ F \u00B7 L",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "You're cruel and lonely, or else humorous",
+          "answers": [
+            {
+              "answer": "((C \u00B7 L) \u2228 H)",
+              "correct": true
+            },
+            {
+              "answer": "(C \u00B7 L) \u2228 H",
+              "correct": false
+            },
+            {
+              "answer": "C \u00B7 L \u2228 H",
+              "correct": false
+            },
+            {
+              "answer": "(C \u00B7 (L \u2228 H))",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "If P, then D and N",
+          "answers": [
+            {
+              "answer": "P \u2283 D \u00B7 N",
+              "correct": false
+            },
+            {
+              "answer": "((P \u2283 D) \u00B7 N)",
+              "correct": false
+            },
+            {
+              "answer": "(P \u2283 D) \u00B7 N",
+              "correct": false
+            },
+            {
+              "answer": "(P \u2283 (D \u00B7 N))",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "Not if R then C",
+          "answers": [
+            {
+              "answer": "(~ R \u2283 ~ C)",
+              "correct": false
+            },
+            {
+              "answer": "~ R \u2283 C",
+              "correct": false
+            },
+            {
+              "answer": "~(R \u2283 C)",
+              "correct": true
+            },
+            {
+              "answer": "(~ R \u2283 C)",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "It is false that if you aren't bright then you're careful",
+          "answers": [
+            {
+              "answer": "B \u2283 C",
+              "correct": false
+            },
+            {
+              "answer": "~(~ B \u2283 C)",
+              "correct": true
+            },
+            {
+              "answer": "(B \u2283 C)",
+              "correct": false
+            },
+            {
+              "answer": "~~ B \u2283 C",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "You're either tough and cautious or else frivolous",
+          "answers": [
+            {
+              "answer": "(T \u00B7 C) \u2228 F",
+              "correct": false
+            },
+            {
+              "answer": "(T \u00B7 (C \u2228 F))",
+              "correct": false
+            },
+            {
+              "answer": "T \u00B7 C \u2228 F",
+              "correct": false
+            },
+            {
+              "answer": "((T \u00B7 C) \u2228 F)",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "You're both weak and either charming or prosperous",
+          "answers": [
+            {
+              "answer": "(W \u00B7 (C \u2228 P))",
+              "correct": true
+            },
+            {
+              "answer": "(W \u00B7 C) \u2228 P",
+              "correct": false
+            },
+            {
+              "answer": "W \u00B7 C \u2228 P",
+              "correct": false
+            },
+            {
+              "answer": "((W \u00B7 C) \u2228 P)",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "If you're tall then you're realistic, and you're boastful",
+          "answers": [
+            {
+              "answer": "T \u2283 R \u00B7 B",
+              "correct": false
+            },
+            {
+              "answer": "(T \u2283 (R \u00B7 B))",
+              "correct": false
+            },
+            {
+              "answer": "(T \u2283 R) \u00B7 B",
+              "correct": false
+            },
+            {
+              "answer": "((T \u2283 R) \u00B7 B)",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "If you're clean then you're powerful, or you're lively",
+          "answers": [
+            {
+              "answer": "((C \u2283 P) \u2228 L)",
+              "correct": true
+            },
+            {
+              "answer": "C \u2283 P \u2228 L",
+              "correct": false
+            },
+            {
+              "answer": "(C \u2283 P) \u2228 L",
+              "correct": false
+            },
+            {
+              "answer": "(C \u2283 (P \u2228 L))",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "You're short, and creative or dishonest",
+          "answers": [
+            {
+              "answer": "(S \u00B7 C) \u2228 D",
+              "correct": false
+            },
+            {
+              "answer": "(S \u00B7 (C \u2228 D))",
+              "correct": true
+            },
+            {
+              "answer": "S \u00B7 C \u2228 D",
+              "correct": false
+            },
+            {
+              "answer": "((S \u00B7 C) \u2228 D)",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lesson_propositional_translations_hard",
+      "name": "Propositional Translations Hard",
+      "description": "PLEASE CHANGE ME",
+      "randomize": true,
+      "questionGenerators": [],
+      "staticQuestions": [
+        {
+          "question": "Only if S, B",
+          "answers": [
+            {
+              "answer": "(B \u2283 S)",
+              "correct": true
+            },
+            {
+              "answer": "(S \u2261 B)",
+              "correct": false
+            },
+            {
+              "answer": "(S \u2283 B)",
+              "correct": false
+            },
+            {
+              "answer": "S \u2283 B",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "S is necessary and sufficient for C",
+          "answers": [
+            {
+              "answer": "S \u2261 C",
+              "correct": false
+            },
+            {
+              "answer": "(C \u2283 S)",
+              "correct": false
+            },
+            {
+              "answer": "(S \u2261 C)",
+              "correct": true
+            },
+            {
+              "answer": "(S \u2283 B)",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "S is sufficient for G",
+          "answers": [
+            {
+              "answer": "(~ S \u2283 \\, ~ G)",
+              "correct": false
+            },
+            {
+              "answer": "(S \u2261 G)",
+              "correct": false
+            },
+            {
+              "answer": "(S \u2283 G)",
+              "correct": true
+            },
+            {
+              "answer": "S \u2283 G",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "B just if G",
+          "answers": [
+            {
+              "answer": "(G \u2283 B)",
+              "correct": false
+            },
+            {
+              "answer": "(B \u2261 G)",
+              "correct": true
+            },
+            {
+              "answer": "B \u2261 G",
+              "correct": false
+            },
+            {
+              "answer": "(B \u2283 G)",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Not both C and P",
+          "answers": [
+            {
+              "answer": "(~ C \u00B7 ~ P)",
+              "correct": false
+            },
+            {
+              "answer": "~ C \u00B7 P",
+              "correct": false
+            },
+            {
+              "answer": "~(C \u00B7 P)",
+              "correct": true
+            },
+            {
+              "answer": "(~ C \u00B7 P)",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "D is necessary and sufficient for C",
+          "answers": [
+            {
+              "answer": "(C \u2283 D)",
+              "correct": false
+            },
+            {
+              "answer": "(D \u2261 C)",
+              "correct": true
+            },
+            {
+              "answer": "(D \u2283 C)",
+              "correct": false
+            },
+            {
+              "answer": "D \u2261 C",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Being wild is sufficient for you to be childish",
+          "answers": [
+            {
+              "answer": "(W \u2283 C)",
+              "correct": true
+            },
+            {
+              "answer": "W \u2283 C",
+              "correct": false
+            },
+            {
+              "answer": "(W \u2261 C)",
+              "correct": false
+            },
+            {
+              "answer": "(~ W \u2283 \\, ~ C)",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "You're short just if you're bitter",
+          "answers": [
+            {
+              "answer": "S \u2261 B",
+              "correct": false
+            },
+            {
+              "answer": "(S \u2283 B)",
+              "correct": false
+            },
+            {
+              "answer": "(S \u2261 B)",
+              "correct": true
+            },
+            {
+              "answer": "(B \u2283 S)",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Not both H and F",
+          "answers": [
+            {
+              "answer": "~ H \u00B7 F",
+              "correct": false
+            },
+            {
+              "answer": "(~ H \u00B7 \\, ~ F)",
+              "correct": false
+            },
+            {
+              "answer": "~(H \u00B7 F)",
+              "correct": true
+            },
+            {
+              "answer": "(~ H \u00B7 F)",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Both not C and B",
+          "answers": [
+            {
+              "answer": "~(C \u00B7 B)",
+              "correct": false
+            },
+            {
+              "answer": "(~ C \u00B7 \\, ~ B)",
+              "correct": false
+            },
+            {
+              "answer": "~ C \u00B7 B",
+              "correct": false
+            },
+            {
+              "answer": "(~ C \u00B7 B)",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "Being slow is sufficient for you to be frantic",
+          "answers": [
+            {
+              "answer": "S \u2283 F",
+              "correct": false
+            },
+            {
+              "answer": "(S \u2261 F)",
+              "correct": false
+            },
+            {
+              "answer": "(S \u2283 F)",
+              "correct": true
+            },
+            {
+              "answer": "(~ S \u2283 \\, ~ F)",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "S just if M",
+          "answers": [
+            {
+              "answer": "(S \u2261 M)",
+              "correct": true
+            },
+            {
+              "answer": "S \u2261 M",
+              "correct": false
+            },
+            {
+              "answer": "(M \u2283 S)",
+              "correct": false
+            },
+            {
+              "answer": "(S \u2283 M)",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Not both L and D",
+          "answers": [
+            {
+              "answer": "~ (L \u00B7 D)",
+              "correct": true
+            },
+            {
+              "answer": "~ L \u00B7 D",
+              "correct": false
+            },
+            {
+              "answer": "(~ L \u00B7 \\, ~ D)",
+              "correct": false
+            },
+            {
+              "answer": "(~ L \u00B7 D)",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Both not N and P",
+          "answers": [
+            {
+              "answer": "(~ N \u00B7 P)",
+              "correct": true
+            },
+            {
+              "answer": "~ N \u00B7 P",
+              "correct": false
+            },
+            {
+              "answer": "(~ N \u00B7 \\, ~ P)",
+              "correct": false
+            },
+            {
+              "answer": "~ (N \u00B7 P)",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Being wild is sufficient for you to be dangerous",
+          "answers": [
+            {
+              "answer": "(W \u2261 D)",
+              "correct": false
+            },
+            {
+              "answer": "(~ W \u2283 \\, ~ D)",
+              "correct": false
+            },
+            {
+              "answer": "(W \u2283 D)",
+              "correct": true
+            },
+            {
+              "answer": "W \u2283 D",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "You're curious unless you're mean",
+          "answers": [
+            {
+              "answer": "(C \u2283 \\, ~ M)",
+              "correct": false
+            },
+            {
+              "answer": "(C \u2228 M)",
+              "correct": true
+            },
+            {
+              "answer": "C \u2261 M",
+              "correct": false
+            },
+            {
+              "answer": "(C \u2261 M)",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Not both S and C",
+          "answers": [
+            {
+              "answer": "~ (S \u00B7 C)",
+              "correct": true
+            },
+            {
+              "answer": "(~ S \u00B7 C)",
+              "correct": false
+            },
+            {
+              "answer": "(~ S \u00B7 \\, ~ C)",
+              "correct": false
+            },
+            {
+              "answer": "~ S \u00B7 C",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "You're rough if you're scholarly",
+          "answers": [
+            {
+              "answer": "(R \u2261 S)",
+              "correct": false
+            },
+            {
+              "answer": "(S \u2283 R)",
+              "correct": true
+            },
+            {
+              "answer": "R \u2283 S",
+              "correct": false
+            },
+            {
+              "answer": "(R \u2283 S)",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "B is sufficient for G",
+          "answers": [
+            {
+              "answer": "B \u2283 G",
+              "correct": false
+            },
+            {
+              "answer": "(B \u2261 G)",
+              "correct": false
+            },
+            {
+              "answer": "(B \u2283 G)",
+              "correct": true
+            },
+            {
+              "answer": "(~ B \u2283 \\, ~ G)",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "You're frightened unless you're slow",
+          "answers": [
+            {
+              "answer": "(F \u2261 S)",
+              "correct": false
+            },
+            {
+              "answer": "(F \u2283 \\, ~ S)",
+              "correct": false
+            },
+            {
+              "answer": "F \u2261 S",
+              "correct": false
+            },
+            {
+              "answer": "(F \u2228 S)",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "T only if C",
+          "answers": [
+            {
+              "answer": "(T \u2261 C)",
+              "correct": false
+            },
+            {
+              "answer": "(T \u2283 C)",
+              "correct": true
+            },
+            {
+              "answer": "T \u2283 C",
+              "correct": false
+            },
+            {
+              "answer": "(C \u2283 T)",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "D if C",
+          "answers": [
+            {
+              "answer": "(D \u2283 C)",
+              "correct": false
+            },
+            {
+              "answer": "D \u2283 C",
+              "correct": false
+            },
+            {
+              "answer": "(D \u2261 C)",
+              "correct": false
+            },
+            {
+              "answer": "(C \u2283 D)",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "M is sufficient for F",
+          "answers": [
+            {
+              "answer": "M \u2283 F",
+              "correct": false
+            },
+            {
+              "answer": "(M \u2283 F)",
+              "correct": true
+            },
+            {
+              "answer": "(M \u2261 F)",
+              "correct": false
+            },
+            {
+              "answer": "(~ M \u2283 \\, ~ F)",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "G iff F",
+          "answers": [
+            {
+              "answer": "(F \u2283 G)",
+              "correct": false
+            },
+            {
+              "answer": "(G \u2283 F)",
+              "correct": false
+            },
+            {
+              "answer": "G \u2261 F",
+              "correct": false
+            },
+            {
+              "answer": "(G \u2261 F)",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "You're rough only if you're selfish",
+          "answers": [
+            {
+              "answer": "(R \u2261 S)",
+              "correct": false
+            },
+            {
+              "answer": "R \u2283 S",
+              "correct": false
+            },
+            {
+              "answer": "(R \u2283 S)",
+              "correct": true
+            },
+            {
+              "answer": "(S \u2283 R)",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "You're bright if you're mediocre",
+          "answers": [
+            {
+              "answer": "(M \u2283 B)",
+              "correct": true
+            },
+            {
+              "answer": "(B \u2261 M)",
+              "correct": false
+            },
+            {
+              "answer": "(B \u2283 M)",
+              "correct": false
+            },
+            {
+              "answer": "B \u2283 M",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "T is necessary for C",
+          "answers": [
+            {
+              "answer": "(T \u2261 C)",
+              "correct": false
+            },
+            {
+              "answer": "(T \u2283 C)",
+              "correct": false
+            },
+            {
+              "answer": "T \u2283 C",
+              "correct": false
+            },
+            {
+              "answer": "(~ T \u2283 \\, ~ C)",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "You're polite iff you're nervous",
+          "answers": [
+            {
+              "answer": "P \u2261 N",
+              "correct": false
+            },
+            {
+              "answer": "(P \u2261 N)",
+              "correct": true
+            },
+            {
+              "answer": "(P \u2283 N )",
+              "correct": false
+            },
+            {
+              "answer": "(N \u2283 P)",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "C only if D",
+          "answers": [
+            {
+              "answer": "C \u2283 D",
+              "correct": false
+            },
+            {
+              "answer": "(D \u2283 C)",
+              "correct": false
+            },
+            {
+              "answer": "(C \u2283 D)",
+              "correct": true
+            },
+            {
+              "answer": "(C \u2261 D)",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "You're cruel if you're terrified",
+          "answers": [
+            {
+              "answer": "(T \u2283 C)",
+              "correct": true
+            },
+            {
+              "answer": "(C \u2261 T)",
+              "correct": false
+            },
+            {
+              "answer": "C \u2283 T",
+              "correct": false
+            },
+            {
+              "answer": "(C \u2283 T)",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "If you aren't mean then you aren't careful",
+          "answers": [
+            {
+              "answer": "(~ M \u2283 C)",
+              "correct": false
+            },
+            {
+              "answer": "(~ M \u2283 \\, ~ C)",
+              "correct": true
+            },
+            {
+              "answer": "~(M \u2283 \\, ~ C)",
+              "correct": false
+            },
+            {
+              "answer": "~ M \u2283 \\, ~ C",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "F iff C",
+          "answers": [
+            {
+              "answer": "F \u2261 C",
+              "correct": false
+            },
+            {
+              "answer": "(F \u2283 C)",
+              "correct": false
+            },
+            {
+              "answer": "(F \u2261 C)",
+              "correct": true
+            },
+            {
+              "answer": "(C \u2283 F)",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "T only if G",
+          "answers": [
+            {
+              "answer": "(G \u2283 T)",
+              "correct": false
+            },
+            {
+              "answer": "T \u2283 G",
+              "correct": false
+            },
+            {
+              "answer": "(T \u2261 G)",
+              "correct": false
+            },
+            {
+              "answer": "(T \u2283 G)",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "If C then R, and B",
+          "answers": [
+            {
+              "answer": "(C \u2283 (R \u00B7 B))",
+              "correct": false
+            },
+            {
+              "answer": "(C \u2283 R) \u00B7 B",
+              "correct": false
+            },
+            {
+              "answer": "((C \u2283 R) \u00B7 B)",
+              "correct": true
+            },
+            {
+              "answer": "C \u2283 R \u00B7 B",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Either not W or not P",
+          "answers": [
+            {
+              "answer": "~(W \u2228 \\, ~ P)",
+              "correct": false
+            },
+            {
+              "answer": "(~ W \u2228 \\, ~ P)",
+              "correct": true
+            },
+            {
+              "answer": "~ W \u2228 \\, ~ P",
+              "correct": false
+            },
+            {
+              "answer": "(~ W \u2228 P)",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "F iff N",
+          "answers": [
+            {
+              "answer": "(N \u2283 F)",
+              "correct": false
+            },
+            {
+              "answer": "F \u2261 N",
+              "correct": false
+            },
+            {
+              "answer": "(F \u2283 N)",
+              "correct": false
+            },
+            {
+              "answer": "(F \u2261 N)",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "C is necessary and sufficient for R",
+          "answers": [
+            {
+              "answer": "C \u2261 R",
+              "correct": false
+            },
+            {
+              "answer": "(R \u2283 C)",
+              "correct": false
+            },
+            {
+              "answer": "(C \u2283 R)",
+              "correct": false
+            },
+            {
+              "answer": "(C \u2261 R)",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "Not either not B or C",
+          "answers": [
+            {
+              "answer": "~(~ B \u2228 C)",
+              "correct": true
+            },
+            {
+              "answer": "B \u2228 C",
+              "correct": false
+            },
+            {
+              "answer": "~ ~ B \u2228 C",
+              "correct": false
+            },
+            {
+              "answer": "(B \u2228 C)",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "If you aren't tough then you aren't lonely",
+          "answers": [
+            {
+              "answer": "(~ T \u2283 \\, ~ L)",
+              "correct": false
+            },
+            {
+              "answer": "(~ T \u2283 L)",
+              "correct": true
+            },
+            {
+              "answer": "~ T \u2283 L",
+              "correct": false
+            },
+            {
+              "answer": "~ (T \u2283 L)",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "You're humorous provided that you're miserable",
+          "answers": [
+            {
+              "answer": "(H \u2261 M)",
+              "correct": false
+            },
+            {
+              "answer": "(H \u2283 M)",
+              "correct": false
+            },
+            {
+              "answer": "(M \u2283 H)",
+              "correct": true
+            },
+            {
+              "answer": "H \u2283 M",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "If you're strong, then you're naive or persistent",
+          "answers": [
+            {
+              "answer": "(S \u2283 (N \u2228 P))",
+              "correct": true
+            },
+            {
+              "answer": "S \u2283 N \u2228 P",
+              "correct": false
+            },
+            {
+              "answer": "(S \u2283 N) \u2228 P",
+              "correct": false
+            },
+            {
+              "answer": "((S \u2283 N) \u2228 P)",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "If you're clean then you're demented, or you're terrified",
+          "answers": [
+            {
+              "answer": "((C \u2283 D) \u2228 T)",
+              "correct": true
+            },
+            {
+              "answer": "(C \u2283 (D \u2228 T))",
+              "correct": false
+            },
+            {
+              "answer": "C \u2283 D \u2228 T",
+              "correct": false
+            },
+            {
+              "answer": "(C \u2283 D) \u2228 T",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Provided that T, S",
+          "answers": [
+            {
+              "answer": "T \u2283 S",
+              "correct": false
+            },
+            {
+              "answer": "(T \u2261 S)",
+              "correct": false
+            },
+            {
+              "answer": "(T \u2283 S)",
+              "correct": true
+            },
+            {
+              "answer": "(S \u2283 T)",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "You're mean and cautious, or else frivolous",
+          "answers": [
+            {
+              "answer": "(M \u00B7 C) \u2228 F",
+              "correct": false
+            },
+            {
+              "answer": "((M \u00B7 C) \u2228 F)",
+              "correct": true
+            },
+            {
+              "answer": "(M \u00B7 (C \u2228 F))",
+              "correct": false
+            },
+            {
+              "answer": "M \u00B7 C \u2228 F",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Unless you're frightened, you're rough",
+          "answers": [
+            {
+              "answer": "(F \u2283 \\, ~ R)",
+              "correct": false
+            },
+            {
+              "answer": "(F \u2261 R)",
+              "correct": false
+            },
+            {
+              "answer": "(F \u2228 R)",
+              "correct": true
+            },
+            {
+              "answer": "F \u2261 R",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "You aren't either smart or realistic",
+          "answers": [
+            {
+              "answer": "(~ S \u2228 \\, ~ R)",
+              "correct": false
+            },
+            {
+              "answer": "(~ S \u2228 R)",
+              "correct": false
+            },
+            {
+              "answer": "~ (S \u2228 R)",
+              "correct": true
+            },
+            {
+              "answer": "~ S \u2228 R",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Both not R and D",
+          "answers": [
+            {
+              "answer": "~(R \u00B7 D)",
+              "correct": false
+            },
+            {
+              "answer": "(~ R \u00B7 \\, ~ D)",
+              "correct": false
+            },
+            {
+              "answer": "~ R \u00B7 D",
+              "correct": false
+            },
+            {
+              "answer": "(~ R \u00B7 D)",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "T is sufficient for F",
+          "answers": [
+            {
+              "answer": "(~ T \u2283 \\, ~ F)",
+              "correct": false
+            },
+            {
+              "answer": "(T \u2283 F)",
+              "correct": true
+            },
+            {
+              "answer": "(T \u2261 F)",
+              "correct": false
+            },
+            {
+              "answer": "T \u2283 F",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "You're either both dull and famous or else courageous",
+          "answers": [
+            {
+              "answer": "((D \u00B7 F) \u2228 C)",
+              "correct": true
+            },
+            {
+              "answer": "(D \u00B7 F) \u2228 C",
+              "correct": false
+            },
+            {
+              "answer": "D \u00B7 F \u2228 C",
+              "correct": false
+            },
+            {
+              "answer": "(D \u00B7 (F \u2228 C))",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "You're bitter unless you're short",
+          "answers": [
+            {
+              "answer": "(B \u2261 S)",
+              "correct": false
+            },
+            {
+              "answer": "B \u2261 S",
+              "correct": false
+            },
+            {
+              "answer": "(B \u2283 \\, ~ S)",
+              "correct": false
+            },
+            {
+              "answer": "(B \u2228 S)",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "You're rich just if you're hideous",
+          "answers": [
+            {
+              "answer": "R \u2261 H",
+              "correct": false
+            },
+            {
+              "answer": "(R \u2261 H)",
+              "correct": true
+            },
+            {
+              "answer": "(R \u2283 H)",
+              "correct": false
+            },
+            {
+              "answer": "(H \u2283 R)",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "If you're bold, then you're candid and selfish",
+          "answers": [
+            {
+              "answer": "(B \u2283 C) \u00B7 S",
+              "correct": false
+            },
+            {
+              "answer": "(B \u2283 (C \u00B7 S))",
+              "correct": true
+            },
+            {
+              "answer": "B \u2283 C \u00B7 S",
+              "correct": false
+            },
+            {
+              "answer": "((B \u2283 C) \u00B7 S)",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "forms": []
+}

@@ -11,6 +11,8 @@ module team.logica_populi.dragonscore {
     requires org.jetbrains.annotations;
 //    requires org.json;
     requires com.google.gson;
+    requires java.sql;
+    requires javafx.web;
 
     opens team.logica_populi.dragonscore to javafx.fxml;
     opens team.logica_populi.dragonscore.ui to javafx.fxml;
