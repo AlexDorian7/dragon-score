@@ -36,14 +36,18 @@ public class Main extends Application {
 
     }
 
+    /**
+     * JavaFX Stop Method.
+     * @throws Exception Any exception thrown when program is stopping
     @Override
     public void stop() throws Exception{
         File file = new File("./points");
         FileWriter writer = new FileWriter(file);
-        writer.write(EncryptionRegistry.getInstance().encrypt(String.valueOf(file)));
+        //writer.write(EncryptionRegistry.getInstance().encrypt(String.valueOf(file)));
         writer.close();
         logger.info("Application Stopping ...");
     }
+    */
 
     /**
      * The main entry point to the program.

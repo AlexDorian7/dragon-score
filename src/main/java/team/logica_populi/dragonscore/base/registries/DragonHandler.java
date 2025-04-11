@@ -93,14 +93,14 @@ public class DragonHandler {
             return;
         }
         this.points = points;
-        JsonRegistry.getInstance().getPointSystem().setPoints(name, lesson, points);
+        JsonRegistry.getInstance().getPointSystem().setPoints(name.toLowerCase(), lesson, points);
     }
 
     private void updatePoints() {
         HashMap<String, HashMap<String, Integer>> records = JsonRegistry.getInstance().getPointSystem().getLessonRecords();
         if (records.containsKey(name)) {
             logger.finer("User Record Found for name");
-            HashMap<String, Integer> userRecords = records.get(name);
+            HashMap<String, Integer> userRecords = records.get(name.toLowerCase());
             if (userRecords.containsKey(lesson.getId())) {
                 points = userRecords.get(lesson.getId());
                 return;
