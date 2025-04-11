@@ -27,7 +27,13 @@
     "id": "lesson_syllogistic_arguments_how_to_star",
     "name": "Syllogistic Arguments - How to Star",
     "description": "Syllogistic Arguments - How to star will test you knowledge of the star test.",
-    "location": "/data/lessons/syllogistic_arguments.json"
+    "location": "/data/lessons/syllogistic_arguments_how_to_star.json"
+  },
+  {
+    "id": "lesson_syllogistic_arguments_symbolic",
+    "name": "Syllogistic Arguments - Symbolic",
+    "description": "Syllogistic Arguments - Symbolic will test you knowledge of the star test to tell if an argument is valid.",
+    "location": "/data/lessons/syllogistic_arguments_symbolic.json"
   }
 ]
 
