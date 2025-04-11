@@ -1,9 +1,9 @@
 package team.logica_populi.dragonscore.base.json;
 
 import com.google.gson.*;
+import team.logica_populi.dragonscore.base.form.AnswerForm;
 import team.logica_populi.dragonscore.base.form.Form;
 import team.logica_populi.dragonscore.base.form.FormField;
-import team.logica_populi.dragonscore.base.logic.Answer;
 
 import java.lang.reflect.Type;
 
@@ -21,6 +21,11 @@ public class FormSerializer implements JsonSerializer<Form> {
             array.add(jsonSerializationContext.serialize(field));
         });
         object.add("fields", array);
+        JsonArray array1 = new JsonArray(form.getAnswerForms().size());
+        for (AnswerForm answerForm : form.getAnswerForms()) {
+            array1.add(jsonSerializationContext.serialize(answerForm));
+        }
+        object.add("answerForms", array1);
         return object;
     }
 }

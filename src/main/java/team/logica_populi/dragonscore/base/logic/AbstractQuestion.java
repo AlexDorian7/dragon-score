@@ -22,13 +22,23 @@ public abstract class AbstractQuestion implements Question {
 
 
     /**
-     * Constructor to make a question given the text, correct answer index, and the answer choices.
+     * Constructor to make a question given the text, and the answer choices.
      * @param question The text for the question label
      * @param answers The answer choices for this question
      */
     protected AbstractQuestion(String question, Answer... answers) {
         this.question = question;
         this.answers = new ArrayList<>(Arrays.stream(answers).toList());
+    }
+
+    /**
+     * Constructor to make a question given the text, and the answer choices as a list.
+     * @param question The text for the question label
+     * @param answers The answer choices for this question
+     */
+    protected AbstractQuestion(String question, List<Answer> answers) {
+        this.question = question;
+        this.answers = answers;
     }
 
     @Override

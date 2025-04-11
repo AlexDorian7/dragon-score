@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.VBox;
+import javafx.scene.web.WebView;
 import team.logica_populi.dragonscore.base.logic.Answer;
 import team.logica_populi.dragonscore.base.logic.Question;
 import team.logica_populi.dragonscore.base.registries.DragonHandler;
@@ -14,7 +15,7 @@ import java.util.function.Consumer;
 
 public class QuestionFormController {
     @FXML
-    private Label questionArea;
+    private WebView questionArea;
     @FXML
     private VBox answerArea;
     @FXML
@@ -38,8 +39,6 @@ public class QuestionFormController {
     // Initialize the controller
     @FXML
     public void initialize() {
-        // Set default text
-        questionArea.setText("Click Submit to see an example response.");
     }
 
     @FXML
@@ -58,7 +57,7 @@ public class QuestionFormController {
     public void setQuestion(Question question) {
         this.question = question;
         resultsShown = false;
-        questionArea.setText(question.getQuestion());
+        questionArea.getEngine().loadContent("<html><head></head><body style='font-size:1.5em;'>" + question.getQuestion() + "</body></html>");
         answerButtons.clear();
         answerArea.getChildren().clear();
         for (Answer answer : question.getAnswers()) {
@@ -122,8 +121,8 @@ public class QuestionFormController {
                     answers.add(question.getAnswers().get(i));
                 }
             }
-
-            callback.accept(answers); // TODO: Actually send back the selected answers
+            if (answers.isEmpty()) return; // The user did not select an answer. Do nothing.
+            callback.accept(answers);
         }
     }
 
