@@ -145,6 +145,7 @@ public class DragonHandler {
      */
     private void handleOnName(String fName, String lName) {
         name = fName + " " + lName;
+        name = name.toLowerCase();
         showMainMenu();
     }
 

@@ -64,32 +64,28 @@ public class PointSystem {
      */
     public void setPoints(String name, Lesson lesson, int points) {
         Gson gson = JsonRegistry.getInstance().getGson();
-        EncryptionRegistry crypt = EncryptionRegistry.getInstance();
 
         AtomicBoolean flag = new AtomicBoolean(true);
 
-        // decrypt on loading the data file
         records.forEach((String id, HashMap<String, Integer> user) ->{
             if(name.equals(id)){
                 flag.set(false);
-                if(user.containsKey(lesson.getId())) {
-                    user.replace(lesson.getId(), points);
-                    records.replace(name, user);
+                if(!user.containsKey(lesson.getId())) {
+                    user.put(lesson.getId(), points);
                 } else {
-                    HashMap<String, Integer> map = new HashMap<>();
-                    map.put(lesson.getId(), points);
-                    records.put(name, map);
+                    user.replace(lesson.getId(), points);
                 }
-                try {
-                    Writer writer = Files.newBufferedWriter(Paths.get("./points"));
-                    // encrypt here?
-                    gson.toJson(records, writer);
-                    writer.close();
-                } catch (IOException i) {
-                    throw new RuntimeException(i);
-                }
+                records.replace(name, user);
             }
         });
+        try {
+            Writer writer = Files.newBufferedWriter(Paths.get("./points"));
+            gson.toJson(records, writer);
+            writer.close();
+        } catch (IOException i) {
+            throw new RuntimeException(i);
+        }
+
          if (flag.get()) {
              try {
                  HashMap<String, Integer> map = new HashMap<>();
@@ -97,7 +93,6 @@ public class PointSystem {
                  records.put(name, map);
                  // PLEASE NOTE: THIS PATH SHOULD BE CHOSEN WITH A BETTER IDEA OF WHERE THE PROJECT WILL BE ONCE IT IS FINALLY BUILT
                  Writer writer = Files.newBufferedWriter(Paths.get("./points"));
-                 // encrypt here?
                  gson.toJson(records, writer);
 
                  writer.close();
