@@ -10,7 +10,7 @@
       "description": "Syllogistic logic studies arguments whose validity depends on \"all,\" \"no,\" \"some,\" and similar notions.\nThis lesson is about translating sentences into syllogistic logic. It goes with the \"Syllogistic Logic\" chapter of Harry J. Gensler's Introduction to Logic (Routledge Press).",
       "randomize": true,
       "questionGenerators": [
-        "team.logica_populi.dragonscore.base.logic.generators.ExampleFormQuestionGenerator"
+        "team.logica_populi.dragonscore.base.logic.generators.FormGenerator"
       ],
       "staticQuestions": []
     }
@@ -36,7 +36,17 @@
           "list": "adjectives"
         }
       ],
-      "form": "The ${adj_1} ${noun_1|pro_noun_1} is ${adj_2}."
+      "form": "<p>The ${adj_1} ${noun_1|pro_noun_1} is ${adj_2}.</p>",
+      "answerForms": [
+        {
+          "form": "$L{adj_1} is $L{adj_2}",
+          "correct": true
+        },
+        {
+          "form": "$U{adj_1} is $U{adj_2}",
+          "correct": false
+        }
+      ]
     },
     {
       "id": "form_2",
@@ -65,7 +75,17 @@
           "list": "adjectives"
         }
       ],
-      "form": "The ${adj_1} ${noun_1} is a ${adj_2} ${noun_2}."
+      "form": "<p>The ${adj_1} ${noun_1} is a ${adj_2} ${noun_2}.</p>",
+      "answerForms": [
+        {
+          "form": "$L{adj_1} is $U{adj_2}",
+          "correct": true
+        },
+        {
+          "form": "$L{adj_1} is $L{adj_2}",
+          "correct": false
+        }
+      ]
     }
   ]
 }

@@ -1,0 +1,215 @@
+{
+  "requires": [],
+  "terms": {
+    "u_letters": [
+      {
+        "word": "A",
+        "type": "U_LET"
+      },
+      {
+        "word": "B",
+        "type": "U_LET"
+      },
+      {
+        "word": "C",
+        "type": "U_LET"
+      },
+      {
+        "word": "D",
+        "type": "U_LET"
+      },
+      {
+        "word": "E",
+        "type": "U_LET"
+      },
+      {
+        "word": "F",
+        "type": "U_LET"
+      },
+      {
+        "word": "G",
+        "type": "U_LET"
+      },
+      {
+        "word": "H",
+        "type": "U_LET"
+      },
+      {
+        "word": "I",
+        "type": "U_LET"
+      },
+      {
+        "word": "J",
+        "type": "U_LET"
+      },
+      {
+        "word": "K",
+        "type": "U_LET"
+      },
+      {
+        "word": "L",
+        "type": "U_LET"
+      },
+      {
+        "word": "M",
+        "type": "U_LET"
+      },
+      {
+        "word": "N",
+        "type": "U_LET"
+      },
+      {
+        "word": "O",
+        "type": "U_LET"
+      },
+      {
+        "word": "P",
+        "type": "U_LET"
+      },{
+        "word": "Q",
+        "type": "U_LET"
+      },{
+        "word": "R",
+        "type": "U_LET"
+      },
+      {
+        "word": "S",
+        "type": "U_LET"
+      },
+      {
+        "word": "T",
+        "type": "U_LET"
+      },
+      {
+        "word": "U",
+        "type": "U_LET"
+      },
+      {
+        "word": "V",
+        "type": "U_LET"
+      },
+      {
+        "word": "W",
+        "type": "U_LET"
+      },{
+        "word": "X",
+        "type": "U_LET"
+      },
+      {
+        "word": "Y",
+        "type": "U_LET"
+      },
+      {
+        "word": "Z",
+        "type": "U_LET"
+      }
+    ],
+    "l_letters": [
+      {
+        "word": "a",
+        "type": "L_LET"
+      },
+      {
+        "word": "b",
+        "type": "L_LET"
+      },
+      {
+        "word": "c",
+        "type": "L_LET"
+      },
+      {
+        "word": "d",
+        "type": "L_LET"
+      },
+      {
+        "word": "e",
+        "type": "L_LET"
+      },
+      {
+        "word": "f",
+        "type": "L_LET"
+      },
+      {
+        "word": "g",
+        "type": "L_LET"
+      },
+      {
+        "word": "h",
+        "type": "L_LET"
+      },
+      {
+        "word": "i",
+        "type": "L_LET"
+      },
+      {
+        "word": "j",
+        "type": "L_LET"
+      },
+      {
+        "word": "k",
+        "type": "L_LET"
+      },
+      {
+        "word": "l",
+        "type": "L_LET"
+      },
+      {
+        "word": "m",
+        "type": "L_LET"
+      },
+      {
+        "word": "n",
+        "type": "L_LET"
+      },
+      {
+        "word": "o",
+        "type": "L_LET"
+      },
+      {
+        "word": "p",
+        "type": "L_LET"
+      },
+      {
+        "word": "q",
+        "type": "L_LET"
+      },{
+        "word": "r",
+        "type": "L_LET"
+      },
+      {
+        "word": "s",
+        "type": "L_LET"
+      },
+      {
+        "word": "t",
+        "type": "L_LET"
+      },
+      {
+        "word": "u",
+        "type": "L_LET"
+      },
+      {
+        "word": "v",
+        "type": "L_LET"
+      },
+      {
+        "word": "w",
+        "type": "L_LET"
+      },
+      {
+        "word": "x",
+        "type": "L_LET"
+      },
+      {
+        "word": "y",
+        "type": "L_LET"
+      },
+      {
+        "word": "z",
+        "type": "L_LET"
+      }
+    ]
+  },
+  "lessons": [],
+  "forms": []
+}
