@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
@@ -17,6 +18,7 @@
             <Font size="16.0" />
          </font>
       </Text>
-      <WebView layoutX="182.0" layoutY="200.0" prefHeight="135.0" prefWidth="237.0" />
+      <WebView fx:id="submissionCodeArea" layoutX="182.0" layoutY="200.0" prefHeight="135.0" prefWidth="237.0" />
+      <Button layoutX="272.0" layoutY="355.0" mnemonicParsing="false" text="Exit" />
    </children>
 </AnchorPane>
