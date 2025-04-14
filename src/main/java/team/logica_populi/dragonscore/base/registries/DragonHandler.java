@@ -13,6 +13,7 @@ import team.logica_populi.dragonscore.ui.UiComponentCreator;
 import team.logica_populi.dragonscore.ui.controllers.MainMenuController;
 import team.logica_populi.dragonscore.ui.controllers.NameFormController;
 import team.logica_populi.dragonscore.ui.controllers.QuestionFormController;
+import team.logica_populi.dragonscore.ui.controllers.SubmissionCodeController;
 
 import java.io.File;
 import java.io.IOException;
@@ -40,7 +41,9 @@ public class DragonHandler {
     private Stage stage;
     private Scene mainMenuScene;
     private Scene questionScene;
+    private Scene submissionCodeScene;
     private QuestionFormController questionController;
+    private SubmissionCodeController submissionCodeController;
 
     private List<LessonHeader> lessonHeaders;
 
@@ -150,6 +153,22 @@ public class DragonHandler {
     }
 
     /**
+     *
+     */
+    private void loadSubmissionCode(){
+        if(stage == null){
+            throw  new IllegalStateException("Attempt to show submission code pane before session was set up!");
+        }
+        if(submissionCodeScene == null){
+            Pair<Parent, SubmissionCodeController> submissionCodeControllerPane = UiComponentCreator.createSubmissionCodePane();
+            submissionCodeController = submissionCodeControllerPane.getValue();
+            submissionCodeScene = new Scene(submissionCodeControllerPane.getKey(), 800, 600);
+        }
+        stage.setScene(submissionCodeScene);
+        stage.show();
+    }
+
+    /**
      * Sets up a lesson and displays it to the user.
      * @param lesson The lesson to load and run
      */
@@ -167,6 +186,9 @@ public class DragonHandler {
 
         questionController.setNextQuestionCallback(() -> {
             // TODO: Make it so if user has at last 100 points, they complete the lesson!
+            if(getPoints() == 100){
+                loadSubmissionCode();
+            }
             questionController.setQuestion(lesson.getNextQuestion());
         });
         questionController.setSubmitCallback((List<Answer> selectedAnswers) -> {

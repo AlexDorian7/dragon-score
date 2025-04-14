@@ -19,6 +19,6 @@
          </font>
       </Text>
       <WebView fx:id="submissionCodeArea" layoutX="182.0" layoutY="200.0" prefHeight="135.0" prefWidth="237.0" />
-      <Button layoutX="272.0" layoutY="355.0" mnemonicParsing="false" text="Exit" />
+      <Button fx:id="submitButton" layoutX="272.0" layoutY="355.0" mnemonicParsing="false" text="Exit" />
    </children>
 </AnchorPane>
