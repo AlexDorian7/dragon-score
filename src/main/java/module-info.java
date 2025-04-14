@@ -11,6 +11,8 @@ module team.logica_populi.dragonscore {
     requires org.jetbrains.annotations;
 //    requires org.json;
     requires com.google.gson;
+    requires java.sql;
+    requires javafx.web;
 
     opens team.logica_populi.dragonscore to javafx.fxml;
     opens team.logica_populi.dragonscore.ui to javafx.fxml;
@@ -19,6 +21,7 @@ module team.logica_populi.dragonscore {
     opens team.logica_populi.dragonscore.base.logic to com.google.gson;
     opens team.logica_populi.dragonscore.base.form to com.google.gson;
     opens team.logica_populi.dragonscore.base.term to com.google.gson;
-    exports team.logica_populi.dragonscore;
+    opens team.logica_populi.dragonscore.base.json to com.google.gson;
     opens team.logica_populi.dragonscore.base.points to com.google.gson;
+    exports team.logica_populi.dragonscore;
 }

@@ -5,6 +5,7 @@ import team.logica_populi.dragonscore.base.logic.Question;
 import team.logica_populi.dragonscore.base.logic.generators.QuestionGenerator;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -20,6 +21,7 @@ public class Lesson {
     private String description;
     private final List<BaseQuestion> staticQuestions;
     private final List<QuestionGenerator> questionGenerators;
+    private final boolean randomize;
 
     /**
      * Create a lesson using only an internal id.
@@ -81,11 +83,25 @@ public class Lesson {
      * @param questionGenerators The question generators assigned to this lesson
      */
     public Lesson(String id, String name, String description, List<BaseQuestion> staticQuestions, List<QuestionGenerator> questionGenerators) {
+        this(id, name, description, staticQuestions, questionGenerators, true);
+    }
+
+    /**
+     * Create a lesson using an internal id, name, description, and lists for static questions and question generators.
+     * @param id The lesson's id
+     * @param name The lesson's name
+     * @param description The lesson's description
+     * @param staticQuestions The static questions assigned to this lesson
+     * @param questionGenerators The question generators assigned to this lesson
+     * @param randomize Randomize the order of answers for questions in this lesson
+     */
+    public Lesson(String id, String name, String description, List<BaseQuestion> staticQuestions, List<QuestionGenerator> questionGenerators, boolean randomize) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.staticQuestions = staticQuestions;
         this.questionGenerators = questionGenerators;
+        this.randomize = randomize;
     }
 
     /**
@@ -144,6 +160,11 @@ public class Lesson {
         return questionGenerators;
     }
 
+    private Question randomizeAnswers(Question question) {
+        if (randomize) Collections.shuffle(question.getAnswers());
+        return question;
+    }
+
     /**
      * Create a new question from a generator or the static pool.
      * <p>
@@ -157,16 +178,16 @@ public class Lesson {
         }
         if (staticQuestions.isEmpty()) {
             QuestionGenerator questionGenerator = questionGenerators.get((int) (Math.random() * questionGenerators.size()));
-            return questionGenerator.getNextQuestion();
+            return randomizeAnswers(questionGenerator.getNextQuestion());
         }
         if (questionGenerators.isEmpty()) {
-            return staticQuestions.get((int) (Math.random() * staticQuestions.size()));
+            return randomizeAnswers(staticQuestions.get((int) (Math.random() * staticQuestions.size())));
         }
         if (Math.random() < 0.5) {
             QuestionGenerator questionGenerator = questionGenerators.get((int) (Math.random() * questionGenerators.size()));
-            return questionGenerator.getNextQuestion();
+            return randomizeAnswers(questionGenerator.getNextQuestion());
         }
-        return staticQuestions.get((int) (Math.random() * staticQuestions.size()));
+        return randomizeAnswers(staticQuestions.get((int) (Math.random() * staticQuestions.size())));
     }
 
     @Override

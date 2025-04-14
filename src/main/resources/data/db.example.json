@@ -65,6 +65,7 @@
       "id": "lesson_1",
       "name": "Lesson 1",
       "description": "Lesson 1 description",
+      "randomize": true,
       "questionGenerators": [
         "team.logica_populi.dragonscore.base.logic.generators.ExampleQuestionGenerator",
         "team.logica_populi.dragonscore.base.logic.generators.ExampleFormQuestionGenerator"

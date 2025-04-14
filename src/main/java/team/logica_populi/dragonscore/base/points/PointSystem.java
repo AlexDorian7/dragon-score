@@ -3,12 +3,14 @@ package team.logica_populi.dragonscore.base.points;
 import com.google.gson.Gson;
 import team.logica_populi.dragonscore.base.Lesson;
 import team.logica_populi.dragonscore.base.registries.JsonRegistry;
+import team.logica_populi.dragonscore.base.registries.EncryptionRegistry;
 
 import java.io.IOException;
 import java.io.Writer;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
+import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.logging.Logger;
 
 /**
@@ -64,29 +66,24 @@ public class PointSystem {
      * @param points The amount of points to set
      */
     public void setPoints(String name, Lesson lesson, int points) {
-        boolean flag = true;
-         for(Map.Entry<String, HashMap<String, Integer>> e : records.entrySet()){
-            if(!e.getKey().isEmpty() && name.equals(e.getKey())){
-                flag = false;
-                HashMap<String, Integer> map = new HashMap<>();
-                map.put(lesson.getId(), points);
-                records.put(name,map);
-            }
-            logger.info(e.getKey());
+        Gson gson = JsonRegistry.getInstance().getGson();
+        EncryptionRegistry crypt = EncryptionRegistry.getInstance();
+
+        AtomicBoolean flag = new AtomicBoolean(true);
+
+        if (records.containsKey(name)) { // Records does contain a record for this user
+            records.get(name).put(lesson.getId(), points);
+        } else { // If the records do not yet contain one for this user
+            HashMap<String, Integer> map = new HashMap<>();
+            map.put(lesson.getId(), points);
+            records.put(name, map);
         }
-         if (flag) {
-             try {
-                 HashMap<String, Integer> map = new HashMap<>();
-                 map.put(lesson.getId(), points);
-                 records.put(name, map);
-                 Gson gson = JsonRegistry.getInstance().getGson();
-                 // PLEASE NOTE: THIS PATH SHOULD BE CHOSEN WITH A BETTER IDEA OF WHERE THE PROJECT WILL BE ONCE IT IS FINALLY BUILT
-                 Writer writer = Files.newBufferedWriter(Paths.get("src/main/resources/data/pointsystem.example.json"));
-                 gson.toJson(records, writer);
-                 writer.close();
-             } catch (IOException e) {
-                 throw new RuntimeException(e);
-             }
-         }
+        try { // Write to the file.
+            Writer writer = Files.newBufferedWriter(Paths.get("./points"));
+            gson.toJson(records, writer);
+            writer.close();
+        } catch (IOException i) {
+            throw new RuntimeException(i);
+        }
     }
 }
