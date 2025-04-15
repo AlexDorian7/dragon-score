@@ -9,6 +9,7 @@ import org.jetbrains.annotations.Nullable;
 import team.logica_populi.dragonscore.base.Lesson;
 import team.logica_populi.dragonscore.base.json.LessonHeader;
 import team.logica_populi.dragonscore.base.logic.Answer;
+import team.logica_populi.dragonscore.base.points.SubmissionCode;
 import team.logica_populi.dragonscore.ui.UiComponentCreator;
 import team.logica_populi.dragonscore.ui.controllers.MainMenuController;
 import team.logica_populi.dragonscore.ui.controllers.NameFormController;
@@ -164,6 +165,15 @@ public class DragonHandler {
             submissionCodeController = submissionCodeControllerPane.getValue();
             submissionCodeScene = new Scene(submissionCodeControllerPane.getKey(), 800, 600);
         }
+
+        String regex = "[\\s]";
+
+        String[] arr = name.split(regex);
+
+        SubmissionCode code = new SubmissionCode(arr[0], arr[1], getLesson().getId());
+
+        submissionCodeController.setCode(code.getCode());
+
         stage.setScene(submissionCodeScene);
         stage.show();
     }

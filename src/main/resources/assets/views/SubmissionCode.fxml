@@ -4,7 +4,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-<?import javafx.scene.web.WebView?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24" xmlns:fx="http://javafx.com/fxml/1" fx:controller="team.logica_populi.dragonscore.ui.controllers.SubmissionCodeController">
    <children>
@@ -18,7 +17,11 @@
             <Font size="16.0" />
          </font>
       </Text>
-      <WebView fx:id="submissionCodeArea" layoutX="182.0" layoutY="200.0" prefHeight="135.0" prefWidth="237.0" />
       <Button fx:id="submitButton" layoutX="272.0" layoutY="355.0" mnemonicParsing="false" text="Exit" />
+      <Text fx:id="codeElement" layoutX="150.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="300.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>

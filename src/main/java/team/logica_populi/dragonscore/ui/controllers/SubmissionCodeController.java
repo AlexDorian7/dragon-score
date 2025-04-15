@@ -1,6 +1,7 @@
 package team.logica_populi.dragonscore.ui.controllers;
 
 import javafx.fxml.FXML;
+import javafx.scene.text.Text;
 import javafx.scene.web.WebView;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -9,7 +10,7 @@ import team.logica_populi.dragonscore.base.points.SubmissionCode;
 
 public class SubmissionCodeController {
     @FXML
-    private WebView submissionCodeArea;
+    public Text codeElement;
 
     @FXML
     private Button submitButton;
@@ -18,8 +19,8 @@ public class SubmissionCodeController {
     public void initialize(){
     }
 
-    private void setCode(){
-
+    public void setCode(String code){
+        codeElement.setText(code);
     }
 
     private void onSubmit(){
