@@ -40,7 +40,7 @@ public class PointSystem {
      * Gets the list of lessonRecords
      * @return Return all the lesson records
      */
-    public HashMap<String, HashMap<String, Integer>> getLessonRecords(){
+    public HashMap<String, HashMap<String, Integer>> getLessonRecords() {
         return records;
     }
 
