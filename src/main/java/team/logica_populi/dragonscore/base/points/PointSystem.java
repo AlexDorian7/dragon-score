@@ -5,12 +5,7 @@ import team.logica_populi.dragonscore.base.Lesson;
 import team.logica_populi.dragonscore.base.ResourceLocation;
 import team.logica_populi.dragonscore.base.registries.JsonRegistry;
 
-import java.io.IOException;
-import java.io.Writer;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.*;
-import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.logging.Logger;
 
 /**
