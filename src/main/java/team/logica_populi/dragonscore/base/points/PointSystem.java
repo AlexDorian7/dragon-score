@@ -58,12 +58,12 @@ public class PointSystem {
     }
 
     /**
-     * Finds the correct record and sets the points for that record.
+     * Finds the correct record and sets the points.dat for that record.
      * <p>
      * Might want to look into storing records in a way that would make this algorithm faster. Maybe Nested Hash maps?
      * @param name The name of the user
      * @param lesson The current lesson
-     * @param points The amount of points to set
+     * @param points The amount of points.dat to set
      */
     public void setPoints(String name, Lesson lesson, int points) {
         Gson gson = JsonRegistry.getInstance().getGson();
@@ -79,7 +79,7 @@ public class PointSystem {
             records.put(name, map);
         }
         try { // Write to the file.
-            Writer writer = Files.newBufferedWriter(Paths.get("./points"));
+            Writer writer = Files.newBufferedWriter(Paths.get("./points.dat.dat"));
             gson.toJson(records, writer);
             writer.close();
         } catch (IOException i) {

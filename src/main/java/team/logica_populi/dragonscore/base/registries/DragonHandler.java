@@ -81,20 +81,20 @@ public class DragonHandler {
     }
 
     /**
-     * Adds points to the current point total.
-     * @param points The amount of points to add
+     * Adds points.dat to the current point total.
+     * @param points The amount of points.dat to add
      */
     protected void addPoints(int points) {
-        setPoints(Integer.max(0, points + getPoints())); // Using max call here to make sure points can never go negative
+        setPoints(Integer.max(0, points + getPoints())); // Using max call here to make sure points.dat can never go negative
     }
 
     /**
-     * Sets the current amount of points tied to this session.
+     * Sets the current amount of points.dat tied to this session.
      * @param points The new point count
      */
     protected void setPoints(int points) {
         if (lesson == null) {
-            logger.warning("You need to load a lesson before trying to set points");
+            logger.warning("You need to load a lesson before trying to set points.dat");
             return;
         }
         this.points = points;
@@ -115,7 +115,7 @@ public class DragonHandler {
     }
 
     /**
-     * Get the current amount of points tied to this session.
+     * Get the current amount of points.dat tied to this session.
      * @return The current point count
      */
     public int getPoints() {
@@ -165,7 +165,7 @@ public class DragonHandler {
         }
 
         questionController.setNextQuestionCallback(() -> {
-            // TODO: Make it so if user has at last 100 points, they complete the lesson!
+            // TODO: Make it so if user has at last 100 points.dat, they complete the lesson!
             questionController.setQuestion(lesson.getNextQuestion());
         });
         questionController.setSubmitCallback((List<Answer> selectedAnswers) -> {
@@ -231,7 +231,7 @@ public class DragonHandler {
      */
     private void loadOrCreatePointFile() {
 
-        File file = new File("./points");
+        File file = new File("./points.dat.dat");
         if (!file.exists()) {
             logger.fine("Creating new Point System.");
             JsonRegistry.getInstance().createNewPointSystem();
@@ -276,16 +276,16 @@ public class DragonHandler {
     }
 
     /**
-     * Gets the amount of points given per question answered.
-     * @return The amount of points given
+     * Gets the amount of points.dat given per question answered.
+     * @return The amount of points.dat given
      */
     public int getPointsToGive() {
         return pointsToGive;
     }
 
     /**
-     * Sets the amount of points given per question answered.
-     * @param pointsToGive The amount of points to give per question
+     * Sets the amount of points.dat given per question answered.
+     * @param pointsToGive The amount of points.dat to give per question
      */
     public void setPointsToGive(int pointsToGive) {
         this.pointsToGive = pointsToGive;
