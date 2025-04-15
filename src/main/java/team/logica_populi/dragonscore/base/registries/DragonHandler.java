@@ -7,12 +7,15 @@ import javafx.stage.Stage;
 import javafx.util.Pair;
 import org.jetbrains.annotations.Nullable;
 import team.logica_populi.dragonscore.base.Lesson;
+import team.logica_populi.dragonscore.base.ResourceLocation;
 import team.logica_populi.dragonscore.base.json.LessonHeader;
 import team.logica_populi.dragonscore.base.logic.Answer;
+import team.logica_populi.dragonscore.base.points.SubmissionCode;
 import team.logica_populi.dragonscore.ui.UiComponentCreator;
 import team.logica_populi.dragonscore.ui.controllers.MainMenuController;
 import team.logica_populi.dragonscore.ui.controllers.NameFormController;
 import team.logica_populi.dragonscore.ui.controllers.QuestionFormController;
+import team.logica_populi.dragonscore.ui.controllers.SubmissionCodeController;
 
 import java.io.File;
 import java.io.IOException;
@@ -40,7 +43,9 @@ public class DragonHandler {
     private Stage stage;
     private Scene mainMenuScene;
     private Scene questionScene;
+    private Scene submissionCodeScene;
     private QuestionFormController questionController;
+    private SubmissionCodeController submissionCodeController;
 
     private List<LessonHeader> lessonHeaders;
 
@@ -81,31 +86,31 @@ public class DragonHandler {
     }
 
     /**
-     * Adds points to the current point total.
-     * @param points The amount of points to add
+     * Adds points.dat to the current point total.
+     * @param points The amount of points.dat to add
      */
     protected void addPoints(int points) {
-        setPoints(Integer.max(0, points + getPoints())); // Using max call here to make sure points can never go negative
+        setPoints(Integer.max(0, points + getPoints())); // Using max call here to make sure points.dat can never go negative
     }
 
     /**
-     * Sets the current amount of points tied to this session.
+     * Sets the current amount of points.dat tied to this session.
      * @param points The new point count
      */
     protected void setPoints(int points) {
         if (lesson == null) {
-            logger.warning("You need to load a lesson before trying to set points");
+            logger.warning("You need to load a lesson before trying to set points.dat");
             return;
         }
         this.points = points;
-        JsonRegistry.getInstance().getPointSystem().setPoints(name, lesson, points);
+        JsonRegistry.getInstance().getPointSystem().setPoints(name.toLowerCase(), lesson, points);
     }
 
     private void updatePoints() {
         HashMap<String, HashMap<String, Integer>> records = JsonRegistry.getInstance().getPointSystem().getLessonRecords();
         if (records.containsKey(name)) {
             logger.finer("User Record Found for name");
-            HashMap<String, Integer> userRecords = records.get(name);
+            HashMap<String, Integer> userRecords = records.get(name.toLowerCase());
             if (userRecords.containsKey(lesson.getId())) {
                 points = userRecords.get(lesson.getId());
                 return;
@@ -115,7 +120,7 @@ public class DragonHandler {
     }
 
     /**
-     * Get the current amount of points tied to this session.
+     * Get the current amount of points.dat tied to this session.
      * @return The current point count
      */
     public int getPoints() {
@@ -145,7 +150,33 @@ public class DragonHandler {
      */
     private void handleOnName(String fName, String lName) {
         name = fName + " " + lName;
+        name = name.toLowerCase();
         showMainMenu();
+    }
+
+    /**
+     *
+     */
+    private void loadSubmissionCode(){
+        if(stage == null){
+            throw  new IllegalStateException("Attempt to show submission code pane before session was set up!");
+        }
+        if(submissionCodeScene == null){
+            Pair<Parent, SubmissionCodeController> submissionCodeControllerPane = UiComponentCreator.createSubmissionCodePane();
+            submissionCodeController = submissionCodeControllerPane.getValue();
+            submissionCodeScene = new Scene(submissionCodeControllerPane.getKey(), 800, 600);
+        }
+
+        String regex = "[\\s]";
+
+        String[] arr = name.split(regex);
+
+        SubmissionCode code = new SubmissionCode(arr[0], arr[1], getLesson().getId());
+
+        submissionCodeController.setCode(code.getCode());
+
+        stage.setScene(submissionCodeScene);
+        stage.show();
     }
 
     /**
@@ -165,7 +196,10 @@ public class DragonHandler {
         }
 
         questionController.setNextQuestionCallback(() -> {
-            // TODO: Make it so if user has at last 100 points, they complete the lesson!
+            // Check for lesson completion
+            if(getPoints() >= 100) {
+                loadSubmissionCode();
+            }
             questionController.setQuestion(lesson.getNextQuestion());
         });
         questionController.setSubmitCallback((List<Answer> selectedAnswers) -> {
@@ -197,17 +231,17 @@ public class DragonHandler {
         mainMenuPane.getValue().setLessons(lessonHeaders);
         mainMenuPane.getValue().setName(name);
         mainMenuPane.getValue().setStartCallback((LessonHeader lessonHeader) -> {
-            JsonRegistry.getInstance().loadDataFile(Objects.requireNonNull(getClass().getResourceAsStream(lessonHeader.location)), true);
-            // TODO: MAKE ME LOAD THE LESSON
+            JsonRegistry.getInstance().loadDataFile(lessonHeader.location().tryGetResource(), true);
+            // Load the lesson
             logger.finest("Attempt to load " + lessonHeader);
             List<Lesson> lessons = JsonRegistry.getInstance().getDataFile().getLessons();
             for (Lesson lesson : lessons) {
-                if (lesson.getId().equals(lessonHeader.id)) {
+                if (lesson.getId().equals(lessonHeader.id())) {
                     loadLesson(lesson);
                     return;
                 }
             }
-            logger.warning("No lesson found with id: " + lessonHeader.id);
+            logger.warning("No lesson found with id: " + lessonHeader.id());
         });
         mainMenuScene = new Scene(mainMenuPane.getKey(), 600, 400);
     }
@@ -230,21 +264,15 @@ public class DragonHandler {
      * Loads or creates a Point system with the {@link JsonRegistry}.
      */
     private void loadOrCreatePointFile() {
-
-        File file = new File("./points");
-        if (!file.exists()) {
+        ResourceLocation location = new ResourceLocation("dynamic:points.dat");
+        if (!location.exists()) {
             logger.fine("Creating new Point System.");
             JsonRegistry.getInstance().createNewPointSystem();
-            return;
+        } else {
+            String data = location.tryGetResource();
+            logger.fine("Loaded existing Point System.");
+            JsonRegistry.getInstance().loadPointSystem(data, true);
         }
-        String contents;
-        try {
-            contents = Files.readString(file.toPath());
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        logger.fine("Loaded existing Point System.");
-        JsonRegistry.getInstance().loadPointSystem(contents, true);
     }
 
     /**
@@ -253,14 +281,10 @@ public class DragonHandler {
      * @param stage The state that everything will be displayed to
      * @param lessonHeadersPath The path to the {@link team.logica_populi.dragonscore.base.json.LessonHeader} list resource that will be loaded for this session
      */
-    public void setupSession(Stage stage, String lessonHeadersPath) {
+    public void setupSession(Stage stage, ResourceLocation lessonHeadersPath) {
         this.stage = stage;
         stage.setTitle("LogiQuest"); // Do other future stage set up here.
-        try {
-            lessonHeaders = JsonRegistry.getInstance().getGson().fromJson(new String(getClass().getResourceAsStream(lessonHeadersPath).readAllBytes()), LESSON_HEADERS_TYPE.getType());
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        lessonHeaders = JsonRegistry.getInstance().getGson().fromJson(lessonHeadersPath.tryGetResource(), LESSON_HEADERS_TYPE.getType());
         loadOrCreatePointFile();
     }
 
@@ -276,16 +300,16 @@ public class DragonHandler {
     }
 
     /**
-     * Gets the amount of points given per question answered.
-     * @return The amount of points given
+     * Gets the amount of points.dat given per question answered.
+     * @return The amount of points.dat given
      */
     public int getPointsToGive() {
         return pointsToGive;
     }
 
     /**
-     * Sets the amount of points given per question answered.
-     * @param pointsToGive The amount of points to give per question
+     * Sets the amount of points.dat given per question answered.
+     * @param pointsToGive The amount of points.dat to give per question
      */
     public void setPointsToGive(int pointsToGive) {
         this.pointsToGive = pointsToGive;

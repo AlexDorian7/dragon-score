@@ -1,0 +1,20 @@
+{
+  "requires": [
+    "DragonScore:requires/letters.json"
+  ],
+  "terms": {},
+  "lessons": [
+    {
+      "id": "lesson_syllogistic_arguments_symbolic",
+      "name": "Syllogistic Arguments - Symbolic",
+      "description": "Syllogistic Arguments - Symbolic will test you knowledge of the star test to tell if an argument is valid.",
+      "randomize": false,
+      "questionGenerators": [
+        "team.logica_populi.dragonscore.base.logic.generators.StarLogicGenerator"
+      ],
+      "staticQuestions": []
+    }
+  ],
+  "forms": [
+  ]
+}
