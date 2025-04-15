@@ -1,22 +1,11 @@
 package team.logica_populi.dragonscore;
 
 import javafx.application.Application;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
-import javafx.util.Pair;
-import team.logica_populi.dragonscore.base.DataFile;
-import team.logica_populi.dragonscore.base.Lesson;
-import team.logica_populi.dragonscore.base.logic.Answer;
 import team.logica_populi.dragonscore.base.registries.DragonHandler;
-import team.logica_populi.dragonscore.base.registries.JsonRegistry;
-import team.logica_populi.dragonscore.ui.UiComponentCreator;
-import team.logica_populi.dragonscore.ui.controllers.DefinitionsExampleController;
-import team.logica_populi.dragonscore.base.points.PointSystem;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.*;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
