@@ -23,7 +23,6 @@ public class StarLogicGenerator implements QuestionGenerator {
         int i1 = (int) Math.floor(Math.random() * 26);
         int i2 = (int) Math.floor(Math.random() * 26);
         int i3 = (int) Math.floor(Math.random() * 26);
-        int i4 = (int) Math.floor(Math.random() * 26);
 
         if (i1 == i) {
             i1 = (i1+1)%26;
