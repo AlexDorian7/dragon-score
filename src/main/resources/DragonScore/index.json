@@ -36,6 +36,12 @@
     "location": "DragonScore:lessons/syllogistic_arguments_symbolic.json"
   },
   {
+    "id": "lesson_syllogistic_arguments_english",
+    "name": "Syllogistic Arguments - English",
+    "description": "Syllogistic Arguments - Eymbolic will test you knowledge of the star test to tell if an argument is valid.",
+    "location": "DragonScore:lessons/syllogistic_arguments_english.json"
+  },
+  {
     "id": "truth_evaluations",
     "name": "Truth Evaluations",
     "description": "Truth Evaluations will test you knowledge of true/false logic.",

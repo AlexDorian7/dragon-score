@@ -14,7 +14,7 @@ public class StarLogicWordGenerator implements QuestionGenerator {
     @Override
     public Question getNextQuestion() {
         assert JsonRegistry.getInstance().getDataFile() != null;
-        List<Term> words = JsonRegistry.getInstance().getDataFile().getTerms().get("word");
+        List<Term> words = JsonRegistry.getInstance().getDataFile().getTerms().get("noun");
         //List<Term> lLetters = JsonRegistry.getInstance().getDataFile().getTerms().get("l_letters");
 
         int i = (int) Math.floor(Math.random() * 26);

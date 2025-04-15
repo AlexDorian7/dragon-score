@@ -1,0 +1,20 @@
+{
+  "requires": [
+    "DragonScore:requires/terms.json"
+  ],
+  "terms": {},
+  "lessons": [
+    {
+      "id": "lesson_syllogistic_arguments_english",
+      "name": "Syllogistic Arguments - English",
+      "description": "Syllogistic Arguments - Eymbolic will test you knowledge of the star test to tell if an argument is valid.",
+      "randomize": false,
+      "questionGenerators": [
+        "team.logica_populi.dragonscore.base.logic.generators.StarLogicWordGenerator"
+      ],
+      "staticQuestions": []
+    }
+  ],
+  "forms": [
+  ]
+}
