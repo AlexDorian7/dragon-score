@@ -5,6 +5,9 @@ import team.logica_populi.dragonscore.base.points.PointSystem;
 
 import java.lang.reflect.Type;
 
+/**
+ * TODO: COMMENT ME!
+ */
 public class PointSystemSerializer implements JsonSerializer<PointSystem>{
     @Override
     public JsonElement serialize(PointSystem pointSystem, Type type, JsonSerializationContext jsonSerializationContext){

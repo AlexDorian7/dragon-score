@@ -39,8 +39,6 @@ public class QuestionFormController {
     // Initialize the controller
     @FXML
     public void initialize() {
-        // Set default text
-        questionArea.getEngine().loadContent("<b>Click Submit to see an example response.</b>");
     }
 
     @FXML
@@ -59,7 +57,7 @@ public class QuestionFormController {
     public void setQuestion(Question question) {
         this.question = question;
         resultsShown = false;
-        questionArea.getEngine().loadContent(question.getQuestion());
+        questionArea.getEngine().loadContent("<html><head></head><body style='font-size:1.5em;'>" + question.getQuestion() + "</body></html>");
         answerButtons.clear();
         answerArea.getChildren().clear();
         for (Answer answer : question.getAnswers()) {
