@@ -1,0 +1,1045 @@
+{
+  "requires": [
+    "/data/requires/letters.json"
+  ],
+  "terms": {},
+  "lessons": [
+    {
+      "id": "lesson_syllogistic_arguments_how_to_star",
+      "name": "Syllogistic Arguments - How to Star",
+      "description": "Syllogistic Arguments - How to star will test you knowledge of the star test.",
+      "randomize": false,
+      "questionGenerators": [
+        "team.logica_populi.dragonscore.base.logic.generators.FormGenerator"
+      ],
+      "staticQuestions": []
+    }
+  ],
+  "forms": [
+    {
+      "id": "form_0",
+      "fields": [
+        {
+          "id": "letter_1",
+          "list": "u_letters"
+        },
+        {
+          "id": "letter_2",
+          "list": "u_letters"
+        }
+      ],
+      "form": "<p>Which letters are distributed here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\tAll ${letter_1} is ${letter_2}\n\t____\n\u2234\t____</pre>",
+      "answerForms": [
+        {
+          "form": "Neither letter is distributed",
+          "correct": false
+        },
+        {
+          "form": "Just the first letter is distributed",
+          "correct": true
+        },
+        {
+          "form": "Just the second letter is distributed",
+          "correct": false
+        },
+        {
+          "form": "Both letters are distributed",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "form_1",
+      "fields": [
+        {
+          "id": "letter_1",
+          "list": "u_letters"
+        },
+        {
+          "id": "letter_2",
+          "list": "u_letters"
+        }
+      ],
+      "form": "<p>Which letters are distributed here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\tNo ${letter_1} is ${letter_2}\n\t____\n\u2234\t____</pre>",
+      "answerForms": [
+        {
+          "form": "Neither letter is distributed",
+          "correct": false
+        },
+        {
+          "form": "Just the first letter is distributed",
+          "correct": false
+        },
+        {
+          "form": "Just the second letter is distributed",
+          "correct": false
+        },
+        {
+          "form": "Both letters are distributed",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "id": "form_2",
+      "fields": [
+        {
+          "id": "letter_1",
+          "list": "u_letters"
+        },
+        {
+          "id": "letter_2",
+          "list": "u_letters"
+        }
+      ],
+      "form": "<p>Which letters are distributed here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\tSome ${letter_1} is ${letter_2}\n\t____\n\u2234\t____</pre>",
+      "answerForms": [
+        {
+          "form": "Neither letter is distributed",
+          "correct": true
+        },
+        {
+          "form": "Just the first letter is distributed",
+          "correct": false
+        },
+        {
+          "form": "Just the second letter is distributed",
+          "correct": false
+        },
+        {
+          "form": "Both letters are distributed",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "form_3",
+      "fields": [
+        {
+          "id": "letter_1",
+          "list": "u_letters"
+        },
+        {
+          "id": "letter_2",
+          "list": "u_letters"
+        }
+      ],
+      "form": "<p>Which letters are distributed here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\tsome ${letter_1} is not ${letter_2}\n\t____\n\u2234\t____</pre>",
+      "answerForms": [
+        {
+          "form": "Neither letter is distributed",
+          "correct": false
+        },
+        {
+          "form": "Just the first letter is distributed",
+          "correct": false
+        },
+        {
+          "form": "Just the second letter is distributed",
+          "correct": true
+        },
+        {
+          "form": "Both letters are distributed",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "form_4",
+      "fields": [
+        {
+          "id": "letter_1",
+          "list": "l_letters"
+        },
+        {
+          "id": "letter_2",
+          "list": "u_letters"
+        }
+      ],
+      "form": "<p>Which letters are distributed here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t${letter_1} is ${letter_2}\n\t____\n\u2234\t____</pre>",
+      "answerForms": [
+        {
+          "form": "Neither letter is distributed",
+          "correct": true
+        },
+        {
+          "form": "Just the first letter is distributed",
+          "correct": false
+        },
+        {
+          "form": "Just the second letter is distributed",
+          "correct": false
+        },
+        {
+          "form": "Both letters are distributed",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "form_5",
+      "fields": [
+        {
+          "id": "letter_1",
+          "list": "l_letters"
+        },
+        {
+          "id": "letter_2",
+          "list": "u_letters"
+        }
+      ],
+      "form": "<p>Which letters are distributed here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t${letter_1} is not ${letter_2}\n\t____\n\u2234\t____</pre>",
+      "answerForms": [
+        {
+          "form": "Neither letter is distributed",
+          "correct": false
+        },
+        {
+          "form": "Just the first letter is distributed",
+          "correct": false
+        },
+        {
+          "form": "Just the second letter is distributed",
+          "correct": true
+        },
+        {
+          "form": "Both letters are distributed",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "form_6",
+      "fields": [
+        {
+          "id": "letter_1",
+          "list": "l_letters"
+        },
+        {
+          "id": "letter_2",
+          "list": "l_letters"
+        }
+      ],
+      "form": "<p>Which letters are distributed here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t${letter_1} is ${letter_2}\n\t____\n\u2234\t____</pre>",
+      "answerForms": [
+        {
+          "form": "Neither letter is distributed",
+          "correct": true
+        },
+        {
+          "form": "Just the first letter is distributed",
+          "correct": false
+        },
+        {
+          "form": "Just the second letter is distributed",
+          "correct": false
+        },
+        {
+          "form": "Both letters are distributed",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "form_7",
+      "fields": [
+        {
+          "id": "letter_1",
+          "list": "l_letters"
+        },
+        {
+          "id": "letter_2",
+          "list": "l_letters"
+        }
+      ],
+      "form": "<p>Which letters are distributed here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t${letter_1} is not ${letter_2}\n\t____\n\u2234\t____</pre>",
+      "answerForms": [
+        {
+          "form": "Neither letter is distributed",
+          "correct": false
+        },
+        {
+          "form": "Just the first letter is distributed",
+          "correct": false
+        },
+        {
+          "form": "Just the second letter is distributed",
+          "correct": true
+        },
+        {
+          "form": "Both letters are distributed",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "form_8",
+      "fields": [
+        {
+          "id": "letter_1",
+          "list": "u_letters"
+        },
+        {
+          "id": "letter_2",
+          "list": "u_letters"
+        }
+      ],
+      "form": "<p>Which letters are distributed here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t____\n\t____\n\u2234\tAll ${letter_1} is ${letter_2}</pre>",
+      "answerForms": [
+        {
+          "form": "Neither letter is distributed",
+          "correct": false
+        },
+        {
+          "form": "Just the first letter is distributed",
+          "correct": true
+        },
+        {
+          "form": "Just the second letter is distributed",
+          "correct": false
+        },
+        {
+          "form": "Both letters are distributed",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "form_9",
+      "fields": [
+        {
+          "id": "letter_1",
+          "list": "u_letters"
+        },
+        {
+          "id": "letter_2",
+          "list": "u_letters"
+        }
+      ],
+      "form": "<p>Which letters are distributed here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t____\n\t____\n\u2234\tNo ${letter_1} is ${letter_2}</pre>",
+      "answerForms": [
+        {
+          "form": "Neither letter is distributed",
+          "correct": false
+        },
+        {
+          "form": "Just the first letter is distributed",
+          "correct": false
+        },
+        {
+          "form": "Just the second letter is distributed",
+          "correct": false
+        },
+        {
+          "form": "Both letters are distributed",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "id": "form_10",
+      "fields": [
+        {
+          "id": "letter_1",
+          "list": "u_letters"
+        },
+        {
+          "id": "letter_2",
+          "list": "u_letters"
+        }
+      ],
+      "form": "<p>Which letters are distributed here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t____\n\t____\n\u2234\tSome ${letter_1} is ${letter_2}</pre>",
+      "answerForms": [
+        {
+          "form": "Neither letter is distributed",
+          "correct": true
+        },
+        {
+          "form": "Just the first letter is distributed",
+          "correct": false
+        },
+        {
+          "form": "Just the second letter is distributed",
+          "correct": false
+        },
+        {
+          "form": "Both letters are distributed",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "form_11",
+      "fields": [
+        {
+          "id": "letter_1",
+          "list": "u_letters"
+        },
+        {
+          "id": "letter_2",
+          "list": "u_letters"
+        }
+      ],
+      "form": "<p>Which letters are distributed here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t____\n\t____\n\u2234\tsome ${letter_1} is not ${letter_2}</pre>",
+      "answerForms": [
+        {
+          "form": "Neither letter is distributed",
+          "correct": false
+        },
+        {
+          "form": "Just the first letter is distributed",
+          "correct": false
+        },
+        {
+          "form": "Just the second letter is distributed",
+          "correct": true
+        },
+        {
+          "form": "Both letters are distributed",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "form_12",
+      "fields": [
+        {
+          "id": "letter_1",
+          "list": "l_letters"
+        },
+        {
+          "id": "letter_2",
+          "list": "u_letters"
+        }
+      ],
+      "form": "<p>Which letters are distributed here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t____\n\t____\n\u2234\t${letter_1} is ${letter_2}</pre>",
+      "answerForms": [
+        {
+          "form": "Neither letter is distributed",
+          "correct": true
+        },
+        {
+          "form": "Just the first letter is distributed",
+          "correct": false
+        },
+        {
+          "form": "Just the second letter is distributed",
+          "correct": false
+        },
+        {
+          "form": "Both letters are distributed",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "form_13",
+      "fields": [
+        {
+          "id": "letter_1",
+          "list": "l_letters"
+        },
+        {
+          "id": "letter_2",
+          "list": "u_letters"
+        }
+      ],
+      "form": "<p>Which letters are distributed here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t____\n\t____\n\u2234\t${letter_1} is not ${letter_2}</pre>",
+      "answerForms": [
+        {
+          "form": "Neither letter is distributed",
+          "correct": false
+        },
+        {
+          "form": "Just the first letter is distributed",
+          "correct": false
+        },
+        {
+          "form": "Just the second letter is distributed",
+          "correct": true
+        },
+        {
+          "form": "Both letters are distributed",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "form_14",
+      "fields": [
+        {
+          "id": "letter_1",
+          "list": "l_letters"
+        },
+        {
+          "id": "letter_2",
+          "list": "l_letters"
+        }
+      ],
+      "form": "<p>Which letters are distributed here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t____\n\t____\n\u2234\t${letter_1} is ${letter_2}</pre>",
+      "answerForms": [
+        {
+          "form": "Neither letter is distributed",
+          "correct": true
+        },
+        {
+          "form": "Just the first letter is distributed",
+          "correct": false
+        },
+        {
+          "form": "Just the second letter is distributed",
+          "correct": false
+        },
+        {
+          "form": "Both letters are distributed",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "form_15",
+      "fields": [
+        {
+          "id": "letter_1",
+          "list": "l_letters"
+        },
+        {
+          "id": "letter_2",
+          "list": "l_letters"
+        }
+      ],
+      "form": "<p>Which letters are distributed here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t____\n\t____\n\u2234\t${letter_1} is not ${letter_2}</pre>",
+      "answerForms": [
+        {
+          "form": "Neither letter is distributed",
+          "correct": false
+        },
+        {
+          "form": "Just the first letter is distributed",
+          "correct": false
+        },
+        {
+          "form": "Just the second letter is distributed",
+          "correct": true
+        },
+        {
+          "form": "Both letters are distributed",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "form_16",
+      "fields": [
+        {
+          "id": "letter_1",
+          "list": "u_letters"
+        },
+        {
+          "id": "letter_2",
+          "list": "u_letters"
+        }
+      ],
+      "form": "<p>Which letters are starred here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\tAll <span style='text-decoration:underline;'>${letter_1}</span> is ${letter_2}\n\t____\n\u2234\t____</pre>",
+      "answerForms": [
+        {
+          "form": "Neither letter is starred",
+          "correct": false
+        },
+        {
+          "form": "Just the first letter is starred",
+          "correct": true
+        },
+        {
+          "form": "Just the second letter is starred",
+          "correct": false
+        },
+        {
+          "form": "Both letters are starred",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "form_17",
+      "fields": [
+        {
+          "id": "letter_1",
+          "list": "u_letters"
+        },
+        {
+          "id": "letter_2",
+          "list": "u_letters"
+        }
+      ],
+      "form": "<p>Which letters are starred here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\tNo <span style='text-decoration:underline;'>${letter_1}</span> is <span style='text-decoration:underline;'>${letter_2}</span>\n\t____\n\u2234\t____</pre>",
+      "answerForms": [
+        {
+          "form": "Neither letter is starred",
+          "correct": false
+        },
+        {
+          "form": "Just the first letter is starred",
+          "correct": false
+        },
+        {
+          "form": "Just the second letter is starred",
+          "correct": false
+        },
+        {
+          "form": "Both letters are starred",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "id": "form_18",
+      "fields": [
+        {
+          "id": "letter_1",
+          "list": "u_letters"
+        },
+        {
+          "id": "letter_2",
+          "list": "u_letters"
+        }
+      ],
+      "form": "<p>Which letters are starred here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\tSome ${letter_1} is ${letter_2}\n\t____\n\u2234\t____</pre>",
+      "answerForms": [
+        {
+          "form": "Neither letter is starred",
+          "correct": true
+        },
+        {
+          "form": "Just the first letter is starred",
+          "correct": false
+        },
+        {
+          "form": "Just the second letter is starred",
+          "correct": false
+        },
+        {
+          "form": "Both letters are starred",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "form_19",
+      "fields": [
+        {
+          "id": "letter_1",
+          "list": "u_letters"
+        },
+        {
+          "id": "letter_2",
+          "list": "u_letters"
+        }
+      ],
+      "form": "<p>Which letters are starred here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\tsome ${letter_1} is not <span style='text-decoration:underline;'>${letter_2}</span>\n\t____\n\u2234\t____</pre>",
+      "answerForms": [
+        {
+          "form": "Neither letter is starred",
+          "correct": false
+        },
+        {
+          "form": "Just the first letter is starred",
+          "correct": false
+        },
+        {
+          "form": "Just the second letter is starred",
+          "correct": true
+        },
+        {
+          "form": "Both letters are starred",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "form_20",
+      "fields": [
+        {
+          "id": "letter_1",
+          "list": "l_letters"
+        },
+        {
+          "id": "letter_2",
+          "list": "u_letters"
+        }
+      ],
+      "form": "<p>Which letters are starred here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t${letter_1} is ${letter_2}\n\t____\n\u2234\t____</pre>",
+      "answerForms": [
+        {
+          "form": "Neither letter is starred",
+          "correct": true
+        },
+        {
+          "form": "Just the first letter is starred",
+          "correct": false
+        },
+        {
+          "form": "Just the second letter is starred",
+          "correct": false
+        },
+        {
+          "form": "Both letters are starred",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "form_21",
+      "fields": [
+        {
+          "id": "letter_1",
+          "list": "l_letters"
+        },
+        {
+          "id": "letter_2",
+          "list": "u_letters"
+        }
+      ],
+      "form": "<p>Which letters are starred here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t${letter_1} is not <span style='text-decoration:underline;'>${letter_2}</span>\n\t____\n\u2234\t____</pre>",
+      "answerForms": [
+        {
+          "form": "Neither letter is starred",
+          "correct": false
+        },
+        {
+          "form": "Just the first letter is starred",
+          "correct": false
+        },
+        {
+          "form": "Just the second letter is starred",
+          "correct": true
+        },
+        {
+          "form": "Both letters are starred",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "form_22",
+      "fields": [
+        {
+          "id": "letter_1",
+          "list": "l_letters"
+        },
+        {
+          "id": "letter_2",
+          "list": "l_letters"
+        }
+      ],
+      "form": "<p>Which letters are starred here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t${letter_1} is ${letter_2}\n\t____\n\u2234\t____</pre>",
+      "answerForms": [
+        {
+          "form": "Neither letter is starred",
+          "correct": true
+        },
+        {
+          "form": "Just the first letter is starred",
+          "correct": false
+        },
+        {
+          "form": "Just the second letter is starred",
+          "correct": false
+        },
+        {
+          "form": "Both letters are starred",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "form_23",
+      "fields": [
+        {
+          "id": "letter_1",
+          "list": "l_letters"
+        },
+        {
+          "id": "letter_2",
+          "list": "l_letters"
+        }
+      ],
+      "form": "<p>Which letters are starred here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t${letter_1} is not <span style='text-decoration:underline;'>${letter_2}</span>\n\t____\n\u2234\t____</pre>",
+      "answerForms": [
+        {
+          "form": "Neither letter is starred",
+          "correct": false
+        },
+        {
+          "form": "Just the first letter is starred",
+          "correct": false
+        },
+        {
+          "form": "Just the second letter is starred",
+          "correct": true
+        },
+        {
+          "form": "Both letters are starred",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "form_24",
+      "fields": [
+        {
+          "id": "letter_1",
+          "list": "u_letters"
+        },
+        {
+          "id": "letter_2",
+          "list": "u_letters"
+        }
+      ],
+      "form": "<p>Which letters are starred here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t____\n\t____\n\u2234\tAll <span style='text-decoration:underline;'>${letter_1}</span> is ${letter_2}</pre>",
+      "answerForms": [
+        {
+          "form": "Neither letter is starred",
+          "correct": false
+        },
+        {
+          "form": "Just the first letter is starred",
+          "correct": false
+        },
+        {
+          "form": "Just the second letter is starred",
+          "correct": true
+        },
+        {
+          "form": "Both letters are starred",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "form_25",
+      "fields": [
+        {
+          "id": "letter_1",
+          "list": "u_letters"
+        },
+        {
+          "id": "letter_2",
+          "list": "u_letters"
+        }
+      ],
+      "form": "<p>Which letters are starred here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t____\n\t____\n\u2234\tNo <span style='text-decoration:underline;'>${letter_1}</span> is <span style='text-decoration:underline;'>${letter_2}</span></pre>",
+      "answerForms": [
+        {
+          "form": "Neither letter is starred",
+          "correct": true
+        },
+        {
+          "form": "Just the first letter is starred",
+          "correct": false
+        },
+        {
+          "form": "Just the second letter is starred",
+          "correct": false
+        },
+        {
+          "form": "Both letters are starred",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "form_26",
+      "fields": [
+        {
+          "id": "letter_1",
+          "list": "u_letters"
+        },
+        {
+          "id": "letter_2",
+          "list": "u_letters"
+        }
+      ],
+      "form": "<p>Which letters are starred here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t____\n\t____\n\u2234\tSome ${letter_1} is ${letter_2}</pre>",
+      "answerForms": [
+        {
+          "form": "Neither letter is starred",
+          "correct": false
+        },
+        {
+          "form": "Just the first letter is starred",
+          "correct": false
+        },
+        {
+          "form": "Just the second letter is starred",
+          "correct": false
+        },
+        {
+          "form": "Both letters are starred",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "id": "form_27",
+      "fields": [
+        {
+          "id": "letter_1",
+          "list": "u_letters"
+        },
+        {
+          "id": "letter_2",
+          "list": "u_letters"
+        }
+      ],
+      "form": "<p>Which letters are starred here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t____\n\t____\n\u2234\tsome ${letter_1} is not <span style='text-decoration:underline;'>${letter_2}</span></pre>",
+      "answerForms": [
+        {
+          "form": "Neither letter is starred",
+          "correct": false
+        },
+        {
+          "form": "Just the first letter is starred",
+          "correct": true
+        },
+        {
+          "form": "Just the second letter is starred",
+          "correct": false
+        },
+        {
+          "form": "Both letters are starred",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "form_28",
+      "fields": [
+        {
+          "id": "letter_1",
+          "list": "l_letters"
+        },
+        {
+          "id": "letter_2",
+          "list": "u_letters"
+        }
+      ],
+      "form": "<p>Which letters are starred here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t____\n\t____\n\u2234\t${letter_1} is ${letter_2}</pre>",
+      "answerForms": [
+        {
+          "form": "Neither letter is starred",
+          "correct": false
+        },
+        {
+          "form": "Just the first letter is starred",
+          "correct": false
+        },
+        {
+          "form": "Just the second letter is starred",
+          "correct": false
+        },
+        {
+          "form": "Both letters are starred",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "id": "form_29",
+      "fields": [
+        {
+          "id": "letter_1",
+          "list": "l_letters"
+        },
+        {
+          "id": "letter_2",
+          "list": "u_letters"
+        }
+      ],
+      "form": "<p>Which letters are starred here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t____\n\t____\n\u2234\t${letter_1} is not <span style='text-decoration:underline;'>${letter_2}</span></pre>",
+      "answerForms": [
+        {
+          "form": "Neither letter is starred",
+          "correct": false
+        },
+        {
+          "form": "Just the first letter is starred",
+          "correct": true
+        },
+        {
+          "form": "Just the second letter is starred",
+          "correct": false
+        },
+        {
+          "form": "Both letters are starred",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "form_30",
+      "fields": [
+        {
+          "id": "letter_1",
+          "list": "l_letters"
+        },
+        {
+          "id": "letter_2",
+          "list": "l_letters"
+        }
+      ],
+      "form": "<p>Which letters are starred here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t____\n\t____\n\u2234\t${letter_1} is ${letter_2}</pre>",
+      "answerForms": [
+        {
+          "form": "Neither letter is starred",
+          "correct": false
+        },
+        {
+          "form": "Just the first letter is starred",
+          "correct": false
+        },
+        {
+          "form": "Just the second letter is starred",
+          "correct": false
+        },
+        {
+          "form": "Both letters are starred",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "id": "form_31",
+      "fields": [
+        {
+          "id": "letter_1",
+          "list": "l_letters"
+        },
+        {
+          "id": "letter_2",
+          "list": "l_letters"
+        }
+      ],
+      "form": "<p>Which letters are starred here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t____\n\t____\n\u2234\t${letter_1} is not <span style='text-decoration:underline;'>${letter_2}</span></pre>",
+      "answerForms": [
+        {
+          "form": "Neither letter is starred",
+          "correct": false
+        },
+        {
+          "form": "Just the first letter is starred",
+          "correct": true
+        },
+        {
+          "form": "Just the second letter is starred",
+          "correct": false
+        },
+        {
+          "form": "Both letters are starred",
+          "correct": false
+        }
+      ]
+    }
+  ]
+
+}

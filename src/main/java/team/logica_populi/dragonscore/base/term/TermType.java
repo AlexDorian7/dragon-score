@@ -34,4 +34,14 @@ public enum TermType {
      * A plural article
      */
     ART_P,
+
+    /**
+     * An uppercase letter
+     */
+    U_LET,
+
+    /**
+     * A lowercase letter
+     */
+    L_LET,
 }
