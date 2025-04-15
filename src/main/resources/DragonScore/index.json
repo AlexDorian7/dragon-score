@@ -46,6 +46,12 @@
     "name": "Truth Evaluations",
     "description": "Truth Evaluations will test you knowledge of true/false logic.",
     "location": "DragonScore:lessons/truth_evaluations.json"
+  },
+  {
+    "id": "unknown_evaluations",
+    "name": "Unknown Evaluations",
+    "description": "Unknown Evaluations will test you knowledge of true/false logic.",
+    "location": "DragonScore:lessons/unknown_evaluations.json"
   }
 ]
 
