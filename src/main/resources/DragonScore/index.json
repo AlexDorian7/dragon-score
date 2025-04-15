@@ -34,6 +34,12 @@
     "name": "Syllogistic Arguments - Symbolic",
     "description": "Syllogistic Arguments - Symbolic will test you knowledge of the star test to tell if an argument is valid.",
     "location": "DragonScore:lessons/syllogistic_arguments_symbolic.json"
+  },
+  {
+    "id": "truth_evaluations",
+    "name": "Truth Evaluations",
+    "description": "Truth Evaluations will test you knowledge of true/false logic.",
+    "location": "DragonScore:lessons/truth_evaluations.json"
   }
 ]
 
