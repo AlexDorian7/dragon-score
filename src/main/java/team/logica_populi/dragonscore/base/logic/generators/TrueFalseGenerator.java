@@ -12,7 +12,7 @@ import java.util.List;
  */
 public class TrueFalseGenerator implements QuestionGenerator {
     private char nextChar = 'A';
-    private HashMap<Character, Boolean> cache;
+    private HashMap<Character, Boolean> cache = new HashMap<>();
     @Override
     public Question getNextQuestion() {
         nextChar = 'A';
@@ -23,7 +23,7 @@ public class TrueFalseGenerator implements QuestionGenerator {
             question.append(character).append("=").append(cache.get(character)).append(", ");
         }
         String questionString = question.toString();
-        questionString = questionString.substring(0, questionString.length()-3); // -1 for index from 0; -2 to remove last ", "
+        questionString = questionString.substring(0, questionString.length()-2);
         questionString += "</p><pre>" + node + "</pre>";
         return new TrueFalseQuestion(questionString, node.getValue());
     }
@@ -45,10 +45,10 @@ public class TrueFalseGenerator implements QuestionGenerator {
             nextChar++;
             return node;
         } else {
-            Operators type = Operators.values()[(int) Math.floor(Math.random() * Operators.values().length-1)]; // Does not include last index as that should be const
-            List<BooleanLogicTreeNode> nodes = new ArrayList<>();
+            Operators type = Operators.values()[(int) Math.floor(Math.random() * (Operators.values().length-1))]; // Does not include last index as that should be const
+            List<BooleanLogicTreeNode> nodes = new ArrayList<>(type.argc);
             for (int i=0; i<type.argc; i++) {
-                nodes.set(i, getRandomNode(true, depth+1));
+                nodes.add(getRandomNode(true, depth+1));
             }
             return new BooleanLogicTreeNode(type, nodes);
         }
@@ -76,10 +76,10 @@ public class TrueFalseGenerator implements QuestionGenerator {
 
         boolean getValue() {
             if (operator == Operators.CONSTANT) return constantValue;
-            List<Boolean> list = new ArrayList<>();
+            List<Boolean> list = new ArrayList<>(inputs.size());
             for (int i=0; i<inputs.size(); i++) {
                 BooleanLogicTreeNode input = inputs.get(i);
-                list.set(i, input.getValue());
+                list.add( input.getValue());
             }
             check(operator.argc, list);
             return operator.transformer.transform(list);
