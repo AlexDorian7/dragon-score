@@ -17,6 +17,7 @@ public class ResourceLocation {
 
     /**
      * Create a Resource Location using a separate namespace and path.
+     * A resource location represents te path to a file or jar resource. It has many helper methods to read, write, and create.
      * @param namespace The namespace for this resource location
      * @param path THe path for this resource location
      */
