@@ -6,6 +6,9 @@ import javafx.scene.control.TextField;
 
 import java.util.function.BiConsumer;
 
+/**
+ * Controller for the name form.
+ */
 public class NameFormController {
 
     @FXML
@@ -15,6 +18,10 @@ public class NameFormController {
 
     private BiConsumer<String, String> submitCallback;
 
+    /**
+     * Submit button handler.
+     * @param actionEvent The action from JavaFX
+     */
     @FXML
     private void submit(ActionEvent actionEvent) {
         if (submitCallback != null) {

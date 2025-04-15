@@ -230,17 +230,17 @@ public class DragonHandler {
         mainMenuPane.getValue().setLessons(lessonHeaders);
         mainMenuPane.getValue().setName(name);
         mainMenuPane.getValue().setStartCallback((LessonHeader lessonHeader) -> {
-            JsonRegistry.getInstance().loadDataFile(Objects.requireNonNull(getClass().getResourceAsStream(lessonHeader.location)), true);
+            JsonRegistry.getInstance().loadDataFile(Objects.requireNonNull(getClass().getResourceAsStream(lessonHeader.location())), true);
             // TODO: MAKE ME LOAD THE LESSON
             logger.finest("Attempt to load " + lessonHeader);
             List<Lesson> lessons = JsonRegistry.getInstance().getDataFile().getLessons();
             for (Lesson lesson : lessons) {
-                if (lesson.getId().equals(lessonHeader.id)) {
+                if (lesson.getId().equals(lessonHeader.id())) {
                     loadLesson(lesson);
                     return;
                 }
             }
-            logger.warning("No lesson found with id: " + lessonHeader.id);
+            logger.warning("No lesson found with id: " + lessonHeader.id());
         });
         mainMenuScene = new Scene(mainMenuPane.getKey(), 600, 400);
     }
