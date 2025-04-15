@@ -1,6 +1,6 @@
 {
   "requires": [
-    "/data/requires/terms.json"
+    "DragonScore:requires/terms.json"
   ],
   "terms": {},
   "lessons": [

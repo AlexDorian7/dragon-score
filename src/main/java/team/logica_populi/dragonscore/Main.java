@@ -2,6 +2,7 @@ package team.logica_populi.dragonscore;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
+import team.logica_populi.dragonscore.base.ResourceLocation;
 import team.logica_populi.dragonscore.base.registries.DragonHandler;
 
 import java.io.IOException;
@@ -27,7 +28,7 @@ public class Main extends Application {
     public void start(Stage stage) throws Exception {
 
         DragonHandler dragonHandler = DragonHandler.newSession();
-        dragonHandler.setupSession(stage, "/data/index.json");
+        dragonHandler.setupSession(stage, new ResourceLocation("index.json"));
         dragonHandler.start();
 
     }
@@ -38,7 +39,7 @@ public class Main extends Application {
      */
 //    @Override
 //    public void stop() throws Exception{
-//        File file = new File("./points");
+//        File file = new File("./points.dat");
 //        FileWriter writer = new FileWriter(file);
 //        //writer.write(EncryptionRegistry.getInstance().encrypt(String.valueOf(file)));
 //        writer.close();

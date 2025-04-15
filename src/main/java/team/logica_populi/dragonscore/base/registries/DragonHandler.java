@@ -7,6 +7,7 @@ import javafx.stage.Stage;
 import javafx.util.Pair;
 import org.jetbrains.annotations.Nullable;
 import team.logica_populi.dragonscore.base.Lesson;
+import team.logica_populi.dragonscore.base.ResourceLocation;
 import team.logica_populi.dragonscore.base.json.LessonHeader;
 import team.logica_populi.dragonscore.base.logic.Answer;
 import team.logica_populi.dragonscore.base.points.SubmissionCode;
@@ -230,8 +231,8 @@ public class DragonHandler {
         mainMenuPane.getValue().setLessons(lessonHeaders);
         mainMenuPane.getValue().setName(name);
         mainMenuPane.getValue().setStartCallback((LessonHeader lessonHeader) -> {
-            JsonRegistry.getInstance().loadDataFile(Objects.requireNonNull(getClass().getResourceAsStream(lessonHeader.location())), true);
-            // TODO: MAKE ME LOAD THE LESSON
+            JsonRegistry.getInstance().loadDataFile(lessonHeader.location().tryGetResource(), true);
+            // Load the lesson
             logger.finest("Attempt to load " + lessonHeader);
             List<Lesson> lessons = JsonRegistry.getInstance().getDataFile().getLessons();
             for (Lesson lesson : lessons) {
@@ -263,22 +264,15 @@ public class DragonHandler {
      * Loads or creates a Point system with the {@link JsonRegistry}.
      */
     private void loadOrCreatePointFile() {
-
-        File file = new File("./points.dat");
-        if (!file.exists()) {
+        ResourceLocation location = new ResourceLocation("dynamic:points.dat");
+        if (!location.exists()) {
             logger.fine("Creating new Point System.");
             JsonRegistry.getInstance().createNewPointSystem();
-            return;
+        } else {
+            String data = location.tryGetResource();
+            logger.fine("Loaded existing Point System.");
+            JsonRegistry.getInstance().loadPointSystem(data, true);
         }
-        String contents;
-        try {
-            contents = Files.readString(file.toPath());
-            //contents = EncryptionRegistry.getInstance().decrypt(contents);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        logger.fine("Loaded existing Point System.");
-        JsonRegistry.getInstance().loadPointSystem(contents, true);
     }
 
     /**
@@ -287,14 +281,10 @@ public class DragonHandler {
      * @param stage The state that everything will be displayed to
      * @param lessonHeadersPath The path to the {@link team.logica_populi.dragonscore.base.json.LessonHeader} list resource that will be loaded for this session
      */
-    public void setupSession(Stage stage, String lessonHeadersPath) {
+    public void setupSession(Stage stage, ResourceLocation lessonHeadersPath) {
         this.stage = stage;
         stage.setTitle("LogiQuest"); // Do other future stage set up here.
-        try {
-            lessonHeaders = JsonRegistry.getInstance().getGson().fromJson(new String(getClass().getResourceAsStream(lessonHeadersPath).readAllBytes()), LESSON_HEADERS_TYPE.getType());
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        lessonHeaders = JsonRegistry.getInstance().getGson().fromJson(lessonHeadersPath.tryGetResource(), LESSON_HEADERS_TYPE.getType());
         loadOrCreatePointFile();
     }
 

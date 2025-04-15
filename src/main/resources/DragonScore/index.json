@@ -3,37 +3,37 @@
     "id": "lesson_definitions",
     "name": "Definitions",
     "description": "This lesson with the \"Meaning and Definitions\" chapter of Harry J.Gensler's Introduction to Logic (Routledge Press).\nAssume that these definitions try to explain current usage and don't stipulate how a term will be used.\n\nSOMEONE PLEASE UPDATE THIS DESC",
-    "location": "/data/lessons/definitions.json"
+    "location": "DragonScore:lessons/definitions.json"
   },
   {
     "id": "lesson_syllogistic_translations",
     "name": "Syllogistic Translations",
     "description": "Syllogistic logic studies arguments whose validity depends on \"all,\" \"no,\" \"some,\" and similar notions.\nThis lesson is about translating sentences into syllogistic logic. It goes with the \"Syllogistic Logic\" chapter of Harry J. Gensler's Introduction to Logic (Routledge Press).",
-    "location": "/data/lessons/syllogistic_translations.json"
+    "location": "DragonScore:lessons/syllogistic_translations.json"
   },
   {
     "id": "lesson_propositional_translations_easy",
     "name": "Propositional Translations Easy",
     "description": "PLEASE CHANGE ME",
-    "location": "/data/lessons/propositional_translations.json"
+    "location": "DragonScore:lessons/propositional_translations.json"
   },
   {
     "id": "lesson_propositional_translations_hard",
     "name": "Propositional Translations Hard",
     "description": "PLEASE CHANGE ME",
-    "location": "/data/lessons/propositional_translations.json"
+    "location": "DragonScore:lessons/propositional_translations.json"
   },
   {
     "id": "lesson_syllogistic_arguments_how_to_star",
     "name": "Syllogistic Arguments - How to Star",
     "description": "Syllogistic Arguments - How to star will test you knowledge of the star test.",
-    "location": "/data/lessons/syllogistic_arguments_how_to_star.json"
+    "location": "DragonScore:lessons/syllogistic_arguments_how_to_star.json"
   },
   {
     "id": "lesson_syllogistic_arguments_symbolic",
     "name": "Syllogistic Arguments - Symbolic",
     "description": "Syllogistic Arguments - Symbolic will test you knowledge of the star test to tell if an argument is valid.",
-    "location": "/data/lessons/syllogistic_arguments_symbolic.json"
+    "location": "DragonScore:lessons/syllogistic_arguments_symbolic.json"
   }
 ]
 
