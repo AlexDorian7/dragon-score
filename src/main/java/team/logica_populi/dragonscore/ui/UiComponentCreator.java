@@ -77,4 +77,16 @@ public class UiComponentCreator {
         MainMenuController controller = fxmlLoader.getController();
         return new Pair<>(parent, controller);
     }
+
+    public static Pair<Parent, SubmissionCodeController> createSubmissionCodePane(){
+        FXMLLoader fxmlLoader = new FXMLLoader(UiComponentCreator.class.getResource("/assets/views/SubmissionCode.fxml"));
+        Parent parent;
+        try {
+            parent = fxmlLoader.load();
+        } catch (IOException e) {
+            throw new RuntimeException(e); // If we failed to load the View then it is likely the rest of the program will not work. Throw error.
+        }
+        SubmissionCodeController controller = fxmlLoader.getController();
+        return new Pair<>(parent, controller);
+    }
 }

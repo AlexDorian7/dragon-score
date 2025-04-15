@@ -9,10 +9,12 @@ import org.jetbrains.annotations.Nullable;
 import team.logica_populi.dragonscore.base.Lesson;
 import team.logica_populi.dragonscore.base.json.LessonHeader;
 import team.logica_populi.dragonscore.base.logic.Answer;
+import team.logica_populi.dragonscore.base.points.SubmissionCode;
 import team.logica_populi.dragonscore.ui.UiComponentCreator;
 import team.logica_populi.dragonscore.ui.controllers.MainMenuController;
 import team.logica_populi.dragonscore.ui.controllers.NameFormController;
 import team.logica_populi.dragonscore.ui.controllers.QuestionFormController;
+import team.logica_populi.dragonscore.ui.controllers.SubmissionCodeController;
 
 import java.io.File;
 import java.io.IOException;
@@ -40,7 +42,9 @@ public class DragonHandler {
     private Stage stage;
     private Scene mainMenuScene;
     private Scene questionScene;
+    private Scene submissionCodeScene;
     private QuestionFormController questionController;
+    private SubmissionCodeController submissionCodeController;
 
     private List<LessonHeader> lessonHeaders;
 
@@ -98,14 +102,14 @@ public class DragonHandler {
             return;
         }
         this.points = points;
-        JsonRegistry.getInstance().getPointSystem().setPoints(name, lesson, points);
+        JsonRegistry.getInstance().getPointSystem().setPoints(name.toLowerCase(), lesson, points);
     }
 
     private void updatePoints() {
         HashMap<String, HashMap<String, Integer>> records = JsonRegistry.getInstance().getPointSystem().getLessonRecords();
         if (records.containsKey(name)) {
             logger.finer("User Record Found for name");
-            HashMap<String, Integer> userRecords = records.get(name);
+            HashMap<String, Integer> userRecords = records.get(name.toLowerCase());
             if (userRecords.containsKey(lesson.getId())) {
                 points = userRecords.get(lesson.getId());
                 return;
@@ -145,7 +149,33 @@ public class DragonHandler {
      */
     private void handleOnName(String fName, String lName) {
         name = fName + " " + lName;
+        name = name.toLowerCase();
         showMainMenu();
+    }
+
+    /**
+     *
+     */
+    private void loadSubmissionCode(){
+        if(stage == null){
+            throw  new IllegalStateException("Attempt to show submission code pane before session was set up!");
+        }
+        if(submissionCodeScene == null){
+            Pair<Parent, SubmissionCodeController> submissionCodeControllerPane = UiComponentCreator.createSubmissionCodePane();
+            submissionCodeController = submissionCodeControllerPane.getValue();
+            submissionCodeScene = new Scene(submissionCodeControllerPane.getKey(), 800, 600);
+        }
+
+        String regex = "[\\s]";
+
+        String[] arr = name.split(regex);
+
+        SubmissionCode code = new SubmissionCode(arr[0], arr[1], getLesson().getId());
+
+        submissionCodeController.setCode(code.getCode());
+
+        stage.setScene(submissionCodeScene);
+        stage.show();
     }
 
     /**
@@ -165,7 +195,10 @@ public class DragonHandler {
         }
 
         questionController.setNextQuestionCallback(() -> {
-            // TODO: Make it so if user has at last 100 points.dat, they complete the lesson!
+            // TODO: Make it so if user has at last 100 points, they complete the lesson!
+            if(getPoints() == 100){
+                loadSubmissionCode();
+            }
             questionController.setQuestion(lesson.getNextQuestion());
         });
         questionController.setSubmitCallback((List<Answer> selectedAnswers) -> {
@@ -240,6 +273,7 @@ public class DragonHandler {
         String contents;
         try {
             contents = Files.readString(file.toPath());
+            //contents = EncryptionRegistry.getInstance().decrypt(contents);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
