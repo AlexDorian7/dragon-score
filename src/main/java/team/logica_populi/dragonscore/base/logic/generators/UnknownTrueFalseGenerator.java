@@ -105,21 +105,21 @@ public class UnknownTrueFalseGenerator implements QuestionGenerator {
 
         @Override
         public String toString() {
-            switch (operator) { // TODO: Make these use proper symbols
+            switch (operator) {
                 case OR -> {
-                    return "(" + inputs.getFirst() + " || " + inputs.getLast() + ")";
+                    return "(" + inputs.getFirst() + " \u2228 " + inputs.getLast() + ")";
                 }
                 case AND -> {
-                    return "(" + inputs.getFirst() + " && " + inputs.getLast() + ")";
+                    return "(" + inputs.getFirst() + " \u00B7 " + inputs.getLast() + ")";
                 }
                 case NOT -> {
                     return "~" + inputs.getFirst();
                 }
                 case EQUALS -> {
-                    return "(" + inputs.getFirst() + " == " + inputs.getLast() + ")";
+                    return "(" + inputs.getFirst() + " \u2261 " + inputs.getLast() + ")";
                 }
                 case CONDITIONAL -> {
-                    return "(" + inputs.getFirst() + " -> " + inputs.getLast() + ")";
+                    return "(" + inputs.getFirst() + " \u2283 " + inputs.getLast() + ")";
                 }
                 case CONSTANT -> {
                     return String.valueOf(constantChar);
