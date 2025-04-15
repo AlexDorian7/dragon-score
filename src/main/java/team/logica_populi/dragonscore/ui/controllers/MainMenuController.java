@@ -70,9 +70,9 @@ public class MainMenuController {
     @FXML
     private void updateSelected(ActionEvent actionEvent) {
         lessonArea.getChildren().clear();
-        Text title = new Text(lessonsBox.getValue().name + "\n");
+        Text title = new Text(lessonsBox.getValue().name() + "\n");
         title.setStroke(Color.BLACK);
-        Text description = new Text(lessonsBox.getValue().description);
+        Text description = new Text(lessonsBox.getValue().description());
         lessonArea.getChildren().addAll(title, description);
     }
 }
