@@ -3,6 +3,8 @@ package team.logica_populi.dragonscore.ui.controllers;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.HBox;
 import team.logica_populi.dragonscore.base.logic.Answer;
 import team.logica_populi.dragonscore.base.logic.Question;
 import team.logica_populi.dragonscore.base.registries.DragonHandler;
@@ -89,18 +91,26 @@ public class DefinitionsExampleController {
 
     private void deselectAll() {
         answer1.setSelected(false);
+        answer1.setStyle(String.format("-fx-background-color: #fce6a4;", answer1.getStyle()));
         answer2.setSelected(false);
+        answer2.setStyle(String.format("-fx-background-color: #fce6a4;", answer2.getStyle()));
         answer3.setSelected(false);
+        answer3.setStyle(String.format("-fx-background-color: #fce6a4;", answer3.getStyle()));
         answer4.setSelected(false);
+        answer4.setStyle(String.format("-fx-background-color: #fce6a4;", answer4.getStyle()));
         answer5.setSelected(false);
+        answer5.setStyle(String.format("-fx-background-color: #fce6a4;", answer5.getStyle()));
         answer6.setSelected(false);
+        answer6.setStyle(String.format("-fx-background-color: #fce6a4;", answer6.getStyle()));
         answer7.setSelected(false);
+        answer7.setStyle(String.format("-fx-background-color: #fce6a4;", answer7.getStyle()));
     }
 
     public void selectAnswer(ActionEvent event) {
         deselectAll();
-        RadioButton clickedButton = (RadioButton) event.getSource();
+        ToggleButton clickedButton = (ToggleButton) event.getSource();
         clickedButton.setSelected(true);
         questionArea.setText("Selected answer: " + clickedButton.getText());
+        clickedButton.setStyle(String.format("-fx-background-color: #C2B280;", clickedButton.getStyle()));
     }
 }

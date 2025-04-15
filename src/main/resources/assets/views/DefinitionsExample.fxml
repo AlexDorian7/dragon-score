@@ -10,15 +10,15 @@
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="600" prefWidth="800" style="-fx-background-color: #fffce8;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="team.logica_populi.dragonscore.ui.controllers.DefinitionsExampleController">
+<AnchorPane prefHeight="600" prefWidth="800"  style="-fx-background-color: #fffce8;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="team.logica_populi.dragonscore.ui.controllers.DefinitionsExampleController">
 
     <!-- MenuLIne -->
     <HBox alignment="CENTER_RIGHT" spacing="20" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20" AnchorPane.topAnchor="10">
         <Label style="-fx-font-size: 32px; -fx-font-weight: bold;" text="LogiCola" />
         <Region fx:id="spacer" HBox.hgrow="ALWAYS" /> <!-- keeps space between logo and menu options -->
-        <Button fx:id="HomeMenu" style="-fx-font-size: 14px; -fx-background-color: #D2B48C; -fx-background-radius: 80" text="Home" /> <!-- to be coded -->
-        <Button fx:id="SectionMenu" style="-fx-font-size: 14px; -fx-background-color: #D2B48C; -fx-background-radius: 80" text="Section" /> <!-- to be coded -->
-        <Button fx:id="QuestionsHelp" style="-fx-font-size: 14px; -fx-background-color: #D2B48C;  -fx-background-radius: 80" text="Questions" /> <!-- to be coded -->
+        <Button fx:id="HomeMenu" style="-fx-font-size: 14px; -fx-background-color: #fffce8; -fx-background-radius: 80" text="Home" /> <!-- to be coded -->
+        <Button fx:id="SectionMenu" style="-fx-font-size: 14px; -fx-background-color: #fffce8; -fx-background-radius: 80" text="Section" /> <!-- to be coded -->
+        <Button fx:id="QuestionsHelp" style="-fx-font-size: 14px; -fx-background-color: #fffce8;  -fx-background-radius: 80" text="Questions" /> <!-- to be coded -->
     </HBox>
 
     <!-- Main Spacings -->
@@ -52,9 +52,9 @@
 
     <!-- Diff Buttons -->
     <HBox alignment="CENTER_LEFT" spacing="15" AnchorPane.bottomAnchor="20" AnchorPane.leftAnchor="50">
-        <ToggleButton fx:id="easyDif" onAction="#onDifficultySelect" style="-fx-background-radius: 30; -fx-background-color: #D2B48C; -fx-text-fill: black; -fx-pref-width: 40; -fx-pref-height: 40;" text="0" />
-        <ToggleButton fx:id="normDif" onAction="#onDifficultySelect" style="-fx-background-radius: 30; -fx-background-color: #D2B48C; -fx-text-fill: black; -fx-pref-width: 40; -fx-pref-height: 40;" text="10" />
-        <ToggleButton fx:id="hardDif" onAction="#onDifficultySelect" style="-fx-background-radius: 30; -fx-background-color: #D2B48C; -fx-text-fill: black; -fx-pref-width: 40; -fx-pref-height: 40;" text="15" />
+        <ToggleButton fx:id="easyDif" onAction="#onDifficultySelect" style="-fx-background-radius: 30; -fx-background-color: #fce6a4; -fx-text-fill: black; -fx-pref-width: 40; -fx-pref-height: 40;" text="0" />
+        <ToggleButton fx:id="normDif" onAction="#onDifficultySelect" style="-fx-background-radius: 30; -fx-background-color: #fce6a4; -fx-text-fill: black; -fx-pref-width: 40; -fx-pref-height: 40;" text="10" />
+        <ToggleButton fx:id="hardDif" onAction="#onDifficultySelect" style="-fx-background-radius: 30; -fx-background-color: #fce6a4; -fx-text-fill: black; -fx-pref-width: 40; -fx-pref-height: 40;" text="15" />
     </HBox>
 
 </AnchorPane>
