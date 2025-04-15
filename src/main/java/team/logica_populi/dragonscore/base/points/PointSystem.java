@@ -3,7 +3,6 @@ package team.logica_populi.dragonscore.base.points;
 import com.google.gson.Gson;
 import team.logica_populi.dragonscore.base.Lesson;
 import team.logica_populi.dragonscore.base.registries.JsonRegistry;
-import team.logica_populi.dragonscore.base.registries.EncryptionRegistry;
 
 import java.io.IOException;
 import java.io.Writer;
@@ -66,7 +65,7 @@ public class PointSystem {
         Gson gson = JsonRegistry.getInstance().getGson();
 
         AtomicBoolean flag = new AtomicBoolean(true);
-        
+
         if (records.containsKey(name)) { // Records does contain a record for this user
             records.get(name).put(lesson.getId(), points);
         } else { // If the records do not yet contain one for this user
