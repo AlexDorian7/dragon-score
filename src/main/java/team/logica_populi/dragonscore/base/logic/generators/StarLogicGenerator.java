@@ -6,10 +6,12 @@ import team.logica_populi.dragonscore.base.logic.TrueFalseQuestion;
 import team.logica_populi.dragonscore.base.registries.JsonRegistry;
 import team.logica_populi.dragonscore.base.term.Term;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
+/**
+ * Star Logic Generator to generate questions that follow star logic in two forms
+ * This generator expects two term lists {@code u_letters} and {@code l_letters} each with 26 terms to be loaded.
+ */
 public class StarLogicGenerator implements QuestionGenerator {
     @Override
     public Question getNextQuestion() {
