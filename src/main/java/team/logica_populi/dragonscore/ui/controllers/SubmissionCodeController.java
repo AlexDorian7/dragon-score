@@ -6,10 +6,13 @@ import javafx.scene.control.*;
 
 public class SubmissionCodeController {
     @FXML
-    public Text codeElement;
+    public Label codeElement;
 
     @FXML
-    private Button submitButton;
+    private Button backToMenu;
+
+    @FXML
+    private Button backToExercise;
 
     @FXML
     public void initialize(){
