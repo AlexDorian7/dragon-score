@@ -231,7 +231,7 @@ public class DragonHandler {
      */
     private void loadOrCreatePointFile() {
 
-        File file = new File("./points.dat.dat");
+        File file = new File("./points.dat");
         if (!file.exists()) {
             logger.fine("Creating new Point System.");
             JsonRegistry.getInstance().createNewPointSystem();

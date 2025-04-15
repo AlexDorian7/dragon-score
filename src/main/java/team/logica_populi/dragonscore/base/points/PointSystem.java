@@ -79,7 +79,7 @@ public class PointSystem {
             records.put(name, map);
         }
         try { // Write to the file.
-            Writer writer = Files.newBufferedWriter(Paths.get("./points.dat.dat"));
+            Writer writer = Files.newBufferedWriter(Paths.get("./points.dat"));
             gson.toJson(records, writer);
             writer.close();
         } catch (IOException i) {
