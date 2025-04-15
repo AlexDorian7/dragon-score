@@ -24,19 +24,18 @@ public class StarLogicGenerator implements QuestionGenerator {
         int i2 = (int) Math.floor(Math.random() * 26);
         int i3 = (int) Math.floor(Math.random() * 26);
 
-        if (i1 == i) {
-            i1 = (i1+1)%26;
-        }
-        if (i2 == i1) {
-            i2 = (i2+1)%26;
-        }
-        if (i2 == i) {
-            i2 = (i2+2)%26;
+        while (i == i1 || i1 == i2 || i2 == i) { // We not have this in a loop to make sure none of them end up the same
+            if (i1 == i) {
+                i1 = (i1+1)%26;
+            }
+            if (i2 == i1) {
+                i2 = (i2+1)%26;
+            }
+            if (i2 == i) {
+                i2 = (i2+2)%26;
+            }
         }
 
-        if (i3 == 4) {
-            i3 = (i3+1)%26;
-        }
 
         if (Math.random() < 0.5) { // This question will use all / none
             Term letter1 = uLetters.get(i); // Get the three letters

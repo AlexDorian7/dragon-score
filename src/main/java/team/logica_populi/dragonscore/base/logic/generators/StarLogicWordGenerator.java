@@ -14,28 +14,27 @@ public class StarLogicWordGenerator implements QuestionGenerator {
     @Override
     public Question getNextQuestion() {
         assert JsonRegistry.getInstance().getDataFile() != null;
-        List<Term> words = JsonRegistry.getInstance().getDataFile().getTerms().get("noun");
-        //List<Term> lLetters = JsonRegistry.getInstance().getDataFile().getTerms().get("l_letters");
+        List<Term> words = JsonRegistry.getInstance().getDataFile().getTerms().get("nouns");
+        List<Term> singleWords = JsonRegistry.getInstance().getDataFile().getTerms().get("pro_nouns");
 
-        int i = (int) Math.floor(Math.random() * 26);
-        int i1 = (int) Math.floor(Math.random() * 26);
-        int i2 = (int) Math.floor(Math.random() * 26);
-        int i3 = (int) Math.floor(Math.random() * 26);
-        int i4 = (int) Math.floor(Math.random() * 26);
+        int i = (int) Math.floor(Math.random() * words.size());
+        int i1 = (int) Math.floor(Math.random() * words.size());
+        int i2 = (int) Math.floor(Math.random() * words.size());
+        int i3 = (int) Math.floor(Math.random() * singleWords.size());
 
-        if (i1 == i) {
-            i1 = (i1+1)%26;
-        }
-        if (i2 == i1) {
-            i2 = (i2+1)%26;
-        }
-        if (i2 == i) {
-            i2 = (i2+2)%26;
+        while (i == i1 || i1 == i2 || i2 == i) { // We not have this in a loop to make sure none of them end up the same
+            if (i1 == i) {
+                i1 = (i1+1)%words.size();
+            }
+            if (i2 == i1) {
+                i2 = (i2+1)%words.size();
+            }
+            if (i2 == i) {
+                i2 = (i2+2)%words.size();
+            }
         }
 
-        if (i3 == 4) {
-            i3 = (i3+1)%26;
-        }
+
 
         if (Math.random() < 0.5) { // This question will use all / none
             Term word1 = words.get(i); // Get the three words
@@ -100,7 +99,7 @@ public class StarLogicWordGenerator implements QuestionGenerator {
             Term word2 = words.get(i1);
             Term word3 = words.get(i2);
 
-            Term word4 = words.get(i3);
+            Term word4 = singleWords.get(i3);
 
             StarType type1 = StarType.values()[(int) Math.floor(Math.random() * 4)];
             StarType type2 = StarType.values()[(int) Math.floor(Math.random() * 4)];
@@ -183,22 +182,22 @@ public class StarLogicWordGenerator implements QuestionGenerator {
     private String makeForm(StarType type, Term term1, Term term2) {
         switch (type) {
             case ALL -> {
-                return "All " + term1.getWord() + " is " + term2.getWord();
+                return "All " + term1.getWord() + "s are " + term2.getWord() + "s";
             }
             case NONE -> {
-                return "No " + term1.getWord() + " is " + term2.getWord();
+                return "No " + term1.getWord() + "s are " + term2.getWord() + "s";
             }
             case SOME -> {
-                return "Some " + term1.getWord() + " is " + term2.getWord();
+                return "Some " + term1.getWord() + "s are " + term2.getWord() + "s";
             }
             case NOT_SOME -> {
-                return "Some " + term1.getWord() + " is not " + term2.getWord();
+                return "Some " + term1.getWord() + "s are not " + term2.getWord() + "s";
             }
             case IS -> {
-                return term1.getWord() + " is " + term2.getWord();
+                return term1.getWord() + " is a " + term2.getWord();
             }
             case IS_NOT -> {
-                return term1.getWord() + " is not " + term2.getWord();
+                return term1.getWord() + " is not a " + term2.getWord();
             }
         }
         return "THIS SHOULD NOT BE POSSIBLE!!!";
