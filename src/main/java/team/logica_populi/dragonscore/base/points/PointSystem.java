@@ -2,7 +2,6 @@ package team.logica_populi.dragonscore.base.points;
 
 import com.google.gson.Gson;
 import team.logica_populi.dragonscore.base.Lesson;
-import team.logica_populi.dragonscore.base.ResourceLocation;
 import team.logica_populi.dragonscore.base.registries.JsonRegistry;
 
 import java.io.IOException;
@@ -41,7 +40,7 @@ public class PointSystem {
      * Gets the list of lessonRecords
      * @return Return all the lesson records
      */
-    public HashMap<String, HashMap<String, Integer>> getLessonRecords() {
+    public HashMap<String, HashMap<String, Integer>> getLessonRecords(){
         return records;
     }
 
@@ -65,6 +64,8 @@ public class PointSystem {
     public void setPoints(String name, Lesson lesson, int points) {
         Gson gson = JsonRegistry.getInstance().getGson();
 
+        AtomicBoolean flag = new AtomicBoolean(true);
+
         if (records.containsKey(name)) { // Records does contain a record for this user
             records.get(name).put(lesson.getId(), points);
         } else { // If the records do not yet contain one for this user
@@ -72,8 +73,28 @@ public class PointSystem {
             map.put(lesson.getId(), points);
             records.put(name, map);
         }
-        // Write to the file.
-        ResourceLocation location = new ResourceLocation("dynamic:points.dat");
-        location.write(gson.toJson(records));
+        try { // Write to the file.
+            Writer writer = Files.newBufferedWriter(Paths.get("./points.dat"));
+            gson.toJson(records, writer);
+            writer.close();
+        } catch (IOException i) {
+            throw new RuntimeException(i);
+        }
+
+         if (flag.get()) {
+             try {
+                 HashMap<String, Integer> map = new HashMap<>();
+                 map.put(lesson.getId(), points);
+                 records.put(name, map);
+                 // PLEASE NOTE: THIS PATH SHOULD BE CHOSEN WITH A BETTER IDEA OF WHERE THE PROJECT WILL BE ONCE IT IS FINALLY BUILT
+                 Writer writer = Files.newBufferedWriter(Paths.get("./points"));
+                 gson.toJson(records, writer);
+
+                 writer.close();
+
+             } catch (IOException e) {
+                 throw new RuntimeException(e);
+             }
+         }
     }
 }
