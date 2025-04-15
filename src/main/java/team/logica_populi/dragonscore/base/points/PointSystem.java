@@ -87,7 +87,7 @@ public class PointSystem {
                  map.put(lesson.getId(), points);
                  records.put(name, map);
                  // PLEASE NOTE: THIS PATH SHOULD BE CHOSEN WITH A BETTER IDEA OF WHERE THE PROJECT WILL BE ONCE IT IS FINALLY BUILT
-                 Writer writer = Files.newBufferedWriter(Paths.get("./points.dat"));
+                 Writer writer = Files.newBufferedWriter(Paths.get("./points"));
                  gson.toJson(records, writer);
 
                  writer.close();

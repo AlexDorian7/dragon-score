@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import org.jetbrains.annotations.Nullable;
 import team.logica_populi.dragonscore.base.DataFile;
+import team.logica_populi.dragonscore.base.ResourceLocation;
 import team.logica_populi.dragonscore.base.form.Form;
 import team.logica_populi.dragonscore.base.json.*;
 import team.logica_populi.dragonscore.base.logic.Answer;
@@ -45,6 +46,8 @@ public class JsonRegistry {
         builder.registerTypeAdapter(Form.class, new FormDeserializer());
         builder.registerTypeAdapter(PointSystem.class, new PointSystemSerializer());
         builder.registerTypeAdapter(PointSystem.class, new PointSystemDeserializer());
+        builder.registerTypeAdapter(ResourceLocation.class, new ResourceLocationSerializer());
+        builder.registerTypeAdapter(ResourceLocation.class, new ResourceLocationDeserializer());
 
 
         gson = builder.create();

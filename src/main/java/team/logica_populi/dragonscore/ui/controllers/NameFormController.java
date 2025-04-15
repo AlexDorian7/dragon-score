@@ -12,6 +12,11 @@ import java.util.function.BiConsumer;
 public class NameFormController {
 
     @FXML
+    public void initialize() {
+        // Assuming 'fName' is your container, or replace with your actual root container node:
+    }
+
+    @FXML
     private TextField fName;
     @FXML
     private TextField lName;
