@@ -136,7 +136,7 @@ public class UnknownTrueFalseGenerator implements QuestionGenerator {
         OR(2, (List<Boolean> inputs) -> inputs.getFirst() || inputs.getLast()),
         AND(2, (List<Boolean> inputs) -> inputs.getFirst() && inputs.getLast()),
         NOT(1, (List<Boolean> inputs) -> !inputs.getFirst()),
-        EQUALS(2, (List<Boolean> inputs) -> inputs.getFirst().equals(inputs.getLast())),
+        EQUALS(2, (List<Boolean> inputs) -> inputs.getFirst().equals(inputs.getLast())), // Biconditional
         CONDITIONAL(2, (List<Boolean> inputs) -> conditional(inputs.getFirst(), inputs.getLast())),
         CONSTANT(1, List::getFirst); // Should always be last element in Enum.
 
