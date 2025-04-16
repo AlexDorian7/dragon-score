@@ -1,0 +1,42 @@
+{
+  "requires": [],
+  "terms": [],
+  "lessons": [
+    {
+      "id": "propositional_arguments_english",
+      "name": "Propositional Arguments - English",
+      "description": "PLEASE CHANGE ME",
+      "randomize": false,
+      "questionGenerators": [],
+      "staticQuestions": [
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tYou're either a logician and cruel, or else\n\tfrivolous and gentle.\n\tYou're a logician.\n\t\u2234\tYou aren't gentle.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": false
+            },
+            {
+              "answer": "False",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf Harry is a scientist, then Harry is\n\tdull and prosperous.\n\tHarry isn't a scientist.\n\t\u2234\tHarry isn't dull.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": false
+            },
+            {
+              "answer": "False",
+              "correct": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "forms": []
+}

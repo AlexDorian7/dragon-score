@@ -52,6 +52,12 @@
     "name": "Unknown Evaluations",
     "description": "Unknown Evaluations will test you knowledge of true/false logic.",
     "location": "DragonScore:lessons/unknown_evaluations.json"
+  },
+  {
+    "id": "propositional_arguments_english",
+    "name": "Propositional Arguments - English",
+    "description": "PLEASE CHANGE ME",
+    "location": "DragonScore:lessons/propositional_arguments_english.json"
   }
 ]
 
