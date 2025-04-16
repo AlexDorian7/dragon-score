@@ -10,7 +10,7 @@
       "questionGenerators": [],
       "staticQuestions": [
         {
-          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf you're rich or a pharmacist,\n\tthen you're dishonest and cowardly.\n\tYou're rich.\n\u2234\tYou're dishonest.</pre>",
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tKeith isn't both cruel and not beautiful.\n\tKeith isn't beautiful.\n\u2234\tKeith isn't cruel.</pre>",
           "answers": [
             {
               "answer": "True",
@@ -23,7 +23,7 @@
           ]
         },
         {
-          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf you're bright or famous, then you're courageous.\n\tYou aren't courageous.\n\u2234\tYou aren't famous.</pre>",
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tYou're either not poor or else not friendly.\n\tYou're poor.\n\u2234\tYou aren't friendly.</pre>",
           "answers": [
             {
               "answer": "True",
@@ -32,6 +32,1280 @@
             {
               "answer": "False",
               "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf you're bold and not lonely, then you aren't disgusting.\n\tYou're disgusting.\n\u2234\tYou're lonely.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": false
+            },
+            {
+              "answer": "False",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tYou're smart and poetic, if and only if you aren't romantic.\n\tYou're romantic.\n\tYou're poetic.\n\u2234\tYou aren't smart.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tYou're cheap and demented, if and only if\n\tyou aren't bashful.\n\tYou're bashful.\n\tYou aren't demented.\n\u2234\tYou aren't cheap.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": false
+            },
+            {
+              "answer": "False",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf you aren't a dentist, then you aren't either\n\tstrong or boring.\n\tYou aren't strong.\n\tYou're boring.\n\u2234\tYou're a dentist.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf you're a criminal, then\n\tyou're dull or scholarly.\n\tYou aren't dull.\n\tYou aren't scholarly.\n\u2234\tYou aren't a criminal.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf you're a diabetic, then you're rich and charming.\n\tYou're rich.\n\u2234\tYou're a diabetic.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": false
+            },
+            {
+              "answer": "False",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf Harry is bright, then\n\tHarry is gentle or courteous.\n\tHarry isn't courteous.\n\u2234\tHarry isn't bright.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": false
+            },
+            {
+              "answer": "False",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf it's true that if you're a backpacker then you're slow,\n\tthen you're remarkable and not dishonest.\n\tYou're dishonest.\n\u2234\tYou aren't slow.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf David isn't a poet, then David isn't clean.\n\tDavid is clean.\n\u2234\tDavid is a poet.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf you aren't a bandit, then you aren't\n\teither short or filthy.\n\tYou aren't short.\n\tYou're a bandit.\n\u2234\tYou're filthy.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": false
+            },
+            {
+              "answer": "False",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf you're poor and beautiful, then you're frantic.\n\tYou aren't frantic.\n\u2234\tYou aren't beautiful.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": false
+            },
+            {
+              "answer": "False",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tYou're a clown if and only if you aren't rough.\n\tYou aren't a clown.\n\u2234\tYou're rough.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf Harry is slow, then Harry is\n\tlikeable and dangerous.\n\tHarry is likeable.\n\tHarry isn't dangerous.\n\u2234\tHarry isn't slow.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tKeith isn't both a prisoner and also either\n\tcheap or demented.\n\tKeith is cheap.\n\u2234\tKeith isn't a prisoner.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf you're a pessimist, then if\n\tyou're strong then you're bashful.\n\tYou're a pessimist.\n\tYou aren't bashful.\n\u2234\tYou aren't strong.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tYou're either not clean or else not frivolous.\n\tYou aren't clean.\n\u2234\tYou're frivolous.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": false
+            },
+            {
+              "answer": "False",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf Donna isn't a politician, then Donna isn't cruel.\n\tDonna is a politician.\n\u2234\tDonna is cruel.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": false
+            },
+            {
+              "answer": "False",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf you're a Canadian, then you're poor and lively.\n\tYou aren't poor.\n\u2234\tYou aren't a Canadian.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf you're rich, then you aren't both\n\tfanatical and not bitter.\n\tYou're fanatical.\n\tYou aren't bitter.\n\u2234\tYou aren't rich.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf you're bold or not filthy, then you aren't hideous.\n\tYou're hideous.\n\u2234\tYou're filthy.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf you're slow or a democrat,\n\tthen you're fortunate and candid.\n\tYou're slow.\n\u2234\tYou're fortunate.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf you're clean, then you aren't both\n\tloveable and not friendly.\n\tYou aren't loveable.\n\tYou aren't friendly.\n\u2234\tYou aren't clean.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": false
+            },
+            {
+              "answer": "False",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf you're dull or a professor, then\n\tyou're humorous and comical.\n\tYou aren't dull.\n\u2234\tYou aren't humorous.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": false
+            },
+            {
+              "answer": "False",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf Harry is rich and poetic, then\n\tHarry is demented.\n\tHarry is demented.\n\tHarry is poetic.\n\u2234\tHarry is rich.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": false
+            },
+            {
+              "answer": "False",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf you're a dancer, then if you're bold\n\tthen you're sociable.\n\tYou're a dancer.\n\tYou aren't bold.\n\u2234\tYou aren't sociable.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": false
+            },
+            {
+              "answer": "False",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf you're rough or scholarly, then you're cautious.\n\tYou aren't cautious.\n\u2234\tYou aren't scholarly.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf Keith is a diabetic, then\n\tKeith is smart and generous.\n\tKeith is a diabetic.\n\u2234\tKeith is smart.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tDavid isn't both slow and not courteous.\n\tDavid isn't courteous.\n\u2234\tDavid isn't slow.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tYou're short and famous, if and only if\n\tyou aren't courageous.\n\tYou're courageous.\n\tYou aren't famous.\n\u2234\tYou aren't short.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": false
+            },
+            {
+              "answer": "False",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf you're a grocer, then\n\tyou're bold or confused.\n\tYou aren't bold.\n\tYou aren't confused.\n\u2234\tYou aren't a grocer.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tDavid isn't both bright and not selfish.\n\tDavid is selfish.\n\u2234\tDavid is bright.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": false
+            },
+            {
+              "answer": "False",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tYou're either a prisoner and cheap, or else\n\tlikeable and dangerous.\n\tYou're a prisoner.\n\u2234\tYou aren't dangerous.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": false
+            },
+            {
+              "answer": "False",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf you're strong and not demented, then you aren't bashful.\n\tYou're bashful.\n\u2234\tYou're demented.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": false
+            },
+            {
+              "answer": "False",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf you aren't a pessimist, then you aren't\n\teither clean or boring.\n\tYou aren't clean.\n\tYou're a pessimist.\n\u2234\tYou're boring.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": false
+            },
+            {
+              "answer": "False",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tYou're either a politician and short, or else\n\tboastful and remarkable.\n\tYou aren't a politician.\n\u2234\tYou're remarkable.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf it's true that if you're a scholar then you're bold,\n\tthen you're lively and not creative.\n\tYou're creative.\n\u2234\tYou aren't bold.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tYou're either not slow or else not faithful.\n\tYou're slow.\n\u2234\tYou aren't faithful.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tYou're cheap and filthy, if and only if you aren't hideous.\n\tYou're hideous.\n\tYou're filthy.\n\u2234\tYou aren't cheap.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf you're a democrat, then you're clean and brilliant.\n\tYou're clean.\n\u2234\tYou're a democrat.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": false
+            },
+            {
+              "answer": "False",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf Carol is short, then\n\tCarol is beautiful or loveable.\n\tCarol isn't loveable.\n\u2234\tCarol isn't short.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": false
+            },
+            {
+              "answer": "False",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tYou're a biologist if and only if you aren't poor.\n\tYou aren't a biologist.\n\u2234\tYou're poor.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf you aren't a lifeguard, then you aren't either\n\trich or comical.\n\tYou aren't rich.\n\tYou're comical.\n\u2234\tYou're a lifeguard.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf Sally isn't a dancer, then Sally isn't rough.\n\tSally is rough.\n\u2234\tSally is a dancer.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tJim isn't both a criminal and also either\n\tsmart or dangerous.\n\tJim is smart.\n\u2234\tJim isn't a criminal.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf you're slow, then you aren't both\n\tdemented and not bashful.\n\tYou're demented.\n\tYou aren't bashful.\n\u2234\tYou aren't slow.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf you're a diabetic, then if\n\tyou're strong then you're boring.\n\tYou're a diabetic.\n\tYou aren't boring.\n\u2234\tYou aren't strong.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tJim isn't both a backpacker and also either\n\tcruel or frivolous.\n\tJim isn't cruel.\n\u2234\tJim is a backpacker.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": false
+            },
+            {
+              "answer": "False",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf you're a cannibal, then you're poor or frightened.\n\tYou aren't poor.\n\tYou aren't a cannibal.\n\u2234\tYou aren't frightened.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": false
+            },
+            {
+              "answer": "False",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf Sally isn't a fugitive, then Sally isn't rich.\n\tSally is a fugitive.\n\u2234\tSally is rich.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": false
+            },
+            {
+              "answer": "False",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf Jim is a plumber, then\n\tJim is rough and lively.\n\tJim is a plumber.\n\u2234\tJim is rough.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf Keith is slow and dishonest, then\n\tKeith is famous.\n\tKeith is famous.\n\tKeith is dishonest.\n\u2234\tKeith is slow.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": false
+            },
+            {
+              "answer": "False",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf you're strong or not fanatical, then you aren't courageous.\n\tYou're courageous.\n\u2234\tYou're fanatical.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf Sally is dull and filthy, then\n\tSally is hideous.\n\tSally is filthy.\n\tSally isn't hideous.\n\u2234\tSally isn't dull.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf you're a judge, then if you're short\n\tthen you're confident.\n\tYou're a judge.\n\tYou aren't short.\n\u2234\tYou aren't confident.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": false
+            },
+            {
+              "answer": "False",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf you're poor or a dentist, then\n\tyou're gloomy and loveable.\n\tYou aren't poor.\n\u2234\tYou aren't gloomy.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": false
+            },
+            {
+              "answer": "False",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf Harry is rich and comical, then\n\tHarry is logical.\n\tHarry is rich.\n\tHarry is comical.\n\u2234\tHarry is logical.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tYou're either not bright or else not dangerous.\n\tYou aren't bright.\n\u2234\tYou're dangerous.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": false
+            },
+            {
+              "answer": "False",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf you're a Canadian, then you're slow and bashful.\n\tYou aren't slow.\n\u2234\tYou aren't a Canadian.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tSally isn't both clean and not generous.\n\tSally is generous.\n\u2234\tSally is clean.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": false
+            },
+            {
+              "answer": "False",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf you're poor or a student,\n\tthen you're remarkable and courteous.\n\tYou're poor.\n\u2234\tYou're remarkable.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tYou're either a democrat and rough, or else\n\tcreative and faithful.\n\tYou're a democrat.\n\u2234\tYou aren't faithful.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": false
+            },
+            {
+              "answer": "False",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tYou're either a professor and slow, or else\n\tfamous and courageous.\n\tYou aren't a professor.\n\u2234\tYou're courageous.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf Sally is a biologist, then Sally is\n\tcheap and filthy.\n\tSally isn't a biologist.\n\u2234\tSally isn't cheap.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": false
+            },
+            {
+              "answer": "False",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tYou're strong and brilliant, if and only if you aren't fortunate.\n\tYou're fortunate.\n\tYou're brilliant.\n\u2234\tYou aren't strong.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf you're a convict, then you're dull and frantic.\n\tYou're dull.\n\u2234\tYou're a convict.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": false
+            },
+            {
+              "answer": "False",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf David is short and lonely, then\n\tDavid is humorous.\n\tDavid is lonely.\n\tDavid isn't short.\n\u2234\tDavid isn't humorous.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": false
+            },
+            {
+              "answer": "False",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tYou're poor and likeable, if and only if\n\tyou aren't dangerous.\n\tYou're dangerous.\n\tYou aren't likeable.\n\u2234\tYou aren't poor.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": false
+            },
+            {
+              "answer": "False",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf you're a backpacker, then\n\tyou're rough or curious.\n\tYou aren't rough.\n\tYou aren't curious.\n\u2234\tYou aren't a backpacker.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf you aren't a fugitive, then you aren't\n\teither smart or boring.\n\tYou aren't smart.\n\tYou're a fugitive.\n\u2234\tYou're boring.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": false
+            },
+            {
+              "answer": "False",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tYou're a grocer if and only if you aren't slow.\n\tYou aren't a grocer.\n\u2234\tYou're slow.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tSally isn't both a guitarist and also either\n\tclean or boastful.\n\tSally is clean.\n\u2234\tSally isn't a guitarist.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf George isn't a pilot, then George isn't cruel.\n\tGeorge is cruel.\n\u2234\tGeorge is a pilot.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tDonna isn't both rich and not confused.\n\tDonna isn't confused.\n\u2234\tDonna isn't rich.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf David isn't a pessimist, then David isn't bright.\n\tDavid is a pessimist.\n\u2234\tDavid is bright.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": false
+            },
+            {
+              "answer": "False",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf you're cheap or frantic, then you're gloomy.\n\tYou aren't gloomy.\n\u2234\tYou aren't frantic.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf you're a republican, then if\n\tyou're strong then you're comical.\n\tYou're a republican.\n\tYou aren't comical.\n\u2234\tYou aren't strong.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf Jim is dull, then Jim is\n\tpoetic and romantic.\n\tJim is poetic.\n\tJim isn't romantic.\n\u2234\tJim isn't dull.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf Carol is a doctor, then\n\tCarol is rich and sarcastic.\n\tCarol is a doctor.\n\u2234\tCarol is rich.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf you're bold, then you aren't both\n\tsociable and not careful.\n\tYou're sociable.\n\tYou aren't careful.\n\u2234\tYou aren't bold.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf you're a biologist, then you're slow or prosperous.\n\tYou aren't slow.\n\tYou aren't a biologist.\n\u2234\tYou aren't prosperous.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": false
+            },
+            {
+              "answer": "False",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf you're clean, then you aren't both\n\tpowerful and not lively.\n\tYou aren't powerful.\n\tYou aren't lively.\n\u2234\tYou aren't clean.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": false
+            },
+            {
+              "answer": "False",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tYou're either not cruel or else not faithful.\n\tYou aren't cruel.\n\u2234\tYou're faithful.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": false
+            },
+            {
+              "answer": "False",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf you aren't a foreigner, then you aren't either\n\tpoor or confused.\n\tYou aren't poor.\n\tYou're confused.\n\u2234\tYou're a foreigner.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tYou're either not bold or else not selfish.\n\tYou're bold.\n\u2234\tYou aren't selfish.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf Keith is rough and friendly, then\n\tKeith is comical.\n\tKeith is rough.\n\tKeith is friendly.\n\u2234\tKeith is comical.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf you're slow or a backpacker,\n\tthen you're poetic and humorous.\n\tYou're slow.\n\u2234\tYou're poetic.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf you're strong or a cannibal, then\n\tyou're bashful and dangerous.\n\tYou aren't strong.\n\u2234\tYou aren't bashful.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": false
+            },
+            {
+              "answer": "False",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tYou're cruel and boring, if and only if you aren't scholarly.\n\tYou're scholarly.\n\tYou're boring.\n\u2234\tYou aren't cruel.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf you're short and not charitable, then you aren't generous.\n\tYou're generous.\n\u2234\tYou're charitable.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": false
+            },
+            {
+              "answer": "False",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf Sally is a pilot, then Sally is\n\trough and cowardly.\n\tSally isn't a pilot.\n\u2234\tSally isn't rough.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": false
+            },
+            {
+              "answer": "False",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf you're a dentist, then you're bright and famous.\n\tYou're bright.\n\u2234\tYou're a dentist.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": false
+            },
+            {
+              "answer": "False",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf Keith is slow and bitter, then\n\tKeith is hideous.\n\tKeith is bitter.\n\tKeith isn't slow.\n\u2234\tKeith isn't hideous.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": false
+            },
+            {
+              "answer": "False",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tYou're either a republican and dull, or else\n\tcolorful and lonely.\n\tYou're a republican.\n\u2234\tYou aren't lonely.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": false
+            },
+            {
+              "answer": "False",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tYou're either a scholar and poor, or else\n\tlikeable and disgusting.\n\tYou aren't a scholar.\n\u2234\tYou're disgusting.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tYou're rich and dangerous, if and only if\n\tyou aren't curious.\n\tYou're curious.\n\tYou aren't dangerous.\n\u2234\tYou aren't rich.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": false
+            },
+            {
+              "answer": "False",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf Harry isn't a democrat, then Harry isn't bold.\n\tHarry is bold.\n\u2234\tHarry is a democrat.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tYou're a bachelor if and only if you aren't smart.\n\tYou aren't a bachelor.\n\u2234\tYou're smart.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": true
+            },
+            {
+              "answer": "False",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf you're a carpenter, then if you're slow\n\tthen you're generous.\n\tYou're a carpenter.\n\tYou aren't slow.\n\u2234\tYou aren't generous.</pre>",
+          "answers": [
+            {
+              "answer": "True",
+              "correct": false
+            },
+            {
+              "answer": "False",
+              "correct": true
             }
           ]
         }

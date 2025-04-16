@@ -80,7 +80,7 @@ const ret = {
     forms: []
 };
 
-for (let i = 0; i < 2; i++) {
+for (let i = 0; i < 100; i++) {
     const text = await getQuestion();
     const blocks = text.split("\r\n\r\n");
     if (blocks.length < 3) { // Not enough text blocks
@@ -101,6 +101,7 @@ for (let i = 0; i < 2; i++) {
     if (lines[0].indexOf("correct") != -1) { // we are correct
         correct = true;
     }
+    console.warn(i);
     // console.log(question);
     // console.log(correct);
     // console.log("");
