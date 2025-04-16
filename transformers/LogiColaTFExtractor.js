@@ -69,8 +69,8 @@ const ret = {
     terms: [],
     lessons: [
         {
-            id: "propositional_arguments_english",
-            name: "Propositional Arguments - English",
+            id: "propositional_arguments_idiomatic",
+            name: "Propositional Arguments - Idiomatic",
             description: "PLEASE CHANGE ME",
             randomize: false,
             questionGenerators: [],

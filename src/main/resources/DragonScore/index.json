@@ -58,6 +58,12 @@
     "name": "Propositional Arguments - English",
     "description": "PLEASE CHANGE ME",
     "location": "DragonScore:lessons/propositional_arguments_english.json"
+  },
+  {
+    "id": "propositional_arguments_idiomatic",
+    "name": "Propositional Arguments - Idiomatic",
+    "description": "PLEASE CHANGE ME",
+    "location": "DragonScore:lessons/propositional_arguments_idiomatic.json"
   }
 ]
 
