@@ -6,7 +6,7 @@ import java.util.logging.Logger;
 /**
  * This class represents a possible answer to a question.
  * This answer may or may not be the correct one.
- * It is important to note that is is the job of the UI controller to make sure the questions are displayed in a random order.
+ * It is important to note that this is the job of the UI controller to make sure the questions are displayed in a random order.
  */
 public class Answer implements Cloneable {
 

@@ -15,26 +15,29 @@ public class StarLogicWordGenerator implements QuestionGenerator {
     public Question getNextQuestion() {
         assert JsonRegistry.getInstance().getDataFile() != null;
         List<Term> words = JsonRegistry.getInstance().getDataFile().getTerms().get("word");
-        //List<Term> lLetters = JsonRegistry.getInstance().getDataFile().getTerms().get("l_letters");
+        List<Term> nouns = JsonRegistry.getInstance().getDataFile().getTerms().get("NOUN");
+        List<Term> pro_nouns = JsonRegistry.getInstance().getDataFile().getTerms().get("PRO_NOUN");
+        List<Term> adjectives = JsonRegistry.getInstance().getDataFile().getTerms().get("ADJ");
 
-        int i = (int) Math.floor(Math.random() * 26);
-        int i1 = (int) Math.floor(Math.random() * 26);
-        int i2 = (int) Math.floor(Math.random() * 26);
-        int i3 = (int) Math.floor(Math.random() * 26);
-        int i4 = (int) Math.floor(Math.random() * 26);
+
+        int i = (int) Math.floor(Math.random() * 128);
+        int i1 = (int) Math.floor(Math.random() * 128);
+        int i2 = (int) Math.floor(Math.random() * 128);
+        int i3 = (int) Math.floor(Math.random() * 128);
+        int i4 = (int) Math.floor(Math.random() * 128);
 
         if (i1 == i) {
-            i1 = (i1+1)%26;
+            i1 = (i1+1)%128;
         }
         if (i2 == i1) {
-            i2 = (i2+1)%26;
+            i2 = (i2+1)%128;
         }
         if (i2 == i) {
-            i2 = (i2+2)%26;
+            i2 = (i2+2)%128;
         }
 
         if (i3 == 4) {
-            i3 = (i3+1)%26;
+            i3 = (i3+1)%128;
         }
 
         if (Math.random() < 0.5) { // This question will use all / none
