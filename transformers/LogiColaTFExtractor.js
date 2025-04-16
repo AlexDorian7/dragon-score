@@ -105,7 +105,7 @@ for (let i = 0; i < 2; i++) {
     // console.log(correct);
     // console.log("");
 
-    let q = question.replace(/\r?\n\.`\. */g, "\n\\u2234\t").replace(/\r?\n */g, "\n\t").replace(/  +/g, "\t");
+    let q = question.replace(/\r?\n\.`\. */g, "\n\\u2234\t").replace(/\r?\n +/g, "\n\t").replace(/  +/g, "\t");
 
     let ret1 = {
         question: `<p>Is this valid?</p><pre style='tab-size:4;'>${q}</pre>`,

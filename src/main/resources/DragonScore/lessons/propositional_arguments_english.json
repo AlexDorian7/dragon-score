@@ -10,28 +10,28 @@
       "questionGenerators": [],
       "staticQuestions": [
         {
-          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tYou're either a logician and cruel, or else\n\tfrivolous and gentle.\n\tYou're a logician.\n\t\u2234\tYou aren't gentle.</pre>",
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf you're rich or a pharmacist,\n\tthen you're dishonest and cowardly.\n\tYou're rich.\n\u2234\tYou're dishonest.</pre>",
           "answers": [
             {
               "answer": "True",
-              "correct": false
+              "correct": true
             },
             {
               "answer": "False",
-              "correct": true
+              "correct": false
             }
           ]
         },
         {
-          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf Harry is a scientist, then Harry is\n\tdull and prosperous.\n\tHarry isn't a scientist.\n\t\u2234\tHarry isn't dull.</pre>",
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>\tIf you're bright or famous, then you're courageous.\n\tYou aren't courageous.\n\u2234\tYou aren't famous.</pre>",
           "answers": [
             {
               "answer": "True",
-              "correct": false
+              "correct": true
             },
             {
               "answer": "False",
-              "correct": true
+              "correct": false
             }
           ]
         }
