@@ -200,11 +200,11 @@
       },
       {
         "word": "purple",
-        "type": "NOUN"
+        "type": "ADJ"
       },
       {
         "word": "pink",
-        "type": "NOUN"
+        "type": "ADJ"
       },
       {
         "word": "grey",
@@ -232,35 +232,35 @@
       },
       {
         "word": "striped",
-        "type": "NOUN"
+        "type": "ADJ"
       },
       {
         "word": "spotted",
-        "type": "NOUN"
+        "type": "ADJ"
       },
       {
         "word": "clean",
-        "type": "NOUN"
+        "type": "ADJ"
       },
       {
         "word": "dirty",
-        "type": "NOUN"
+        "type": "ADJ"
       },
       {
         "word": "fluffy",
-        "type": "NOUN"
+        "type": "ADJ"
       },
       {
         "word": "soft",
-        "type": "NOUN"
+        "type": "ADJ"
       },
       {
         "word": "hard",
-        "type": "NOUN"
+        "type": "ADJ"
       },
       {
         "word": "coarse",
-        "type": "NOUN"
+        "type": "ADJ"
       }
     ],
     "verbs": [

@@ -4,7 +4,11 @@ import javafx.application.Application;
 import javafx.stage.Stage;
 import team.logica_populi.dragonscore.base.ResourceLocation;
 import team.logica_populi.dragonscore.base.registries.DragonHandler;
+import team.logica_populi.dragonscore.base.registries.EncryptionRegistry;
+import team.logica_populi.dragonscore.base.registries.JsonRegistry;
 
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.logging.LogManager;
