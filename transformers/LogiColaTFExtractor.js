@@ -69,9 +69,9 @@ const ret = {
     terms: [],
     lessons: [
         {
-            id: "propositional_arguments_idiomatic",
-            name: "Propositional Arguments - Idiomatic",
-            description: "PLEASE CHANGE ME",
+            id: "set_BI",
+            name: "Set BI",
+            description: "Example",
             randomize: false,
             questionGenerators: [],
             staticQuestions: []
@@ -80,7 +80,7 @@ const ret = {
     forms: []
 };
 
-for (let i = 0; i < 100; i++) {
+for (let i = 0; i < 10; i++) {
     const text = await getQuestion();
     const blocks = text.split("\r\n\r\n");
     if (blocks.length < 3) { // Not enough text blocks
@@ -106,7 +106,7 @@ for (let i = 0; i < 100; i++) {
     // console.log(correct);
     // console.log("");
 
-    let q = question.replace(/\r?\n\.`\. */g, "\n\\u2234\t").replace(/\r?\n +/g, "\n\t").replace(/  +/g, "\t");
+    let q = question.replace(/\r?\n\.`\. */g, "\n\\u2234\t").replace(/\r?\n +/g, "\n\t").replace(/  +/g, "\t").replace(/\r\n/g, "\n");
 
     let ret1 = {
         question: `<p>Is this valid?</p><pre style='tab-size:4;'>${q}</pre>`,
