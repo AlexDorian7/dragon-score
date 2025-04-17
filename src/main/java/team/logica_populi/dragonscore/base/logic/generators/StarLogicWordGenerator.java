@@ -3,6 +3,7 @@ package team.logica_populi.dragonscore.base.logic.generators;
 import javafx.util.Pair;
 import team.logica_populi.dragonscore.base.logic.Question;
 import team.logica_populi.dragonscore.base.logic.TrueFalseQuestion;
+import team.logica_populi.dragonscore.base.logic.YesNoQuestion;
 import team.logica_populi.dragonscore.base.registries.JsonRegistry;
 import team.logica_populi.dragonscore.base.term.Term;
 
@@ -70,7 +71,7 @@ public class StarLogicWordGenerator implements QuestionGenerator {
                 String questStr = "<p>Is this valid?</p><pre style='tab-size:4;'>\n\t" + makeForm(type1, word1, word2) + "\n\t"
                         + makeForm(type2, word2, word3) + "\n\u2234\t"
                         + makeForm(type3, word1, word3) + "</pre>";
-                return new TrueFalseQuestion(questStr, correct);
+                return new YesNoQuestion(questStr, correct);
             } else { // 1 is 2   1 is 3   2 is 3
                 if (starred1.getKey()) l1++;
                 if (starred1.getValue()) {
@@ -91,7 +92,7 @@ public class StarLogicWordGenerator implements QuestionGenerator {
                 String questStr = "<p>Is this valid?</p><pre style='tab-size:4;'>\n\t" + makeForm(type1, word1, word2) + "\n\t"
                         + makeForm(type2, word1, word3) + "\n\u2234\t"
                         + makeForm(type3, word2, word3) + "</pre>";
-                return new TrueFalseQuestion(questStr, correct);
+                return new YesNoQuestion(questStr, correct);
             }
 
         } else { // this question will use is / is not
@@ -140,7 +141,7 @@ public class StarLogicWordGenerator implements QuestionGenerator {
                     + makeForm(type1, word1, word2) + "\n\t"
                     + makeForm(type2, word2, word3) + "\n\u2234\t"
                     + makeForm(type5, word4, word3) + "</pre>";
-            return new TrueFalseQuestion(questStr, correct);
+            return new YesNoQuestion(questStr, correct);
         }
     }
 

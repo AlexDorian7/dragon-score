@@ -1,0 +1,20 @@
+{
+  "requires": [
+    "DragonScore:requires/terms.json"
+  ],
+  "terms": {},
+  "lessons": [
+    {
+      "id": "probability",
+      "name": "Probability - Mill/Induction",
+      "description": "Probability - Mill/Induction CHANGE ME!",
+      "randomize": false,
+      "questionGenerators": [
+        "team.logica_populi.dragonscore.base.logic.generators.ProbabilityReasoningGenerator"
+      ],
+      "staticQuestions": []
+    }
+  ],
+  "forms": [
+  ]
+}
