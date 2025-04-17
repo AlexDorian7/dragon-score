@@ -2,9 +2,21 @@ package team.logica_populi.dragonscore.base.points;
 
 import java.util.Random;
 
+/**
+ *  Generates a submission code for completion of lesson exercises
+ */
 public class SubmissionCode {
     private final String code;
 
+    /**
+     * Generates a submission code through an encryption calculations.
+     * @param name name of the user
+     * @param lesson the lesson id
+     * @param first index of last character of user's first name in the alphabet
+     * @param last index last character of user's last name in the alphabet
+     * @param les index of lesson character in the alphabet
+     * @return The generated the submission code
+     */
     private static String generateCode(String name, char lesson, int first, int last, int les) {
         Random random = new Random();
 
@@ -17,10 +29,10 @@ public class SubmissionCode {
 
     /**
      * Default constructor
-     *
-     * @param fName
-     * @param lName
-     * @param lesson
+     * Generates a submission code which students will turn in for their assignment
+     * @param fName first name of the user
+     * @param lName last name of the user
+     * @param lesson the current lesson the user is working on
      */
     public SubmissionCode(String fName, String lName, String lesson) {
         String fullName = fName + " " + lName;
@@ -49,6 +61,10 @@ public class SubmissionCode {
         this.code = generateCode(fullName, lessonCh, firstNameIndex, lastNameIndex, lessonIdIndex);
     }
 
+    /**
+     * Gets the submission code
+     * @return the generated submission code
+     */
     public String getCode() {
         return code;
     }

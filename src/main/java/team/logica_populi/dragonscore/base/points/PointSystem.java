@@ -18,7 +18,7 @@ public class PointSystem {
 
     /**
      * Default constructor
-     * returns a new Hashmap
+     * returns A new Hashmap
      */
     public PointSystem() {
         this(new HashMap<>());
