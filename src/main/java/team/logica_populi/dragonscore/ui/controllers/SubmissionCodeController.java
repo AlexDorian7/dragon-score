@@ -19,7 +19,11 @@ public class SubmissionCodeController {
         codeElement.setText(code);
     }
 
-    private void onSubmit(){
+    private void backToMenu(){
+
+    }
+
+    private void backToExercise(){
 
     }
 
