@@ -22,6 +22,7 @@ public class Lesson {
     private final List<BaseQuestion> staticQuestions;
     private final List<QuestionGenerator> questionGenerators;
     private final boolean randomize;
+    private final int pointsRequired;
 
     /**
      * Create a lesson using only an internal id.
@@ -102,6 +103,7 @@ public class Lesson {
         this.staticQuestions = staticQuestions;
         this.questionGenerators = questionGenerators;
         this.randomize = randomize;
+        this.pointsRequired = 100;
     }
 
     /**
@@ -193,5 +195,9 @@ public class Lesson {
     @Override
     public String toString() {
         return name;
+    }
+
+    public int getPointsRequired() {
+        return pointsRequired;
     }
 }

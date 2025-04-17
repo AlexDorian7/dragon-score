@@ -9,6 +9,7 @@
       "name": "Syllogistic Arguments - Symbolic",
       "description": "Syllogistic Arguments - Symbolic will test you knowledge of the star test to tell if an argument is valid.",
       "randomize": false,
+      "pointsRequired": 100,
       "questionGenerators": [
         "team.logica_populi.dragonscore.base.logic.generators.StarLogicGenerator"
       ],

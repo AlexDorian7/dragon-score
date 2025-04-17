@@ -7,6 +7,7 @@
       "name": "Propositional Arguments - Idiomatic",
       "description": "PLEASE CHANGE ME",
       "randomize": false,
+      "pointsRequired": 100,
       "questionGenerators": [],
       "staticQuestions": [
         {

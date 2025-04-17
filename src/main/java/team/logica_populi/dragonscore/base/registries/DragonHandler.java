@@ -193,6 +193,7 @@ public class DragonHandler {
             throw new IllegalStateException("Attempt to show question menu before session was set up!");
         }
         setLesson(lesson);
+        logger.info("Points required: " + lesson.getPointsRequired());
         updatePoints();
         if (questionScene == null) {
             Pair<Parent, QuestionFormController> questionFormPane = UiComponentCreator.createQuestionFormPane();
@@ -202,7 +203,7 @@ public class DragonHandler {
 
         questionController.setNextQuestionCallback(() -> {
             // Check for lesson completion
-            if(getPoints() >= 100) {
+            if(getPoints() >= lesson.getPointsRequired()) {
                 loadSubmissionCode();
                 setPoints(0);
             }
@@ -217,11 +218,11 @@ public class DragonHandler {
                 }
             }
             addPoints(getPointsToGive() * (correct ? 1 : -1));
-            questionController.setProgress((double) getPoints() / 100);
+            questionController.setProgress((double) getPoints() / lesson.getPointsRequired());
             questionController.showCorrect();
         });
 
-        questionController.setProgress((double) getPoints() / 100); // Update the progress bar for the first time
+        questionController.setProgress((double) getPoints() / lesson.getPointsRequired()); // Update the progress bar for the first time
         questionController.setQuestion(lesson.getNextQuestion()); // Display the first question
 
         stage.setScene(questionScene); // Add the scene to the stage
