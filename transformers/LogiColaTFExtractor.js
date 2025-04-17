@@ -69,9 +69,9 @@ const ret = {
     terms: [],
     lessons: [
         {
-            id: "set_BI",
-            name: "Set BI",
-            description: "Example",
+            id: "syllogistic_arguments_idiomatic",
+            name: "Syllogistic Arguments - Idiomatic",
+            description: "PLEASE CHANGE ME",
             randomize: false,
             questionGenerators: [],
             staticQuestions: []
@@ -80,7 +80,7 @@ const ret = {
     forms: []
 };
 
-for (let i = 0; i < 10; i++) {
+for (let i = 0; i < 100; i++) {
     const text = await getQuestion();
     const blocks = text.split("\r\n\r\n");
     if (blocks.length < 3) { // Not enough text blocks
