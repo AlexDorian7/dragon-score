@@ -1,7 +1,502 @@
 [
   {
-    "question": "I AM ANALOGY AND CORRECT!",
-    "type": "ANALOGY",
+    "question": "We've observed various cases of happiness. We find that\ntaking vitamin C is the only additional factor that occurs\nif and only if the person is happy.\nSo probably taking vitamin C causes happiness.",
+    "type": "DISAGREEMENT",
+    "correct": false
+  },
+  {
+    "question": "In comparing two groups, we've found that people\nin the first group are bald, but not those in the second.\nThe two groups are otherwise identical, except that the first group\neats wheat germ but not the second. So probably wheat germ causes\n(or is part of the cause of) baldness, or baldness\ncauses (or is part of the cause of) eating wheat germ.",
+    "type": "DIFFERENCE",
     "correct": true
+  },
+  {
+    "question": "We've studied a sample of people\nwho swim and have found that 80 percent\nof these people are intelligent. So we conclude\nthat probably roughly 80 percent of those\nwho swim are intelligent.",
+    "type": "ANALOGY",
+    "correct": false
+  },
+  {
+    "question": "We've discovered that the more that a person\nruns the more the person has hiccups.\nSo probably running causes hiccups,\nor having hiccups causes one to run,\nor some third thing causes both.",
+    "type": "ANALOGY",
+    "correct": false
+  },
+  {
+    "question": "Fernandez and Boyle are alike in most ways.\nFernandez takes vitamin C.\nThis is all we know about the matter.\nSo probably Boyle also takes vitamin C.",
+    "type": "DISAGREEMENT",
+    "correct": false
+  },
+  {
+    "question": "85 percent of the people who drink coffee\nhave a cold. Connolly drinks coffee.\nSo Connolly has a cold.",
+    "type": "DISAGREEMENT",
+    "correct": false
+  },
+  {
+    "question": "We've discovered in comparing two groups that people\nin the first group have stomach flu, but not those in the second.\nThe two groups are otherwise identical, except that the first group\neats spinach but not the second. So probably spinach causes\n(or is part of the cause of) stomach flu, or stomach flu\ncauses (or is part of the cause of) eating spinach.",
+    "type": "DIFFERENCE",
+    "correct": true
+  },
+  {
+    "question": "We've observed a large and varied group of people\nwho do LogiCola. 40 percent of those in our sample\nhave a cold. So probably roughly 40 percent of those\nwho do LogiCola have a cold.",
+    "type": "DISAGREEMENT",
+    "correct": false
+  },
+  {
+    "question": "You eat spinach but don't have heart attacks. So it's false that\neating spinach necessarily causes heart attacks.",
+    "type": "DISAGREEMENT",
+    "correct": true
+  },
+  {
+    "question": "In various examples of obesity, we've found that\neveryone who eats wheat germ is obese, and\neveryone who is obese eats wheat germ.\nSo probably eating wheat germ causes obesity,\nor obesity causes one to eat wheat germ.",
+    "type": "ANALOGY",
+    "correct": false
+  },
+  {
+    "question": "Greene drinks beer and 57 percent of\nthose who drink beer are bald.\nThis is all we know about the matter.\nSo Greene is bald.",
+    "type": "DISAGREEMENT",
+    "correct": false
+  },
+  {
+    "question": "The more that you backpack the more you have a cold.\nSo probably backpacking causes colds.",
+    "type": "DISAGREEMENT",
+    "correct": false
+  },
+  {
+    "question": "We've studied a sample of people\nwho run and have found that 55 percent\nof these people are intelligent. So we conclude\nthat probably roughly 55 percent of those\nwho run are intelligent.",
+    "type": "ANALOGY",
+    "correct": false
+  },
+  {
+    "question": "We've found groups that drink beer but don't have bad breath.\nSo drinking beer doesn't always cause bad breath.",
+    "type": "DISAGREEMENT",
+    "correct": true
+  },
+  {
+    "question": "In comparing two groups, we've found that people\nin the first group have warts, but not those in the second.\nThe two groups are otherwise identical, except that the first group\ndoes LogiCola but not the second. So probably LogiCola causes\n(or is part of the cause of) warts.",
+    "type": "ANALOGY",
+    "correct": false
+  },
+  {
+    "question": "Connolly runs and 73 percent of\nthose who run are beautiful.\nThis is all we know about the matter.\nSo it's 73 percent probable that Connolly is beautiful.",
+    "type": "DISAGREEMENT",
+    "correct": false
+  },
+  {
+    "question": "We've observed various cases of forgetfulness. We find that\neveryone who swims is forgetful, and\neveryone who is forgetful swims.\nSo probably swimming causes forgetfulness,\nor forgetfulness causes one to swim.",
+    "type": "ANALOGY",
+    "correct": false
+  },
+  {
+    "question": "Fernandez and Martinez are alike in most ways.\nFernandez eats wheat germ.\nThis is all we know about the matter.\nSo Martinez also eats wheat germ.",
+    "type": "DISAGREEMENT",
+    "correct": false
+  },
+  {
+    "question": "After observing various groups, we've found that\nthe more that people swim the more they have hiccups.\nSo probably swimming causes hiccups,\nor having hiccups causes one to swim,\nor some third thing causes both.",
+    "type": "ANALOGY",
+    "correct": false
+  },
+  {
+    "question": "We've observed a large and varied group of people\nwho do LogiCola. 2 percent of those in our sample\nare happy. So probably roughly 2 percent of those\nwho do LogiCola are happy.",
+    "type": "DISAGREEMENT",
+    "correct": false
+  },
+  {
+    "question": "Weiss eats asparagus and 62 percent of\nthose who eat asparagus have stomach flu.\nSo Weiss has stomach flu.",
+    "type": "DISAGREEMENT",
+    "correct": false
+  },
+  {
+    "question": "We've found groups that swim but aren't angry.\nSo swimming doesn't always cause anger.",
+    "type": "DISAGREEMENT",
+    "correct": true
+  },
+  {
+    "question": "A first group and a second group are alike in most ways.\nThe first group eats spinach.\nSo the second group also eats spinach.",
+    "type": "DISAGREEMENT",
+    "correct": false
+  },
+  {
+    "question": "We've discovered in various cases of hiccups that\nbackpacking is the only additional factor that occurs\nif and only if the person has hiccups.\nSo probably backpacking causes hiccups,\nor having hiccups causes one to backpack.",
+    "type": "ANALOGY",
+    "correct": false
+  },
+  {
+    "question": "The more that you drink coffee the more you are ugly.\nSo probably coffee causes ugliness,\nor ugliness causes one to drink coffee,\nor some third thing causes both.",
+    "type": "DISAGREEMENT",
+    "correct": false
+  },
+  {
+    "question": "10 percent of the people who eat spinach that\nwe've examined are rich.\tWe've examined\na large and varied group of people who eat spinach.\nSo probably roughly 10 percent of all those\nwho eat spinach are rich.",
+    "type": "ANALOGY",
+    "correct": false
+  },
+  {
+    "question": "Fernandez eats wheat germ and 83 percent of\nthose who eat wheat germ are lazy.\nSo Fernandez is lazy.",
+    "type": "DISAGREEMENT",
+    "correct": false
+  },
+  {
+    "question": "In comparing a first group and a second group, we find that\nthey tend to be very similar.\nThe first group eats spinach.\nSo probably the second group also eats spinach.",
+    "type": "DISAGREEMENT",
+    "correct": false
+  },
+  {
+    "question": "We've compared two groups of people. We find that people\nin the first group have stomach flu, but not those in the second.\nThe two groups are otherwise identical, except that the first group\nruns but not the second. So probably running causes\n(or is part of the cause of) stomach flu.",
+    "type": "ANALOGY",
+    "correct": false
+  },
+  {
+    "question": "We've observed various cases of bad breath. We find that\ntaking vitamin C is the only additional factor that occurs\nif and only if the person has bad breath.\nSo probably taking vitamin C causes bad breath,\nor bad breath causes one to take vitamin C.",
+    "type": "ANALOGY",
+    "correct": false
+  },
+  {
+    "question": "We've found groups that watch TV but aren't lazy.\nSo watching TV doesn't always cause laziness.",
+    "type": "DISAGREEMENT",
+    "correct": true
+  },
+  {
+    "question": "We've studied a sample of people\nwho drink beer and have found that 29 percent\nof these people have bad breath. So we conclude\nthat probably roughly 29 percent of those\nwho drink beer have bad breath.",
+    "type": "ANALOGY",
+    "correct": false
+  },
+  {
+    "question": "We've observed that most of the things true of\nGreene are also true of Hilton.\nGreene drinks coffee.\nThis is all we know about the matter.\nSo probably Hilton also drinks coffee.",
+    "type": "ANALOGY",
+    "correct": false
+  },
+  {
+    "question": "In comparing two groups, we've found that people\nin the first group are beautiful, but not those in the second.\nThe two groups are otherwise identical, except that the first group\neats asparagus but not the second. So probably asparagus causes\n(or is part of the cause of) beauty, or beauty\ncauses (or is part of the cause of) eating asparagus.",
+    "type": "DIFFERENCE",
+    "correct": true
+  },
+  {
+    "question": "We've discovered that the more that a person\ntakes vitamin C the more the person has bad breath.\nSo probably vitamin C causes bad breath.",
+    "type": "DISAGREEMENT",
+    "correct": false
+  },
+  {
+    "question": "We've observed various cases of colds. We find that\nswimming is the only additional factor that occurs\nif and only if the person has a cold.\nSo swimming causes colds,\nor having a cold causes one to swim.",
+    "type": "ANALOGY",
+    "correct": false
+  },
+  {
+    "question": "We've found groups that eat wheat germ but aren't rich.\nSo eating wheat germ doesn't always cause riches.",
+    "type": "DISAGREEMENT",
+    "correct": true
+  },
+  {
+    "question": "We've studied a large and varied sample of people\nwho watch TV and have found that 17 percent\nof these people are ugly. So we conclude\nthat 17 percent of those\nwho watch TV are ugly.",
+    "type": "ANALOGY",
+    "correct": false
+  },
+  {
+    "question": "We've discovered in comparing two groups that people\nin the first group have bad breath, but not those in the second.\nThe two groups are otherwise identical, except that the first group\nbackpacks but not the second. So probably backpacking causes\n(or is part of the cause of) bad breath, or bad breath\ncauses (or is part of the cause of) backpacking.",
+    "type": "DIFFERENCE",
+    "correct": true
+  },
+  {
+    "question": "In comparing a first group and a second group, we find that\nthey tend to be very similar.\nThe first group eats asparagus.\nSo the second group also eats asparagus.",
+    "type": "DISAGREEMENT",
+    "correct": false
+  },
+  {
+    "question": "We've discovered that the more that a person\nswims the more the person has stomach flu.\nSo probably swimming causes stomach flu,\nor stomach flu causes one to swim,\nor some third thing causes both.",
+    "type": "ANALOGY",
+    "correct": false
+  },
+  {
+    "question": "In various examples of colds, we've found that\ndoing LogiCola is the only additional factor that occurs\nif and only if the person has a cold.\nSo probably doing LogiCola causes colds,\nor having a cold causes one to do LogiCola.",
+    "type": "ANALOGY",
+    "correct": false
+  },
+  {
+    "question": "You eat asparagus but aren't ugly. So it's false that\neating asparagus necessarily causes ugliness.",
+    "type": "DISAGREEMENT",
+    "correct": true
+  },
+  {
+    "question": "We've discovered in comparing two groups that people\nin the first group are rich, but not those in the second.\nThe two groups are otherwise identical, except that the first group\ntakes vitamin C but not the second. So probably vitamin C causes\n(or is part of the cause of) riches, or having riches\ncauses (or is part of the cause of) taking vitamin C.",
+    "type": "DIFFERENCE",
+    "correct": true
+  },
+  {
+    "question": "97 percent of the people who backpack\nare angry. Wilson backpacks.\nSo it's 97 percent probable that Wilson is angry.",
+    "type": "DISAGREEMENT",
+    "correct": false
+  },
+  {
+    "question": "We've observed a large and varied group of people\nwho watch TV. 85 percent of those in our sample\nare obese. So probably roughly 85 percent of those\nwho watch TV are obese.",
+    "type": "DISAGREEMENT",
+    "correct": false
+  },
+  {
+    "question": "In various examples of baldness, we've found that\neveryone who drinks beer is bald, and\neveryone who is bald drinks beer.\nSo probably drinking beer causes baldness,\nor baldness causes one to drink beer.",
+    "type": "ANALOGY",
+    "correct": false
+  },
+  {
+    "question": "We've observed that most of the things true of\nConnolly are also true of Boyle.\nConnolly eats asparagus.\nSo Boyle also eats asparagus.",
+    "type": "DISAGREEMENT",
+    "correct": false
+  },
+  {
+    "question": "You swim but aren't obese. So it's false that\nswimming necessarily causes obesity.",
+    "type": "DISAGREEMENT",
+    "correct": true
+  },
+  {
+    "question": "After observing various groups, we've found that\nthe more that people eat asparagus the more they are happy.\nSo probably asparagus causes happiness,\nor happiness causes one to eat asparagus,\nor some third thing causes both.",
+    "type": "ANALOGY",
+    "correct": false
+  },
+  {
+    "question": "We've studied a large and varied sample of people\nwho take vitamin C and have found that 27 percent\nof these people have a cold. So we conclude\nthat probably roughly 27 percent of those\nwho take vitamin C have a cold.",
+    "type": "ANALOGY",
+    "correct": false
+  },
+  {
+    "question": "In comparing two groups, we've found that people\nin the first group are ugly, but not those in the second.\nThe two groups are otherwise identical, except that the first group\nwatches TV but not the second. So probably TV causes\n(or is part of the cause of) ugliness, or ugliness\ncauses (or is part of the cause of) watching TV.",
+    "type": "DIFFERENCE",
+    "correct": true
+  },
+  {
+    "question": "In various examples of warts, we've found that\nrunning is the only additional factor that occurs\nif and only if the person has warts.\nSo running causes warts,\nor having warts causes one to run.",
+    "type": "ANALOGY",
+    "correct": false
+  },
+  {
+    "question": "Weiss swims and 61 percent of\nthose who swim are angry.\nThis is all we know about the matter.\nSo it's 61 percent probable that Weiss is angry.",
+    "type": "DISAGREEMENT",
+    "correct": false
+  },
+  {
+    "question": "You eat wheat germ but don't have a cold. So it's false that\neating wheat germ necessarily causes colds.",
+    "type": "DISAGREEMENT",
+    "correct": true
+  },
+  {
+    "question": "Fernandez and Hughes are alike in most ways.\nFernandez eats asparagus.\nSo Hughes also eats asparagus.",
+    "type": "DISAGREEMENT",
+    "correct": false
+  },
+  {
+    "question": "63 percent of the people who drink beer that\nwe've examined have heart attacks.\tWe've examined\na large group of people who drink beer.\nSo probably roughly 63 percent of all those\nwho drink beer have heart attacks.",
+    "type": "ANALOGY",
+    "correct": false
+  },
+  {
+    "question": "We've compared two groups of people. We find that people\nin the first group have stomach flu, but not those in the second.\nThe two groups are otherwise identical, except that the first group\ntakes vitamin C but not the second. So probably vitamin C causes\n(or is part of the cause of) stomach flu, or stomach flu\ncauses (or is part of the cause of) taking vitamin C.",
+    "type": "DIFFERENCE",
+    "correct": true
+  },
+  {
+    "question": "After observing various groups, we've found that\nthe more that people drink beer the more they are rich.\nSo probably beer causes riches,\nor having riches causes one to drink beer,\nor some third thing causes both.",
+    "type": "ANALOGY",
+    "correct": false
+  },
+  {
+    "question": "We know that 53 percent of those who backpack\nare beautiful and that Gensler backpacks.\nThis is all we know about the matter.\nSo it's 53 percent probable that Gensler is beautiful.",
+    "type": "DISAGREEMENT",
+    "correct": false
+  },
+  {
+    "question": "In various examples of intelligence, we've found that\neveryone who runs is intelligent.\nSo probably running causes intelligence.",
+    "type": "DISAGREEMENT",
+    "correct": false
+  },
+  {
+    "question": "We've observed a large and varied group of people\nwho swim. 49 percent of those in our sample\nare lazy. So probably roughly 49 percent of those\nwho swim are lazy.",
+    "type": "DISAGREEMENT",
+    "correct": false
+  },
+  {
+    "question": "In comparing a first group and a second group, we find that\nthey tend to be very similar.\nThe first group eats asparagus.\nSo the second group also eats asparagus.",
+    "type": "DISAGREEMENT",
+    "correct": false
+  },
+  {
+    "question": "You drink coffee but don't have warts. So it's false that\ndrinking coffee necessarily causes warts.",
+    "type": "DISAGREEMENT",
+    "correct": true
+  },
+  {
+    "question": "We've discovered in comparing two groups that people\nin the first group have stomach flu, but not those in the second.\nThe two groups are otherwise identical, except that the first group\nbackpacks but not the second. So backpacking causes\n(or is part of the cause of) stomach flu, or stomach flu\ncauses (or is part of the cause of) backpacking.",
+    "type": "DIFFERENCE",
+    "correct": true
+  },
+  {
+    "question": "We know that 58 percent of those who do LogiCola\nare angry and that Wilson does LogiCola.\nSo Wilson is angry.",
+    "type": "DISAGREEMENT",
+    "correct": false
+  },
+  {
+    "question": "We've discovered in various cases of baldness that\neating wheat germ is the only additional factor that occurs\nif and only if the person is bald.\nSo probably eating wheat germ causes baldness.",
+    "type": "DISAGREEMENT",
+    "correct": false
+  },
+  {
+    "question": "In comparing Wong and Boyle, we find that\nthey tend to be very similar.\nWong backpacks.\nSo probably Boyle also backpacks.",
+    "type": "DISAGREEMENT",
+    "correct": false
+  },
+  {
+    "question": "We've observed a large and varied group of people\nwho watch TV. 66 percent of those in our sample\nhave acne. So probably roughly 66 percent of those\nwho watch TV have acne.",
+    "type": "DISAGREEMENT",
+    "correct": false
+  },
+  {
+    "question": "You do LogiCola but aren't happy. So it's false that\ndoing LogiCola necessarily causes happiness.",
+    "type": "DISAGREEMENT",
+    "correct": true
+  },
+  {
+    "question": "Jones drinks coffee and 51 percent of\nthose who drink coffee have acne.\nThis is all we know about the matter.\nSo it's 51 percent probable that Jones has acne.",
+    "type": "DISAGREEMENT",
+    "correct": false
+  },
+  {
+    "question": "The more that you run the more you are beautiful.\nSo running causes beauty,\nor beauty causes one to run,\nor some third thing causes both.",
+    "type": "DISAGREEMENT",
+    "correct": false
+  },
+  {
+    "question": "In comparing two groups, we've found that people\nin the first group have warts, but not those in the second.\nThe first group eats asparagus but not the second. So probably\nasparagus causes (or is part of the cause of) warts,\nor having warts causes (or is part of the cause of)\neating asparagus.",
+    "type": "DIFFERENCE",
+    "correct": true
+  },
+  {
+    "question": "We've discovered that there are people that\nrun but aren't lazy. So running\ndoesn't necessary cause laziness.",
+    "type": "DISAGREEMENT",
+    "correct": true
+  },
+  {
+    "question": "We've studied a large sample of people\nwho eat spinach and have found that 60 percent\nof these people are intelligent. So we conclude\nthat probably roughly 60 percent of those\nwho eat spinach are intelligent.",
+    "type": "ANALOGY",
+    "correct": false
+  },
+  {
+    "question": "90 percent of the people who do LogiCola\nare beautiful. Connolly does LogiCola.\nThis is all we know about the matter.\nSo it's 90 percent probable that Connolly is beautiful.",
+    "type": "DISAGREEMENT",
+    "correct": false
+  },
+  {
+    "question": "In various examples of riches, we've found that\neating wheat germ is the only additional factor that occurs\nif and only if the person is rich.\nSo probably eating wheat germ causes riches,\nor having riches causes one to eat wheat germ.",
+    "type": "ANALOGY",
+    "correct": false
+  },
+  {
+    "question": "Greene and Hughes are alike in most ways.\nGreene swims.\nThis is all we know about the matter.\nSo probably Hughes also swims.",
+    "type": "DISAGREEMENT",
+    "correct": false
+  },
+  {
+    "question": "We've compared two groups of people. We find that people\nin the first group have hiccups, but not those in the second.\nThe first group runs but not the second. So probably\nrunning causes (or is part of the cause of) hiccups,\nor having hiccups causes (or is part of the cause of)\nrunning.",
+    "type": "DIFFERENCE",
+    "correct": true
+  },
+  {
+    "question": "We've studied a large and varied sample of people\nwho swim and have found that 34 percent\nof these people are intelligent. So we conclude\nthat probably roughly 34 percent of those\nwho swim are intelligent.",
+    "type": "ANALOGY",
+    "correct": false
+  },
+  {
+    "question": "After observing various groups, we've found that\nthe more that people drink beer the more they have hiccups.\nSo beer causes hiccups,\nor having hiccups causes one to drink beer,\nor some third thing causes both.",
+    "type": "ANALOGY",
+    "correct": false
+  },
+  {
+    "question": "You backpack but aren't obese. So it's false that\nbackpacking necessarily causes obesity.",
+    "type": "DISAGREEMENT",
+    "correct": true
+  },
+  {
+    "question": "We've discovered in various cases of beauty that\nrunning is the only additional factor that occurs\nif and only if the person is beautiful.\nSo probably running causes beauty,\nor beauty causes one to run.",
+    "type": "ANALOGY",
+    "correct": false
+  },
+  {
+    "question": "We've discovered in comparing two groups that people\nin the first group are lazy, but not those in the second.\nThe two groups are otherwise identical, except that the first group\ndrinks coffee but not the second. So coffee causes\n(or is part of the cause of) laziness, or laziness\ncauses (or is part of the cause of) drinking coffee.",
+    "type": "DIFFERENCE",
+    "correct": true
+  },
+  {
+    "question": "We know that 94 percent of those who take vitamin C\nhave acne and that Connolly takes vitamin C.\nThis is all we know about the matter.\nSo Connolly has acne.",
+    "type": "DISAGREEMENT",
+    "correct": false
+  },
+  {
+    "question": "We've observed that most of the things true of\na first group are also true of a second group.\nThe first group watches TV.\nSo the second group also watches TV.",
+    "type": "DISAGREEMENT",
+    "correct": false
+  },
+  {
+    "question": "After observing various groups, we've found that\nthe more that people eat wheat germ the more they are bald.\nSo wheat germ causes baldness,\nor baldness causes one to eat wheat germ,\nor some third thing causes both.",
+    "type": "ANALOGY",
+    "correct": false
+  },
+  {
+    "question": "We've found groups that backpack but aren't lazy.\nSo backpacking doesn't always cause laziness.",
+    "type": "DISAGREEMENT",
+    "correct": true
+  },
+  {
+    "question": "We've observed a large and varied group of people\nwho do LogiCola. 27 percent of those in our sample\nare ugly. So probably roughly 27 percent of those\nwho do LogiCola are ugly.",
+    "type": "DISAGREEMENT",
+    "correct": false
+  },
+  {
+    "question": "We've discovered in comparing two groups that people\nin the first group are angry, but not those in the second.\nThe two groups are otherwise identical, except that the first group\nbackpacks but not the second. So probably backpacking causes\nanger, or anger causes one to backpack.",
+    "type": "ANALOGY",
+    "correct": false
+  },
+  {
+    "question": "Connolly eats spinach and 58 percent of\nthose who eat spinach have hiccups.\nSo Connolly has hiccups.",
+    "type": "DISAGREEMENT",
+    "correct": false
+  },
+  {
+    "question": "We've discovered in various cases of acne that\ndoing LogiCola is the only additional factor that occurs\nif and only if the person has acne.\nSo probably doing LogiCola causes acne,\nor acne causes one to do LogiCola.",
+    "type": "ANALOGY",
+    "correct": false
+  },
+  {
+    "question": "Wilson and Hughes are alike in most ways.\nWilson drinks coffee.\nThis is all we know about the matter.\nSo Hughes also drinks coffee.",
+    "type": "DISAGREEMENT",
+    "correct": false
+  },
+  {
+    "question": "45 percent of the people who drink beer that\nwe've examined are lazy.\tWe've examined\na large and varied group of people who drink beer.\nSo probably roughly 45 percent of all those\nwho drink beer are lazy.",
+    "type": "ANALOGY",
+    "correct": false
+  },
+  {
+    "question": "We've compared two groups of people. We find that people\nin the first group are bald, but not those in the second.\nThe two groups are otherwise identical, except that the first group\nruns but not the second. So running causes\n(or is part of the cause of) baldness, or baldness\ncauses (or is part of the cause of) running.",
+    "type": "DIFFERENCE",
+    "correct": true
+  },
+  {
+    "question": "64 percent of the people who swim\nare happy. Stevens swims.\nThis is all we know about the matter.\nSo it's 64 percent probable that Stevens is happy.",
+    "type": "DISAGREEMENT",
+    "correct": false
+  },
+  {
+    "question": "We've discovered that the more that a person\ndoes LogiCola the more the person is bald.\nSo probably LogiCola causes baldness,\nor baldness causes one to do LogiCola.",
+    "type": "DISAGREEMENT",
+    "correct": false
+  },
+  {
+    "question": "We've discovered that there are people that\neat spinach but aren't ugly. So eating spinach\ndoesn't necessary cause ugliness.",
+    "type": "DISAGREEMENT",
+    "correct": true
+  },
+  {
+    "question": "We've observed various cases of forgetfulness. We find that\neating asparagus is the only additional factor that occurs\nif and only if the person is forgetful.\nSo probably eating asparagus causes forgetfulness,\nor forgetfulness causes one to eat asparagus.",
+    "type": "ANALOGY",
+    "correct": false
+  },
+  {
+    "question": "We've studied a large and varied sample of people\nwho take vitamin C and have found that 55 percent\nof these people are obese. So we conclude\nthat probably roughly 55 percent of those\nwho take vitamin C are obese.",
+    "type": "ANALOGY",
+    "correct": false
   }
 ]

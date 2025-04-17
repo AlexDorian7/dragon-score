@@ -43,7 +43,7 @@ function waitForMilliseconds(milliseconds) {
 }
 
 function wait() {
-    return waitForMilliseconds(10);
+    return waitForMilliseconds(100);
 }
 
 async function getQuestion() {
@@ -64,23 +64,9 @@ async function getQuestion() {
 }
 
 
-const ret = {
-    requires: [],
-    terms: [],
-    lessons: [
-        {
-            id: "syllogistic_arguments_idiomatic",
-            name: "Syllogistic Arguments - Idiomatic",
-            description: "PLEASE CHANGE ME",
-            randomize: false,
-            questionGenerators: [],
-            staticQuestions: []
-        },
-    ],
-    forms: []
-};
+const ret = [];
 
-for (let i = 0; i < 10; i++) {
+for (let i = 0; i < 100; i++) {
     const text = await getQuestion();
     const blocks = text.split("\r\n\r\n");
     if (blocks.length < 3) { // Not enough text blocks
@@ -95,33 +81,35 @@ for (let i = 0; i < 10; i++) {
         i--; // retry
         continue;
     }
-    const question = blocks[1];
-    const lines = blocks[2].split("\r\n");
+    let type = "DISAGREEMENT";
     let correct = false;
-    if (lines[0].indexOf("correct") != -1) { // we are correct
-        correct = true;
+    const question = blocks[1];
+    if (blocks[2] == "") { // For some reason the Disagreeement method uses a different solution format than the rest...
+        if (blocks[7].indexOf("Correct") != -1) { // we are correct
+            correct = true;
+        }
+    } else {
+        const lines = blocks[2].split("\r\n");
+        if (lines[0].indexOf("correct") != -1) { // we are correct
+            correct = true;
+        }
+        type = "ANALOGY";
+        if (lines[0].indexOf("agreement") != -1) type = "AGREEMENT";
+        else if (lines[0].indexOf("variation") != -1) type = "VARIATION";
+        else if (lines[0].indexOf("sample-projection") != -1) type = "SAMPLE_PROJECTION";
+        else if (lines[0].indexOf("difference") != -1) type = "DIFFERENCE";
+        else if (lines[0].indexOf("statistical") != -1) type = "STATISTICAL";
     }
     console.warn(i);
-    // console.log(question);
-    // console.log(correct);
-    // console.log("");
 
     let q = question.replace(/\r?\n\.`\. */g, "\n\\u2234\t").replace(/\r?\n +/g, "\n\t").replace(/  +/g, "\t").replace(/\r\n/g, "\n");
 
     let ret1 = {
-        question: `<p>Is this valid?</p><pre style='tab-size:4;'>${q}</pre>`,
-        answers: [
-            {
-                answer: "Yes",
-                correct: correct
-            },
-            {
-                answer: "No",
-                correct: !correct
-            }
-        ]
+        question: q,
+        type: type,
+        correct: correct
     }
-    ret.lessons[0].staticQuestions.push(ret1);
+    ret.push(ret1);
 }
 
 console.log(JSON.stringify(ret, null, 2).replace(/\\\\/g, "\\"));

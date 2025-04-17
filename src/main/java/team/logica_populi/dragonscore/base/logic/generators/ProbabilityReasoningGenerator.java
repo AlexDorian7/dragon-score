@@ -13,7 +13,7 @@ import java.util.List;
  * Question generator to load questions for set P.
  * Needs to have a file under {@code DragonScore:Probability/ReasoningRecords.json}.
  */
-public class ProbabilityReasoningGenerator implements QuestionGenerator{
+public class ProbabilityReasoningGenerator implements QuestionGenerator {
 
     private static final TypeToken<List<ProbabilityReasoningRecord>> RECORDS_TYPE = new TypeToken<>(){};
 
