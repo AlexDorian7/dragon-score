@@ -3,13 +3,13 @@ package team.logica_populi.dragonscore.base.points;
 import java.util.Random;
 
 /**
- * Class to generate a submission code
+ *  Generates a submission code for completion of lesson exercises
  */
 public class SubmissionCode {
     private final String code;
 
     /**
-     * Generates a submission code through calculations.
+     * Generates a submission code through an encryption calculations.
      * @param name name of the user
      * @param lesson the lesson id
      * @param first index of last character of user's first name in the alphabet

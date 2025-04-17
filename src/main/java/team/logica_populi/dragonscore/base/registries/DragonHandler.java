@@ -155,7 +155,7 @@ public class DragonHandler {
     }
 
     /**
-     *
+     * Sets up the scene for Submission code as well as generates the code
      */
     private void loadSubmissionCode(){
         if(stage == null){
@@ -173,6 +173,11 @@ public class DragonHandler {
 
         SubmissionCode code = new SubmissionCode(arr[0], arr[1], getLesson().getId());
 
+
+        // Write submission code to a file
+        //ResourceLocation location = new ResourceLocation("dynamic:submissions.dat");
+        //location.write(JsonRegistry.getInstance().getGson().toJson(code));
+
         submissionCodeController.setCode(code.getCode());
 
         stage.setScene(submissionCodeScene);
@@ -183,7 +188,7 @@ public class DragonHandler {
      * Sets up a lesson and displays it to the user.
      * @param lesson The lesson to load and run
      */
-    private void loadLesson(Lesson lesson) {
+     public void loadLesson(Lesson lesson) {
         if (stage == null) {
             throw new IllegalStateException("Attempt to show question menu before session was set up!");
         }
@@ -199,6 +204,7 @@ public class DragonHandler {
             // Check for lesson completion
             if(getPoints() >= 100) {
                 loadSubmissionCode();
+                setPoints(0);
             }
             questionController.setQuestion(lesson.getNextQuestion());
         });
