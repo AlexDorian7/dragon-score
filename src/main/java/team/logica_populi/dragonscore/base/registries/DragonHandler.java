@@ -39,6 +39,7 @@ public class DragonHandler {
     private int points = 0;
     private int pointsToGive = 10;
     private Lesson lesson;
+    private SubmissionCode code;
 
     private Stage stage;
     private Scene mainMenuScene;
@@ -154,6 +155,15 @@ public class DragonHandler {
         showMainMenu();
     }
 
+    protected void setSubmissionCode(SubmissionCode code) {
+         if (lesson == null) {
+            logger.warning("You need to load a lesson before trying to set submission.dat");
+            return;
+        }
+        this.code = code;
+        JsonRegistry.getInstance().getSubmissionSystem().setSubmission(name.toLowerCase(), lesson, code);
+    }
+
     /**
      * Sets up the scene for Submission code as well as generates the code
      */
@@ -171,12 +181,8 @@ public class DragonHandler {
 
         String[] arr = name.split(regex);
 
-        SubmissionCode code = new SubmissionCode(arr[0], arr[1], getLesson().getId());
-
-
-        // Write submission code to a file
-        //ResourceLocation location = new ResourceLocation("dynamic:submissions.dat");
-        //location.write(JsonRegistry.getInstance().getGson().toJson(code));
+        code = new SubmissionCode(arr[0], arr[1], getLesson().getId());
+        setSubmissionCode(code);
 
         submissionCodeController.setCode(code.getCode());
 
@@ -282,6 +288,21 @@ public class DragonHandler {
     }
 
     /**
+     * Loads or creates a Submission system with the {@link JsonRegistry}
+     */
+    private void loadOrCreateSubmissionsFile(){
+        ResourceLocation location = new ResourceLocation("dynamic:submissions.dat");
+        if (!location.exists()) {
+            logger.fine("Creating new Submissions System.");
+            JsonRegistry.getInstance().createSubmissionSystem();
+        } else {
+            String data = location.tryGetResource();
+            logger.fine("Loaded existing Submissions System.");
+            JsonRegistry.getInstance().loadSubmissionSystem(data, true);
+        }
+    }
+
+    /**
      * Sets us this session with JavaFX and the back end.
      * This should be the first thing you call on a new session
      * @param stage The state that everything will be displayed to
@@ -292,6 +313,7 @@ public class DragonHandler {
         stage.setTitle("LogiQuest"); // Do other future stage set up here.
         lessonHeaders = JsonRegistry.getInstance().getGson().fromJson(lessonHeadersPath.tryGetResource(), LESSON_HEADERS_TYPE.getType());
         loadOrCreatePointFile();
+        loadOrCreateSubmissionsFile();
     }
 
     /**
