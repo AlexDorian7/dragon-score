@@ -5,6 +5,10 @@ target/
 
 dynamic/
 
+transformers/node_modules/
+transformers/package-lock.json
+
+
 ### IntelliJ IDEA ###
 .idea/
 .idea/modules.xml

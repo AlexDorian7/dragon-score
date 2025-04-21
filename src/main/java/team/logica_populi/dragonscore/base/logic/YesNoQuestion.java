@@ -3,7 +3,7 @@ package team.logica_populi.dragonscore.base.logic;
 /**
  * A simple implementation of {@link AbstractQuestion} with only ywo answers being true and false
  */
-public class TrueFalseQuestion extends AbstractQuestion {
+public class YesNoQuestion extends AbstractQuestion {
 
     private Boolean isTrue;
 
@@ -13,8 +13,8 @@ public class TrueFalseQuestion extends AbstractQuestion {
      * @param question     The text for the question label
      * @param isTrue       Is the question true
      */
-    public TrueFalseQuestion(String question, boolean isTrue) {
-        super(question, new Answer("True", isTrue), new Answer("False", !isTrue));
+    public YesNoQuestion(String question, boolean isTrue) {
+        super(question, new Answer("Yes", isTrue), new Answer("No", !isTrue));
         this.isTrue = isTrue;
     }
 

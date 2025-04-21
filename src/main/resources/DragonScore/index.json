@@ -34,6 +34,48 @@
     "name": "Syllogistic Arguments - Symbolic",
     "description": "Syllogistic Arguments - Symbolic will test you knowledge of the star test to tell if an argument is valid.",
     "location": "DragonScore:lessons/syllogistic_arguments_symbolic.json"
+  },
+  {
+    "id": "lesson_syllogistic_arguments_english",
+    "name": "Syllogistic Arguments - English",
+    "description": "Syllogistic Arguments - Eymbolic will test you knowledge of the star test to tell if an argument is valid.",
+    "location": "DragonScore:lessons/syllogistic_arguments_english.json"
+  },
+  {
+    "id": "truth_evaluations",
+    "name": "Truth Evaluations",
+    "description": "Truth Evaluations will test you knowledge of true/false logic.",
+    "location": "DragonScore:lessons/truth_evaluations.json"
+  },
+  {
+    "id": "unknown_evaluations",
+    "name": "Unknown Evaluations",
+    "description": "Unknown Evaluations will test you knowledge of true/false logic.",
+    "location": "DragonScore:lessons/unknown_evaluations.json"
+  },
+  {
+    "id": "propositional_arguments_english",
+    "name": "Propositional Arguments - English",
+    "description": "PLEASE CHANGE ME",
+    "location": "DragonScore:lessons/propositional_arguments_english.json"
+  },
+  {
+    "id": "propositional_arguments_idiomatic",
+    "name": "Propositional Arguments - Idiomatic",
+    "description": "PLEASE CHANGE ME",
+    "location": "DragonScore:lessons/propositional_arguments_idiomatic.json"
+  },
+  {
+    "id": "syllogistic_arguments_idiomatic",
+    "name": "Syllogistic Arguments - Idiomatic",
+    "description": "PLEASE CHANGE ME",
+    "location": "DragonScore:lessons/syllogistic_arguments_idiomatic.json"
+  },
+  {
+    "id": "probability",
+    "name": "Probability - Mill/Induction",
+    "description": "Probability - Mill/Induction CHANGE ME!",
+    "location": "DragonScore:lessons/probability.json"
   }
 ]
 

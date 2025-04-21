@@ -39,6 +39,7 @@ public class DragonHandler {
     private int points = 0;
     private int pointsToGive = 10;
     private Lesson lesson;
+    private SubmissionCode code;
 
     private Stage stage;
     private Scene mainMenuScene;
@@ -154,8 +155,17 @@ public class DragonHandler {
         showMainMenu();
     }
 
+    protected void setSubmissionCode(SubmissionCode code) {
+         if (lesson == null) {
+            logger.warning("You need to load a lesson before trying to set submission.dat");
+            return;
+        }
+        this.code = code;
+        JsonRegistry.getInstance().getSubmissionSystem().setSubmission(name.toLowerCase(), lesson, code);
+    }
+
     /**
-     *
+     * Sets up the scene for Submission code as well as generates the code
      */
     private void loadSubmissionCode(){
         if(stage == null){
@@ -171,7 +181,8 @@ public class DragonHandler {
 
         String[] arr = name.split(regex);
 
-        SubmissionCode code = new SubmissionCode(arr[0], arr[1], getLesson().getId());
+        code = new SubmissionCode(arr[0], arr[1], getLesson().getId());
+        setSubmissionCode(code);
 
         submissionCodeController.setCode(code.getCode());
 
@@ -183,11 +194,12 @@ public class DragonHandler {
      * Sets up a lesson and displays it to the user.
      * @param lesson The lesson to load and run
      */
-    private void loadLesson(Lesson lesson) {
+     public void loadLesson(Lesson lesson) {
         if (stage == null) {
             throw new IllegalStateException("Attempt to show question menu before session was set up!");
         }
         setLesson(lesson);
+        logger.info("Points required: " + lesson.getPointsRequired());
         updatePoints();
         if (questionScene == null) {
             Pair<Parent, QuestionFormController> questionFormPane = UiComponentCreator.createQuestionFormPane();
@@ -197,8 +209,9 @@ public class DragonHandler {
 
         questionController.setNextQuestionCallback(() -> {
             // Check for lesson completion
-            if(getPoints() >= 100) {
+            if(getPoints() >= lesson.getPointsRequired()) {
                 loadSubmissionCode();
+                setPoints(0);
             }
             questionController.setQuestion(lesson.getNextQuestion());
         });
@@ -211,11 +224,11 @@ public class DragonHandler {
                 }
             }
             addPoints(getPointsToGive() * (correct ? 1 : -1));
-            questionController.setProgress((double) getPoints() / 100);
+            questionController.setProgress((double) getPoints() / lesson.getPointsRequired());
             questionController.showCorrect();
         });
 
-        questionController.setProgress((double) getPoints() / 100); // Update the progress bar for the first time
+        questionController.setProgress((double) getPoints() / lesson.getPointsRequired()); // Update the progress bar for the first time
         questionController.setQuestion(lesson.getNextQuestion()); // Display the first question
 
         stage.setScene(questionScene); // Add the scene to the stage
@@ -276,6 +289,21 @@ public class DragonHandler {
     }
 
     /**
+     * Loads or creates a Submission system with the {@link JsonRegistry}
+     */
+    private void loadOrCreateSubmissionsFile(){
+        ResourceLocation location = new ResourceLocation("dynamic:submissions.dat");
+        if (!location.exists()) {
+            logger.fine("Creating new Submissions System.");
+            JsonRegistry.getInstance().createSubmissionSystem();
+        } else {
+            String data = location.tryGetResource();
+            logger.fine("Loaded existing Submissions System.");
+            JsonRegistry.getInstance().loadSubmissionSystem(data, true);
+        }
+    }
+
+    /**
      * Sets us this session with JavaFX and the back end.
      * This should be the first thing you call on a new session
      * @param stage The state that everything will be displayed to
@@ -286,6 +314,7 @@ public class DragonHandler {
         stage.setTitle("LogiQuest"); // Do other future stage set up here.
         lessonHeaders = JsonRegistry.getInstance().getGson().fromJson(lessonHeadersPath.tryGetResource(), LESSON_HEADERS_TYPE.getType());
         loadOrCreatePointFile();
+        loadOrCreateSubmissionsFile();
     }
 
     /**

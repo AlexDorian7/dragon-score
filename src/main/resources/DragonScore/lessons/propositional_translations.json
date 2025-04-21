@@ -7,6 +7,7 @@
       "name": "Propositional Translations Easy",
       "description": "PLEASE CHANGE ME",
       "randomize": true,
+      "pointsRequired": 100,
       "questionGenerators": [],
       "staticQuestions": [
         {
