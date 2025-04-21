@@ -1,6 +1,7 @@
 package team.logica_populi.dragonscore.base.points;
 
 import java.util.Random;
+import java.time.LocalDate;
 
 /**
  *  Generates a submission code for completion of lesson exercises
@@ -19,12 +20,13 @@ public class SubmissionCode {
      */
     private static String generateCode(String name, char lesson, int first, int last, int les) {
         Random random = new Random();
+        LocalDate date = LocalDate.now();
 
         String head = String.valueOf(random.nextInt(1000));
         String tail = String.valueOf(random.nextInt(1000));
         String data = String.valueOf((first * les) + (last * les));
 
-        return head + "." + data + "." + tail + "(" + name + "-" + lesson + ")";
+        return head + "." + data + "." + tail + "(" + name + "-" + lesson + " " + date +")";
     }
 
     /**
