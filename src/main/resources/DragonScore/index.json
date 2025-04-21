@@ -64,6 +64,18 @@
     "name": "Propositional Arguments - Idiomatic",
     "description": "PLEASE CHANGE ME",
     "location": "DragonScore:lessons/propositional_arguments_idiomatic.json"
+  },
+  {
+    "id": "syllogistic_arguments_idiomatic",
+    "name": "Syllogistic Arguments - Idiomatic",
+    "description": "PLEASE CHANGE ME",
+    "location": "DragonScore:lessons/syllogistic_arguments_idiomatic.json"
+  },
+  {
+    "id": "probability",
+    "name": "Probability - Mill/Induction",
+    "description": "Probability - Mill/Induction CHANGE ME!",
+    "location": "DragonScore:lessons/probability.json"
   }
 ]
 
