@@ -3,7 +3,11 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-points
+dynamic/
+
+transformers/node_modules/
+transformers/package-lock.json
+
 
 ### IntelliJ IDEA ###
 .idea/

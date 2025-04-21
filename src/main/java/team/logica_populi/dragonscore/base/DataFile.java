@@ -18,16 +18,17 @@ public class DataFile {
     private final HashMap<String, List<Term>> terms;
     private final List<Lesson> lessons;
     private final List<Form> forms;
-    private final List<String> requires;
+    private final List<ResourceLocation> requires;
 
     /**
      * Default constructor.
      * @param terms The term lists for this data file
      * @param lessons The lessons for this data file
-     * @param forms the forms for this data file
+     * @param forms The forms for this data file
+     * @param requires The other required files for this data file
      * @see team.logica_populi.dragonscore.base.registries.JsonRegistry#loadDataFile(String, boolean)
      */
-    private DataFile(HashMap<String, List<Term>> terms, List<Lesson> lessons, List<Form> forms, List<String> requires) {
+    private DataFile(HashMap<String, List<Term>> terms, List<Lesson> lessons, List<Form> forms, List<ResourceLocation> requires) {
         this.terms = terms;
         this.lessons = lessons;
         this.forms = forms;
@@ -62,7 +63,7 @@ public class DataFile {
      * Gets the required data files for this data file.
      * @return The required files
      */
-    public List<String> getRequires() {
+    public List<ResourceLocation> getRequires() {
         return requires;
     }
 
@@ -94,13 +95,11 @@ public class DataFile {
      * Loads and merges the required files of this data file into this data file.
      * @param requires The list of path names to load
      */
-    private void loadRequires(List<String> requires) {
+    private void loadRequires(List<ResourceLocation> requires) {
         logger.finer(requires.toString());
-        for (String path : requires) {
+        for (ResourceLocation path : requires) {
             logger.fine("Loading require from" + path);
-            InputStream stream = getClass().getResourceAsStream(path);
-            if (stream == null) continue;
-            mergeDataFile(JsonRegistry.getInstance().loadDataFile(stream, false));
+            mergeDataFile(JsonRegistry.getInstance().loadDataFile(path.tryGetResource(), false));
         }
     }
 }

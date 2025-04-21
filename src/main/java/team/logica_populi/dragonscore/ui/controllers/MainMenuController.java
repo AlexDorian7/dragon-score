@@ -14,6 +14,9 @@ import team.logica_populi.dragonscore.base.json.LessonHeader;
 import java.util.List;
 import java.util.function.Consumer;
 
+/**
+ * Controller for the Main Menu.
+ */
 public class MainMenuController {
     @FXML
     private ComboBox<LessonHeader> lessonsBox;
@@ -49,6 +52,10 @@ public class MainMenuController {
         nameLabel.setText("Welcome " + name + "!");
     }
 
+    /**
+     * Handler for the start lesson button.
+     * @param actionEvent The event from JavaFX
+     */
     @FXML
     private void startLesson(ActionEvent actionEvent) {
         if (callback != null) {
@@ -56,12 +63,16 @@ public class MainMenuController {
         }
     }
 
+    /**
+     * Combo Box Handler.
+     * @param actionEvent The event from JavaFX
+     */
     @FXML
     private void updateSelected(ActionEvent actionEvent) {
         lessonArea.getChildren().clear();
-        Text title = new Text(lessonsBox.getValue().name + "\n");
+        Text title = new Text(lessonsBox.getValue().name() + "\n");
         title.setStroke(Color.BLACK);
-        Text description = new Text(lessonsBox.getValue().description);
+        Text description = new Text(lessonsBox.getValue().description());
         lessonArea.getChildren().addAll(title, description);
     }
 }
