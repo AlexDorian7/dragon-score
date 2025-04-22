@@ -39,12 +39,45 @@ public class QuestionFormController {
     // Initialize the controller
     @FXML
     public void initialize() {
+        ToggleGroup difficultyGroup = new ToggleGroup();
+        easyDif.setToggleGroup(difficultyGroup);
+        normDif.setToggleGroup(difficultyGroup);
+        hardDif.setToggleGroup(difficultyGroup);
+
+        setupToggleStyle(easyDif);
+        setupToggleStyle(normDif);
+        setupToggleStyle(hardDif);
     }
+    private void setupToggleStyle(ToggleButton button) {
+        button.setOnAction(event -> {
+            updateDifficultyStyles();
+
+            ToggleButton clickedButton = (ToggleButton) event.getSource();
+            int difficulty = Integer.parseInt(clickedButton.getText());
+
+            if (DragonHandler.getCurrentSession() != null) {
+                DragonHandler.getCurrentSession().setPointsToGive(difficulty);
+            }
+        });
+    }
+    private void updateDifficultyStyles() {
+        ToggleButton[] buttons = { easyDif, normDif, hardDif };
+
+        for (ToggleButton btn : buttons) {
+            if (btn.isSelected()) {
+                btn.setStyle("-fx-background-radius: 100; -fx-background-color: #645c41; -fx-text-fill: black; -fx-pref-width: 50; -fx-pref-height: 50; -fx-font-size: 1.1em;"); // green
+            } else {
+                btn.setStyle("-fx-background-radius: 100; -fx-background-color: #fce6a4; -fx-text-fill: black; -fx-pref-width: 50; -fx-pref-height: 50; -fx-font-size: 1.1em;"); // green
+            }
+        }
+    }
+
 
     @FXML
     private void onDifficultySelect(ActionEvent event) {
         ToggleButton clickedButton = (ToggleButton) event.getSource();
         int difficulty = Integer.parseInt(clickedButton.getText());
+
         if (DragonHandler.getCurrentSession() != null) {
             DragonHandler.getCurrentSession().setPointsToGive(difficulty);
         }
@@ -52,6 +85,7 @@ public class QuestionFormController {
 
     /**
      * Sets the question that this view is to display.
+     *
      * @param question The question to display
      */
     public void setQuestion(Question question) {
@@ -71,6 +105,7 @@ public class QuestionFormController {
 
     /**
      * Sets the progress bar value.
+     *
      * @param progress The value to display in the progress bar
      */
     public void setProgress(double progress) {
@@ -84,7 +119,7 @@ public class QuestionFormController {
      */
     public void showCorrect() {
         resultsShown = true;
-        for (int i=0; i<answerButtons.size(); i++) {
+        for (int i = 0; i < answerButtons.size(); i++) {
             if (answerButtons.get(i).isSelected()) {
                 answerButtons.get(i).setStyle("-fx-background-color: #FF7F7F");
             }
@@ -97,6 +132,7 @@ public class QuestionFormController {
 
     /**
      * Sets the on submitted callback consumer.
+     *
      * @param callback The consumer to call with the selected answers
      */
     public void setSubmitCallback(Consumer<List<Answer>> callback) {
@@ -105,6 +141,7 @@ public class QuestionFormController {
 
     /**
      * Called when the submit button is pressed.
+     *
      * @param actionEvent Event details provided by JavaFX
      */
     @FXML
@@ -116,7 +153,7 @@ public class QuestionFormController {
         }
         if (callback != null) {
             ArrayList<Answer> answers = new ArrayList<>();
-            for (int i=0; i<answerButtons.size(); i++) {
+            for (int i = 0; i < answerButtons.size(); i++) {
                 if (answerButtons.get(i).isSelected()) {
                     answers.add(question.getAnswers().get(i));
                 }
@@ -141,9 +178,11 @@ public class QuestionFormController {
 
     /**
      * Sets the callback that will be called when the user wants to go to the next question.
+     *
      * @param nextQuestionCallback The callback to be executed
      */
     public void setNextQuestionCallback(Runnable nextQuestionCallback) {
         this.nextQuestionCallback = nextQuestionCallback;
     }
+
 }

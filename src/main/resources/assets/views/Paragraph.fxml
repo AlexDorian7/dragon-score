@@ -8,7 +8,8 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="$CONTROLLER_NAME$"
-            prefHeight="400.0" prefWidth="600.0" >
-
+            fx:controller="assets.views.Paragraph"
+            prefHeight="400.0" prefWidth="600.0">
+<!-- three sentacnce where the user can choice a whole sentance. that you can not type in. text flow on hower highihgt
+and on click green or red for results. 4x textflow box. and a conclusion pointer, there for....-->
 </AnchorPane>
