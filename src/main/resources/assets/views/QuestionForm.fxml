@@ -10,43 +10,51 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.web.WebView?>
 
-<AnchorPane prefHeight="600" prefWidth="800" style="-fx-background-color: #fffce8;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="team.logica_populi.dragonscore.ui.controllers.QuestionFormController">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #fffce8;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="team.logica_populi.dragonscore.ui.controllers.QuestionFormController">
 
-    <!-- MenuLIne -->
-    <HBox alignment="CENTER_RIGHT" spacing="20" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20" AnchorPane.topAnchor="10">
-        <Label style="-fx-font-size: 32px; -fx-font-weight: bold;" text="LogiQuest" />
-        <Region fx:id="spacer" HBox.hgrow="ALWAYS" /> <!-- keeps space between logo and menu options -->
-        <Button fx:id="HomeMenu" style="-fx-font-size: 14px; -fx-background-color: #fffce8; -fx-background-radius: 80;" text="Home" /> <!-- to be coded -->
-        <Button fx:id="SectionMenu" style="-fx-font-size: 14px; -fx-background-color: #fffce8; -fx-background-radius: 80;" text="Section" /> <!-- to be coded -->
-        <Button fx:id="QuestionsHelp" style="-fx-font-size: 14px; -fx-background-color: #fffce8; -fx-background-radius: 80;" text="Questions" /> <!-- to be coded -->
+    <!-- Header / Menu -->
+    <HBox alignment="CENTER_RIGHT" spacing="20" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20">
+        <Label text="LogiQuest" style="-fx-font-family: 'Arial'; -fx-font-size: 2.5em; -fx-font-weight: bold;" />
+        <Region fx:id="spacer" HBox.hgrow="ALWAYS" />
+        <Button fx:id="HomeMenu" text="Home"
+                style="-fx-font-family: 'Arial'; -fx-font-size: 1.4em; -fx-background-color: #fffce8; -fx-font-weight: bold; -fx-background-radius: 80;" />
+        <Button fx:id="SectionMenu" text="Section"
+                style="-fx-font-family: 'Arial'; -fx-font-size: 1.4em; -fx-background-color: #fffce8; -fx-font-weight: bold; -fx-background-radius: 80;" />
+        <Button fx:id="QuestionsHelp" text="Questions"
+                style="-fx-font-family: 'Arial'; -fx-font-size: 1.4em; -fx-background-color: #fffce8; -fx-font-weight: bold; -fx-background-radius: 80;" />
     </HBox>
 
-    <!-- Main Spacings -->
-    <VBox alignment="CENTER" spacing="10.0" AnchorPane.bottomAnchor="70" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="60">
+    <!-- Centered Layout -->
+    <VBox alignment="CENTER" spacing="20" AnchorPane.topAnchor="80" AnchorPane.leftAnchor="40" AnchorPane.rightAnchor="40" AnchorPane.bottomAnchor="80">
 
+        <!-- Question Display -->
+        <WebView fx:id="questionArea" prefHeight="200" maxHeight="300" prefWidth="Infinity"
+                 style="-fx-background-color: #fce6a4; -fx-border-radius: 30;" />
 
-        <!-- Question frame -->
+        <!-- Progress Bar -->
+        <ProgressBar fx:id="progressBar" prefWidth="Infinity" minHeight="20"
+                     style="-fx-progress-color: #fce6a4;"/>
+
+        <!-- Answers Area -->
+        <VBox fx:id="answerArea" spacing="10" maxWidth="Infinity" minHeight="100"
+              style="-fx-border-color: black; -fx-border-radius: 8; -fx-background-color: white; -fx-background-radius: 8; -fx-padding: 15;" />
+
+        <!-- Submit -->
         <HBox alignment="CENTER">
-            <WebView fx:id="questionArea" minHeight="100" prefHeight="200.0" prefWidth="700" style="-fx-background-color: #fce6a4; -fx-padding: 15; -fx-border-radius: 30; -fx-font-size: 22px; -fx-alignment: center; -fx-text-alignment: center;" text="Place holder for hardcoded question." wrapText="true" />
-        </HBox>
-
-        <!-- ProgressBAr ////// need to style in implement -->
-        <ProgressBar id="progBar" fx:id="progressBar" minHeight="20" prefWidth="700" progress="0.65" style=" -fx-progress-color: #fce6a4;" />
-
-        <!-- Answer Block //// need to backend the answer-radio-->
-        <VBox fx:id="answerArea" maxWidth="700" minHeight="100" spacing="10" style="-fx-border-color: black; -fx-border-radius: 8; -fx-background-color: white; -fx-background-radius: 8; -fx-padding: 15;" />
-
-        <!-- Submit Button -->
-        <HBox alignment="CENTER">
-            <Button fx:id="submitButton" maxWidth="200.0" minWidth="100.0" onAction="#onSubmit" prefWidth="150.0" style="-fx-background-color: black; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 8 20;" text="Submit" />
+            <Button fx:id="submitButton" text="Submit" onAction="#onSubmit"
+                    style="-fx-background-color: black; -fx-text-fill: white; -fx-font-family: 'Arial'; -fx-font-weight: bold; -fx-font-size: 1.2em; -fx-padding: 10 25;"
+                    maxWidth="200" />
         </HBox>
     </VBox>
 
-    <!-- Diff Buttons -->
-    <HBox alignment="CENTER_LEFT" spacing="15" AnchorPane.bottomAnchor="20" AnchorPane.leftAnchor="50">
-        <ToggleButton fx:id="easyDif" onAction="#onDifficultySelect" style="-fx-background-radius: 30; -fx-background-color: #D2B48C; -fx-text-fill: black; -fx-pref-width: 40; -fx-pref-height: 40;" text="0" />
-        <ToggleButton fx:id="normDif" onAction="#onDifficultySelect" style="-fx-background-radius: 30; -fx-background-color: #D2B48C; -fx-text-fill: black; -fx-pref-width: 40; -fx-pref-height: 40;" text="10" />
-        <ToggleButton fx:id="hardDif" onAction="#onDifficultySelect" style="-fx-background-radius: 30; -fx-background-color: #fce6a4; -fx-text-fill: black; -fx-pref-width: 40; -fx-pref-height: 40;" text="15" />
+    <!-- Difficulty Buttons -->
+    <HBox alignment="CENTER_LEFT" spacing="15" AnchorPane.bottomAnchor="20" AnchorPane.leftAnchor="40">
+        <ToggleButton fx:id="easyDif" onAction="#onDifficultySelect" text="0"
+                      style="-fx-background-radius: 30; -fx-background-color: #fce6a4; -fx-text-fill: black; -fx-pref-width: 40; -fx-pref-height: 40;" />
+        <ToggleButton fx:id="normDif" onAction="#onDifficultySelect" text="10"
+                      style="-fx-background-radius: 30; -fx-background-color: #fce6a4; -fx-text-fill: black; -fx-pref-width: 40; -fx-pref-height: 40;" />
+        <ToggleButton fx:id="hardDif" onAction="#onDifficultySelect" text="15"
+                      style="-fx-background-radius: 30; -fx-background-color: #fce6a4; -fx-text-fill: black; -fx-pref-width: 40; -fx-pref-height: 40;" />
     </HBox>
 
 </AnchorPane>
