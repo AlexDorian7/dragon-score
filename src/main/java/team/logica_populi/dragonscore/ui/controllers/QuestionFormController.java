@@ -3,6 +3,7 @@ package team.logica_populi.dragonscore.ui.controllers;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.web.WebView;
 import team.logica_populi.dragonscore.base.logic.Answer;
@@ -14,10 +15,11 @@ import java.util.List;
 import java.util.function.Consumer;
 
 public class QuestionFormController {
+
     @FXML
     private WebView questionArea;
     @FXML
-    private VBox answerArea;
+    private FlowPane answerArea;
     @FXML
     private Button submitButton;
     @FXML
@@ -86,10 +88,10 @@ public class QuestionFormController {
         resultsShown = true;
         for (int i=0; i<answerButtons.size(); i++) {
             if (answerButtons.get(i).isSelected()) {
-                answerButtons.get(i).setStyle("-fx-background-color: #FF7F7F");
+                answerButtons.get(i).setStyle("-fx-background-color: #FF7770");
             }
             if (question.getAnswers().get(i).isCorrect()) {
-                answerButtons.get(i).setStyle("-fx-background-color: #7FFF7F");
+                answerButtons.get(i).setStyle("-fx-background-color: #9FD4A3");
             }
         }
         submitButton.setText("Next Question");
