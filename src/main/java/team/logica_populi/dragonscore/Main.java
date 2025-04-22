@@ -1,17 +1,14 @@
 package team.logica_populi.dragonscore;
 
 import javafx.application.Application;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
-import javafx.util.Pair;
-import team.logica_populi.dragonscore.base.logic.Question;
-import team.logica_populi.dragonscore.base.logic.generators.ExampleQuestionGenerator;
+import team.logica_populi.dragonscore.base.ResourceLocation;
 import team.logica_populi.dragonscore.base.registries.DragonHandler;
-import team.logica_populi.dragonscore.ui.UiComponentCreator;
-import team.logica_populi.dragonscore.ui.controllers.DefinitionsExampleController;
-import team.logica_populi.dragonscore.ui.controllers.QuestionFormController;
+import team.logica_populi.dragonscore.base.registries.EncryptionRegistry;
+import team.logica_populi.dragonscore.base.registries.JsonRegistry;
 
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.logging.LogManager;
@@ -35,10 +32,24 @@ public class Main extends Application {
     public void start(Stage stage) throws Exception {
 
         DragonHandler dragonHandler = DragonHandler.newSession();
-        dragonHandler.setupSession(stage, "/data/index.json");
+        dragonHandler.setupSession(stage, new ResourceLocation("index.json"));
         dragonHandler.start();
 
     }
+
+    /**
+     * JavaFX Stop Method.
+     * @throws Exception Any exception thrown when program is stopping
+     */
+//    @Override
+//    public void stop() throws Exception{
+//        File file = new File("./points.dat");
+//        FileWriter writer = new FileWriter(file);
+//        //writer.write(EncryptionRegistry.getInstance().encrypt(String.valueOf(file)));
+//        writer.close();
+//        logger.info("Application Stopping ...");
+//    }
+
 
     /**
      * The main entry point to the program.

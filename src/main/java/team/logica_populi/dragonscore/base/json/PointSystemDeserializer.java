@@ -6,6 +6,9 @@ import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * TODO: COMMENT ME!
+ */
 public class PointSystemDeserializer implements JsonDeserializer<PointSystem> {
     @Override
     public PointSystem deserialize(JsonElement jsonElement, Type type, JsonDeserializationContext jsonDeserializationContext) throws JsonParseException{

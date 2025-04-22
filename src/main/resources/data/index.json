@@ -1,9 +1,0 @@
-{
-  "requires": [
-    "/data/lessons/definitions.json",
-    "/data/lessons/syllogistic_translations.json"
-  ],
-  "terms": [],
-  "lessons": [],
-  "forms": []
-}

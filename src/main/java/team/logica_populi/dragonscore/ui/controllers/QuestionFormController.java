@@ -3,7 +3,8 @@ package team.logica_populi.dragonscore.ui.controllers;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.FlowPane;
+import javafx.scene.web.WebView;
 import team.logica_populi.dragonscore.base.logic.Answer;
 import team.logica_populi.dragonscore.base.logic.Question;
 import team.logica_populi.dragonscore.base.registries.DragonHandler;
@@ -13,10 +14,13 @@ import java.util.List;
 import java.util.function.Consumer;
 
 public class QuestionFormController {
+
     @FXML
-    private Label questionArea;
+    private Button HomeMenu;
     @FXML
-    private VBox answerArea;
+    private WebView questionArea;
+    @FXML
+    private FlowPane answerArea;
     @FXML
     private Button submitButton;
     @FXML
@@ -38,14 +42,47 @@ public class QuestionFormController {
     // Initialize the controller
     @FXML
     public void initialize() {
-        // Set default text
-        questionArea.setText("Click Submit to see an example response.");
+        ToggleGroup difficultyGroup = new ToggleGroup();
+        easyDif.setToggleGroup(difficultyGroup);
+        normDif.setToggleGroup(difficultyGroup);
+        hardDif.setToggleGroup(difficultyGroup);
+
+        setDifficultlyHandler(easyDif);
+        setDifficultlyHandler(normDif);
+        setDifficultlyHandler(hardDif);
+        updateDifficultyStyles();
     }
+    private void setDifficultlyHandler(ToggleButton button) {
+        button.setOnAction(event -> {
+
+            ToggleButton clickedButton = (ToggleButton) event.getSource();
+            int difficulty = Integer.parseInt(clickedButton.getText());
+
+            updateDifficultyStyles();
+
+            if (DragonHandler.getCurrentSession() != null) {
+                DragonHandler.getCurrentSession().setPointsToGive(difficulty);
+            }
+        });
+    }
+    private void updateDifficultyStyles() {
+        ToggleButton[] buttons = { easyDif, normDif, hardDif };
+
+        for (ToggleButton btn : buttons) {
+            if (btn.isSelected()) {
+                btn.setStyle("-fx-background-radius: 100; -fx-background-color: #645c41; -fx-text-fill: black; -fx-pref-width: 50; -fx-pref-height: 50; -fx-font-size: 1.1em;"); // green
+            } else {
+                btn.setStyle("-fx-background-radius: 100; -fx-background-color: #fce6a4; -fx-text-fill: black; -fx-pref-width: 50; -fx-pref-height: 50; -fx-font-size: 1.1em;"); // green
+            }
+        }
+    }
+
 
     @FXML
     private void onDifficultySelect(ActionEvent event) {
         ToggleButton clickedButton = (ToggleButton) event.getSource();
         int difficulty = Integer.parseInt(clickedButton.getText());
+
         if (DragonHandler.getCurrentSession() != null) {
             DragonHandler.getCurrentSession().setPointsToGive(difficulty);
         }
@@ -53,12 +90,13 @@ public class QuestionFormController {
 
     /**
      * Sets the question that this view is to display.
+     *
      * @param question The question to display
      */
     public void setQuestion(Question question) {
         this.question = question;
         resultsShown = false;
-        questionArea.setText(question.getQuestion());
+        questionArea.getEngine().loadContent("<html><head></head><body style='font-size:1.5em;'>" + question.getQuestion() + "</body></html>");
         answerButtons.clear();
         answerArea.getChildren().clear();
         for (Answer answer : question.getAnswers()) {
@@ -72,6 +110,7 @@ public class QuestionFormController {
 
     /**
      * Sets the progress bar value.
+     *
      * @param progress The value to display in the progress bar
      */
     public void setProgress(double progress) {
@@ -85,12 +124,12 @@ public class QuestionFormController {
      */
     public void showCorrect() {
         resultsShown = true;
-        for (int i=0; i<answerButtons.size(); i++) {
+        for (int i = 0; i < answerButtons.size(); i++) {
             if (answerButtons.get(i).isSelected()) {
-                answerButtons.get(i).setStyle("-fx-background-color: #FF7F7F");
+                answerButtons.get(i).setStyle("-fx-background-color: #FF7770");
             }
             if (question.getAnswers().get(i).isCorrect()) {
-                answerButtons.get(i).setStyle("-fx-background-color: #7FFF7F");
+                answerButtons.get(i).setStyle("-fx-background-color: #9FD4A3");
             }
         }
         submitButton.setText("Next Question");
@@ -98,6 +137,7 @@ public class QuestionFormController {
 
     /**
      * Sets the on submitted callback consumer.
+     *
      * @param callback The consumer to call with the selected answers
      */
     public void setSubmitCallback(Consumer<List<Answer>> callback) {
@@ -106,6 +146,7 @@ public class QuestionFormController {
 
     /**
      * Called when the submit button is pressed.
+     *
      * @param actionEvent Event details provided by JavaFX
      */
     @FXML
@@ -117,13 +158,13 @@ public class QuestionFormController {
         }
         if (callback != null) {
             ArrayList<Answer> answers = new ArrayList<>();
-            for (int i=0; i<answerButtons.size(); i++) {
+            for (int i = 0; i < answerButtons.size(); i++) {
                 if (answerButtons.get(i).isSelected()) {
                     answers.add(question.getAnswers().get(i));
                 }
             }
-
-            callback.accept(answers); // TODO: Actually send back the selected answers
+            if (answers.isEmpty()) return; // The user did not select an answer. Do nothing.
+            callback.accept(answers);
         }
     }
 
@@ -142,9 +183,17 @@ public class QuestionFormController {
 
     /**
      * Sets the callback that will be called when the user wants to go to the next question.
+     *
      * @param nextQuestionCallback The callback to be executed
      */
     public void setNextQuestionCallback(Runnable nextQuestionCallback) {
         this.nextQuestionCallback = nextQuestionCallback;
+    }
+
+    @FXML
+    private void goHome(ActionEvent actionEvent) {
+        DragonHandler currentSession = DragonHandler.getCurrentSession();
+        if (currentSession == null) return; //This should never be possible, but do nothing id it is
+        currentSession.showMainMenu(); // return to main menu. Any unsaved progress will be lost, but program saves after each submit
     }
 }

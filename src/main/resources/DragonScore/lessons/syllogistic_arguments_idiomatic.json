@@ -1,0 +1,1317 @@
+{
+  "requires": [],
+  "terms": [],
+  "lessons": [
+    {
+      "id": "syllogistic_arguments_idiomatic",
+      "name": "Syllogistic Arguments - Idiomatic",
+      "description": "Syllogist Arguments-Idiomatic- Will test knowledge of deductive reasoning arguments composed of two premises and a conclusion",
+      "randomize": false,
+      "pointsRequired": 100,
+      "questionGenerators": [],
+      "staticQuestions": [
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Not all who are clean are generous. My reason for\nsaying this is that some who are frivolous are clean\nand those who are generous are never frivolous. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>It is false that there are some gentle convicts who aren't\nfrightened. So everyone who is mean must be frightened, in view of\nthe fact that those who are mean are always gentle convicts. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Since boastful criminals are tough and it's false\nthat some tough person is remarkable, as a result\nno remarkable person is a boastful criminal. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>A person isn't a bitter druggist unless he or she is\nfaithful. Not all who are cheap are faithful. Then it\nmust be that some bitter druggists aren't cheap. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>The dullest cannibal is brilliant. We know this because\nwe know that whoever is a pal of Madonna isn't brilliant\nand that the dullest cannibal isn't a pal of Madonna. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>No poor person is mediocre. For beautiful fugitives\nare poor and it's false that there is some\nbeautiful fugitive who is mediocre. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Whoever is a humorous bandit isn't cheap. But no one\nis gloomy unless he or she is cheap. As a result,\nnot a single humorous bandit is gloomy. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>We may conclude that not all who are persistent are\ngrocers -- since grocers are cruel, and those\nwho are cruel aren't naive, and at least\nsome who are naive are persistent. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>You're the roughest person in Missouri and\nthe roughest person in Missouri doesn't appreciate\nhypocrites. This implies that you must be sarcastic.\nAfter all, whoever appreciates hypocrites isn't sarcastic. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Jim isn't the wildest clown in Missouri. This\nmeans that Jim can't be this terrified person, since\nthis terrified person is the wildest clown in Missouri. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Whoever is a dentist in Missouri is short. Thus\none or more short persons are boring, since\nsurely some dentists in Missouri are boring. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>David isn't a cautious novelist. Of course the\nbrightest person is a cautious novelist. This\nproves that David isn't the brightest person. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>No prosperous scientists are gentle. Not all people who\nare prosperous scientists are tall. We may conclude that\npeople who are gentle are sometimes tall. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>A person isn't a courteous politician unless he or she\nis realistic. Not all who are mean are realistic.\nHence some who are mean aren't courteous politicians. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>You aren't famous -- because you're the\ntoughest person in Missouri and the toughest\nperson in Missouri knows republicans. Naturally\nthose who know republicans aren't famous. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Because the cruelest person is a bitter doctor, it\nmust be that Keith is the cruelest person -- since\nKeith is a bitter doctor. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Tom can't be forgetful. I say this for three\nreasons. (1) Tom is a pickpocket. (2) No pickpockets\nare rich. And finally (3) none but rich\npeople are forgetful. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>No frantic bankers are candid. People who are\ntough are sometimes candid. This shows that not\neveryone who is tough is a frantic banker. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Jim is a friendly wrestler. How do I know\nthis? Well, Jim is strong and only\nthose who are strong are friendly wrestlers. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Whoever is a disgusting professor isn't short. But no one\nis short unless he or she is comical. As a result,\nnot a single disgusting professor is comical. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>A person isn't a carpenter unless he or she is poetic. It\nfollows that only those who are carpenters are poetic. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Not all who are romantic are slow. My reason for\nsaying this is that some who are nervous are slow\nand those who are romantic are never nervous. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>One or more terrified dentists aren't bashful. This proves\nthat not all who are bashful are terrified dentists. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Any talented druggist is boring. Not everyone\nwho is wild is a talented druggist. Hence\nnot everyone who is wild is boring. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>At least some backpackers in Missouri are mean. Thus\nsome backpackers in Missouri are frivolous, since surely\nsome mean persons are frivolous. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>At least one poet is remarkable, and only\nthose who are tough are poets. It follows\nthat some remarkable persons are tough. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Madonna isn't a dishonest fugitive. And\ndishonest fugitives aren't slow. All this\nimplies that Madonna is notorious -- since we\nall know that slow people are notorious. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Not all who are short are greedy. My reason for\nsaying this is that some who are courageous are short\nand those who are greedy are never courageous. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>At least one smart person is candid, and only\nthose who are smart are bandits. It follows\nthat some who are candid are bandits. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Carol is a beautiful grocer. This means that\nCarol is weak -- since only those\nwho are weak are beautiful grocers. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>One or more guitarists in Missouri must be mediocre. The evidence\nfor this is that whoever is a guitarist in Missouri is wild\nand that some who are wild are mediocre. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>It's false that disgusting persons are sometimes hypocrites. This\nfollows from the fact that not a single hypocrite is disgusting. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Since naive clowns are slow and it's false\nthat some slow person is dangerous, as a result\nno dangerous person is a naive clown. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Since one or more polite judges are demented, I conclude\nthat at least one demented person is a polite judge. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>A person isn't a tactful musician unless he or she is\nvirtuous. Not all who are rough are virtuous. Then it\nmust be that some tactful musicians aren't rough. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>We may conclude that not all who are vicious are\npessimists -- since pessimists are slow, and those\nwho are slow aren't talented, and at least\nsome who are talented are vicious. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>You're the wildest person in Missouri and\nthe wildest person in Missouri doesn't despise\nreporters. This implies that you must be gentle.\nAfter all, whoever despises reporters isn't gentle. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>The boldest politician is courteous. We know this because\nwe know that whoever is a neighbor of Donna isn't courteous\nand that the boldest politician isn't a neighbor of Donna. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>It is false that there is some notorious republican who isn't\ncreative. Therefore everyone who is weak is creative,\nsince people who are notorious republicans are always weak. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Pals of Harry aren't bitter. The cruelest doctor\nis a pal of Harry. From this it follows that the\ncruelest doctor isn't bitter. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Some who are hideous aren't mean. So\nthose who are candid are sometimes mean. I\nassume that no one who is candid is also hideous. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>No bold person is gloomy. For frantic wrestlers\nare bold and it's false that there is some\nfrantic wrestler who is gloomy. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>You aren't humorous -- because you're the\nweakest person in Missouri and the weakest\nperson in Missouri encourages professors. Naturally\nthose who encourage professors aren't humorous. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Sally can't be nervous. I say this for three\nreasons. (1) Sally is a biologist. (2) No biologists\nare clean. And finally (3) none but clean\npeople are nervous. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Because the richest person is a polite carpenter, it\nmust be that George is the richest person -- since\nGeorge is a polite carpenter. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>No boring convicts are virtuous. People who are\ntough are sometimes virtuous. This shows that not\neveryone who is tough is a boring convict. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>A person isn't a diabetic unless he or she is frightened. It\nfollows that only those who are diabetics are frightened. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>George isn't a cheerful druggist. Of course the\nrichest person is a cheerful druggist. This\nproves that George isn't the richest person. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>No cowardly poets are remarkable. Not all people who\nare cowardly poets are smart. We may conclude that\npeople who are remarkable are sometimes smart. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Whoever is a fugitive in Missouri is clean. Thus\none or more clean persons are bitter, since\nsurely some fugitives in Missouri are bitter. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>At least some grocers in Missouri aren't cheap. Thus not\nall grocers in Missouri are beautiful, since surely those who\nare cheap are sometimes not beautiful. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Any colorful hypocrite is mediocre. Not everyone\nwho is tall is a colorful hypocrite. Hence\nnot everyone who is tall is mediocre. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>At least one clown is naive, and only\nthose who are mean are clowns. It follows\nthat some naive persons are mean. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Tom is a persistent dentist. This means that\nTom is bold -- since only those\nwho are bold are persistent dentists. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>One or more musicians in Missouri must be demented. The evidence\nfor this is that whoever is a musician in Missouri is cheap\nand that some who are cheap are demented. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Since bashful scientists are cruel and it's false\nthat some cruel person is talented, as a result\nno talented person is a bashful scientist. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Carol isn't a vicious politician. And\nvicious politicians aren't rich. All this\nimplies that Carol is frivolous -- since we\nall know that rich people are frivolous. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Whoever is a realistic senator isn't tough. But no one\nis frightened unless he or she is tough. As a result,\nnot a single realistic senator is frightened. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Not all who are dull are remarkable. My reason for\nsaying this is that some who are cheerful are dull\nand those who are remarkable are never cheerful. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>It's false that dishonest persons are sometimes students. This\nfollows from the fact that not a single student is dishonest. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>A person isn't a famous banker unless he or she is\nnotorious. Not all who are dull are notorious. Then it\nmust be that some famous bankers aren't dull. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>It is false that there are some confused wrestlers who aren't\nfanatical. So everyone who is bold must be fanatical, in view of\nthe fact that those who are bold are always confused wrestlers. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>You're the cheapest person in Missouri and\nthe cheapest person in Missouri doesn't bribe\nGermans. This implies that you must be forgetful.\nAfter all, whoever bribes Germans isn't forgetful. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Sally is this confident person. This follows because\nSally is the meanest terrorist in Missouri and this\nconfident person is the meanest terrorist in Missouri. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>The boldest convict is gloomy. We know this because\nwe know that whoever is a parent of Jim isn't gloomy\nand that the boldest convict isn't a parent of Jim. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>You aren't miserable -- because you're the\nslowest person in Missouri and the slowest\nperson in Missouri forgets dentists. Naturally\nthose who forget dentists aren't miserable. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>A person isn't a poetic foreigner unless he or she\nis disgusting. Not all who are clean are disgusting.\nHence some who are clean aren't poetic foreigners. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Since one or more persistent diabetics are curious, I conclude\nthat at least one curious person is a persistent diabetic. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>At least some backpackers in Missouri are slow. Thus\nsome backpackers in Missouri are terrified, since surely\nsome slow persons are terrified. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Not all who are frivolous are dull. My reason for\nsaying this is that some who are talented are dull\nand those who are frivolous are never talented. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Because the richest person is a frightened poet, it\nmust be that Tom is the richest person -- since\nTom is a frightened poet. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>A person isn't a bandit unless he or she is powerful. It\nfollows that only those who are bandits are powerful. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>No famous customers are dishonest. Not all people who\nare famous customers are wild. We may conclude that\npeople who are dishonest are sometimes wild. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Defenders of Keith aren't hideous. The meanest guitarist\nis a defender of Keith. From this it follows that the\nmeanest guitarist isn't hideous. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Whoever is a brilliant clown isn't smart. But no one\nis smart unless he or she is forgetful. As a result,\nnot a single brilliant clown is forgetful. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Whoever is a pilot in Missouri is strong. Thus\none or more strong persons are mediocre, since\nsurely some pilots in Missouri are mediocre. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Donna can't be humorous. I say this for three\nreasons. (1) Donna is a judge. (2) No judges\nare cruel. And finally (3) none but cruel\npeople are humorous. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>It is false that there is some persistent dentist who isn't\nnaive. Therefore everyone who is rich is naive,\nsince people who are persistent dentists are always rich. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Harry isn't a romantic prisoner. Of course the\nslowest person is a romantic prisoner. This\nproves that Harry isn't the slowest person. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>One or more virtuous musicians aren't tactful. This proves\nthat not all who are tactful are virtuous musicians. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Any charitable pessimist is talented. Not everyone\nwho is rich is a charitable pessimist. Hence\nnot everyone who is rich is talented. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>No slow person is gentle. For charming politicians\nare slow and it's false that there is some\ncharming politician who is gentle. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>At least some Canadians in Missouri aren't wild. Thus not\nall Canadians in Missouri are remarkable, since surely those who\nare wild are sometimes not remarkable. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Some who are cowardly aren't rich. So\nthose who are faithful are sometimes rich. I\nassume that no one who is faithful is also cowardly. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>At least one banker is courageous, and only\nthose who are slow are bankers. It follows\nthat some courageous persons are slow. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>At least one clean person is greedy, and only\nthose who are clean are democrats. It follows\nthat some who are greedy are democrats. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Donna is a forgetful wrestler. This means that\nDonna is cruel -- since only those\nwho are cruel are forgetful wrestlers. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Whoever is a colorful German isn't bold. But no one\nis mediocre unless he or she is bold. As a result,\nnot a single colorful German is mediocre. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>It is false that there are some poetic convicts who aren't\nnaive. So everyone who is wild must be naive, in view of\nthe fact that those who are wild are always poetic convicts. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Jim is a nervous soldier. How do I know\nthis? Well, Jim is poor and only\nthose who are poor are nervous soldiers. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>A person isn't a sarcastic dentist unless he or she is\nromantic. Not all who are tough are romantic. Then it\nmust be that some sarcastic dentists aren't tough. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>No virtuous druggists are terrified. People who are\ncheap are sometimes terrified. This shows that not\neveryone who is cheap is a virtuous druggist. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Not all who are cruel are scholarly. My reason for\nsaying this is that some who are boring are cruel\nand those who are scholarly are never boring. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>One or more fugitives in Missouri must be charitable. The evidence\nfor this is that whoever is a fugitive in Missouri is rich\nand that some who are rich are charitable. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>You aren't gentle -- because you're the\nsmartest person in Missouri and the smartest\nperson in Missouri respects plumbers. Naturally\nthose who respect plumbers aren't gentle. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Because the dullest person is a cheerful bandit, it\nmust be that Harry is the dullest person -- since\nHarry is a cheerful bandit. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>A person isn't a creative guitarist unless he or she\nis remarkable. Not all who are smart are remarkable.\nHence some who are smart aren't creative guitarists. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>We may conclude that not all who are bitter are\nclowns -- since clowns are dull, and those\nwho are dull aren't faithful, and at least\nsome who are faithful are bitter. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Since candid dentists are bright and it's false\nthat some bright person is selfish, as a result\nno selfish person is a candid dentist. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>It's false that humorous persons are sometimes prisoners. This\nfollows from the fact that not a single prisoner is humorous. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "forms": []
+}
