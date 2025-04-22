@@ -11,7 +11,7 @@ import team.logica_populi.dragonscore.base.registries.DragonHandler;
 import java.util.logging.Logger;
 
 /**
- *
+ * PLEASE COMMENT ME
  */
 public class SubmissionCodeController {
     private static Logger logger;
@@ -28,6 +28,9 @@ public class SubmissionCodeController {
     @FXML
     private Button backToExerciseButton;
 
+    /**
+     * Called by JavaFX.
+     */
     @FXML
     public void initialize(){
         codeArea.setEditable(false);

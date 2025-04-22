@@ -67,7 +67,8 @@
         {
           "id": "art_2",
           "list": "articles_p"
-        },{
+        },
+        {
           "id": "adj_1",
           "list": "adjectives"
         },
@@ -84,6 +85,130 @@
         },
         {
           "form": "$L{adj_1} is $L{adj_2}",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "form_6",
+      "fields": [
+        {
+          "id": "noun_1",
+          "list": "nouns"
+        },
+        {
+          "id": "adj_1",
+          "list": "adjectives"
+        }
+      ],
+      "form": "<p>Some ${noun_1}s are not ${adj_1}.</p>",
+      "answerForms": [
+        {
+          "form": "Some $U{noun_1}s are not $L{adj_1}",
+          "correct": true
+        },
+        {
+          "form": "All $U{noun_1}s are $L{adj_1}",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "form_7",
+      "fields": [
+        {
+          "id": "noun_1",
+          "list": "nouns"
+        },
+        {
+          "id": "adj_1",
+          "list": "adjectives"
+        }
+      ],
+      "form": "<p>Not all ${noun_1}s are ${adj_1}.</p>",
+      "answerForms": [
+        {
+          "form": "Some $U{noun_1}s are not $L{adj_1}",
+          "correct": true
+        },
+        {
+          "form": "All $U{noun_1}s are $L{adj_1}",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "form_8",
+      "fields": [
+        {
+          "id": "noun_1",
+          "list": "nouns"
+        },
+        {
+          "id": "adj_1",
+          "list": "adjectives"
+        }
+      ],
+      "form": "<p>Only some ${noun_1}s are ${adj_1}.</p>",
+      "answerForms": [
+        {
+          "form": "Some $U{noun_1}s are $L{adj_1} and some $U{noun_1}s are not $L{adj_1}",
+          "correct": true
+        },
+        {
+          "form": "All $U{noun_1}s are $L{adj_1}",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "form_9",
+      "fields": [
+        {
+          "id": "noun_1",
+          "list": "nouns"
+        },
+        {
+          "id": "adj_1",
+          "list": "adjectives"
+        }
+      ],
+      "form": "<p>Few ${noun_1}s are ${adj_1}.</p>",
+      "answerForms": [
+        {
+          "form": "Some $U{noun_1}s are $L{adj_1}, but most are not",
+          "correct": true
+        },
+        {
+          "form": "All $U{noun_1}s are $L{adj_1}",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "form_10",
+      "fields": [
+        {
+          "id": "noun_1",
+          "list": "nouns"
+        },
+        {
+          "id": "adj_1",
+          "list": "adjectives"
+        },
+        {
+          "id": "adj_2",
+          "list": "adjectives"
+        }
+      ],
+      "form": "<p>If a ${noun_1} is ${adj_1}, then it is ${adj_2}.</p>",
+      "answerForms": [
+        {
+          "form": "All $U{noun_1}s that are $L{adj_1} are $L{adj_2}",
+          "correct": true
+        },
+        {
+          "form": "Some $U{noun_1}s that are $L{adj_1} are not $L{adj_2}",
           "correct": false
         }
       ]

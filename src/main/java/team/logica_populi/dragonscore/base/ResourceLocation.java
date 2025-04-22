@@ -9,6 +9,11 @@ import java.util.Objects;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * A resource location represents a path in the format {@code namespace:path}.
+ * It provides an interface for working with both files and resources that can be specified using the resource location path system.
+ * A resource location will be turned into a path of the following form {@code ./namespace/path}.
+ */
 public class ResourceLocation {
     private static final Logger logger = Logger.getLogger(ResourceLocation.class.getName());
 

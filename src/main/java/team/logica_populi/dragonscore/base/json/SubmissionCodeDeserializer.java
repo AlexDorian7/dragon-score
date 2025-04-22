@@ -7,6 +7,9 @@ import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * PLEASE COMMENT ME
+ */
 public class SubmissionCodeDeserializer implements JsonDeserializer<SubmissionSystem> {
     @Override
     public SubmissionSystem deserialize(JsonElement jsonElement, Type type, JsonDeserializationContext jsonDeserializationContext) throws JsonParseException{

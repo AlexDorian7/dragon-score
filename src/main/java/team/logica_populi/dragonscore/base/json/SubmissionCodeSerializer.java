@@ -6,6 +6,9 @@ import team.logica_populi.dragonscore.base.registries.DragonHandler;
 
 import java.lang.reflect.Type;
 
+/**
+ * PLEASE COMMENT ME
+ */
 public class SubmissionCodeSerializer implements JsonSerializer<SubmissionSystem> {
     @Override
     public JsonElement serialize(SubmissionSystem submissionSystem, Type type, JsonSerializationContext jsonSerializationContext){

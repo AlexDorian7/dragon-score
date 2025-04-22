@@ -9,18 +9,32 @@ import java.util.HashMap;
 import java.util.logging.Logger;
 import java.util.*;
 
+/**
+ * PLEASE COMMENT ME
+ */
 public class SubmissionSystem { private static final Logger logger = Logger.getLogger(SubmissionSystem.class.getName());
 
     private final HashMap<String, HashMap<String, String>> submissionRecords;
 
+    /**
+     * PLEASE COMMENT ME
+     */
     public SubmissionSystem(){
         this(new HashMap<>());
     }
 
+    /**
+     * PLEASE COMMENT ME
+     * @param submissionRecords
+     */
     public SubmissionSystem(HashMap<String, HashMap<String, String>> submissionRecords) {
         this.submissionRecords = submissionRecords;
     }
 
+    /**
+     * PLEASE COMMENT ME
+     * @return
+     */
     public HashMap<String, HashMap<String, String>> getSubmissions(){
         return submissionRecords;
     }
