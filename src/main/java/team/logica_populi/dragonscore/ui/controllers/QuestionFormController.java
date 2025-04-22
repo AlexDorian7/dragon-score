@@ -4,7 +4,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.FlowPane;
-import javafx.scene.layout.VBox;
 import javafx.scene.web.WebView;
 import team.logica_populi.dragonscore.base.logic.Answer;
 import team.logica_populi.dragonscore.base.logic.Question;
@@ -16,6 +15,8 @@ import java.util.function.Consumer;
 
 public class QuestionFormController {
 
+    @FXML
+    private Button HomeMenu;
     @FXML
     private WebView questionArea;
     @FXML
@@ -46,16 +47,18 @@ public class QuestionFormController {
         normDif.setToggleGroup(difficultyGroup);
         hardDif.setToggleGroup(difficultyGroup);
 
-        setupToggleStyle(easyDif);
-        setupToggleStyle(normDif);
-        setupToggleStyle(hardDif);
+        setDifficultlyHandler(easyDif);
+        setDifficultlyHandler(normDif);
+        setDifficultlyHandler(hardDif);
+        updateDifficultyStyles();
     }
-    private void setupToggleStyle(ToggleButton button) {
+    private void setDifficultlyHandler(ToggleButton button) {
         button.setOnAction(event -> {
-            updateDifficultyStyles();
 
             ToggleButton clickedButton = (ToggleButton) event.getSource();
             int difficulty = Integer.parseInt(clickedButton.getText());
+
+            updateDifficultyStyles();
 
             if (DragonHandler.getCurrentSession() != null) {
                 DragonHandler.getCurrentSession().setPointsToGive(difficulty);
@@ -187,4 +190,10 @@ public class QuestionFormController {
         this.nextQuestionCallback = nextQuestionCallback;
     }
 
+    @FXML
+    private void goHome(ActionEvent actionEvent) {
+        DragonHandler currentSession = DragonHandler.getCurrentSession();
+        if (currentSession == null) return; //This should never be possible, but do nothing id it is
+        currentSession.showMainMenu(); // return to main menu. Any unsaved progress will be lost, but program saves after each submit
+    }
 }

@@ -168,13 +168,13 @@ public class DragonHandler {
      * Sets up the scene for Submission code as well as generates the code
      */
     private void loadSubmissionCode(){
-        if(stage == null){
-            throw  new IllegalStateException("Attempt to show submission code pane before session was set up!");
+        if(stage == null) {
+            throw new IllegalStateException("Attempt to show submission code pane before session was set up!");
         }
         if(submissionCodeScene == null){
             Pair<Parent, SubmissionCodeController> submissionCodeControllerPane = UiComponentCreator.createSubmissionCodePane();
             submissionCodeController = submissionCodeControllerPane.getValue();
-            submissionCodeScene = new Scene(submissionCodeControllerPane.getKey(), 800, 600);
+            submissionCodeScene = new Scene(submissionCodeControllerPane.getKey(), 600, 400);
         }
 
         String regex = "[\\s]";
