@@ -87,7 +87,7 @@ header nav a {
 
 .content {
     max-width: 1040px;
-    margin: 0 auto;
+    margin: 0 auto; /* This line is broken [auto] */
 }
 
 main {
@@ -95,7 +95,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    min-height: calc(100vh - 120px);
+    min-height: calc(100vh - 120px); /* This line is broken [calc] */
 }
 
 main h1 {
