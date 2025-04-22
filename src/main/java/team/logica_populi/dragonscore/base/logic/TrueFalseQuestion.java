@@ -5,9 +5,6 @@ package team.logica_populi.dragonscore.base.logic;
  */
 public class TrueFalseQuestion extends AbstractQuestion {
 
-    private static final Answer TRUE_ANSWER = new Answer("True");
-    private static final Answer FALSE_ANSWER = new Answer("False");
-
     private Boolean isTrue;
 
     /**

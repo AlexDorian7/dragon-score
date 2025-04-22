@@ -3,6 +3,7 @@ package team.logica_populi.dragonscore.base.logic.generators;
 import javafx.util.Pair;
 import team.logica_populi.dragonscore.base.logic.Question;
 import team.logica_populi.dragonscore.base.logic.TrueFalseQuestion;
+import team.logica_populi.dragonscore.base.logic.YesNoQuestion;
 import team.logica_populi.dragonscore.base.registries.JsonRegistry;
 import team.logica_populi.dragonscore.base.term.Term;
 
@@ -24,19 +25,18 @@ public class StarLogicGenerator implements QuestionGenerator {
         int i2 = (int) Math.floor(Math.random() * 26);
         int i3 = (int) Math.floor(Math.random() * 26);
 
-        if (i1 == i) {
-            i1 = (i1+1)%26;
-        }
-        if (i2 == i1) {
-            i2 = (i2+1)%26;
-        }
-        if (i2 == i) {
-            i2 = (i2+2)%26;
+        while (i == i1 || i1 == i2 || i2 == i) { // We not have this in a loop to make sure none of them end up the same
+            if (i1 == i) {
+                i1 = (i1+1)%26;
+            }
+            if (i2 == i1) {
+                i2 = (i2+1)%26;
+            }
+            if (i2 == i) {
+                i2 = (i2+2)%26;
+            }
         }
 
-        if (i3 == 4) {
-            i3 = (i3+1)%26;
-        }
 
         if (Math.random() < 0.5) { // This question will use all / none
             Term letter1 = uLetters.get(i); // Get the three letters
@@ -72,7 +72,7 @@ public class StarLogicGenerator implements QuestionGenerator {
                 String questStr = "<p>Is this valid?</p><pre style='tab-size:4;'>\n\t" + makeForm(type1, letter1, letter2) + "\n\t"
                         + makeForm(type2, letter2, letter3) + "\n\u2234\t"
                         + makeForm(type3, letter1, letter3) + "</pre>";
-                return new TrueFalseQuestion(questStr, correct);
+                return new YesNoQuestion(questStr, correct);
             } else { // 1 is 2   1 is 3   2 is 3
                 if (starred1.getKey()) l1++;
                 if (starred1.getValue()) {
@@ -93,7 +93,7 @@ public class StarLogicGenerator implements QuestionGenerator {
                 String questStr = "<p>Is this valid?</p><pre style='tab-size:4;'>\n\t" + makeForm(type1, letter1, letter2) + "\n\t"
                         + makeForm(type2, letter1, letter3) + "\n\u2234\t"
                         + makeForm(type3, letter2, letter3) + "</pre>";
-                return new TrueFalseQuestion(questStr, correct);
+                return new YesNoQuestion(questStr, correct);
             }
 
         } else { // this question will use is / is not
@@ -142,7 +142,7 @@ public class StarLogicGenerator implements QuestionGenerator {
                     + makeForm(type1, letter1, letter2) + "\n\t"
                     + makeForm(type2, letter2, letter3) + "\n\u2234\t"
                     + makeForm(type5, letter4, letter3) + "</pre>";
-            return new TrueFalseQuestion(questStr, correct);
+            return new YesNoQuestion(questStr, correct);
         }
     }
 

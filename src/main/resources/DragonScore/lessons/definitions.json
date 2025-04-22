@@ -7,6 +7,7 @@
       "name": "Definitions",
       "description": "This lesson with the \"Meaning and Definitions\" chapter of Harry J.Gensler's Introduction to Logic (Routledge Press).\nAssume that these definitions try to explain current usage and don't stipulate how a term will be used.\n\nSOMEONE PLEASE UPDATE THIS DESC",
       "randomize": false,
+      "pointsRequired": 100,
       "questionGenerators": [],
       "staticQuestions": [
         {

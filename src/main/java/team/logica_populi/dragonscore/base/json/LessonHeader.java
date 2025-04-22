@@ -1,5 +1,7 @@
 package team.logica_populi.dragonscore.base.json;
 
+import team.logica_populi.dragonscore.base.ResourceLocation;
+
 /**
  * Data Storage class to hold data about a lesson without containing the entire lesson's data
  *
@@ -8,7 +10,7 @@ package team.logica_populi.dragonscore.base.json;
  * @param description The description of the referenced lesson.
  * @param location    The resource location of the referenced lesson.
  */
-public record LessonHeader(String id, String name, String description, String location) {
+public record LessonHeader(String id, String name, String description, ResourceLocation location) {
     /**
      * Constructs a default {@code LessonHeader}
      *
