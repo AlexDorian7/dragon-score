@@ -95,7 +95,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    min-height: calc(100vh - 120px); /* This line is broken [calc] */
+    min-height: calc(100vh - 120px); /* This line is broken [100vh] */
 }
 
 main h1 {
