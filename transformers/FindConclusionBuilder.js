@@ -1,6 +1,6 @@
 const data = [
     `You're the cheapest person in Missouri| andthe cheapest person in Missouri doesn't forget professors.| This implies that*you must be talented.| After all,whoever forgets professors isn't talented.`,
-    `*Tom is a scholarly professor.| How do I know this? Well, Tom is clean andonly those who are clean are scholarly professors.`,
+    `*Tom is a scholarly professor.| How do I know this? Well,Tom is clean| andonly those who are clean are scholarly professors.`,
     `Since |prosperous convicts are weak| andit's false that some weak person is remarkable,| as a result*no remarkable person is a prosperous convict.`,
     `Keith isn't a dishonest soldier.| Anddishonest soldiers aren't cruel.| All this implies that*Keith is faithful| - since we all know thatcruel people are faithful.`,
     `You're the boldest person in Missouri| andthe boldest person in Missouri doesn't hate diabetics.| This implies that*you must be courageous.| After all,whoever hates diabetics isn't courageous.`,

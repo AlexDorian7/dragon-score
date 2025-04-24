@@ -38,8 +38,12 @@
           "question": "Please find the conclusion in this argument.",
           "answers": [
             {
-              "answer": "Tom is a scholarly professor.| How do I know this? Well, Tom is clean and",
+              "answer": "Tom is a scholarly professor.| How do I know this? Well,",
               "correct": true
+            },
+            {
+              "answer": "Tom is clean| and",
+              "correct": false
             },
             {
               "answer": "only those who are clean are scholarly professors.",

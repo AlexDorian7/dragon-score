@@ -119,10 +119,13 @@ public class ParagraphQuestionForm implements IQuestionFormController {
             } else if (split.length == 2) {
                 text = new Text(split[0]);
                 addA = new Text(split[1]);
+                addA.setFont(DEFAULT_FONT);
             } else {
                 addB = new Text(split[0]);
                 text = new Text(split[1]);
                 addA = new Text(split[2]);
+                addA.setFont(DEFAULT_FONT);
+                addB.setFont(DEFAULT_FONT);
             }
             Text space = new Text(" ");
             space.setFont(DEFAULT_FONT);
