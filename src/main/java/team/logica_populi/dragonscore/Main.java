@@ -39,15 +39,15 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws Exception {
 
-        Question q = new TrueFalseQuestion("Hi", true);
-        Pair<Parent, ParagraphQuestionForm> paragraphQuestionFormPane = UiComponentCreator.createParagraphQuestionFormPane();
-        paragraphQuestionFormPane.getValue().setQuestion(q);
-        stage.setScene(new Scene(paragraphQuestionFormPane.getKey(), 800, 600));
-        stage.show();
+//        Question q = new TrueFalseQuestion("Hi", true);
+//        Pair<Parent, ParagraphQuestionForm> paragraphQuestionFormPane = UiComponentCreator.createParagraphQuestionFormPane();
+//        paragraphQuestionFormPane.getValue().setQuestion(q);
+//        stage.setScene(new Scene(paragraphQuestionFormPane.getKey(), 800, 600));
+//        stage.show();
 
-//        DragonHandler dragonHandler = DragonHandler.newSession();
-//        dragonHandler.setupSession(stage, new ResourceLocation("index.json"));
-//        dragonHandler.start();
+        DragonHandler dragonHandler = DragonHandler.newSession();
+        dragonHandler.setupSession(stage, new ResourceLocation("index.json"));
+        dragonHandler.start();
 
     }
 
