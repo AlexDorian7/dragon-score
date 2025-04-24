@@ -13,10 +13,7 @@ import team.logica_populi.dragonscore.base.logic.Answer;
 import team.logica_populi.dragonscore.base.points.SubmissionCode;
 import team.logica_populi.dragonscore.base.points.SubmissionSystem;
 import team.logica_populi.dragonscore.ui.UiComponentCreator;
-import team.logica_populi.dragonscore.ui.controllers.MainMenuController;
-import team.logica_populi.dragonscore.ui.controllers.NameFormController;
-import team.logica_populi.dragonscore.ui.controllers.QuestionFormController;
-import team.logica_populi.dragonscore.ui.controllers.SubmissionCodeController;
+import team.logica_populi.dragonscore.ui.controllers.*;
 
 import java.io.File;
 import java.io.IOException;
@@ -46,7 +43,7 @@ public class DragonHandler {
     private Scene mainMenuScene;
     private Scene questionScene;
     private Scene submissionCodeScene;
-    private QuestionFormController questionController;
+    private IQuestionFormController questionController;
     private SubmissionCodeController submissionCodeController;
 
     private List<LessonHeader> lessonHeaders;
@@ -214,11 +211,27 @@ public class DragonHandler {
         setLesson(lesson);
         logger.info("Points required: " + lesson.getPointsRequired());
         updatePoints();
-        if (questionScene == null) {
+        if (lesson.getFormType() != null) {
+            switch (lesson.getFormType()) {
+                case("PARAGRAPH"):
+                    Pair<Parent, ParagraphQuestionForm> paragraphQuestionFormPane = UiComponentCreator.createParagraphQuestionFormPane();
+                    questionController = paragraphQuestionFormPane.getValue();
+                    questionScene = new Scene(paragraphQuestionFormPane.getKey());
+                    break;
+                default:
+                    Pair<Parent, QuestionFormController> questionFormPane = UiComponentCreator.createQuestionFormPane();
+                    questionController = questionFormPane.getValue();
+                    questionScene = new Scene(questionFormPane.getKey());
+                    break;
+            }
+        } else {
             Pair<Parent, QuestionFormController> questionFormPane = UiComponentCreator.createQuestionFormPane();
             questionController = questionFormPane.getValue();
-            questionScene = new Scene(questionFormPane.getKey(), 800, 600);
+            questionScene = new Scene(questionFormPane.getKey());
         }
+
+
+
 
         questionController.setNextQuestionCallback(() -> {
             // Check for lesson completion
@@ -269,7 +282,7 @@ public class DragonHandler {
             }
             logger.warning("No lesson found with id: " + lessonHeader.id());
         });
-        mainMenuScene = new Scene(mainMenuPane.getKey(), 600, 400);
+        mainMenuScene = new Scene(mainMenuPane.getKey());
     }
 
     /**
@@ -320,7 +333,7 @@ public class DragonHandler {
      * Sets us this session with JavaFX and the back end.
      * This should be the first thing you call on a new session
      * @param stage The state that everything will be displayed to
-     * @param lessonHeadersPath The path to the {@link team.logica_populi.dragonscore.base.json.LessonHeader} list resource that will be loaded for this session
+     * @param lessonHeadersPath The path to the {@link LessonHeader} list resource that will be loaded for this session
      */
     public void setupSession(Stage stage, ResourceLocation lessonHeadersPath) {
         this.stage = stage;
@@ -337,7 +350,11 @@ public class DragonHandler {
     public void start() {
         Pair<Parent, NameFormController> nameFormPane = UiComponentCreator.createNameFormPane();
         nameFormPane.getValue().setSubmitCallback(this::handleOnName);
-        stage.setScene(new Scene(nameFormPane.getKey(), 400, 400));
+        stage.setMinWidth(600); // Set window dimensions
+        stage.setMinHeight(600);
+        stage.setWidth(800);
+        stage.setHeight(600);
+        stage.setScene(new Scene(nameFormPane.getKey(), 800, 600));
         stage.show();
     }
 

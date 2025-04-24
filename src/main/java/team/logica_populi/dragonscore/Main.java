@@ -39,7 +39,7 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws Exception {
 
-//        Question q = new TrueFalseQuestion("Hi", true);
+//        Question q = new TrueFalseQuestion("Please find the conclusion in this argument.", true);
 //        Pair<Parent, ParagraphQuestionForm> paragraphQuestionFormPane = UiComponentCreator.createParagraphQuestionFormPane();
 //        paragraphQuestionFormPane.getValue().setQuestion(q);
 //        stage.setScene(new Scene(paragraphQuestionFormPane.getKey(), 800, 600));

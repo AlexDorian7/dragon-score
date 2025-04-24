@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
 
-public class QuestionFormController {
+public class QuestionFormController implements IQuestionFormController {
 
     @FXML
     private Button HomeMenu;

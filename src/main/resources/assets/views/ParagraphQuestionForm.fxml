@@ -21,14 +21,10 @@
 
     <!-- Centered Content -->
     <VBox alignment="CENTER" spacing="20" AnchorPane.bottomAnchor="100" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20" AnchorPane.topAnchor="80">
-
-        <!-- Progress Bar -->
-        <HBox alignment="CENTER">
-            <ProgressBar fx:id="progressBar" maxWidth="800" minHeight="20" prefWidth="700" progress="0.65" style="-fx-progress-color: #fce6a4;" />
-        </HBox>
+         <ProgressBar fx:id="progressBar" maxHeight="1.7976931348623157E308" maxWidth="1200.0" minHeight="20" prefHeight="20.0" prefWidth="800.0" progress="0.65" style="-fx-progress-color: #fce6a4;" />
 
         <!-- Answer Block //// need to backend the answer-radio-->
-        <TextFlow fx:id="paragraphArea" maxWidth="700" minHeight="100" style="-fx-border-color: black; -fx-border-radius: 8; -fx-background-color: white; -fx-background-radius: 8; -fx-padding: 15;" />
+        <TextFlow fx:id="paragraphArea" maxHeight="1.7976931348623157E308" maxWidth="1200.0" minHeight="100" prefWidth="800.0" style="-fx-border-color: black; -fx-border-radius: 8; -fx-background-color: white; -fx-background-radius: 8; -fx-padding: 15;" />
 
         <!-- Submit Button -->
         <HBox alignment="CENTER">

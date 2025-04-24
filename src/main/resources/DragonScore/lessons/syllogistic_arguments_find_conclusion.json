@@ -1,0 +1,42 @@
+{
+  "requires": [
+    "DragonScore:requires/letters.json"
+  ],
+  "terms": {},
+  "lessons": [
+    {
+      "id": "syllogistic_arguments_find_conclusion",
+      "name": "Syllogistic Arguments - Find Conclusion",
+      "description": "Syllogistic Arguments - Find Conclusion will test if you can find the conclusion in a syllogistic argument.",
+      "randomize": false,
+      "pointsRequired": 100,
+      "formType": "PARAGRAPH",
+      "questionGenerators": [],
+      "staticQuestions": [
+        {
+          "question": "Please find the conclusion in this argument.",
+          "answers": [
+            {
+              "answer": "You're the cheapest person in Missouri| and",
+              "correct": false
+            },
+            {
+              "answer": "the cheapest person in Missouri doesn't forget professors.| This implies that",
+              "correct": false
+            },
+            {
+              "answer": "you must be talented.| After all,",
+              "correct": true
+            },
+            {
+              "answer": "whoever forgets professors isn't talented.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "forms": [
+  ]
+}

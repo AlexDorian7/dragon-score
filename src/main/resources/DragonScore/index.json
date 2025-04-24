@@ -76,6 +76,12 @@
     "name": "Probability - Mill/Induction",
     "description": "Probability - Mill/Induction CHANGE ME!",
     "location": "DragonScore:lessons/probability.json"
+  },
+  {
+    "id": "syllogistic_arguments_find_conclusion",
+    "name": "Syllogistic Arguments - Find Conclusion",
+    "description": "Syllogistic Arguments - Find Conclusion will test if you can find the conclusion in a syllogistic argument.",
+    "location": "DragonScore:lessons/syllogistic_arguments_find_conclusion.json"
   }
 ]
 
