@@ -11,6 +11,7 @@ import team.logica_populi.dragonscore.base.ResourceLocation;
 import team.logica_populi.dragonscore.base.json.LessonHeader;
 import team.logica_populi.dragonscore.base.logic.Answer;
 import team.logica_populi.dragonscore.base.points.SubmissionCode;
+import team.logica_populi.dragonscore.base.points.SubmissionSystem;
 import team.logica_populi.dragonscore.ui.UiComponentCreator;
 import team.logica_populi.dragonscore.ui.controllers.MainMenuController;
 import team.logica_populi.dragonscore.ui.controllers.NameFormController;
@@ -155,6 +156,10 @@ public class DragonHandler {
         showMainMenu();
     }
 
+    /**
+     * Sets the submission code
+     * @param code the submission code
+     */
     protected void setSubmissionCode(SubmissionCode code) {
          if (lesson == null) {
             logger.warning("You need to load a lesson before trying to set submission.dat");
@@ -162,6 +167,14 @@ public class DragonHandler {
         }
         this.code = code;
         JsonRegistry.getInstance().getSubmissionSystem().setSubmission(name.toLowerCase(), lesson, code);
+    }
+
+    /**
+     * Returns the current submission code for the lesson
+     * @return current submission code for lesson
+     */
+    public SubmissionCode getCode(){
+        return code;
     }
 
     /**

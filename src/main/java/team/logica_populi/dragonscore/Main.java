@@ -41,14 +41,14 @@ public class Main extends Application {
      * JavaFX Stop Method.
      * @throws Exception Any exception thrown when program is stopping
      */
-//    @Override
-//    public void stop() throws Exception{
-//        File file = new File("./points.dat");
-//        FileWriter writer = new FileWriter(file);
-//        //writer.write(EncryptionRegistry.getInstance().encrypt(String.valueOf(file)));
-//        writer.close();
-//        logger.info("Application Stopping ...");
-//    }
+    @Override
+    public void stop() throws Exception{
+        File file1 = new File("dynamic/points.dat");
+        EncryptionRegistry.getInstance().EncryptFile(file1);
+        File file2 = new File("dynamic/submissions.dat");
+        EncryptionRegistry.getInstance().EncryptFile(file2);
+
+    }
 
 
     /**

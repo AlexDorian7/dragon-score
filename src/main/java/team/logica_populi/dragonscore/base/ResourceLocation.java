@@ -1,5 +1,7 @@
 package team.logica_populi.dragonscore.base;
 
+import team.logica_populi.dragonscore.base.registries.EncryptionRegistry;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -95,6 +97,7 @@ public class ResourceLocation {
         logger.info(file.getPath());
         if (file.exists() && file.canRead()) {
             try {
+                EncryptionRegistry.getInstance().DecryptFile(file);
                 return Files.readString(file.toPath());
             } catch (IOException e) {
                 throw new RuntimeException(e);

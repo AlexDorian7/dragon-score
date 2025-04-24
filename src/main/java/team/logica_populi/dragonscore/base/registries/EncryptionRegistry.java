@@ -7,9 +7,10 @@ import javax.crypto.spec.GCMParameterSpec;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.PBEKeySpec;
 import javax.crypto.spec.SecretKeySpec;
-import java.io.InputStream;
+import java.io.*;
 import java.nio.ByteBuffer;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
 import java.security.SecureRandom;
 import java.security.spec.KeySpec;
 import java.time.Instant;
@@ -95,6 +96,7 @@ public class EncryptionRegistry {
             byte[] encryptedData = new byte[iv.length + cipherText.length + nowBuffer.length];
             System.arraycopy(nowBuffer, 0, encryptedData, 0, nowBuffer.length);
             System.arraycopy(iv, 0, encryptedData, nowBuffer.length, iv.length);
+            System.arraycopy(cipherText, 0, encryptedData, nowBuffer.length + iv.length, cipherText.length);
 
             logger.info(new String(iv));
             logger.info(new String(nowBuffer));
@@ -153,5 +155,21 @@ public class EncryptionRegistry {
             logger.log(Level.WARNING, "FAILED TO DECRYPT DATA!", e);
             return null;
         }
+    }
+
+
+    public void EncryptFile(File file) throws IOException {
+        String data = Files.readString(file.toPath());
+        data = getInstance().encrypt(data);
+        FileOutputStream outputStream = new FileOutputStream(file);
+        outputStream.write(data.getBytes());
+        outputStream.close();
+    }
+    public void DecryptFile(File file) throws IOException {
+        String data = Files.readString(file.toPath());
+        data = getInstance().decrypt(data);
+        FileOutputStream outputStream = new FileOutputStream(file);
+        outputStream.write(data.getBytes());
+        outputStream.close();
     }
 }

@@ -3,15 +3,20 @@ package team.logica_populi.dragonscore.ui.controllers;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.MapValueFactory;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
-import team.logica_populi.dragonscore.base.Lesson;
 import team.logica_populi.dragonscore.base.json.LessonHeader;
+import team.logica_populi.dragonscore.base.points.SubmissionCode;
+import team.logica_populi.dragonscore.base.points.SubmissionSystem;
+import team.logica_populi.dragonscore.base.registries.DragonHandler;
+import team.logica_populi.dragonscore.base.registries.JsonRegistry;
 
 import java.util.List;
+import java.util.Map;
 import java.util.function.Consumer;
 
 /**
@@ -27,6 +32,9 @@ public class MainMenuController {
 
     private Consumer<LessonHeader> callback;
 
+    public void initialize(){
+
+    }
 
     /**
      * Sets the lessons to display in the lessons box.
@@ -75,4 +83,5 @@ public class MainMenuController {
         Text description = new Text(lessonsBox.getValue().description());
         lessonArea.getChildren().addAll(title, description);
     }
+
 }
