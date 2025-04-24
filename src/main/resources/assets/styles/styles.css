@@ -111,36 +111,3 @@ main h1 {
     gap: 28px;
     margin-bottom: 80px;
 }
-
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 15px 25px;
-    font-size: 20px;
-    font-weight: 500;
-    border-radius: 9999px;
-    text-decoration: none;
-    transition: all 0.2s ease;
-    text-align: center;
-}
-
-.btn.primary {
-    background-color: #2e2e2e;
-    color: #fff;
-}
-
-.btn.primary:hover {
-    background-color: #000;
-}
-
-.btn.secondary {
-    background-color: transparent;
-    color: #2e2e2e;
-    border: 2px solid #2e2e2e;
-}
-
-.btn.secondary:hover {
-    background-color: #282828;
-    color: #fff;
-}
