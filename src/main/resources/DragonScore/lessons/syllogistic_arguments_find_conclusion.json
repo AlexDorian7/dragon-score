@@ -33,6 +33,333 @@
               "correct": false
             }
           ]
+        },
+        {
+          "question": "Please find the conclusion in this argument.",
+          "answers": [
+            {
+              "answer": "Tom is a scholarly professor.| How do I know this? Well, Tom is clean and",
+              "correct": true
+            },
+            {
+              "answer": "only those who are clean are scholarly professors.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Please find the conclusion in this argument.",
+          "answers": [
+            {
+              "answer": "Since |prosperous convicts are weak| and",
+              "correct": false
+            },
+            {
+              "answer": "it's false that some weak person is remarkable,| as a result",
+              "correct": false
+            },
+            {
+              "answer": "no remarkable person is a prosperous convict.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "Please find the conclusion in this argument.",
+          "answers": [
+            {
+              "answer": "Keith isn't a dishonest soldier.| And",
+              "correct": false
+            },
+            {
+              "answer": "dishonest soldiers aren't cruel.| All this implies that",
+              "correct": false
+            },
+            {
+              "answer": "Keith is faithful| - since we all know that",
+              "correct": true
+            },
+            {
+              "answer": "cruel people are faithful.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Please find the conclusion in this argument.",
+          "answers": [
+            {
+              "answer": "You're the boldest person in Missouri| and",
+              "correct": false
+            },
+            {
+              "answer": "the boldest person in Missouri doesn't hate diabetics.| This implies that",
+              "correct": false
+            },
+            {
+              "answer": "you must be courageous.| After all,",
+              "correct": true
+            },
+            {
+              "answer": "whoever hates diabetics isn't courageous.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Please find the conclusion in this argument.",
+          "answers": [
+            {
+              "answer": "No smart person is brilliant.| For",
+              "correct": true
+            },
+            {
+              "answer": "confused farmers are smart| and",
+              "correct": false
+            },
+            {
+              "answer": "it's false that there is some confused farmer who is brilliant.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Please find the conclusion in this argument.",
+          "answers": [
+            {
+              "answer": "One or more grocers in Missouri must be colorful.| The evidence for this is that",
+              "correct": true
+            },
+            {
+              "answer": "whoever is a grocer in Missouri is bright| and that",
+              "correct": false
+            },
+            {
+              "answer": "some who are bright are colorful.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Please find the conclusion in this argument.",
+          "answers": [
+            {
+              "answer": "It's false that poetic persons are sometimes customers.| This follows from the fact",
+              "correct": true
+            },
+            {
+              "answer": "that not a single customer is poetic.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Please find the conclusion in this argument.",
+          "answers": [
+            {
+              "answer": "The cruelest guitarist is romantic.| We know this because we know that",
+              "correct": true
+            },
+            {
+              "answer": "whoever is a friend of Madonna isn't romantic| and that",
+              "correct": false
+            },
+            {
+              "answer": "the cruelest guitarist isn't a friend of Madonna.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Please find the conclusion in this argument.",
+          "answers": [
+            {
+              "answer": "It is false that there are some virtuous clowns who aren't demented.| So",
+              "correct": false
+            },
+            {
+              "answer": "everyone who is smart must be demented,| in view of the fact that",
+              "correct": true
+            },
+            {
+              "answer": "those who are smart are always virtuous clowns.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Please find the conclusion in this argument.",
+          "answers": [
+            {
+              "answer": "We may conclude that |not all who are talented are judges| - since",
+              "correct": true
+            },
+            {
+              "answer": "judges are dull,| and",
+              "correct": false
+            },
+            {
+              "answer": "those who are dull aren't sociable,| and",
+              "correct": false
+            },
+            {
+              "answer": "at least some who are sociable are talented.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Please find the conclusion in this argument.",
+          "answers": [
+            {
+              "answer": "No frivolous dentists are cautious.",
+              "correct": false
+            },
+            {
+              "answer": "Not all people who are frivolous dentists are rough.| We may conclude that",
+              "correct": false
+            },
+            {
+              "answer": "people who are cautious are sometimes rough.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "Please find the conclusion in this argument.",
+          "answers": [
+            {
+              "answer": "Whoever is a realistic prisoner isn't slow.| But",
+              "correct": false
+            },
+            {
+              "answer": "no one is frightened unless he or she is slow.| As a result,",
+              "correct": false
+            },
+            {
+              "answer": "not a single realistic prisoner is frightened.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "Please find the conclusion in this argument.",
+          "answers": [
+            {
+              "answer": "Any powerful musician is cheerful.",
+              "correct": false
+            },
+            {
+              "answer": "Not everyone who is wild is a powerful musician.| Hence",
+              "correct": false
+            },
+            {
+              "answer": "not everyone who is wild is cheerful.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "Please find the conclusion in this argument.",
+          "answers": [
+            {
+              "answer": "One or more cowardly scientists aren't dishonest.| This proves that",
+              "correct": false
+            },
+            {
+              "answer": "not all who are dishonest are cowardly scientists.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "Please find the conclusion in this argument.",
+          "answers": [
+            {
+              "answer": "It is false that there are some mediocre senators who aren't fortunate.| So",
+              "correct": false
+            },
+            {
+              "answer": "everyone who is poor must be fortunate,| in view of the fact that",
+              "correct": true
+            },
+            {
+              "answer": "those who are poor are always mediocre senators.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Please find the conclusion in this argument.",
+          "answers": [
+            {
+              "answer": "David is this gloomy person.| This follows because",
+              "correct": true
+            },
+            {
+              "answer": "David is the roughest pickpocket in Missouri| and",
+              "correct": false
+            },
+            {
+              "answer": "this gloomy person is the roughest pickpocket in Missouri.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Please find the conclusion in this argument.",
+          "answers": [
+            {
+              "answer": "Any polite democrat is naive.",
+              "correct": false
+            },
+            {
+              "answer": "Not everyone who is smart is a polite democrat.| Hence",
+              "correct": false
+            },
+            {
+              "answer": "not everyone who is smart is naive.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "Please find the conclusion in this argument.",
+          "answers": [
+            {
+              "answer": "At least some wrestlers in Missouri are cheap.| Thus",
+              "correct": false
+            },
+            {
+              "answer": "some wrestlers in Missouri are demented,| since surely",
+              "correct": true
+            },
+            {
+              "answer": "some cheap persons are demented.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Please find the conclusion in this argument.",
+          "answers": [
+            {
+              "answer": "We may conclude that not |all who are scholarly are terrorists| - since",
+              "correct": true
+            },
+            {
+              "answer": "terrorists are cruel,| and",
+              "correct": false
+            },
+            {
+              "answer": "those who are cruel aren't bashful,| and",
+              "correct": false
+            },
+            {
+              "answer": "at least some who are bashful are scholarly.",
+              "correct": false
+            }
+          ]
         }
       ]
     }
