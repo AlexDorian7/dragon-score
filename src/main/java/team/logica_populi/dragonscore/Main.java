@@ -1,11 +1,19 @@
 package team.logica_populi.dragonscore;
 
 import javafx.application.Application;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.util.Pair;
 import team.logica_populi.dragonscore.base.ResourceLocation;
+import team.logica_populi.dragonscore.base.logic.Question;
+import team.logica_populi.dragonscore.base.logic.TrueFalseQuestion;
 import team.logica_populi.dragonscore.base.registries.DragonHandler;
 import team.logica_populi.dragonscore.base.registries.EncryptionRegistry;
 import team.logica_populi.dragonscore.base.registries.JsonRegistry;
+import team.logica_populi.dragonscore.ui.UiComponentCreator;
+import team.logica_populi.dragonscore.ui.controllers.ParagraphQuestionForm;
+import team.logica_populi.dragonscore.ui.controllers.QuestionFormController;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -31,9 +39,15 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws Exception {
 
-        DragonHandler dragonHandler = DragonHandler.newSession();
-        dragonHandler.setupSession(stage, new ResourceLocation("index.json"));
-        dragonHandler.start();
+        Question q = new TrueFalseQuestion("Hi", true);
+        Pair<Parent, ParagraphQuestionForm> paragraphQuestionFormPane = UiComponentCreator.createParagraphQuestionFormPane();
+        paragraphQuestionFormPane.getValue().setQuestion(q);
+        stage.setScene(new Scene(paragraphQuestionFormPane.getKey(), 800, 600));
+        stage.show();
+
+//        DragonHandler dragonHandler = DragonHandler.newSession();
+//        dragonHandler.setupSession(stage, new ResourceLocation("index.json"));
+//        dragonHandler.start();
 
     }
 

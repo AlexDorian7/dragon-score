@@ -116,8 +116,9 @@ public class ResourceLocation {
 
     /**
      * Create the file for this resource location if it does not exist
+     * @return true if the file was created
      */
-    public void createIfNotExists() {
+    public boolean createIfNotExists() {
         File file = getAsFile();
         if (!file.exists()) {
             try {
@@ -129,10 +130,12 @@ public class ResourceLocation {
                 if (!newFile) {
                     logger.warning("A file with this name already exists for: " + this);
                 }
+                return newFile;
             } catch (IOException e) {
                 logger.log(Level.WARNING, "Failed to create file for: " + this, e);
             }
         }
+        return false;
     }
 
     /**
