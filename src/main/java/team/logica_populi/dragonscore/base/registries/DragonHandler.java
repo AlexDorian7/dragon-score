@@ -295,7 +295,10 @@ public class DragonHandler {
             logger.fine("Creating new Point System.");
             JsonRegistry.getInstance().createNewPointSystem();
         } else {
-            String data = location.tryGetResource();
+            String data = EncryptionRegistry.getInstance().decrypt(location.tryGetResource());
+            logger.info(data);
+            //data = EncryptionRegistry.getInstance().decrypt(data);
+            logger.info(data);
             logger.fine("Loaded existing Point System.");
             JsonRegistry.getInstance().loadPointSystem(data, true);
         }
@@ -310,7 +313,9 @@ public class DragonHandler {
             logger.fine("Creating new Submissions System.");
             JsonRegistry.getInstance().createSubmissionSystem();
         } else {
-            String data = location.tryGetResource();
+            String data = EncryptionRegistry.getInstance().decrypt(location.tryGetResource());
+            //data = EncryptionRegistry.getInstance().decrypt(data);
+            logger.info(data);
             logger.fine("Loaded existing Submissions System.");
             JsonRegistry.getInstance().loadSubmissionSystem(data, true);
         }
@@ -320,7 +325,7 @@ public class DragonHandler {
      * Sets us this session with JavaFX and the back end.
      * This should be the first thing you call on a new session
      * @param stage The state that everything will be displayed to
-     * @param lessonHeadersPath The path to the {@link team.logica_populi.dragonscore.base.json.LessonHeader} list resource that will be loaded for this session
+     * @param lessonHeadersPath The path to the {@link LessonHeader} list resource that will be loaded for this session
      */
     public void setupSession(Stage stage, ResourceLocation lessonHeadersPath) {
         this.stage = stage;

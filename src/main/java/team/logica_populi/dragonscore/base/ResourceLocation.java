@@ -1,6 +1,6 @@
 package team.logica_populi.dragonscore.base;
 
-import team.logica_populi.dragonscore.base.registries.EncryptionRegistry;
+import com.google.gson.JsonElement;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -97,7 +97,6 @@ public class ResourceLocation {
         logger.info(file.getPath());
         if (file.exists() && file.canRead()) {
             try {
-                EncryptionRegistry.getInstance().DecryptFile(file);
                 return Files.readString(file.toPath());
             } catch (IOException e) {
                 throw new RuntimeException(e);
@@ -138,7 +137,9 @@ public class ResourceLocation {
     /**
      * Writes data to the file for this Resource Location.
      * This will create the file if it does not exist.
+     *
      * @param data The data to write
+     * @return
      */
     public void write(String data) {
         createIfNotExists();

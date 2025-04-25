@@ -11,6 +11,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Locale;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
@@ -43,11 +44,23 @@ public class Main extends Application {
      */
     @Override
     public void stop() throws Exception{
-        File file1 = new File("dynamic/points.dat");
-        EncryptionRegistry.getInstance().EncryptFile(file1);
-        File file2 = new File("dynamic/submissions.dat");
-        EncryptionRegistry.getInstance().EncryptFile(file2);
+        ResourceLocation loc1 = new ResourceLocation("dynamic:points.dat");
+        loc1.createIfNotExists();
+        if (loc1.tryGetResource().isEmpty()){
+            loc1.write(EncryptionRegistry.getInstance().encrypt(JsonRegistry.getInstance().getGson().toJson(JsonRegistry.getInstance().createNewPointSystem().getLessonRecords())));
+        }
+        else{
+            loc1.write(EncryptionRegistry.getInstance().encrypt(JsonRegistry.getInstance().getGson().toJson(JsonRegistry.getInstance().getPointSystem().getLessonRecords())));
+        }
 
+        ResourceLocation loc2 = new ResourceLocation("dynamic:submissions.dat");
+        loc2.createIfNotExists();
+        if(loc2.tryGetResource().isEmpty()){
+           loc2.write(EncryptionRegistry.getInstance().encrypt(JsonRegistry.getInstance().getGson().toJson(JsonRegistry.getInstance().createSubmissionSystem().getSubmissions())));
+        }
+        else{
+            loc2.write(EncryptionRegistry.getInstance().encrypt(JsonRegistry.getInstance().getGson().toJson(JsonRegistry.getInstance().getSubmissionSystem().getSubmissions())));
+        }
     }
 
 
