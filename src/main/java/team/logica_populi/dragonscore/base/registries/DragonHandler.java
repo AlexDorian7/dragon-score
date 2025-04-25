@@ -337,6 +337,10 @@ public class DragonHandler {
      */
     public void setupSession(Stage stage, ResourceLocation lessonHeadersPath) {
         this.stage = stage;
+        stage.setMinWidth(600); // Set window dimensions
+        stage.setMinHeight(600);
+        stage.setWidth(800);
+        stage.setHeight(600);
         stage.setTitle("LogiQuest"); // Do other future stage set up here.
         lessonHeaders = JsonRegistry.getInstance().getGson().fromJson(lessonHeadersPath.tryGetResource(), LESSON_HEADERS_TYPE.getType());
         loadOrCreatePointFile();
@@ -350,10 +354,6 @@ public class DragonHandler {
     public void start() {
         Pair<Parent, NameFormController> nameFormPane = UiComponentCreator.createNameFormPane();
         nameFormPane.getValue().setSubmitCallback(this::handleOnName);
-        stage.setMinWidth(600); // Set window dimensions
-        stage.setMinHeight(600);
-        stage.setWidth(800);
-        stage.setHeight(600);
         stage.setScene(new Scene(nameFormPane.getKey(), 800, 600));
         stage.show();
     }

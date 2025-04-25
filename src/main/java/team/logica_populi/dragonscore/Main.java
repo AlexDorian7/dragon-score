@@ -11,6 +11,7 @@ import team.logica_populi.dragonscore.base.logic.TrueFalseQuestion;
 import team.logica_populi.dragonscore.base.registries.DragonHandler;
 import team.logica_populi.dragonscore.base.registries.EncryptionRegistry;
 import team.logica_populi.dragonscore.base.registries.JsonRegistry;
+import team.logica_populi.dragonscore.ui.ErrorWindow;
 import team.logica_populi.dragonscore.ui.UiComponentCreator;
 import team.logica_populi.dragonscore.ui.controllers.ParagraphQuestionForm;
 import team.logica_populi.dragonscore.ui.controllers.QuestionFormController;
@@ -45,9 +46,13 @@ public class Main extends Application {
 //        stage.setScene(new Scene(paragraphQuestionFormPane.getKey(), 800, 600));
 //        stage.show();
 
-        DragonHandler dragonHandler = DragonHandler.newSession();
-        dragonHandler.setupSession(stage, new ResourceLocation("index.json"));
-        dragonHandler.start();
+        try {
+            DragonHandler dragonHandler = DragonHandler.newSession();
+            dragonHandler.setupSession(stage, new ResourceLocation("index.json"));
+            dragonHandler.start();
+        } catch (Exception e) {
+            ErrorWindow.makeErrorWindow(stage, e, this);
+        }
 
     }
 
@@ -56,7 +61,7 @@ public class Main extends Application {
      * @throws Exception Any exception thrown when program is stopping
      */
     @Override
-    public void stop() throws Exception{
+    public void stop() throws Exception {
         File file1 = new File("dynamic/points.dat");
         EncryptionRegistry.getInstance().EncryptFile(file1);
         File file2 = new File("dynamic/submissions.dat");
