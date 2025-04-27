@@ -54,21 +54,11 @@ public class Main extends Application {
     public void stop() throws Exception{
         ResourceLocation loc1 = new ResourceLocation("dynamic:points.dat");
         loc1.createIfNotExists();
-        if (loc1.tryGetResource().isEmpty()){
-            loc1.write(EncryptionRegistry.getInstance().encrypt(JsonRegistry.getInstance().getGson().toJson(JsonRegistry.getInstance().createNewPointSystem().getLessonRecords())));
-        }
-        else{
-            loc1.write(EncryptionRegistry.getInstance().encrypt(JsonRegistry.getInstance().getGson().toJson(JsonRegistry.getInstance().getPointSystem().getLessonRecords())));
-        }
+        loc1.write(EncryptionRegistry.getInstance().encrypt(JsonRegistry.getInstance().getGson().toJson(JsonRegistry.getInstance().getPointSystem().getLessonRecords())));
 
         ResourceLocation loc2 = new ResourceLocation("dynamic:submissions.dat");
         loc2.createIfNotExists();
-        if(loc2.tryGetResource().isEmpty()){
-           loc2.write(EncryptionRegistry.getInstance().encrypt(JsonRegistry.getInstance().getGson().toJson(JsonRegistry.getInstance().createSubmissionSystem().getSubmissions())));
-        }
-        else{
-            loc2.write(EncryptionRegistry.getInstance().encrypt(JsonRegistry.getInstance().getGson().toJson(JsonRegistry.getInstance().getSubmissionSystem().getSubmissions())));
-        }
+        loc2.write(EncryptionRegistry.getInstance().encrypt(JsonRegistry.getInstance().getGson().toJson(JsonRegistry.getInstance().getSubmissionSystem().getSubmissions())));
     }
 
 

@@ -308,9 +308,13 @@ public class DragonHandler {
             logger.fine("Creating new Point System.");
             JsonRegistry.getInstance().createNewPointSystem();
         } else {
-            String data = EncryptionRegistry.getInstance().decrypt(location.tryGetResource());
-            logger.info(data);
-            //data = EncryptionRegistry.getInstance().decrypt(data);
+            String data = null;
+            try{
+                data = EncryptionRegistry.getInstance().decrypt(location.tryGetResource());
+            } catch (Exception e) {
+                JsonRegistry.getInstance().createSubmissionSystem();
+                return;
+            }
             logger.info(data);
             logger.fine("Loaded existing Point System.");
             JsonRegistry.getInstance().loadPointSystem(data, true);
@@ -326,7 +330,13 @@ public class DragonHandler {
             logger.fine("Creating new Submissions System.");
             JsonRegistry.getInstance().createSubmissionSystem();
         } else {
-            String data = EncryptionRegistry.getInstance().decrypt(location.tryGetResource());
+            String data = null;
+            try{
+                data = EncryptionRegistry.getInstance().decrypt(location.tryGetResource());
+            } catch (Exception e) {
+                JsonRegistry.getInstance().createSubmissionSystem();
+                return;
+            }
             //data = EncryptionRegistry.getInstance().decrypt(data);
             logger.info(data);
             logger.fine("Loaded existing Submissions System.");
