@@ -56,7 +56,6 @@ public class SubmissionSystem { private static final Logger logger = Logger.getL
      * @param code the submission code
      */
     public void setSubmission(String name, Lesson lesson, SubmissionCode code) {
-        Gson gson = JsonRegistry.getInstance().getGson();
 
         if (submissionRecords.containsKey(name)) { // Records does contain a record for this user
             submissionRecords.get(name).put(lesson.getId(), code.getCode());
@@ -65,7 +64,4 @@ public class SubmissionSystem { private static final Logger logger = Logger.getL
             map.put(lesson.getId(), code.getCode());
             submissionRecords.put(name, map);
         }
-        // Write to the file.
-        ResourceLocation location = new ResourceLocation("dynamic:submissions.dat");
-        location.write(gson.toJson(submissionRecords));
     }}

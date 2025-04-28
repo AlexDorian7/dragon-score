@@ -8,8 +8,11 @@ import team.logica_populi.dragonscore.base.registries.EncryptionRegistry;
 import team.logica_populi.dragonscore.base.registries.JsonRegistry;
 import team.logica_populi.dragonscore.ui.ErrorWindow;
 
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Locale;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
@@ -58,7 +61,7 @@ public class Main extends Application {
 
         ResourceLocation loc2 = new ResourceLocation("dynamic:submissions.dat");
         loc2.createIfNotExists();
-        loc2.write(EncryptionRegistry.getInstance().encrypt(JsonRegistry.getInstance().getGson().toJson(JsonRegistry.getInstance().getSubmissionSystem().getSubmissions())));
+        loc2.write(EncryptionRegistry.getInstance().encrypt(JsonRegistry.getInstance().getGson().toJson(JsonRegistry.getInstance().getSubmissionSystem())));
     }
 
 

@@ -157,19 +157,4 @@ public class EncryptionRegistry {
         }
     }
 
-
-    public void EncryptFile(File file) throws IOException {
-        String data = Files.readString(file.toPath());
-        data = getInstance().encrypt(data);
-        FileOutputStream outputStream = new FileOutputStream(file);
-        outputStream.write(data.getBytes());
-        outputStream.close();
-    }
-    public void DecryptFile(File file) throws IOException {
-        String data = Files.readString(file.toPath());
-        data = getInstance().decrypt(data);
-        FileOutputStream outputStream = new FileOutputStream(file);
-        outputStream.write(data.getBytes());
-        outputStream.close();
-    }
 }
