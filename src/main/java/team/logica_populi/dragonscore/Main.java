@@ -1,18 +1,18 @@
 package team.logica_populi.dragonscore;
 
 import javafx.application.Application;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
 import team.logica_populi.dragonscore.base.ResourceLocation;
+import team.logica_populi.dragonscore.base.logic.BooleanLogicTreeNode;
 import team.logica_populi.dragonscore.base.registries.DragonHandler;
 import team.logica_populi.dragonscore.base.registries.EncryptionRegistry;
 import team.logica_populi.dragonscore.base.registries.JsonRegistry;
 import team.logica_populi.dragonscore.ui.ErrorWindow;
+import team.logica_populi.dragonscore.ui.TruthTableView;
 
-import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Locale;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
@@ -33,10 +33,9 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws Exception {
 
-//        Question q = new TrueFalseQuestion("Please find the conclusion in this argument.", true);
-//        Pair<Parent, ParagraphQuestionForm> paragraphQuestionFormPane = UiComponentCreator.createParagraphQuestionFormPane();
-//        paragraphQuestionFormPane.getValue().setQuestion(q);
-//        stage.setScene(new Scene(paragraphQuestionFormPane.getKey(), 800, 600));
+//        BooleanLogicTreeNode node = BooleanLogicTreeNode.getRandomTree(2);
+//        TruthTableView truthTableView = new TruthTableView(node);
+//        stage.setScene(new Scene(truthTableView, 400, 400));
 //        stage.show();
 
         try {

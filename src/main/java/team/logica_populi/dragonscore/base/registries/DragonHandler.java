@@ -10,6 +10,8 @@ import team.logica_populi.dragonscore.base.Lesson;
 import team.logica_populi.dragonscore.base.ResourceLocation;
 import team.logica_populi.dragonscore.base.json.LessonHeader;
 import team.logica_populi.dragonscore.base.logic.Answer;
+import team.logica_populi.dragonscore.base.logic.BooleanLogicTreeNode;
+import team.logica_populi.dragonscore.base.logic.Question;
 import team.logica_populi.dragonscore.base.points.SubmissionCode;
 import team.logica_populi.dragonscore.base.points.SubmissionSystem;
 import team.logica_populi.dragonscore.ui.UiComponentCreator;
@@ -205,60 +207,78 @@ public class DragonHandler {
      * @param lesson The lesson to load and run
      */
      public void loadLesson(Lesson lesson) {
-        if (stage == null) {
-            throw new IllegalStateException("Attempt to show question menu before session was set up!");
-        }
-        setLesson(lesson);
-        logger.info("Points required: " + lesson.getPointsRequired());
-        updatePoints();
-        if (lesson.getFormType() != null) {
-            switch (lesson.getFormType()) {
-                case("PARAGRAPH"):
-                    Pair<Parent, ParagraphQuestionForm> paragraphQuestionFormPane = UiComponentCreator.createParagraphQuestionFormPane();
-                    questionController = paragraphQuestionFormPane.getValue();
-                    questionScene = new Scene(paragraphQuestionFormPane.getKey());
-                    break;
-                default:
-                    Pair<Parent, QuestionFormController> questionFormPane = UiComponentCreator.createQuestionFormPane();
-                    questionController = questionFormPane.getValue();
-                    questionScene = new Scene(questionFormPane.getKey());
-                    break;
-            }
-        } else {
-            Pair<Parent, QuestionFormController> questionFormPane = UiComponentCreator.createQuestionFormPane();
-            questionController = questionFormPane.getValue();
-            questionScene = new Scene(questionFormPane.getKey());
-        }
+         if (stage == null) {
+             throw new IllegalStateException("Attempt to show question menu before session was set up!");
+         }
+         setLesson(lesson);
+         logger.info("Points required: " + lesson.getPointsRequired());
+         updatePoints();
+         if (lesson.getFormType() != null) {
+             switch (lesson.getFormType()) {
+                 case("PARAGRAPH"):
+                     Pair<Parent, ParagraphQuestionForm> paragraphQuestionFormPane = UiComponentCreator.createParagraphQuestionFormPane();
+                     questionController = paragraphQuestionFormPane.getValue();
+                     questionScene = new Scene(paragraphQuestionFormPane.getKey());
+                     break;
+                 default:
+                     Pair<Parent, QuestionFormController> questionFormPane = UiComponentCreator.createQuestionFormPane();
+                     questionController = questionFormPane.getValue();
+                     questionScene = new Scene(questionFormPane.getKey());
+                     break;
+             }
+         } else {
+             Pair<Parent, QuestionFormController> questionFormPane = UiComponentCreator.createQuestionFormPane();
+             questionController = questionFormPane.getValue();
+             questionScene = new Scene(questionFormPane.getKey());
+         }
 
 
 
 
-        questionController.setNextQuestionCallback(() -> {
-            // Check for lesson completion
-            if(getPoints() >= lesson.getPointsRequired()) {
-                loadSubmissionCode();
-                setPoints(0);
-            }
-            questionController.setQuestion(lesson.getNextQuestion());
-        });
-        questionController.setSubmitCallback((List<Answer> selectedAnswers) -> {
-            boolean correct = true;
-            for (Answer answer : selectedAnswers) {
-                if (!answer.isCorrect()) {
-                    correct = false;
-                    break;
-                }
-            }
-            addPoints(getPointsToGive() * (correct ? 1 : -1));
-            questionController.setProgress((double) getPoints() / lesson.getPointsRequired());
-            questionController.showCorrect();
-        });
+         questionController.setNextQuestionCallback(() -> {
+             // Check for lesson completion
+             if(getPoints() >= lesson.getPointsRequired()) {
+                 loadSubmissionCode();
+                 setPoints(0);
+             }
+             Question nextQuestion = lesson.getNextQuestion();
+             if (nextQuestion.getExtra() != null && nextQuestion.getExtra() instanceof BooleanLogicTreeNode && questionController instanceof QuestionFormController) {
+                 ((QuestionFormController) questionController).setQuestion(nextQuestion, (BooleanLogicTreeNode) nextQuestion.getExtra());
+             } else {
+                 questionController.setQuestion(nextQuestion); // Display next question
+             }
+         });
+         questionController.setSubmitCallback((List<Answer> selectedAnswers) -> {
+             boolean correct = true;
+             for (Answer answer : selectedAnswers) {
+                 if (!answer.isCorrect()) {
+                     correct = false;
+                     break;
+                 }
+             }
+             addPoints(getPointsToGive() * (correct ? 1 : -1));
+             questionController.setProgress((double) getPoints() / lesson.getPointsRequired());
+             questionController.showCorrect();
+         });
 
-        questionController.setProgress((double) getPoints() / lesson.getPointsRequired()); // Update the progress bar for the first time
-        questionController.setQuestion(lesson.getNextQuestion()); // Display the first question
+         questionController.setProgress((double) getPoints() / lesson.getPointsRequired()); // Update the progress bar for the first time
+         Question firstQuestion = lesson.getNextQuestion();
+         if (firstQuestion.getExtra() == null) {
+             logger.info("NULL");
+         } else {
+             logger.info(firstQuestion.getExtra().toString());
+             logger.info(String.valueOf(firstQuestion.getExtra() instanceof BooleanLogicTreeNode));
+             logger.info(String.valueOf(questionController instanceof QuestionFormController));
+         }
+         if ((firstQuestion.getExtra() != null) && (firstQuestion.getExtra() instanceof BooleanLogicTreeNode) && (questionController instanceof QuestionFormController)) {
+             logger.info("HI");
+             ((QuestionFormController) questionController).setQuestion(firstQuestion, (BooleanLogicTreeNode) firstQuestion.getExtra());
+         } else {
+             questionController.setQuestion(firstQuestion); // Display the first question
+         }
 
-        stage.setScene(questionScene); // Add the scene to the stage
-        stage.show(); // Show the stage
+         stage.setScene(questionScene); // Add the scene to the stage
+         stage.show(); // Show the stage
     }
 
     /**

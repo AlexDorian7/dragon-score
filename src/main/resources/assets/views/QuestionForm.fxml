@@ -5,7 +5,6 @@
 <?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
@@ -22,15 +21,11 @@
 
     <!-- Centered Content -->
     <VBox alignment="CENTER" spacing="20" AnchorPane.bottomAnchor="100" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20" AnchorPane.topAnchor="80">
-         <WebView fx:id="questionArea" maxWidth="1200.0" prefHeight="200" prefWidth="700" style="-fx-background-color: white; -fx-border-color: #ccc; -fx-border-radius: 8; -fx-padding: 10;" />
+         <WebView fx:id="questionArea" maxWidth="1200.0" prefHeight="200" prefWidth="700" style="-fx-background-color: white; -fx-border-color: #ccc; -fx-border-radius: 8; -fx-padding: 10;" VBox.vgrow="ALWAYS" />
          <ProgressBar fx:id="progressBar" maxHeight="1.7976931348623157E308" maxWidth="1200.0" minHeight="20" prefHeight="20.0" prefWidth="800.0" progress="0.65" style="-fx-progress-color: #fce6a4;" />
 
         <!-- Answer Block //// need to backend the answer-radio-->
-        <VBox maxHeight="1.7976931348623157E308" maxWidth="1200.0" minHeight="100" prefWidth="800.0" spacing="10" style="-fx-border-color: black; -fx-border-radius: 8; -fx-background-color: white; -fx-background-radius: 8; -fx-padding: 15;">
-         <children>
-            <FlowPane fx:id="answerArea" hgap="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" orientation="VERTICAL" prefHeight="200.0" prefWidth="200.0" rowValignment="TOP" vgap="10.0" />
-         </children>
-        </VBox>
+        <VBox fx:id="answerArea" maxHeight="1.7976931348623157E308" maxWidth="1200.0" minHeight="100" prefHeight="200.0" prefWidth="800.0" spacing="10" style="-fx-border-color: black; -fx-border-radius: 8; -fx-background-color: white; -fx-background-radius: 8; -fx-padding: 15;" VBox.vgrow="ALWAYS" />
 
         <!-- Submit Button -->
         <HBox alignment="CENTER">

@@ -2,12 +2,16 @@ package team.logica_populi.dragonscore.ui.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.geometry.Pos;
 import javafx.scene.control.*;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.VBox;
 import javafx.scene.web.WebView;
 import team.logica_populi.dragonscore.base.logic.Answer;
+import team.logica_populi.dragonscore.base.logic.BooleanLogicTreeNode;
 import team.logica_populi.dragonscore.base.logic.Question;
 import team.logica_populi.dragonscore.base.registries.DragonHandler;
+import team.logica_populi.dragonscore.ui.TruthTableView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +24,7 @@ public class QuestionFormController implements IQuestionFormController {
     @FXML
     private WebView questionArea;
     @FXML
-    private FlowPane answerArea;
+    private VBox answerArea;
     @FXML
     private Button submitButton;
     @FXML
@@ -38,6 +42,8 @@ public class QuestionFormController implements IQuestionFormController {
     private ArrayList<RadioButton> answerButtons = new ArrayList<>();
 
     private boolean resultsShown = false;
+
+    private TruthTableView tableView = null;
 
     // Initialize the controller
     @FXML
@@ -99,12 +105,32 @@ public class QuestionFormController implements IQuestionFormController {
         questionArea.getEngine().loadContent("<html><head></head><body style='font-size:1.5em;'>" + question.getQuestion() + "</body></html>");
         answerButtons.clear();
         answerArea.getChildren().clear();
+        FlowPane flow = new FlowPane();
+        flow.alignmentProperty().set(Pos.TOP_LEFT);
+        flow.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
         for (Answer answer : question.getAnswers()) {
             RadioButton button = new RadioButton(answer.getText());
-            answerArea.getChildren().add(button);
+            flow.getChildren().add(button);
             answerButtons.add(button);
             button.setOnAction(this::selectAnswer);
         }
+        submitButton.setText("Submit");
+    }
+
+    /**
+     * Sets the question that this view is to display in table mode
+     *
+     * @param question The question to display
+     * @param root The root of the logical expression
+     */
+    public void setQuestion(Question question, BooleanLogicTreeNode root) {
+        this.question = question;
+        resultsShown = false;
+        questionArea.getEngine().loadContent("<html><head></head><body style='font-size:1.5em;'>" + question.getQuestion() + "</body></html>");
+        answerButtons.clear();
+        answerArea.getChildren().clear();
+        tableView = new TruthTableView(root);
+        answerArea.getChildren().add(tableView);
         submitButton.setText("Submit");
     }
 
