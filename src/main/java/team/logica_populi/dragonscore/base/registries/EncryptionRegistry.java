@@ -97,10 +97,6 @@ public class EncryptionRegistry {
             System.arraycopy(iv, 0, encryptedData, nowBuffer.length, iv.length);
             System.arraycopy(cipherText, 0, encryptedData, nowBuffer.length + iv.length, cipherText.length);
 
-            logger.info(new String(iv));
-            logger.info(new String(nowBuffer));
-
-
             return Base64.getEncoder().encodeToString(encryptedData);
         } catch (Exception e) {
             // Handle the exception properly
@@ -132,9 +128,6 @@ public class EncryptionRegistry {
             System.arraycopy(encryptedData, 0, salt, 0, salt.length);
             System.arraycopy(encryptedData, salt.length, iv, 0, iv.length);
             GCMParameterSpec gcmParameterSpec = new GCMParameterSpec(128, iv);
-
-            logger.info(new String(iv));
-            logger.info(new String(salt));
 
             SecretKeyFactory factory = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA256");
             KeySpec spec = new PBEKeySpec(s.toCharArray(), salt, ITERATION_COUNT, KEY_LENGTH);

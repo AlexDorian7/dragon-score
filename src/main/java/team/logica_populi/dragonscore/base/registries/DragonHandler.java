@@ -328,7 +328,6 @@ public class DragonHandler {
                 JsonRegistry.getInstance().createNewPointSystem();
                 return;
             }
-            logger.info(data);
             logger.fine("Loaded existing Point System.");
             JsonRegistry.getInstance().loadPointSystem(data, true);
         }
@@ -350,7 +349,6 @@ public class DragonHandler {
                 JsonRegistry.getInstance().createSubmissionSystem();
                 return;
             }
-            logger.info(data);
             logger.fine("Loaded existing Submission System.");
             JsonRegistry.getInstance().loadSubmissionSystem(data, true);
         }

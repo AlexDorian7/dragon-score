@@ -94,7 +94,6 @@ public class ResourceLocation {
      */
     public String tryGetResource(String pathPrefix) {
         File file = new File(namespace + "/" + pathPrefix + (pathPrefix.isEmpty() ? "" : "/") + path);
-        logger.info(file.getPath());
         if (file.exists() && file.canRead()) {
             try {
                 return Files.readString(file.toPath());
