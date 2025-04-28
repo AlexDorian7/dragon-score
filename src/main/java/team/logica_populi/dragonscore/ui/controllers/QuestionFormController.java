@@ -2,6 +2,7 @@ package team.logica_populi.dragonscore.ui.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.geometry.Orientation;
 import javafx.geometry.Pos;
 import javafx.scene.control.*;
 import javafx.scene.layout.FlowPane;
@@ -108,12 +109,16 @@ public class QuestionFormController implements IQuestionFormController {
         FlowPane flow = new FlowPane();
         flow.alignmentProperty().set(Pos.TOP_LEFT);
         flow.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
+        flow.orientationProperty().set(Orientation.VERTICAL);
+        flow.setHgap(10);
+        flow.setVgap(10);
         for (Answer answer : question.getAnswers()) {
             RadioButton button = new RadioButton(answer.getText());
             flow.getChildren().add(button);
             answerButtons.add(button);
             button.setOnAction(this::selectAnswer);
         }
+        answerArea.getChildren().add(flow);
         submitButton.setText("Submit");
     }
 
@@ -150,12 +155,16 @@ public class QuestionFormController implements IQuestionFormController {
      */
     public void showCorrect() {
         resultsShown = true;
-        for (int i = 0; i < answerButtons.size(); i++) {
-            if (answerButtons.get(i).isSelected()) {
-                answerButtons.get(i).setStyle("-fx-background-color: #FF7770");
-            }
-            if (question.getAnswers().get(i).isCorrect()) {
-                answerButtons.get(i).setStyle("-fx-background-color: #9FD4A3");
+        if (tableView != null) {
+            tableView.applyRowColors(tableView.getExpression().gatherResultsTable(tableView.getTruthMapping(), tableView.getVariables()));
+        } else {
+            for (int i = 0; i < answerButtons.size(); i++) {
+                if (answerButtons.get(i).isSelected()) {
+                    answerButtons.get(i).setStyle("-fx-background-color: #FF7770");
+                }
+                if (question.getAnswers().get(i).isCorrect()) {
+                    answerButtons.get(i).setStyle("-fx-background-color: #9FD4A3");
+                }
             }
         }
         submitButton.setText("Next Question");
@@ -184,9 +193,17 @@ public class QuestionFormController implements IQuestionFormController {
         }
         if (callback != null) {
             ArrayList<Answer> answers = new ArrayList<>();
-            for (int i = 0; i < answerButtons.size(); i++) {
-                if (answerButtons.get(i).isSelected()) {
-                    answers.add(question.getAnswers().get(i));
+            if (tableView != null) {
+                if (tableView.getExpression().testTable(tableView.getTruthMapping(), tableView.getVariables())) {
+                    answers.add(question.getAnswers().get(1));
+                } else {
+                    answers.add(question.getAnswers().get(0));
+                }
+            } else {
+                for (int i = 0; i < answerButtons.size(); i++) {
+                    if (answerButtons.get(i).isSelected()) {
+                        answers.add(question.getAnswers().get(i));
+                    }
                 }
             }
             if (answers.isEmpty()) return; // The user did not select an answer. Do nothing.

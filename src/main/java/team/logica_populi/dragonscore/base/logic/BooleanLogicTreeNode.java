@@ -1,37 +1,111 @@
 package team.logica_populi.dragonscore.base.logic;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
+import java.util.logging.Logger;
 
 /**
  * Class to store the boolean logic tree
  */
 public class BooleanLogicTreeNode {
+    private static final Logger logger = Logger.getLogger(BooleanLogicTreeNode.class.getName());
+
     public final Operators operator;
     public final List<BooleanLogicTreeNode> inputs;
-    public final boolean constantValue;
     public final char constantChar;
 
     private char nextChar = 'A';
-    private final HashMap<Character, Boolean> cache = new HashMap<>();
+    private HashMap<Character, Boolean> cache = new HashMap<>();
 
     BooleanLogicTreeNode(Operators operator, List<BooleanLogicTreeNode> inputs) {
-        this(operator, inputs, false, '0');
+        this(operator, inputs, '0');
     }
 
-    BooleanLogicTreeNode(Operators operator, List<BooleanLogicTreeNode> inputs, boolean constantValue, char constantChar) {
+    BooleanLogicTreeNode(Operators operator, List<BooleanLogicTreeNode> inputs, char constantChar) {
         this.operator = operator;
         this.inputs = inputs;
-        this.constantValue = constantValue;
         this.constantChar = constantChar;
     }
 
+
+
+
+    public static HashMap<Character, Boolean> decodeBitmask(int bitmask, List<Character> variables) {
+        HashMap<Character, Boolean> result = new HashMap<>();
+
+        for (int i = 0; i < variables.size(); i++) {
+            boolean value = (bitmask & (1 << i)) != 0; // Check if the bit at index i is set
+            result.put(variables.get(i), value);
+        }
+
+        return result;
+    }
+
+
+    /**
+     * tests if the provided truth table mapping is truthful.
+     * @param table The truth table mapping
+     * @param vars The list of constants in the correct order
+     * @return is it truthful
+     */
+    public boolean testTable(Map<Set<Character>, Boolean> table, List<Character> vars) {
+        final boolean[] truthful = {true};
+
+        table.forEach((Set<Character> key, Boolean value) -> {
+            HashMap<Character, Boolean> newCache = new HashMap<>();
+
+            // Populate newCache based on the set representation
+            for (Character var : vars) {
+                newCache.put(var, key.contains(var)); // True if the variable is in the set, false otherwise
+            }
+
+            cache = newCache;
+            boolean v1 = getValue();
+            logger.info("Eval: " + v1);
+            boolean val = (v1 == value);
+            logger.info("New Cache: " + newCache);
+            logger.info("Current Cache: " + cache);
+            logger.info("Match: " + val);
+
+            truthful[0] = truthful[0] && val;
+        });
+
+        return truthful[0];
+    }
+
+
+    /**
+     * tests if the provided truth table mapping is truthful and records which rows are not
+     * @param table The truth table mapping
+     * @param vars The list of constants in the correct order
+     * @return the recording
+     */
+    public Map<Set<Character>, Boolean> gatherResultsTable(Map<Set<Character>, Boolean> table, List<Character> vars) {
+        table.forEach((Set<Character> key, Boolean value) -> {
+            HashMap<Character, Boolean> newCache = new HashMap<>();
+
+            // Populate newCache based on the set representation
+            for (Character var : vars) {
+                newCache.put(var, key.contains(var)); // True if the variable is in the set, false otherwise
+            }
+
+            cache = newCache;
+
+            boolean val = (getValue() == value);
+//            logger.info("New Cache: " + newCache);
+//            logger.info("Current Cache: " + cache);
+//            logger.info("Match: " + val);
+
+            table.put(key, val);
+        });
+        return table;
+    }
+
     public boolean getValue() {
-        if (operator == Operators.CONSTANT) return constantValue;
+        if (operator == Operators.CONSTANT) return cache.get(constantChar);
         List<Boolean> list = new ArrayList<>(inputs.size());
         for (int i=0; i<inputs.size(); i++) {
             BooleanLogicTreeNode input = inputs.get(i);
+            input.cache = cache; // propagate cache through tree
             list.add( input.getValue());
         }
         check(operator.argc, list);
@@ -39,10 +113,11 @@ public class BooleanLogicTreeNode {
     }
 
     public boolean getValue(char toFlip) {
-        if (operator == Operators.CONSTANT) return (constantChar == toFlip) != constantValue;
+        if (operator == Operators.CONSTANT) return (constantChar == toFlip) != cache.get(constantChar);
         List<Boolean> list = new ArrayList<>(inputs.size());
         for (int i=0; i<inputs.size(); i++) {
             BooleanLogicTreeNode input = inputs.get(i);
+            input.cache = cache; // propagate cache through tree
             list.add(input.getValue(toFlip));
         }
         check(operator.argc, list);
@@ -88,7 +163,7 @@ public class BooleanLogicTreeNode {
     private static BooleanLogicTreeNode getRandomNode(boolean allowConst, int depth, char nextChar, int maxDepth) {
         if (depth >= maxDepth || allowConst && Math.random() > 0.5) { // Pick Const
             boolean val = Math.random() > 0.5;
-            BooleanLogicTreeNode node = new BooleanLogicTreeNode(Operators.CONSTANT, new ArrayList<>(), val, nextChar);
+            BooleanLogicTreeNode node = new BooleanLogicTreeNode(Operators.CONSTANT, new ArrayList<>(), nextChar);
             node.getCache().put(nextChar, val);
             node.nextChar = (char) (nextChar+1);
             return node;

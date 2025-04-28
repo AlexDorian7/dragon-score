@@ -5,22 +5,29 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.CheckBoxTableCell;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import team.logica_populi.dragonscore.base.logic.BooleanLogicTreeNode;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
+/**
+ * A view to display a truth table for a given boolean expression
+ */
 public class TruthTableView extends TableView<TruthTableView.RowData> {
 
-    private final BooleanLogicTreeNode logicNode;
+    private final BooleanLogicTreeNode expression;
+    private List<Character> variables;
 
-    public TruthTableView(BooleanLogicTreeNode logicNode) {
-        this.logicNode = logicNode;
+    /**
+     * Constructs a Truth Table for the provided expression
+     * @param expression The boolean expression
+     */
+    public TruthTableView(BooleanLogicTreeNode expression) {
+        this.expression = expression;
         this.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
         this.setPrefSize(400, 100);
         this.setMinSize(400, 50);
@@ -31,7 +38,7 @@ public class TruthTableView extends TableView<TruthTableView.RowData> {
     }
 
     private void initializeColumns() {
-        Map<Character, Boolean> cache = logicNode.getCache();
+        Map<Character, Boolean> cache = expression.getCache();
         List<Character> variables = new ArrayList<>(cache.keySet());
 
         // Add columns for each variable
@@ -51,8 +58,8 @@ public class TruthTableView extends TableView<TruthTableView.RowData> {
     }
 
     private ObservableList<RowData> generateTruthTable() {
-        Map<Character, Boolean> cache = logicNode.getCache();
-        List<Character> variables = new ArrayList<>(cache.keySet());
+        Map<Character, Boolean> cache = expression.getCache();
+        variables = new ArrayList<>(cache.keySet());
         int rows = (int) Math.pow(2, variables.size());
         List<RowData> dataList = new ArrayList<>();
 
@@ -66,6 +73,72 @@ public class TruthTableView extends TableView<TruthTableView.RowData> {
         }
 
         return FXCollections.observableArrayList(dataList);
+    }
+
+    /**
+     * Gets the truth mapping for the current state in {@code 000b: true, 001b: false}.
+     * @return the truth mapping
+     */
+    public Map<Set<Character>, Boolean> getTruthMapping() {
+        Map<Set<Character>, Boolean> truthMap = new HashMap<>();
+
+        for (RowData row : getItems()) {
+            Set<Character> activeVariables = new HashSet<>();
+            for (Character var : row.variables) {
+                if (Boolean.parseBoolean(row.getValue(var))) {
+                    activeVariables.add(var); // Store only variables that are true
+                }
+            }
+
+            truthMap.put(activeVariables, row.userInput.get());
+        }
+
+        return truthMap;
+    }
+
+    /**
+     * Gets the expression for this truth table.
+     * @return The expression
+     */
+    public BooleanLogicTreeNode getExpression() {
+        return expression;
+    }
+
+    public void applyRowColors(Map<Set<Character>, Boolean> truthMap) {
+        setRowFactory(tv -> new TableRow<RowData>() {
+            @Override
+            protected void updateItem(RowData row, boolean empty) {
+                super.updateItem(row, empty);
+                if (row == null || empty) {
+                    setStyle(""); // Reset style if row is empty
+                    return;
+                }
+
+                // Construct a Set<Character> representing the active variables in this row
+                Set<Character> activeVariables = new HashSet<>();
+                for (Character var : row.variables) {
+                    if (Boolean.parseBoolean(row.getValue(var))) {
+                        activeVariables.add(var);
+                    }
+                }
+
+                // Apply color based on the mapping
+                if (truthMap.containsKey(activeVariables)) {
+                    boolean isTrue = truthMap.get(activeVariables);
+                    setStyle("-fx-background-color: " + (isTrue ? "lightgreen;" : "lightcoral;"));
+                } else {
+                    setStyle(""); // Reset if no match
+                }
+            }
+        });
+    }
+
+    /**
+     * Gets the ordered list of constant variables.
+     * @return The ordered list of vars
+     */
+    public List<Character> getVariables() {
+        return variables;
     }
 
     public static class RowData {

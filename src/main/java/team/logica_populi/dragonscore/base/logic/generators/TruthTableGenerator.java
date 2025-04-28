@@ -12,7 +12,7 @@ public class TruthTableGenerator implements QuestionGenerator {
     public Question getNextQuestion() {
         BooleanLogicTreeNode node = BooleanLogicTreeNode.getRandomTree(2);
         String questionString = "<p>Please fill out the truth table for: </p><pre>" + node + "</pre>";
-        BaseQuestion question = new BaseQuestion(questionString, new Answer("THIS SHOULD NOT BE SEEN", false));
+        BaseQuestion question = new BaseQuestion(questionString, new Answer("THIS SHOULD NOT BE SEEN", false), new Answer("THIS SHOULD NOT BE SEEN", true));
         question.setExtra(node);
         return question;
     }

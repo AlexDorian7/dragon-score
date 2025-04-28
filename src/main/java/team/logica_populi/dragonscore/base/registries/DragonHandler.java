@@ -263,15 +263,7 @@ public class DragonHandler {
 
          questionController.setProgress((double) getPoints() / lesson.getPointsRequired()); // Update the progress bar for the first time
          Question firstQuestion = lesson.getNextQuestion();
-         if (firstQuestion.getExtra() == null) {
-             logger.info("NULL");
-         } else {
-             logger.info(firstQuestion.getExtra().toString());
-             logger.info(String.valueOf(firstQuestion.getExtra() instanceof BooleanLogicTreeNode));
-             logger.info(String.valueOf(questionController instanceof QuestionFormController));
-         }
          if ((firstQuestion.getExtra() != null) && (firstQuestion.getExtra() instanceof BooleanLogicTreeNode) && (questionController instanceof QuestionFormController)) {
-             logger.info("HI");
              ((QuestionFormController) questionController).setQuestion(firstQuestion, (BooleanLogicTreeNode) firstQuestion.getExtra());
          } else {
              questionController.setQuestion(firstQuestion); // Display the first question
