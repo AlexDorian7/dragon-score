@@ -33,6 +33,8 @@ public class Main extends Application {
 
         DragonHandler dragonHandler = DragonHandler.newSession();
         dragonHandler.setupSession(stage, new ResourceLocation("index.json"));
+        stage.setWidth(800);
+        stage.setHeight(600);
         dragonHandler.start();
 
     }
@@ -51,6 +53,7 @@ public class Main extends Application {
 //    }
 
 
+
     /**
      * The main entry point to the program.
      * This code sets up the logger properties and then starts JavaFX.
@@ -62,7 +65,7 @@ public class Main extends Application {
             InputStream stream = Main.class.getResourceAsStream("/logging.properties");
             LogManager.getLogManager().readConfiguration(stream);
             logger = Logger.getLogger(Main.class.getName());
-            logger.info("Welcome!");
+            logger.info("Welcome! To LogiQuest – to get your quiz score recorded, you must reach 100%.");
         } catch (IOException e) {
             logger = Logger.getLogger(Main.class.getName());
             logger.warning("Failed to load logging.properties");
