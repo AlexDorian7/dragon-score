@@ -256,6 +256,7 @@ public class DragonHandler {
         assert JsonRegistry.getInstance().getDataFile() != null; // If there is no loaded data file we should not even be here
         mainMenuPane.getValue().setLessons(lessonHeaders);
         mainMenuPane.getValue().setName(name);
+        mainMenuPane.getValue().setCodes();
         mainMenuPane.getValue().setStartCallback((LessonHeader lessonHeader) -> {
             JsonRegistry.getInstance().loadDataFile(lessonHeader.location().tryGetResource(), true);
             // Load the lesson
@@ -299,7 +300,7 @@ public class DragonHandler {
             try{
                 data = EncryptionRegistry.getInstance().decrypt(location.tryGetResource());
             } catch (Exception e) {
-                JsonRegistry.getInstance().createSubmissionSystem();
+                JsonRegistry.getInstance().createNewPointSystem();
                 return;
             }
             logger.info(data);
@@ -313,8 +314,8 @@ public class DragonHandler {
      */
     private void loadOrCreateSubmissionsFile(){
         ResourceLocation location = new ResourceLocation("dynamic:submissions.dat");
-        if (!location.exists()) {
-            logger.fine("Creating new Submissions System.");
+         if (!location.exists()) {
+            logger.fine("Creating new Submission System.");
             JsonRegistry.getInstance().createSubmissionSystem();
         } else {
             String data = null;
@@ -324,9 +325,8 @@ public class DragonHandler {
                 JsonRegistry.getInstance().createSubmissionSystem();
                 return;
             }
-            //data = EncryptionRegistry.getInstance().decrypt(data);
             logger.info(data);
-            logger.fine("Loaded existing Submissions System.");
+            logger.fine("Loaded existing Submission System.");
             JsonRegistry.getInstance().loadSubmissionSystem(data, true);
         }
     }

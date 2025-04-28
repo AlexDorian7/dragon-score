@@ -1,39 +1,52 @@
 package team.logica_populi.dragonscore.ui.controllers;
 
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.scene.control.cell.MapValueFactory;
-import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import team.logica_populi.dragonscore.base.json.LessonHeader;
-import team.logica_populi.dragonscore.base.points.SubmissionCode;
-import team.logica_populi.dragonscore.base.points.SubmissionSystem;
+
 import team.logica_populi.dragonscore.base.registries.DragonHandler;
 import team.logica_populi.dragonscore.base.registries.JsonRegistry;
 
 import java.util.List;
-import java.util.Map;
 import java.util.function.Consumer;
+import java.util.logging.Logger;
 
 /**
  * Controller for the Main Menu.
  */
 public class MainMenuController {
+    private static Logger logger;
+
     @FXML
     private ComboBox<LessonHeader> lessonsBox;
     @FXML
     private TextFlow lessonArea;
     @FXML
     private Label nameLabel;
+    @FXML
+    private ListView<String> codes;
 
     private Consumer<LessonHeader> callback;
 
-    public void initialize(){
 
+    public void initialize(){
+    }
+
+    public void setCodes(){
+        ObservableList<String> items =FXCollections.observableArrayList();
+        JsonRegistry.getInstance().getSubmissionSystem().getSubmissions().forEach(((s, map) -> {
+            map.forEach((String key, String val) ->{
+                //logger.info(val);
+                items.add(key + " : " + val);
+            });
+        }));
+        codes.setItems(items);
     }
 
     /**
