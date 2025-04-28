@@ -2,30 +2,31 @@ package team.logica_populi.dragonscore.ui.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.geometry.Orientation;
-import javafx.geometry.Pos;
 import javafx.scene.control.*;
-import javafx.scene.layout.FlowPane;
-import javafx.scene.layout.VBox;
-import javafx.scene.web.WebView;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.Text;
+import javafx.scene.text.TextFlow;
 import team.logica_populi.dragonscore.base.logic.Answer;
-import team.logica_populi.dragonscore.base.logic.BooleanLogicTreeNode;
 import team.logica_populi.dragonscore.base.logic.Question;
 import team.logica_populi.dragonscore.base.registries.DragonHandler;
-import team.logica_populi.dragonscore.ui.TruthTableView;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
+import java.util.logging.Logger;
 
-public class QuestionFormController implements IQuestionFormController {
+public class ParagraphQuestionForm implements IQuestionFormController {
+
+    private static final Logger logger = Logger.getLogger(ParagraphQuestionForm.class.getName());
+    private static final Font DEFAULT_FONT = new Font("System Default", 13);
+    private static final Font BOLD_DEFAULT_FONT = new Font("System Bold", 13);
+    private static final Font QUESTION_FONT = new Font("System Default", 16);
 
     @FXML
     private Button HomeMenu;
     @FXML
-    private WebView questionArea;
-    @FXML
-    private VBox answerArea;
+    private TextFlow paragraphArea;
     @FXML
     private Button submitButton;
     @FXML
@@ -40,11 +41,10 @@ public class QuestionFormController implements IQuestionFormController {
     private Consumer<List<Answer>> callback;
     private Runnable nextQuestionCallback;
     private Question question;
-    private ArrayList<RadioButton> answerButtons = new ArrayList<>();
+    private ArrayList<Text> answerButtons = new ArrayList<>();
+    private Answer selectedAnswer = null;
 
     private boolean resultsShown = false;
-
-    private TruthTableView tableView = null;
 
     // Initialize the controller
     @FXML
@@ -103,39 +103,51 @@ public class QuestionFormController implements IQuestionFormController {
     public void setQuestion(Question question) {
         this.question = question;
         resultsShown = false;
-        questionArea.getEngine().loadContent("<html><head></head><body style='font-size:1.5em;'>" + question.getQuestion() + "</body></html>");
         answerButtons.clear();
-        answerArea.getChildren().clear();
-        FlowPane flow = new FlowPane();
-        flow.alignmentProperty().set(Pos.TOP_LEFT);
-        flow.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
-        flow.orientationProperty().set(Orientation.VERTICAL);
-        flow.setHgap(10);
-        flow.setVgap(10);
+        selectedAnswer = null;
+        paragraphArea.getChildren().clear();
+        Text questionText = new Text(question.getQuestion() + "\n\n");
+        questionText.setFont(QUESTION_FONT);
+        paragraphArea.getChildren().add(questionText);
         for (Answer answer : question.getAnswers()) {
-            RadioButton button = new RadioButton(answer.getText());
-            flow.getChildren().add(button);
-            answerButtons.add(button);
-            button.setOnAction(this::selectAnswer);
-        }
-        answerArea.getChildren().add(flow);
-        submitButton.setText("Submit");
-    }
+            String[] split = answer.getText().split("\\|");
+            Text text;
+            Text addB = null;
+            Text addA = null;
+            if (split.length == 1) {
+                text = new Text(answer.getText());
+            } else if (split.length == 2) {
+                text = new Text(split[0]);
+                addA = new Text(split[1]);
+                addA.setFont(DEFAULT_FONT);
+            } else {
+                addB = new Text(split[0]);
+                text = new Text(split[1]);
+                addA = new Text(split[2]);
+                addA.setFont(DEFAULT_FONT);
+                addB.setFont(DEFAULT_FONT);
+            }
+            Text space = new Text(" ");
+            space.setFont(DEFAULT_FONT);
+            if (addB != null) paragraphArea.getChildren().add(addB);
+            paragraphArea.getChildren().add(text);
+            if (addA != null) paragraphArea.getChildren().add(addA);
+            paragraphArea.getChildren().add(space);
+            answerButtons.add(text);
+            text.setFont(DEFAULT_FONT);
+            text.setOnMouseClicked((event) -> {
+                deselectAll();
+                selectedAnswer = answer;
+                text.underlineProperty().set(true);
+            });
+            text.setOnMouseEntered((event) -> {
+                text.setFont(BOLD_DEFAULT_FONT);
 
-    /**
-     * Sets the question that this view is to display in table mode
-     *
-     * @param question The question to display
-     * @param root The root of the logical expression
-     */
-    public void setQuestion(Question question, BooleanLogicTreeNode root) {
-        this.question = question;
-        resultsShown = false;
-        questionArea.getEngine().loadContent("<html><head></head><body style='font-size:1.5em;'>" + question.getQuestion() + "</body></html>");
-        answerButtons.clear();
-        answerArea.getChildren().clear();
-        tableView = new TruthTableView(root);
-        answerArea.getChildren().add(tableView);
+            });
+            text.setOnMouseExited((event) -> {
+                text.setFont(DEFAULT_FONT);
+            });
+        }
         submitButton.setText("Submit");
     }
 
@@ -155,16 +167,12 @@ public class QuestionFormController implements IQuestionFormController {
      */
     public void showCorrect() {
         resultsShown = true;
-        if (tableView != null) {
-            tableView.applyRowColors(tableView.getExpression().gatherResultsTable(tableView.getTruthMapping(), tableView.getVariables()));
-        } else {
-            for (int i = 0; i < answerButtons.size(); i++) {
-                if (answerButtons.get(i).isSelected()) {
-                    answerButtons.get(i).setStyle("-fx-background-color: #FF7770");
-                }
-                if (question.getAnswers().get(i).isCorrect()) {
-                    answerButtons.get(i).setStyle("-fx-background-color: #9FD4A3");
-                }
+        for (int i = 0; i < answerButtons.size(); i++) {
+            if (answerButtons.get(i).underlineProperty().get()) {
+                answerButtons.get(i).fillProperty().set(new Color(1 , 0.46484375D, 0.4375D, 1D));
+            }
+            if (question.getAnswers().get(i).isCorrect()) {
+                answerButtons.get(i).fillProperty().set(new Color(0.62109375D, 0.828125D, 0.63671875D, 1D));
             }
         }
         submitButton.setText("Next Question");
@@ -193,35 +201,24 @@ public class QuestionFormController implements IQuestionFormController {
         }
         if (callback != null) {
             ArrayList<Answer> answers = new ArrayList<>();
-            if (tableView != null) {
-                if (tableView.getExpression().testTable(tableView.getTruthMapping(), tableView.getVariables())) {
-                    answers.add(question.getAnswers().get(1));
-                } else {
-                    answers.add(question.getAnswers().get(0));
-                }
-            } else {
-                for (int i = 0; i < answerButtons.size(); i++) {
-                    if (answerButtons.get(i).isSelected()) {
-                        answers.add(question.getAnswers().get(i));
-                    }
-                }
-            }
+//            for (int i = 0; i < answerButtons.size(); i++) {
+//                if (answerButtons.get(i).isSelected()) {
+//                    answers.add(question.getAnswers().get(i));
+//                }
+//            }
+            answers.add(selectedAnswer);
             if (answers.isEmpty()) return; // The user did not select an answer. Do nothing.
             callback.accept(answers);
         }
     }
 
     private void deselectAll() {
-        for (RadioButton answerButton : answerButtons) {
-            answerButton.setSelected(false);
+        for (Text text : answerButtons) {
+            text.underlineProperty().set(false
+
+            );
         }
 
-    }
-
-    private void selectAnswer(ActionEvent event) {
-        deselectAll();
-        RadioButton clickedButton = (RadioButton) event.getSource();
-        clickedButton.setSelected(true);
     }
 
     /**

@@ -1,5 +1,7 @@
 package team.logica_populi.dragonscore.base;
 
+import com.google.gson.JsonElement;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -113,8 +115,9 @@ public class ResourceLocation {
 
     /**
      * Create the file for this resource location if it does not exist
+     * @return true if the file was created
      */
-    public void createIfNotExists() {
+    public boolean createIfNotExists() {
         File file = getAsFile();
         if (!file.exists()) {
             try {
@@ -126,16 +129,20 @@ public class ResourceLocation {
                 if (!newFile) {
                     logger.warning("A file with this name already exists for: " + this);
                 }
+                return newFile;
             } catch (IOException e) {
                 logger.log(Level.WARNING, "Failed to create file for: " + this, e);
             }
         }
+        return false;
     }
 
     /**
      * Writes data to the file for this Resource Location.
      * This will create the file if it does not exist.
+     *
      * @param data The data to write
+     * @return
      */
     public void write(String data) {
         createIfNotExists();

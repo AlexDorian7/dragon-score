@@ -7,7 +7,7 @@ import javax.crypto.spec.GCMParameterSpec;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.PBEKeySpec;
 import javax.crypto.spec.SecretKeySpec;
-import java.io.InputStream;
+import java.io.*;
 import java.nio.ByteBuffer;
 import java.nio.charset.StandardCharsets;
 import java.security.SecureRandom;
@@ -95,6 +95,7 @@ public class EncryptionRegistry {
             byte[] encryptedData = new byte[iv.length + cipherText.length + nowBuffer.length];
             System.arraycopy(nowBuffer, 0, encryptedData, 0, nowBuffer.length);
             System.arraycopy(iv, 0, encryptedData, nowBuffer.length, iv.length);
+            System.arraycopy(cipherText, 0, encryptedData, nowBuffer.length + iv.length, cipherText.length);
 
             logger.info(new String(iv));
             logger.info(new String(nowBuffer));
@@ -154,4 +155,5 @@ public class EncryptionRegistry {
             return null;
         }
     }
+
 }

@@ -1,24 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
+
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="assets.views.BinaryTruthTables"
+            fx:controller="team.logica_populi.dragonscore.ui.controllers.TruthTableQuestionForm"
             prefHeight="400.0" prefWidth="600.0">
     <!-- Top Navigation for BD-->
     <HBox alignment="CENTER_RIGHT" spacing="20" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20">
         <Label text="LogiQuest" style="-fx-font-family: 'Arial'; -fx-font-size: 2.5em; -fx-font-weight: bold;" />
         <Region fx:id="spacer" HBox.hgrow="ALWAYS" />
         <Button fx:id="HomeMenu" text="Home"
-                style="-fx-font-family: 'Arial'; -fx-font-size: 1.2em; -fx-background-color: #fffce8; -fx-font-weight: bold; -fx-background-radius: 80;" />
-        <Button fx:id="SectionMenu" text="Section"
-                style="-fx-font-family: 'Arial'; -fx-font-size: 1.2em; -fx-background-color: #fffce8; -fx-font-weight: bold; -fx-background-radius: 80;" />
-        <Button fx:id="QuestionsHelp" text="Questions"
                 style="-fx-font-family: 'Arial'; -fx-font-size: 1.2em; -fx-background-color: #fffce8; -fx-font-weight: bold; -fx-background-radius: 80;" />
     </HBox>
 
