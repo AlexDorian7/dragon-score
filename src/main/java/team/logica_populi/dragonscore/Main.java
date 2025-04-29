@@ -32,12 +32,6 @@ public class Main extends Application {
      */
     @Override
     public void start(Stage stage) throws Exception {
-
-//        BooleanLogicTreeNode node = BooleanLogicTreeNode.getRandomTree(2);
-//        TruthTableView truthTableView = new TruthTableView(node);
-//        stage.setScene(new Scene(truthTableView, 400, 400));
-//        stage.show();
-
         try {
             DragonHandler dragonHandler = DragonHandler.newSession();
             dragonHandler.setupSession(stage, new ResourceLocation("index.json"));
@@ -45,7 +39,6 @@ public class Main extends Application {
         } catch (Exception e) {
             ErrorWindow.makeErrorWindow(stage, e, this);
         }
-
     }
 
     /**
