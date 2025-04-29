@@ -8,6 +8,8 @@
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.TextFlow?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.geometry.Insets?>
 
 <AnchorPane prefHeight="600.0"
             prefWidth="800.0"
@@ -15,6 +17,8 @@
             xmlns="http://javafx.com/javafx/23.0.1"
             xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="team.logica_populi.dragonscore.ui.controllers.MainMenuController">
+
+
 
     <!-- Header -->
     <HBox alignment="CENTER_RIGHT"
@@ -36,17 +40,22 @@
           AnchorPane.topAnchor="0"
           AnchorPane.bottomAnchor="0"
           AnchorPane.leftAnchor="160"
-          AnchorPane.rightAnchor="160"
-          spacing="28">
+          AnchorPane.rightAnchor="160">
 
         <!-- Welcome Label -->
         <Label fx:id="nameLabel"
-               text="Welcome NAME HERE to LogiQuest! To get your Quiz score recorded, you must reach 100%."
+               text="Welcome NAME HERE to LogiQuest!"
                wrapText="true"
                textAlignment="CENTER"
                style="-fx-font-size: 32px;
                -fx-font-weight: 'Segoe UI Semibold';
-               -fx-line-spacing: 10px;">
+               -fx-line-spacing: 10px;
+               -fx-text-fill: black;">
+
+            <VBox.margin>
+                <Insets bottom="20"/>
+            </VBox.margin>
+
         </Label>
 
         <!-- Lesson Selector -->
@@ -62,10 +71,13 @@
                       -fx-border-width: 1;
                       -fx-border-style: solid;
                       -fx-border-radius: 4;
-                      -fx-background-radius: 4;" />
+                      -fx-background-radius: 4;
+                      -fx-font-size: 16px;
+                      -fx-selection-bar: #635325;
+                      -fx-accent: #635325;" />
 
             <Button text="Start"
-                    prefHeight="40.0"
+                    prefHeight="35.0"
                     minWidth="110.0"
                     onAction="#startLesson"
                     style="-fx-background-color: #282828;
@@ -73,9 +85,29 @@
                     -fx-border-radius: 10;
                     -fx-background-radius: 10;
                     -fx-font-size: 24px;
-                    -fx-font-weight: 'BOLD';
-                    -fx-padding: 8 28;" />
+                    -fx-padding: 8 28;"
+                    onMouseEntered="#handleHover"
+                    onMouseExited="#handleExit"/>
+
+            <VBox.margin>
+                <Insets bottom="8"/>
+            </VBox.margin>
+
         </HBox>
+
+        <ListView fx:id="codes"
+                  prefHeight="150"
+                  maxWidth="Infinity"
+                  style="-fx-background-color: #fdfdfd;
+                      -fx-border-color: #ccc;
+                      -fx-border-radius: 4;
+                      -fx-background-radius: 4;">
+
+        <VBox.margin>
+            <Insets bottom="14"/>
+        </VBox.margin>
+        </ListView>
+
 
         <!-- Text Area -->
         <TextFlow fx:id="lessonArea"  />

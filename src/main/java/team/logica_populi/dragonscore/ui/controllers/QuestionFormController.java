@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.geometry.Orientation;
 import javafx.geometry.Pos;
 import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.web.WebView;
@@ -49,6 +50,7 @@ public class QuestionFormController implements IQuestionFormController {
     // Initialize the controller
     @FXML
     public void initialize() {
+
         ToggleGroup difficultyGroup = new ToggleGroup();
         easyDif.setToggleGroup(difficultyGroup);
         normDif.setToggleGroup(difficultyGroup);
@@ -77,9 +79,19 @@ public class QuestionFormController implements IQuestionFormController {
 
         for (ToggleButton btn : buttons) {
             if (btn.isSelected()) {
-                btn.setStyle("-fx-background-radius: 100; -fx-background-color: #645c41; -fx-text-fill: black; -fx-pref-width: 50; -fx-pref-height: 50; -fx-font-size: 1.1em;"); // green
+                btn.setStyle("-fx-background-radius: 100; " +
+                        "-fx-background-color: #635325;" +
+                        " -fx-text-fill: #ffffff; " +
+                        "-fx-pref-width: 50;" +
+                        " -fx-pref-height: 50; " +
+                        "-fx-font-size: 20px;"); // green
             } else {
-                btn.setStyle("-fx-background-radius: 100; -fx-background-color: #fce6a4; -fx-text-fill: black; -fx-pref-width: 50; -fx-pref-height: 50; -fx-font-size: 1.1em;"); // green
+                btn.setStyle("-fx-background-radius: 100; " +
+                        "-fx-background-color: #e0c97d; " +
+                        "-fx-text-fill: #282828; " +
+                        "-fx-pref-width: 50; " +
+                        "-fx-pref-height: 50; " +
+                        "-fx-font-size: 20px;"); // green
             }
         }
     }
@@ -103,7 +115,25 @@ public class QuestionFormController implements IQuestionFormController {
     public void setQuestion(Question question) {
         this.question = question;
         resultsShown = false;
-        questionArea.getEngine().loadContent("<html><head></head><body style='font-size:1.5em;'>" + question.getQuestion() + "</body></html>");
+        questionArea.getEngine().loadContent(
+                "<html><head>" +
+                        "  <style>" +
+                        "    body {" +
+                        "      font-family: Helvetica;" +
+                        "      font-size: 18px;" +
+                        "      line-height: 24px;" +
+                        "      background: #fdfdfd;" +
+                        "      border: 8px solid #ead8a2;" +
+                        "      border-radius: 10px;" +
+                        "      margin: 0;" +
+                        "      padding: 10px;" +
+                        "      color: #000000;" +
+                        "    }" +
+                        "  </style>" +
+                        "</head><body>" +
+                        question.getQuestion() +
+                        "</body></html>"
+        );
         answerButtons.clear();
         answerArea.getChildren().clear();
         FlowPane flow = new FlowPane();
@@ -122,6 +152,31 @@ public class QuestionFormController implements IQuestionFormController {
         submitButton.setText("Submit");
     }
 
+    @FXML
+    private void handleHover(MouseEvent ev) {
+        Button b = (Button)ev.getSource();
+        b.setStyle(
+                "-fx-background-color: black;" +
+                        "-fx-text-fill: white;" +
+                        "-fx-border-radius: 10;" +
+                        "-fx-background-radius: 10;" +
+                        "-fx-font-size: 20px;" +
+                        "-fx-padding: 8 28;"
+        );
+    }
+
+    @FXML
+    private void handleExit(MouseEvent ev) {
+        Button b = (Button)ev.getSource();
+        b.setStyle(
+                "-fx-background-color: #282828;" +
+                        "-fx-text-fill: white;" +
+                        "-fx-border-radius: 10;" +
+                        "-fx-background-radius: 10;" +
+                        "-fx-font-size: 20px;" +
+                        "-fx-padding: 8 28;"
+        );
+    }
     /**
      * Sets the question that this view is to display in table mode
      *
@@ -131,7 +186,7 @@ public class QuestionFormController implements IQuestionFormController {
     public void setQuestion(Question question, BooleanLogicTreeNode root) {
         this.question = question;
         resultsShown = false;
-        questionArea.getEngine().loadContent("<html><head></head><body style='font-size:1.5em;'>" + question.getQuestion() + "</body></html>");
+        questionArea.getEngine().loadContent("<html><head></head><body style='font-size:16px;'>" + question.getQuestion() + "</body></html>");
         answerButtons.clear();
         answerArea.getChildren().clear();
         tableView = new TruthTableView(root);
@@ -148,6 +203,7 @@ public class QuestionFormController implements IQuestionFormController {
         if (progress > 1) progress = 1;
         if (progress < 0) progress = 0;
         progressBar.setProgress(progress);
+        progressBar.setStyle("-fx-accent: #916e09;");
     }
 
     /**
@@ -156,19 +212,37 @@ public class QuestionFormController implements IQuestionFormController {
     public void showCorrect() {
         resultsShown = true;
         if (tableView != null) {
-            tableView.applyRowColors(tableView.getExpression().gatherResultsTable(tableView.getTruthMapping(), tableView.getVariables()));
+            tableView.applyRowColors(
+                    tableView.getExpression()
+                            .gatherResultsTable(
+                                    tableView.getTruthMapping(),
+                                    tableView.getVariables()
+                            )
+            );
         } else {
             for (int i = 0; i < answerButtons.size(); i++) {
-                if (answerButtons.get(i).isSelected()) {
-                    answerButtons.get(i).setStyle("-fx-background-color: #FF7770");
-                }
-                if (question.getAnswers().get(i).isCorrect()) {
-                    answerButtons.get(i).setStyle("-fx-background-color: #9FD4A3");
+                RadioButton btn = answerButtons.get(i);
+                boolean isCorrect = question.getAnswers().get(i).isCorrect();
+                if (isCorrect) {
+                    // correct answer → green
+                    btn.setStyle(
+                            "-fx-background-color: #9FD4A3;" +
+                                    "-fx-padding: 1 4 1 4;" +
+                                    "-fx-background-radius: 2;"
+                    );
+                } else if (btn.isSelected()) {
+                    // wrong selection → red
+                    btn.setStyle(
+                            "-fx-background-color: #FF7770;" +
+                                    "-fx-padding: 1 4 1 4;" +
+                                    "-fx-background-radius: 2;"
+                    );
                 }
             }
         }
         submitButton.setText("Next Question");
     }
+
 
     /**
      * Sets the on submitted callback consumer.
