@@ -211,7 +211,7 @@ public class DragonHandler {
              throw new IllegalStateException("Attempt to show question menu before session was set up!");
          }
          setLesson(lesson);
-         logger.info("Points required: " + lesson.getPointsRequired());
+         logger.finer("Points required: " + lesson.getPointsRequired());
          updatePoints();
          if (lesson.getFormType() != null) {
              switch (lesson.getFormType()) {
@@ -321,10 +321,9 @@ public class DragonHandler {
             logger.fine("Creating new Point System.");
             JsonRegistry.getInstance().createNewPointSystem();
         } else {
-            String data = null;
+            String data;
             try{
                 data = EncryptionRegistry.getInstance().decrypt(location.tryGetResource());
-                logger.info(data);
             } catch (Exception e) {
                 JsonRegistry.getInstance().createNewPointSystem();
                 return;
@@ -343,10 +342,9 @@ public class DragonHandler {
             logger.fine("Creating new Submission System.");
             JsonRegistry.getInstance().createSubmissionSystem();
         } else {
-            String data = null;
+            String data;
             try{
                 data = EncryptionRegistry.getInstance().decrypt(location.tryGetResource());
-                logger.info(data);
             } catch (Exception e) {
                 JsonRegistry.getInstance().createSubmissionSystem();
                 return;
