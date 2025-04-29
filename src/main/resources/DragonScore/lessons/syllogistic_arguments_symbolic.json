@@ -17,5 +17,25 @@
     }
   ],
   "forms": [
+    {
+      "id": "AAA-1",
+      "name": "Barbara",
+      "figure": 1,
+      "premises": [
+        { "type": "A", "subject": "M", "predicate": "P" },
+        { "type": "A", "subject": "S", "predicate": "M" }
+      ],
+      "conclusion": { "type": "A", "subject": "S", "predicate": "P" }
+    },
+    {
+      "id": "EAE-1",
+      "name": "Celarent",
+      "figure": 1,
+      "premises": [
+        { "type": "E", "subject": "M", "predicate": "P" },
+        { "type": "A", "subject": "S", "predicate": "M" }
+      ],
+      "conclusion": { "type": "E", "subject": "S", "predicate": "P" }
+    }
   ]
 }

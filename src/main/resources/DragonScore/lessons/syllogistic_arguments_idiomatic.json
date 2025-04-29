@@ -5,7 +5,7 @@
     {
       "id": "syllogistic_arguments_idiomatic",
       "name": "Syllogistic Arguments - Idiomatic",
-      "description": "PLEASE CHANGE ME",
+      "description": "Syllogist Arguments-Idiomatic- Will test knowledge of deductive reasoning arguments composed of two premises and a conclusion",
       "randomize": false,
       "pointsRequired": 100,
       "questionGenerators": [],

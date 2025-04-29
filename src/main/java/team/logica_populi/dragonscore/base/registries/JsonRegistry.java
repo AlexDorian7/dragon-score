@@ -10,12 +10,10 @@ import team.logica_populi.dragonscore.base.json.*;
 import team.logica_populi.dragonscore.base.logic.Answer;
 import team.logica_populi.dragonscore.base.logic.generators.QuestionGenerator;
 import team.logica_populi.dragonscore.base.points.PointSystem;
-import team.logica_populi.dragonscore.base.points.SubmissionCode;
 import team.logica_populi.dragonscore.base.points.SubmissionSystem;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
@@ -52,8 +50,8 @@ public class JsonRegistry {
         builder.registerTypeAdapter(PointSystem.class, new PointSystemDeserializer());
         builder.registerTypeAdapter(ResourceLocation.class, new ResourceLocationSerializer());
         builder.registerTypeAdapter(ResourceLocation.class, new ResourceLocationDeserializer());
-        builder.registerTypeAdapter(SubmissionCode.class, new SubmissionCodeSerializer());
-        builder.registerTypeAdapter(SubmissionCode.class, new SubmissionCodeDeserializer());
+        builder.registerTypeAdapter(SubmissionSystem.class, new SubmissionCodeSerializer());
+        builder.registerTypeAdapter(SubmissionSystem.class, new SubmissionCodeDeserializer());
 
         gson = builder.create();
     }

@@ -1,5 +1,7 @@
 package team.logica_populi.dragonscore.base.logic;
 
+import org.jetbrains.annotations.Nullable;
+
 import java.util.List;
 
 /**
@@ -21,4 +23,11 @@ public interface Question {
      * @return The answers for this question
      */
     List<Answer> getAnswers();
+
+    /**
+     * Gets any extra data that this question may have.
+     * @return The extra data
+     */
+    @Nullable
+    Object getExtra();
 }

@@ -1,0 +1,110 @@
+{
+  "requires": [
+    "DragonScore:requires/letters.json"
+  ],
+  "terms": {},
+  "lessons": [
+    {
+      "id": "propositional_arguments_find_conclusion",
+      "name": "Propositional Arguments - Find Conclusion",
+      "description": "Propositional Arguments - Find Conclusion will test if you can find the conclusion in a propositional argument.",
+      "randomize": false,
+      "pointsRequired": 100,
+      "formType": "PARAGRAPH",
+      "questionGenerators": [],
+      "staticQuestions": [
+        {
+          "question": "Please find the conclusion in this argument.",
+          "answers": [
+            {
+              "answer": "You wouldn't be frivolous if you were either cheap or not scholarly.| As a consequence,",
+              "correct": false
+            },
+            {
+              "answer": "you must be scholarly| - since clearly",
+              "correct": true
+            },
+            {
+              "answer": "you're frivolous.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Please find the conclusion in this argument.",
+          "answers": [
+            {
+              "answer": "George isn't both a carpenter and also either strong or frightened.",
+              "correct": false
+            },
+            {
+              "answer": "George must be a carpenter,| since obviously",
+              "correct": true
+            },
+            {
+              "answer": "George isn't strong.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Please find the conclusion in this argument.",
+          "answers": [
+            {
+              "answer": "A necessary and sufficient condition for Donna being both cruel and realistic is that Donna isn't boastful.| Thus",
+              "correct": false
+            },
+            {
+              "answer": "Donna isn't cruel.| My evidence for this is that",
+              "correct": true
+            },
+            {
+              "answer": "Donna is boastful.| And obviously",
+              "correct": false
+            },
+            {
+              "answer": "Donna isn't realistic.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Please find the conclusion in this argument.",
+          "answers": [
+            {
+              "answer": "It is sufficient that you be a dentist, in order for you to be short and remarkable.",
+              "correct": false
+            },
+            {
+              "answer": "You aren't short.| It follows that",
+              "correct": false
+            },
+            {
+              "answer": "you can't be a dentist.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "Please find the conclusion in this argument.",
+          "answers": [
+            {
+              "answer": "These two facts prove to us that |Jim is poor.| First,",
+              "correct": true
+            },
+            {
+              "answer": "Jim isn't both poor and not faithful.| Second,",
+              "correct": false
+            },
+            {
+              "answer": "Jim is faithful.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "forms": [
+  ]
+}

@@ -1,5 +1,7 @@
 package team.logica_populi.dragonscore.base;
 
+import com.google.gson.JsonElement;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -9,6 +11,11 @@ import java.util.Objects;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * A resource location represents a path in the format {@code namespace:path}.
+ * It provides an interface for working with both files and resources that can be specified using the resource location path system.
+ * A resource location will be turned into a path of the following form {@code ./namespace/path}.
+ */
 public class ResourceLocation {
     private static final Logger logger = Logger.getLogger(ResourceLocation.class.getName());
 
@@ -87,7 +94,6 @@ public class ResourceLocation {
      */
     public String tryGetResource(String pathPrefix) {
         File file = new File(namespace + "/" + pathPrefix + (pathPrefix.isEmpty() ? "" : "/") + path);
-        logger.info(file.getPath());
         if (file.exists() && file.canRead()) {
             try {
                 return Files.readString(file.toPath());
@@ -108,8 +114,9 @@ public class ResourceLocation {
 
     /**
      * Create the file for this resource location if it does not exist
+     * @return true if the file was created
      */
-    public void createIfNotExists() {
+    public boolean createIfNotExists() {
         File file = getAsFile();
         if (!file.exists()) {
             try {
@@ -121,16 +128,20 @@ public class ResourceLocation {
                 if (!newFile) {
                     logger.warning("A file with this name already exists for: " + this);
                 }
+                return newFile;
             } catch (IOException e) {
                 logger.log(Level.WARNING, "Failed to create file for: " + this, e);
             }
         }
+        return false;
     }
 
     /**
      * Writes data to the file for this Resource Location.
      * This will create the file if it does not exist.
+     *
      * @param data The data to write
+     * @return
      */
     public void write(String data) {
         createIfNotExists();

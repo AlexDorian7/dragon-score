@@ -1,14 +1,16 @@
 package team.logica_populi.dragonscore;
 
 import javafx.application.Application;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
 import team.logica_populi.dragonscore.base.ResourceLocation;
+import team.logica_populi.dragonscore.base.logic.BooleanLogicTreeNode;
 import team.logica_populi.dragonscore.base.registries.DragonHandler;
 import team.logica_populi.dragonscore.base.registries.EncryptionRegistry;
 import team.logica_populi.dragonscore.base.registries.JsonRegistry;
+import team.logica_populi.dragonscore.ui.ErrorWindow;
+import team.logica_populi.dragonscore.ui.TruthTableView;
 
-import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.logging.LogManager;
@@ -30,25 +32,29 @@ public class Main extends Application {
      */
     @Override
     public void start(Stage stage) throws Exception {
-
-        DragonHandler dragonHandler = DragonHandler.newSession();
-        dragonHandler.setupSession(stage, new ResourceLocation("index.json"));
-        dragonHandler.start();
-
+        try {
+            DragonHandler dragonHandler = DragonHandler.newSession();
+            dragonHandler.setupSession(stage, new ResourceLocation("index.json"));
+            dragonHandler.start();
+        } catch (Exception e) {
+            ErrorWindow.makeErrorWindow(stage, e, this);
+        }
     }
 
     /**
      * JavaFX Stop Method.
      * @throws Exception Any exception thrown when program is stopping
      */
-//    @Override
-//    public void stop() throws Exception{
-//        File file = new File("./points.dat");
-//        FileWriter writer = new FileWriter(file);
-//        //writer.write(EncryptionRegistry.getInstance().encrypt(String.valueOf(file)));
-//        writer.close();
-//        logger.info("Application Stopping ...");
-//    }
+    @Override
+    public void stop() throws Exception{
+        ResourceLocation loc1 = new ResourceLocation("dynamic:points.dat");
+        loc1.createIfNotExists();
+        loc1.write(EncryptionRegistry.getInstance().encrypt(JsonRegistry.getInstance().getGson().toJson(JsonRegistry.getInstance().getPointSystem().getLessonRecords())));
+
+        ResourceLocation loc2 = new ResourceLocation("dynamic:submissions.dat");
+        loc2.createIfNotExists();
+        loc2.write(EncryptionRegistry.getInstance().encrypt(JsonRegistry.getInstance().getGson().toJson(JsonRegistry.getInstance().getSubmissionSystem().getSubmissions())));
+    }
 
 
     /**
