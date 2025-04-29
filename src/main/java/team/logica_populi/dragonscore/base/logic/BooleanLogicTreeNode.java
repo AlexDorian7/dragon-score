@@ -51,15 +51,19 @@ public class BooleanLogicTreeNode {
         final boolean[] truthful = {true};
 
         table.forEach((Set<Character> key, Boolean value) -> {
-            HashMap<Character, Boolean> newCache = new HashMap<>();
+            cache.clear();
 
             // Populate newCache based on the set representation
             for (Character var : vars) {
-                newCache.put(var, key.contains(var)); // True if the variable is in the set, false otherwise
+                cache.put(var, key.contains(var)); // True if the variable is in the set, false otherwise
             }
 
-            cache = newCache;
-            boolean val = (getValue() == value);
+            logger.finer("Cache: " + cache);
+            boolean v1 = getValue();
+            logger.finer("Eval: " + v1);
+            boolean val = (v1 == value);
+            logger.finer("Value: " + value);
+            logger.finer("Matches: " + val);
             truthful[0] = truthful[0] && val;
         });
 
@@ -75,15 +79,19 @@ public class BooleanLogicTreeNode {
      */
     public Map<Set<Character>, Boolean> gatherResultsTable(Map<Set<Character>, Boolean> table, List<Character> vars) {
         table.forEach((Set<Character> key, Boolean value) -> {
-            HashMap<Character, Boolean> newCache = new HashMap<>();
+            cache.clear();
 
             // Populate newCache based on the set representation
             for (Character var : vars) {
-                newCache.put(var, key.contains(var)); // True if the variable is in the set, false otherwise
+                cache.put(var, key.contains(var)); // True if the variable is in the set, false otherwise
             }
 
-            cache = newCache;
-            boolean val = (getValue() == value);
+            logger.finer("Cache: " + cache);
+            boolean v1 = getValue();
+            logger.finer("Eval: " + v1);
+            boolean val = (v1 == value);
+            logger.finer("Value: " + value);
+            logger.finer("Matches: " + val);
             table.put(key, val);
         });
         return table;
