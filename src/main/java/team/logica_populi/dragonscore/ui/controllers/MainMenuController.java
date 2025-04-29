@@ -6,9 +6,11 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import team.logica_populi.dragonscore.base.json.LessonHeader;
+import javafx.scene.text.FontWeight;
 
 import team.logica_populi.dragonscore.base.registries.DragonHandler;
 import team.logica_populi.dragonscore.base.registries.JsonRegistry;
@@ -16,6 +18,9 @@ import team.logica_populi.dragonscore.base.registries.JsonRegistry;
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.logging.Logger;
+import javafx.scene.input.MouseEvent;
+import java.util.function.BiConsumer;
+
 
 /**
  * Controller for the Main Menu.
@@ -91,10 +96,43 @@ public class MainMenuController {
     @FXML
     private void updateSelected(ActionEvent actionEvent) {
         lessonArea.getChildren().clear();
+        lessonArea.setLineSpacing(8);
+
         Text title = new Text(lessonsBox.getValue().name() + "\n");
-        title.setStroke(Color.BLACK);
+        title.setFill(Color.web("#282828"));
+        title.setFont(Font.font("Helvetica", FontWeight.BOLD, 16));
+
         Text description = new Text(lessonsBox.getValue().description());
+        description.setFill(Color.web("#282828"));
+        description.setFont(Font.font("Helvetica", 14));
+
         lessonArea.getChildren().addAll(title, description);
+    }
+
+    @FXML
+    private void handleHover(MouseEvent ev) {
+        Button b = (Button)ev.getSource();
+        b.setStyle(
+                "-fx-background-color: black;" +
+                        "-fx-text-fill: white;" +
+                        "-fx-border-radius: 10;" +
+                        "-fx-background-radius: 10;" +
+                        "-fx-font-size: 24px;" +
+                        "-fx-padding: 8 28;"
+        );
+    }
+
+    @FXML
+    private void handleExit(MouseEvent ev) {
+        Button b = (Button)ev.getSource();
+        b.setStyle(
+                "-fx-background-color: #282828;" +
+                        "-fx-text-fill: white;" +
+                        "-fx-border-radius: 10;" +
+                        "-fx-background-radius: 10;" +
+                        "-fx-font-size: 24px;" +
+                        "-fx-padding: 8 28;"
+        );
     }
 
 }

@@ -2,8 +2,10 @@ package team.logica_populi.dragonscore.ui.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
+import javafx.scene.input.MouseEvent;
 import java.util.function.BiConsumer;
 
 /**
@@ -40,5 +42,31 @@ public class NameFormController {
      */
     public void setSubmitCallback(BiConsumer<String, String> submitCallback) {
         this.submitCallback = submitCallback;
+    }
+
+    @FXML
+    private void handleHover(MouseEvent ev) {
+        Button b = (Button)ev.getSource();
+        b.setStyle(
+                "-fx-background-color: black;" +
+                        "-fx-text-fill: white;" +
+                        "-fx-border-radius: 10;" +
+                        "-fx-background-radius: 10;" +
+                        "-fx-font-size: 24px;" +
+                        "-fx-padding: 8 28;"
+        );
+    }
+
+    @FXML
+    private void handleExit(MouseEvent ev) {
+        Button b = (Button)ev.getSource();
+        b.setStyle(
+                "-fx-background-color: #282828;" +
+                        "-fx-text-fill: white;" +
+                        "-fx-border-radius: 10;" +
+                        "-fx-background-radius: 10;" +
+                        "-fx-font-size: 24px;" +
+                        "-fx-padding: 8 28;"
+        );
     }
 }

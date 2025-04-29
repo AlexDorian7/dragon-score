@@ -1,34 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.input.MouseEvent?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24" xmlns:fx="http://javafx.com/fxml/1" fx:controller="team.logica_populi.dragonscore.ui.controllers.SubmissionCodeController">
+<AnchorPane prefHeight="600.0"
+            prefWidth="800.0"
+            style="-fx-background-color: #fffce8;"
+            xmlns="http://javafx.com/javafx/17.0.12"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="team.logica_populi.dragonscore.ui.controllers.SubmissionCodeController">
+
+
    <children>
-      <Text layoutX="164.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Congratulations! You have finished the exercise!" textAlignment="CENTER" wrappingWidth="272.7010192871094">
-         <font>
-            <Font size="26.0" />
-         </font>
+      <VBox alignment="CENTER"
+            spacing="0"
+            AnchorPane.topAnchor="0"
+            AnchorPane.bottomAnchor="0"
+            AnchorPane.leftAnchor="270"
+            AnchorPane.rightAnchor="270">
+
+         <!-- Heading -->
+         <Text text="Congratulations! You have finished the exercise!"
+               wrappingWidth="600"
+               textAlignment="CENTER"
+               style="-fx-font-family: 'Helvetica';
+               -fx-font-size: 32px;
+               -fx-prompt-text-fill: #a2a2a2;
+               -fx-line-spacing: 12px;">
+
+         <VBox.margin>
+            <Insets bottom="36"/>
+         </VBox.margin>
       </Text>
-      <Text layoutX="196.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Here is your submission code:">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Text>
-      <Button fx:id="backToMenuButton" layoutX="359.0" layoutY="343.0" mnemonicParsing="false" onAction="#backToMenu" text="Return To Menu" />
-      <Button fx:id="backToExerciseButton" layoutX="150.0" layoutY="343.0" mnemonicParsing="false" onAction="#backToExercise" text="Return to Exercise" />
-      <Label fx:id="codeElement" layoutX="150.0" layoutY="248.0">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Label>
-      <TextArea fx:id="codeArea" layoutX="125.0" layoutY="200.0" prefHeight="20.0" prefWidth="350.0">
-         <font>
-            <Font size="20.0" />
-         </font></TextArea>
+
+
+
+
+         <Text text="Here is your submission code:"
+               wrappingWidth="600"
+               textAlignment="CENTER"
+               style="-fx-font-family: 'Helvetica';
+               -fx-font-size: 20px;
+               -fx-prompt-text-fill: #a2a2a2; " >
+
+            <VBox.margin>
+               <Insets bottom="12"/>
+            </VBox.margin>
+         </Text>
+
+         <!-- Code label and area -->
+         <Label fx:id="codeElement"
+                textAlignment="CENTER">
+         </Label>
+
+         <TextArea fx:id="codeArea"
+                   maxWidth="Infinity"
+                   prefHeight="40.0"
+                   wrapText="true"
+                   style="-fx-background-color: #FDFDFD;
+                 -fx-border-color: #a5a5a5;
+                 -fx-border-width: 1;
+                 -fx-border-style: solid;
+                 -fx-border-radius: 4;
+                 -fx-background-radius: 4;
+                 -fx-prompt-text-fill: #a2a2a2;
+                 -fx-font-size: 16px;">
+
+            <VBox.margin>
+               <Insets bottom="24"/>
+            </VBox.margin>
+
+         </TextArea>
+
+         <!-- Buttons side by side -->
+         <HBox alignment="CENTER">
+            <Button fx:id="backToExerciseButton"
+                    onAction="#backToExercise"
+                    text="Return to Exercise"
+                    prefHeight="40.0"
+                    style="-fx-background-color: #282828;
+                    -fx-font-family: 'Helvetica';
+                       -fx-font-size: 16px;
+                       -fx-text-fill: white;
+                       -fx-border-radius: 10;
+                       -fx-background-radius: 10;
+                       -fx-padding: 8 28;"
+                    onMouseEntered="#handleHover"
+                    onMouseExited="#handleExit"/>
+
+            <Region HBox.hgrow="ALWAYS" />
+
+            <Button fx:id="backToMenuButton"
+                    onAction="#backToMenu"
+                    text="Return To Menu"
+                    prefHeight="40.0"
+                    style="-fx-background-color: transparent;
+                       -fx-border-color: #282828;
+                       -fx-font-family: 'Helvetica';
+                       -fx-font-size: 16px;
+                       -fx-border-width: 2;
+                       -fx-border-radius: 10;
+                       -fx-background-radius: 10;
+                       -fx-text-fill: black;
+                       -fx-padding: 8 28;"
+                    onMouseEntered="#handleHover"
+                    onMouseExited="#handleExit"/>
+         </HBox>
+
+
+
+      </VBox>
    </children>
 </AnchorPane>

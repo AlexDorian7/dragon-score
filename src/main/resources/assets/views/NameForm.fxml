@@ -7,30 +7,97 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
+<?import javafx.geometry.Insets?>
 
-<AnchorPane fx:id="root" prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: #fffce8;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="team.logica_populi.dragonscore.ui.controllers.NameFormController">
+<AnchorPane fx:id="root"
+            prefHeight="600.0"
+            prefWidth="800.0"
+            style="-fx-background-color: #fffce8;"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="team.logica_populi.dragonscore.ui.controllers.NameFormController">
 
    <!-- Header -->
-   <HBox alignment="CENTER_RIGHT" spacing="20" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20" AnchorPane.topAnchor="20">
-      <Label style="-fx-font-size: 32px; -fx-font-weight: bold;" text="LogiQuest" />
-      <Region fx:id="spacer" HBox.hgrow="ALWAYS" />
+   <HBox alignment="CENTER_RIGHT"
+         AnchorPane.leftAnchor="44"
+         AnchorPane.rightAnchor="44"
+         AnchorPane.topAnchor="28">
+      <Label text="LogiQuest"
+             style="-fx-font-family: 'Helvetica';
+               -fx-font-size: 36px;
+               -fx-font-weight: BOLD;
+               -fx-text-fill: #282828;" />
+      <Region fx:id="spacer"
+              HBox.hgrow="ALWAYS" />
    </HBox>
 
    <!-- Content Area -->
-   <VBox alignment="CENTER" spacing="15" AnchorPane.topAnchor="80" AnchorPane.bottomAnchor="40" AnchorPane.leftAnchor="40" AnchorPane.rightAnchor="40">
+   <VBox alignment="CENTER"
+         prefWidth="900"
+         AnchorPane.topAnchor="0"
+         AnchorPane.bottomAnchor="0"
+         AnchorPane.leftAnchor="270"
+         AnchorPane.rightAnchor="270"
+         spacing="0">
 
-      <Text text="What is your name?" wrappingWidth="600"  textAlignment="CENTER">
-         <font>
-            <Font size="24.0" />
-         </font>
+      <Text text="What is your name?"
+            wrappingWidth="600"
+            textAlignment="CENTER"
+            style="-fx-font-size: 42px;
+            -fx-font-weight: 'Segoe UI Semibold';">
+         <VBox.margin>
+            <Insets bottom="28"/>
+         </VBox.margin>
       </Text>
 
-      <TextField fx:id="fName" promptText="First Name" maxWidth="200" />
-      <TextField fx:id="lName" promptText="Last Name" maxWidth="200" />
+      <TextField fx:id="fName"
+                 promptText="First Name"
+                 maxWidth="400"
+                 prefHeight="40.0"
+                 style="-fx-background-color: #FDFDFD;
+                      -fx-border-color: #a5a5a5;
+                      -fx-border-width: 1;
+                      -fx-border-style: solid;
+                      -fx-border-radius: 4;
+                      -fx-background-radius: 4;
+                      -fx-prompt-text-fill: #a2a2a2;
+                      -fx-font-size: 16px;">
+      <VBox.margin>
+         <Insets bottom="14"/>
+      </VBox.margin>
+   </TextField>
 
-      <Button text="Submit" onAction="#submit" maxWidth="150"
-              style="-fx-background-color: black; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10 20;" />
+      <TextField fx:id="lName"
+                 promptText="Last Name"
+                 maxWidth="400"
+                 prefHeight="40.0"
+                 style="-fx-background-color: #FDFDFD;
+                      -fx-border-color: #a5a5a5;
+                      -fx-border-width: 1;
+                      -fx-border-style: solid;
+                      -fx-border-radius: 4;
+                      -fx-background-radius: 4;
+                      -fx-prompt-text-fill: #a2a2a2;
+                      -fx-font-size: 16px;">
+         <VBox.margin>
+            <Insets bottom="20"/>
+         </VBox.margin>
+      </TextField>
+
+      <Button text="Submit"
+              onAction="#submit"
+              prefHeight="50.0"
+              maxWidth="400.0"
+              minWidth="130"
+              style="-fx-background-color: #282828;
+                    -fx-text-fill: white;
+                    -fx-border-radius: 10;
+                    -fx-background-radius: 10;
+                    -fx-font-size: 24px;
+                    -fx-padding: 8 28;
+                    -fx-prompt-text-fill: #a2a2a2;"
+              onMouseEntered="#handleHover"
+              onMouseExited="#handleExit"/>
    </VBox>
 </AnchorPane>
