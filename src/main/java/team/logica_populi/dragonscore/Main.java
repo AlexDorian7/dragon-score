@@ -60,7 +60,7 @@ public class Main extends Application {
 
         ResourceLocation loc2 = new ResourceLocation("dynamic:submissions.dat");
         loc2.createIfNotExists();
-        loc2.write(EncryptionRegistry.getInstance().encrypt(JsonRegistry.getInstance().getGson().toJson(JsonRegistry.getInstance().getSubmissionSystem())));
+        loc2.write(EncryptionRegistry.getInstance().encrypt(JsonRegistry.getInstance().getGson().toJson(JsonRegistry.getInstance().getSubmissionSystem().getSubmissions())));
     }
 
 

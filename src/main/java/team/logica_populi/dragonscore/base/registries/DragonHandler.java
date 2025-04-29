@@ -324,6 +324,7 @@ public class DragonHandler {
             String data = null;
             try{
                 data = EncryptionRegistry.getInstance().decrypt(location.tryGetResource());
+                logger.info(data);
             } catch (Exception e) {
                 JsonRegistry.getInstance().createNewPointSystem();
                 return;
@@ -345,6 +346,7 @@ public class DragonHandler {
             String data = null;
             try{
                 data = EncryptionRegistry.getInstance().decrypt(location.tryGetResource());
+                logger.info(data);
             } catch (Exception e) {
                 JsonRegistry.getInstance().createSubmissionSystem();
                 return;
