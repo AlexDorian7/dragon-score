@@ -15,11 +15,11 @@
     </HBox>
 
     <!-- Centered Content -->
-    <VBox alignment="CENTER" AnchorPane.bottomAnchor="60" AnchorPane.leftAnchor="44" AnchorPane.rightAnchor="44" AnchorPane.topAnchor="60">
+    <VBox alignment="CENTER" AnchorPane.bottomAnchor="40" AnchorPane.leftAnchor="44" AnchorPane.rightAnchor="44" AnchorPane.topAnchor="60">
 
         <!-- Question Box -->
         <HBox alignment="CENTER">
-                <WebView fx:id="questionArea" minHeight="80.0" prefHeight="220.0" prefWidth="700" VBox.vgrow="ALWAYS" />
+                <WebView fx:id="questionArea" minHeight="80.0" maxHeight="300.0" maxWidth="700" VBox.vgrow="ALWAYS" />
 
             <VBox.margin>
                 <Insets top="20" />
@@ -30,12 +30,12 @@
         <HBox alignment="CENTER">
             <ProgressBar fx:id="progressBar" minHeight="30" prefWidth="700" progress="0.65" style="-fx-progress-color: #916e09;" />
             <VBox.margin>
-                <Insets top="28" />
+                <Insets top="12" />
             </VBox.margin>
         </HBox>
 
         <!-- Answer Block //// need to backend the answer-radio-->
-        <VBox fx:id="answerArea" minHeight="80.0" prefHeight="220.0" maxWidth="700" spacing="10" style="-fx-border-color: #a5a5a5;               -fx-border-radius: 4;               -fx-background-color: #fdfdfd;               -fx-background-radius: 4;               -fx-font-size: 16px;               -fx-font-family: 'Helvetica';               -fx-padding: 24 20 16 20;" VBox.vgrow="ALWAYS">
+        <VBox fx:id="answerArea" minHeight="160.0" maxHeight="220.0" maxWidth="700" spacing="10" VBox.vgrow="ALWAYS" style="-fx-border-color: #a5a5a5;               -fx-border-radius: 4;               -fx-background-color: #fdfdfd;               -fx-background-radius: 4;               -fx-font-size: 16px;               -fx-font-family: 'Helvetica';               -fx-padding: 24 20 16 20;" >
 
 
 
@@ -59,7 +59,7 @@
             <Button fx:id="submitButton" minWidth="120.0" onAction="#onSubmit" onMouseEntered="#handleHover" onMouseExited="#handleExit" prefHeight="45.0" style="-fx-background-color: #282828;                        -fx-text-fill: white;                        -fx-border-radius: 10;                        -fx-background-radius: 10;                        -fx-font-size: 20px;                        -fx-padding: 8 28;" text="Submit" />
 
             <VBox.margin>
-                <Insets top="28" />
+                <Insets top="14" />
             </VBox.margin>
         </HBox>
 
