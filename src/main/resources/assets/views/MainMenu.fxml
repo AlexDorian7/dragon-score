@@ -32,11 +32,11 @@
 
     <!-- Centered Content -->
     <VBox alignment="CENTER"
-          prefWidth="900"
+          prefWidth="700"
           AnchorPane.topAnchor="0"
           AnchorPane.bottomAnchor="0"
-          AnchorPane.leftAnchor="200"
-          AnchorPane.rightAnchor="200"
+          AnchorPane.leftAnchor="160"
+          AnchorPane.rightAnchor="160"
           spacing="28">
 
         <!-- Welcome Label -->
@@ -44,9 +44,9 @@
                text="Welcome NAME HERE to LogiQuest! To get your Quiz score recorded, you must reach 100%."
                wrapText="true"
                textAlignment="CENTER"
-               style="-fx-font-size: 42px;
+               style="-fx-font-size: 32px;
                -fx-font-weight: 'Segoe UI Semibold';
-               -fx-line-spacing: 20px;">
+               -fx-line-spacing: 10px;">
         </Label>
 
         <!-- Lesson Selector -->

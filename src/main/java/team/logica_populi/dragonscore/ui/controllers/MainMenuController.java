@@ -70,7 +70,7 @@ public class MainMenuController {
      * @param name The name to display
      */
     public void setName(String name) {
-        nameLabel.setText("Welcome " + name + "!");
+        nameLabel.setText("Welcome " + name + " to LogiQuest! To get your Quiz score recorded, you must reach 100%.");
     }
 
     /**

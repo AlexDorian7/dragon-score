@@ -42,7 +42,7 @@
          spacing="0">
 
       <Text text="What is your name?"
-            wrappingWidth="900"
+            wrappingWidth="600"
             textAlignment="CENTER"
             style="-fx-font-size: 42px;
             -fx-font-weight: 'Segoe UI Semibold';">
