@@ -141,7 +141,7 @@ public class TruthTableView extends TableView<TruthTableView.RowData> {
         return variables;
     }
 
-    public static class RowData {
+    protected static class RowData {
         private final SimpleBooleanProperty userInput = new SimpleBooleanProperty(false);
         private final List<SimpleStringProperty> values = new ArrayList<>();
         private final List<Character> variables;
