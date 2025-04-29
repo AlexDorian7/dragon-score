@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="team.logica_populi.dragonscore.ui.controllers.ParagraphQuestionController"
+            prefHeight="400.0" prefWidth="600.0">
+<!-- three sentacnce where the user can choice a whole sentance. that you can not type in. text flow on hower highihgt
+and on click green or red for results. 4x textflow box. and a conclusion pointer, there for....-->
+</AnchorPane>

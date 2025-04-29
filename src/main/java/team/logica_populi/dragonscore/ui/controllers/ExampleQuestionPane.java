@@ -4,7 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
-import team.logica_populi.dragonscore.logic.Question;
+import team.logica_populi.dragonscore.base.logic.Question;
 
 /**
  * FXML Controller for /assets/views/ExampleQuestionPane.fxml
@@ -30,6 +30,8 @@ public class ExampleQuestionPane {
 
     private Question question;
 
+    private Runnable buttonCallback;
+
     public void setQuestion(Question question) {
         // TODO: Make this support question with more or less than 4 answers
         // TODO: Display answers in random order
@@ -39,6 +41,11 @@ public class ExampleQuestionPane {
         a2Button.setText(question.getAnswers().get(1).toString());
         a3Button.setText(question.getAnswers().get(2).toString());
         a4Button.setText(question.getAnswers().get(3).toString());
+        deselectAll();
+    }
+
+    public void setCallback(Runnable callback) {
+        this.buttonCallback = callback;
     }
 
     private void deselectAll() {
@@ -54,6 +61,7 @@ public class ExampleQuestionPane {
 //        question.setSelected(AnswerOptions.ANSWER1);
         deselectAll();
         a1Button.setSelected(true);
+        if (buttonCallback != null) buttonCallback.run();
     }
 
     @FXML
@@ -62,6 +70,7 @@ public class ExampleQuestionPane {
 //        question.setSelected(AnswerOptions.ANSWER2);
         deselectAll();
         a2Button.setSelected(true);
+        if (buttonCallback != null) buttonCallback.run();
     }
 
     @FXML
@@ -70,6 +79,7 @@ public class ExampleQuestionPane {
 //        question.setSelected(AnswerOptions.ANSWER3);
         deselectAll();
         a3Button.setSelected(true);
+        if (buttonCallback != null) buttonCallback.run();
     }
 
     @FXML
@@ -78,5 +88,6 @@ public class ExampleQuestionPane {
 //        question.setSelected(AnswerOptions.ANSWER4);
         deselectAll();
         a4Button.setSelected(true);
+        if (buttonCallback != null) buttonCallback.run();
     }
 }
