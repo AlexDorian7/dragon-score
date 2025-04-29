@@ -169,10 +169,10 @@ public class ParagraphQuestionForm implements IQuestionFormController {
         resultsShown = true;
         for (int i = 0; i < answerButtons.size(); i++) {
             if (answerButtons.get(i).underlineProperty().get()) {
-                answerButtons.get(i).fillProperty().set(new Color(1 , 0.46484375D, 0.4375D, 1D));
+                answerButtons.get(i).fillProperty().set(Color.LIGHTCORAL);
             }
             if (question.getAnswers().get(i).isCorrect()) {
-                answerButtons.get(i).fillProperty().set(new Color(0.62109375D, 0.828125D, 0.63671875D, 1D));
+                answerButtons.get(i).fillProperty().set(Color.LIGHTGREEN);
             }
         }
         submitButton.setText("Next Question");

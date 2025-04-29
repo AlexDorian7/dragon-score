@@ -160,10 +160,10 @@ public class QuestionFormController implements IQuestionFormController {
         } else {
             for (int i = 0; i < answerButtons.size(); i++) {
                 if (answerButtons.get(i).isSelected()) {
-                    answerButtons.get(i).setStyle("-fx-background-color: #FF7770");
+                    answerButtons.get(i).setStyle("-fx-background-color: lightcoral;");
                 }
                 if (question.getAnswers().get(i).isCorrect()) {
-                    answerButtons.get(i).setStyle("-fx-background-color: #9FD4A3");
+                    answerButtons.get(i).setStyle("-fx-background-color: lightgreen;");
                 }
             }
         }
