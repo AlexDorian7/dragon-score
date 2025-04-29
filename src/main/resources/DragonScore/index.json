@@ -88,6 +88,12 @@
     "name": "Truth Tables",
     "description": "Truth Tables will test you knowledge of true/false logic.",
     "location": "DragonScore:lessons/truth_tables.json"
+  },
+  {
+    "id": "propositional_arguments_find_conclusion",
+    "name": "Propositional Arguments - Find Conclusion",
+    "description": "Propositional Arguments - Find Conclusion will test if you can find the conclusion in a propositional argument.",
+    "location": "DragonScore:lessons/propositional_arguments_find_conclusion.json"
   }
 ]
 
