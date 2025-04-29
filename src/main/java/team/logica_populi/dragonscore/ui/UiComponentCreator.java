@@ -42,7 +42,7 @@ public class UiComponentCreator {
         return new Pair<>(parent, controller);
     }
 
-    public static Pair<Parent, ParagraphQuestionForm> createParagraphQuestionFormPane() {
+    public static Pair<Parent, ParagraphQuestionFormController> createParagraphQuestionFormPane() {
         FXMLLoader fxmlLoader = new FXMLLoader(UiComponentCreator.class.getResource("/assets/views/ParagraphQuestionForm.fxml"));
         Parent parent;
         try {
@@ -50,7 +50,7 @@ public class UiComponentCreator {
         } catch (IOException e) {
             throw new RuntimeException(e); // If we failed to load the View then it is likely the rest of the program will not work. Throw error.
         }
-        ParagraphQuestionForm controller = fxmlLoader.getController();
+        ParagraphQuestionFormController controller = fxmlLoader.getController();
         return new Pair<>(parent, controller);
     }
 

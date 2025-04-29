@@ -1,7 +1,7 @@
 package team.logica_populi.dragonscore.base.logic;
 
 /**
- * A simple implementation of {@link AbstractQuestion} with only ywo answers being true and false
+ * A simple implementation of {@link AbstractQuestion} with only two answers being true and false
  */
 public class TrueFalseQuestion extends AbstractQuestion {
 

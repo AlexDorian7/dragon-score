@@ -13,16 +13,11 @@ import team.logica_populi.dragonscore.base.logic.Answer;
 import team.logica_populi.dragonscore.base.logic.BooleanLogicTreeNode;
 import team.logica_populi.dragonscore.base.logic.Question;
 import team.logica_populi.dragonscore.base.points.SubmissionCode;
-import team.logica_populi.dragonscore.base.points.SubmissionSystem;
 import team.logica_populi.dragonscore.ui.UiComponentCreator;
 import team.logica_populi.dragonscore.ui.controllers.*;
 
-import java.io.File;
-import java.io.IOException;
-import java.nio.file.Files;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Objects;
 import java.util.logging.Logger;
 
 /**
@@ -216,7 +211,7 @@ public class DragonHandler {
          if (lesson.getFormType() != null) {
              switch (lesson.getFormType()) {
                  case("PARAGRAPH"):
-                     Pair<Parent, ParagraphQuestionForm> paragraphQuestionFormPane = UiComponentCreator.createParagraphQuestionFormPane();
+                     Pair<Parent, ParagraphQuestionFormController> paragraphQuestionFormPane = UiComponentCreator.createParagraphQuestionFormPane();
                      questionController = paragraphQuestionFormPane.getValue();
                      questionScene = new Scene(paragraphQuestionFormPane.getKey());
                      break;

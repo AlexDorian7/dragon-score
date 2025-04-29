@@ -16,9 +16,9 @@ import java.util.List;
 import java.util.function.Consumer;
 import java.util.logging.Logger;
 
-public class ParagraphQuestionForm implements IQuestionFormController {
+public class ParagraphQuestionFormController implements IQuestionFormController {
 
-    private static final Logger logger = Logger.getLogger(ParagraphQuestionForm.class.getName());
+    private static final Logger logger = Logger.getLogger(ParagraphQuestionFormController.class.getName());
     private static final Font DEFAULT_FONT = new Font("System Default", 13);
     private static final Font BOLD_DEFAULT_FONT = new Font("System Bold", 13);
     private static final Font QUESTION_FONT = new Font("System Default", 16);
