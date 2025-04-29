@@ -219,14 +219,14 @@ public class QuestionFormController implements IQuestionFormController {
                 if (isCorrect) {
                     // correct answer → green
                     btn.setStyle(
-                            "-fx-background-color: lightcoral;" +
+                            "-fx-background-color: lightgreen;" +
                                     "-fx-padding: 1 4 1 4;" +
                                     "-fx-background-radius: 2;"
                     );
                 } else if (btn.isSelected()) {
                     // wrong selection → red
                     btn.setStyle(
-                            "-fx-background-color: lightgreen;" +
+                            "-fx-background-color: lightcoral;" +
                                     "-fx-padding: 1 4 1 4;" +
                                     "-fx-background-radius: 2;"
                     );
