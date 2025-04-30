@@ -78,11 +78,19 @@ public abstract class AbstractQuestion implements Question {
         return string.toString();
     }
 
+    /**
+     * Gets any extra content tied to this question.
+     * @return The tied extra content
+     */
     @Override
     public @Nullable Object getExtra() {
         return extra;
     }
 
+    /**
+     * Sets extra content tied to this question
+     * @param extra The extra content to tie
+     */
     public void setExtra(@Nullable Object extra) {
         this.extra = extra;
     }
