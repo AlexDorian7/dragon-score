@@ -468,7 +468,7 @@
             },
             {
               "answer": "Has non-essential properties",
-              "correct": false
+              "correct": true
             }
           ]
         },
@@ -1133,7 +1133,7 @@
           ]
         },
         {
-          "question": "A politician is a scoundrel involved in politics.",
+          "question": "A politician is a scoundrel involved in making laws.",
           "answers": [
             {
               "answer": "Too broad",
@@ -1141,7 +1141,7 @@
             },
             {
               "answer": "Too narrow",
-              "correct": true
+              "correct": false
             },
             {
               "answer": "Circular",
@@ -1826,7 +1826,7 @@
           ]
         },
         {
-          "question": "Logic is defined as that subject that is treated by LogiCola.",
+          "question": "Logic is defined as that subject that is treated by LogiQuest.",
           "answers": [
             {
               "answer": "Too broad",
