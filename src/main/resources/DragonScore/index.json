@@ -9,7 +9,7 @@
     "id": "lesson_syllogistic_translations_easy",
     "name": "Week 2 Syllogistic Logic - Easier Translations",
     "description": "Syllogistic logic studies arguments whose validity depends on \"all,\" \"no,\" \"some,\" and similar notions.\nThis lesson is about translating sentences into syllogistic logic. It goes with the \"Syllogistic Logic\" chapter of Harry J. Gensler's Introduction to Logic (Routledge Press).",
-    "location": "DragonScore:lessons/syllogistic_translations.json"
+    "location": "DragonScore:lessons/syllogistic_translations_easy.json"
   },
   {
     "id": "lesson_syllogistic_arguments_how_to_star",
@@ -33,7 +33,7 @@
     "id": "lesson_syllogistic_translations_hard",
     "name": "Week 3 Syllogistic Logic – Harder Translations",
     "description": "Syllogistic logic studies arguments whose validity depends on \"all,\" \"no,\" \"some,\" and similar notions.\nThis lesson is about translating sentences into syllogistic logic. It goes with the \"Syllogistic Logic\" chapter of Harry J. Gensler's Introduction to Logic (Routledge Press).",
-    "location": "DragonScore:lessons/MISSINGNO"
+    "location": "DragonScore:lessons/syllogistic_translations_hard.json"
   },
   {
     "id": "lesson_syllogistic_arguments_find_conclusion",

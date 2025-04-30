@@ -150,6 +150,7 @@
       { "word": "diplomats", "type": "NOUN" },
       { "word": "diabetics", "type": "NOUN" },
       { "word": "engineers", "type": "NOUN" },
+      { "word": "grocers", "type": "NOUN" },
       { "word": "foresters", "type": "NOUN" },
       { "word": "journalists", "type": "NOUN" },
       { "word": "landscapers", "type": "NOUN" },
@@ -178,6 +179,7 @@
       { "word": "diabetic", "type": "NOUN" },
       { "word": "engineer", "type": "NOUN" },
       { "word": "forester", "type": "NOUN" },
+      { "word": "grocer", "type": "NOUN" },
       { "word": "journalist", "type": "NOUN" },
       { "word": "landscaper", "type": "NOUN" },
       { "word": "librarian", "type": "NOUN" },
@@ -215,6 +217,39 @@
       { "word": "Alaska", "type": "PRO_NOUN" },
       { "word": "Colorado", "type": "PRO_NOUN" },
       { "word": "Maryland", "type": "PRO_NOUN" }
+    ],
+    "names": [
+      { "word": "Dr. Steineger", "type": "PRO_NOUN" },
+      { "word": "Alex", "type": "PRO_NOUN" },
+      { "word": "Derek", "type": "PRO_NOUN" },
+      { "word": "Eric", "type": "PRO_NOUN" },
+      { "word": "Lance", "type": "PRO_NOUN" },
+      { "word": "Nick", "type": "PRO_NOUN" },
+      { "word": "Lia", "type": "PRO_NOUN" },
+      { "word": "Dan", "type": "PRO_NOUN" },
+      { "word": "Bob", "type": "PRO_NOUN" },
+      { "word": "Joe", "type": "PRO_NOUN" },
+      { "word": "Jane", "type": "PRO_NOUN" },
+      { "word": "Zack", "type": "PRO_NOUN" },
+      { "word": "Samson", "type": "PRO_NOUN" },
+      { "word": "Seth", "type": "PRO_NOUN" },
+      { "word": "Andrew", "type": "PRO_NOUN" },
+      { "word": "Adam", "type": "PRO_NOUN" },
+      { "word": "Jay", "type": "PRO_NOUN" },
+      { "word": "Marcus", "type": "PRO_NOUN" },
+      { "word": "George", "type": "PRO_NOUN" }
+    ],
+    "is": [
+      { "word": "is", "type": "VERB" },
+      { "word": "is not", "type": "VERB" }
+    ],
+    "all": [
+      { "word": "All", "type": "ADJ" },
+      { "word": "No", "type": "ADJ" }
+    ],
+    "are": [
+      { "word": "are", "type": "VERB" },
+      { "word": "are not", "type": "VERB" }
     ]
   },
   "lessons": [],

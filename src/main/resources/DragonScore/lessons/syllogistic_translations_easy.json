@@ -1,0 +1,305 @@
+{
+  "requires": [
+    "DragonScore:requires/terms.json"
+  ],
+  "terms": {},
+  "lessons": [
+    {
+      "id": "lesson_syllogistic_translations_easy",
+      "name": "Syllogistic Translations",
+      "description": "Syllogistic logic studies arguments whose validity depends on \"all,\" \"no,\" \"some,\" and similar notions.\nThis lesson is about translating sentences into syllogistic logic. It goes with the \"Syllogistic Logic\" chapter of Harry J. Gensler's Introduction to Logic (Routledge Press).",
+      "randomize": true,
+      "pointsRequired": 100,
+      "questionGenerators": [
+        "team.logica_populi.dragonscore.base.logic.generators.FormGenerator"
+      ],
+      "staticQuestions": []
+    }
+  ],
+  "forms": [
+    {
+      "id": "no",
+      "fields": [
+        {
+          "id": "person_type",
+          "list": "people_types_s"
+        },
+        {
+          "id": "adj_1",
+          "list": "adjectives"
+        },
+        {
+          "id": "adj_2",
+          "list": "adjectives"
+        }
+      ],
+      "form": "<pre>\"No ${adj_1} ${person_type} is ${adj_2}.\"</pre><p>Translates into logic as:</p>",
+      "answerForms": [
+        {
+          "form": "$L{person_type} is not $U{adj_2}",
+          "correct": false
+        },
+        {
+          "form": "All $U{person_type} is $U{adj_2}",
+          "correct": false
+        },
+        {
+          "form": "$U{person_type} is not $U{adj_2}",
+          "correct": false
+        },
+        {
+          "form": "No $U{person_type} is $U{adj_2}",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "id": "all_no",
+      "fields": [
+        {
+          "id": "type",
+          "list": "all"
+        },
+        {
+          "id": "people_type",
+          "list": "people_types_p"
+        },
+        {
+          "id": "adj",
+          "list": "adjectives"
+        },
+        {
+          "id": "location",
+          "list": "locations"
+        },
+        {
+          "id": "comparator",
+          "list": "comparators"
+        }
+      ],
+      "form": "<pre>\"${type} ${people_type} in ${location} ${comparator} people who are ${adj}.\"</pre><p>Translates into logic as:</p>",
+      "answerForms": [
+        {
+          "form": "$F{type} $L{people_type} is $U{comparator}",
+          "correct": false
+        },
+        {
+          "form": "$F{type} $U{comparator} is $L{people_type}",
+          "correct": false
+        },
+        {
+          "form": "$F{type} $U{people_type} is $U{comparator}",
+          "correct": true
+        },
+        {
+          "form": "$U{people_type} is $U{comparator}",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "is_s",
+      "fields": [
+        {
+          "id": "type",
+          "list": "is"
+        },
+        {
+          "id": "name",
+          "list": "names"
+        },
+        {
+          "id": "adj",
+          "list": "adjectives"
+        },
+        {
+          "id": "location",
+          "list": "locations"
+        }
+      ],
+      "form": "<pre>\"${name} ${type} the ${adj} one in ${location}.\"</pre><p>Translates into logic as:</p>",
+      "answerForms": [
+        {
+          "form": "$U{name} $F{type} $L{adj}",
+          "correct": false
+        },
+        {
+          "form": "$U{name} $F{type} $U{adj}",
+          "correct": false
+        },
+        {
+          "form": "$L{name} $F{type} $L{adj}",
+          "correct": true
+        },
+        {
+          "form": "$L{name} $F{type} $U{adj}",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "is_not_s",
+      "fields": [
+        {
+          "id": "name",
+          "list": "names"
+        },
+        {
+          "id": "adj",
+          "list": "adjectives"
+        },
+        {
+          "id": "person_type",
+          "list": "people_types_s"
+        }
+      ],
+      "form": "<pre>\"${name} isn't the most ${adj} ${person_type}.\"</pre><p>Translates into logic as:</p>",
+      "answerForms": [
+        {
+          "form": "$U{name} is not $L{person_type}",
+          "correct": false
+        },
+        {
+          "form": "$U{name} is not $U{person_type}",
+          "correct": false
+        },
+        {
+          "form": "$L{name} is not $L{person_type}",
+          "correct": true
+        },
+        {
+          "form": "$L{name} is not $U{person_type}",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "is_p",
+      "fields": [
+        {
+          "id": "type",
+          "list": "is"
+        },
+        {
+          "id": "name",
+          "list": "names"
+        },
+        {
+          "id": "adj",
+          "list": "adjectives"
+        },
+        {
+          "id": "location",
+          "list": "locations"
+        }
+      ],
+      "form": "<pre>\"${name} ${type} a ${adj} person in ${location}.\"</pre><p>Translates into logic as:</p>",
+      "answerForms": [
+        {
+          "form": "$U{name} $F{type} $L{adj}",
+          "correct": false
+        },
+        {
+          "form": "$U{name} $F{type} $U{adj}",
+          "correct": false
+        },
+        {
+          "form": "$L{name} $F{type} $L{adj}",
+          "correct": true
+        },
+        {
+          "form": "$L{name} $F{type} $U{adj}",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "some",
+      "fields": [
+        {
+          "id": "type",
+          "list": "all"
+        },
+        {
+          "id": "people_type",
+          "list": "people_types_p"
+        },
+        {
+          "id": "adj_1",
+          "list": "adjectives"
+        },
+        {
+          "id": "adj_2",
+          "list": "adjectives"
+        },
+        {
+          "id": "location",
+          "list": "locations"
+        }
+      ],
+      "form": "<pre>\"Some ${adj_1} ${people_type} ${type} ${adj_2} people in ${location}.\"</pre><p>Translates into logic as:</p>",
+      "answerForms": [
+        {
+          "form": "Some $L{people_type} $F{type} $U{adj_2}",
+          "correct": false
+        },
+        {
+          "form": "Some $U{people_type} $F{type} $L{adj_2}",
+          "correct": false
+        },
+        {
+          "form": "$U{people_type} is not $U{adj_2}",
+          "correct": false
+        },
+        {
+          "form": "Some $U{people_type} $F{type} $U{adj_2}",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "id": "some_2",
+      "fields": [
+        {
+          "id": "type",
+          "list": "all"
+        },
+        {
+          "id": "people_type",
+          "list": "people_types_p"
+        },
+        {
+          "id": "adj_1",
+          "list": "adjectives"
+        },
+        {
+          "id": "adj_2",
+          "list": "adjectives"
+        },
+        {
+          "id": "location",
+          "list": "locations"
+        }
+      ],
+      "form": "<pre>\"Some ${adj_1} people ${type} people in ${location}.\"</pre><p>Translates into logic as:</p>",
+      "answerForms": [
+        {
+          "form": "Some $L{adj_1} $F{type} $U{location}",
+          "correct": false
+        },
+        {
+          "form": "Some $U{adj_1} $F{type} $L{location}",
+          "correct": false
+        },
+        {
+          "form": "$U{adj_1} is not $U{location}",
+          "correct": false
+        },
+        {
+          "form": "Some $U{adj_1} $F{type} $U{location}",
+          "correct": true
+        }
+      ]
+    }
+  ]
+}
