@@ -73,7 +73,7 @@
           "list": "comparators"
         }
       ],
-      "form": "<p>\"All ${people_type} in ${location} ${comparator} people who are ${adj}.\"<br/>\tTranslates into logic as:</p>",
+      "form": "<pre>\"All ${people_type} in ${location} ${comparator} people who are ${adj}.\"</pre><p>Translates into logic as:</p>",
       "answerForms": [
         {
           "form": "all $L{people_type} is $U{comparator}",
