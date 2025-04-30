@@ -72,19 +72,19 @@
       "form": "<pre>\"People who are ${people_type} in ${location} are people who are ${adj}.\"</pre><p>Translates into logic as:</p>",
       "answerForms": [
         {
-          "form": "All $L{people_type} is $U{comparator}",
+          "form": "All $L{people_type} is $U{adj}",
           "correct": false
         },
         {
-          "form": "All $U{comparator} is $L{people_type}",
+          "form": "All $U{adj} is $L{people_type}",
           "correct": false
         },
         {
-          "form": "All $U{people_type} is $U{comparator}",
+          "form": "All $U{people_type} is $U{adj}",
           "correct": true
         },
         {
-          "form": "$U{people_type} is $U{comparator}",
+          "form": "$U{people_type} is $U{adj}",
           "correct": false
         }
       ]
@@ -242,7 +242,7 @@
       "fields": [
         {
           "id": "type",
-          "list": "all"
+          "list": "are"
         },
         {
           "id": "people_type",
@@ -264,19 +264,19 @@
       "form": "<pre>\"One or more ${adj_1} ${people_type} ${type} ${adj_2} people in ${location}.\"</pre><p>Translates into logic as:</p>",
       "answerForms": [
         {
-          "form": "Some $L{people_type} $F{type} $U{adj_2}",
+          "form": "Some $L{adj_1} $F{type} $U{adj_2}",
           "correct": false
         },
         {
-          "form": "Some $U{people_type} $F{type} $L{adj_2}",
+          "form": "Some $U{adj_1} $F{type} $L{adj_2}",
           "correct": false
         },
         {
-          "form": "$U{people_type} is not $U{adj_2}",
+          "form": "$U{adj_1} is not $U{adj_2}",
           "correct": false
         },
         {
-          "form": "Some $U{people_type} $F{type} $U{adj_2}",
+          "form": "Some $U{adj_1} $F{type} $U{adj_2}",
           "correct": true
         }
       ]
@@ -286,7 +286,7 @@
       "fields": [
         {
           "id": "type",
-          "list": "all"
+          "list": "are"
         },
         {
           "id": "people_type",

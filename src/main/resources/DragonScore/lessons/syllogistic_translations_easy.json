@@ -218,7 +218,7 @@
       "fields": [
         {
           "id": "type",
-          "list": "all"
+          "list": "are"
         },
         {
           "id": "people_type",
@@ -262,7 +262,7 @@
       "fields": [
         {
           "id": "type",
-          "list": "all"
+          "list": "are"
         },
         {
           "id": "people_type",
