@@ -1,7 +1,6 @@
-Some {pnoun1} don't forget any {adj2} people
+Some {peopletypesp1} don't forget any {adj2} people
  *  some U1 is not U2
     U1 is not U2
     some U1 us U2
     some L1 is not U2
 
-All {pnoun1} in {location} admire people who are {adj}

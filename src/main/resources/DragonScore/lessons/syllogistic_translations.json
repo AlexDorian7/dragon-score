@@ -5,7 +5,7 @@
   "terms": {},
   "lessons": [
     {
-      "id": "lesson_syllogistic_translations",
+      "id": "lesson_syllogistic_translations_easy",
       "name": "Syllogistic Translations",
       "description": "Syllogistic logic studies arguments whose validity depends on \"all,\" \"no,\" \"some,\" and similar notions.\nThis lesson is about translating sentences into syllogistic logic. It goes with the \"Syllogistic Logic\" chapter of Harry J. Gensler's Introduction to Logic (Routledge Press).",
       "randomize": true,
@@ -21,12 +21,8 @@
       "id": "form_1",
       "fields": [
         {
-          "id": "noun_1",
-          "list": "nouns"
-        },
-        {
-          "id": "pro_noun_1",
-          "list": "pro_nouns"
+          "id": "person_type",
+          "list": "people_types_s"
         },
         {
           "id": "adj_1",
@@ -37,15 +33,23 @@
           "list": "adjectives"
         }
       ],
-      "form": "<p>The ${adj_1} ${noun_1|pro_noun_1} is ${adj_2}.</p>",
+      "form": "<pre>\"No ${adj_1} ${person_type} is ${adj_2}\"</pre><p>Translates into logic as:</p>",
       "answerForms": [
         {
-          "form": "$L{adj_1} is $L{adj_2}",
-          "correct": true
+          "form": "$L{person_type} is not $U{adj_2}",
+          "correct": false
         },
         {
-          "form": "$U{adj_1} is $U{adj_2}",
+          "form": "all $U{person_type} is $U{adj_2}",
           "correct": false
+        },
+        {
+          "form": "$U{person_type} is not $U{adj_2}",
+          "correct": false
+        },
+        {
+          "form": "no $U{person_type} is $U{adj_2}",
+          "correct": true
         }
       ]
     },
@@ -53,162 +57,38 @@
       "id": "form_2",
       "fields": [
         {
-          "id": "noun_1",
-          "list": "nouns"
+          "id": "people_type",
+          "list": "people_types_p"
         },
         {
-          "id": "noun_2",
-          "list": "nouns"
-        },
-        {
-          "id": "art_1",
-          "list": "articles_s"
-        },
-        {
-          "id": "art_2",
-          "list": "articles_p"
-        },
-        {
-          "id": "adj_1",
+          "id": "adj",
           "list": "adjectives"
         },
         {
-          "id": "adj_2",
-          "list": "adjectives"
+          "id": "location",
+          "list": "locations"
+        },
+        {
+          "id": "comparator",
+          "list": "comparators"
         }
       ],
-      "form": "<p>The ${adj_1} ${noun_1} is a ${adj_2} ${noun_2}.</p>",
+      "form": "<p>\"All ${people_type} in ${location} ${comparator} people who are ${adj}.\"<br/>\tTranslates into logic as:</p>",
       "answerForms": [
         {
-          "form": "$L{adj_1} is $U{adj_2}",
-          "correct": true
-        },
-        {
-          "form": "$L{adj_1} is $L{adj_2}",
+          "form": "all $L{people_type} is $U{comparator}",
           "correct": false
-        }
-      ]
-    },
-    {
-      "id": "form_6",
-      "fields": [
-        {
-          "id": "noun_1",
-          "list": "nouns"
         },
         {
-          "id": "adj_1",
-          "list": "adjectives"
-        }
-      ],
-      "form": "<p>Some ${noun_1}s are not ${adj_1}.</p>",
-      "answerForms": [
-        {
-          "form": "Some $U{noun_1}s are not $L{adj_1}",
-          "correct": true
-        },
-        {
-          "form": "All $U{noun_1}s are $L{adj_1}",
+          "form": "all $U{comparator} is $U{people_type}",
           "correct": false
-        }
-      ]
-    },
-    {
-      "id": "form_7",
-      "fields": [
-        {
-          "id": "noun_1",
-          "list": "nouns"
         },
         {
-          "id": "adj_1",
-          "list": "adjectives"
-        }
-      ],
-      "form": "<p>Not all ${noun_1}s are ${adj_1}.</p>",
-      "answerForms": [
-        {
-          "form": "Some $U{noun_1}s are not $L{adj_1}",
+          "form": "all $U{people_type} is $U{comparator}",
           "correct": true
         },
         {
-          "form": "All $U{noun_1}s are $L{adj_1}",
-          "correct": false
-        }
-      ]
-    },
-    {
-      "id": "form_8",
-      "fields": [
-        {
-          "id": "noun_1",
-          "list": "nouns"
-        },
-        {
-          "id": "adj_1",
-          "list": "adjectives"
-        }
-      ],
-      "form": "<p>Only some ${noun_1}s are ${adj_1}.</p>",
-      "answerForms": [
-        {
-          "form": "Some $U{noun_1}s are $L{adj_1} and some $U{noun_1}s are not $L{adj_1}",
-          "correct": true
-        },
-        {
-          "form": "All $U{noun_1}s are $L{adj_1}",
-          "correct": false
-        }
-      ]
-    },
-    {
-      "id": "form_9",
-      "fields": [
-        {
-          "id": "noun_1",
-          "list": "nouns"
-        },
-        {
-          "id": "adj_1",
-          "list": "adjectives"
-        }
-      ],
-      "form": "<p>Few ${noun_1}s are ${adj_1}.</p>",
-      "answerForms": [
-        {
-          "form": "Some $U{noun_1}s are $L{adj_1}, but most are not",
-          "correct": true
-        },
-        {
-          "form": "All $U{noun_1}s are $L{adj_1}",
-          "correct": false
-        }
-      ]
-    },
-    {
-      "id": "form_10",
-      "fields": [
-        {
-          "id": "noun_1",
-          "list": "nouns"
-        },
-        {
-          "id": "adj_1",
-          "list": "adjectives"
-        },
-        {
-          "id": "adj_2",
-          "list": "adjectives"
-        }
-      ],
-      "form": "<p>If a ${noun_1} is ${adj_1}, then it is ${adj_2}.</p>",
-      "answerForms": [
-        {
-          "form": "All $U{noun_1}s that are $L{adj_1} are $L{adj_2}",
-          "correct": true
-        },
-        {
-          "form": "Some $U{noun_1}s that are $L{adj_1} are not $L{adj_2}",
+          "form": "$U{people_type} is $U{comparator}",
           "correct": false
         }
       ]
