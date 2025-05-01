@@ -54,6 +54,7 @@
       <TextField fx:id="fName"
                  promptText="First Name"
                  maxWidth="400"
+                 minWidth="130"
                  prefHeight="40.0"
                  style="-fx-background-color: #FDFDFD;
                       -fx-border-color: #a5a5a5;
@@ -71,6 +72,7 @@
       <TextField fx:id="lName"
                  promptText="Last Name"
                  maxWidth="400"
+                 minWidth="130"
                  prefHeight="40.0"
                  style="-fx-background-color: #FDFDFD;
                       -fx-border-color: #a5a5a5;
@@ -87,14 +89,14 @@
 
       <Button text="Submit"
               onAction="#submit"
-              prefHeight="50.0"
+              prefHeight="45.0"
               maxWidth="400.0"
               minWidth="130"
               style="-fx-background-color: #282828;
                     -fx-text-fill: white;
                     -fx-border-radius: 10;
                     -fx-background-radius: 10;
-                    -fx-font-size: 24px;
+                    -fx-font-size: 22px;
                     -fx-padding: 8 28;
                     -fx-prompt-text-fill: #a2a2a2;"
               onMouseEntered="#handleHover"

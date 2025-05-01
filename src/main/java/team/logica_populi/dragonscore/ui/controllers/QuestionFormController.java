@@ -119,13 +119,12 @@ public class QuestionFormController implements IQuestionFormController {
                 "<html><head>" +
                         "  <style>" +
                         "    body {" +
-                        "      font-family: Helvetica;" +
+                        "      font-family: Verdana;" +
                         "      font-size: 18px;" +
                         "      line-height: 24px;" +
                         "      background: #fdfdfd;" +
-                        "      border: 8px solid #ead8a2;" +
-                        "      border-radius: 10px;" +
                         "      margin: 0;" +
+                        "      maxWidth: 700;" +
                         "      padding: 10px;" +
                         "      color: #000000;" +
                         "    }" +
@@ -203,7 +202,7 @@ public class QuestionFormController implements IQuestionFormController {
         if (progress > 1) progress = 1;
         if (progress < 0) progress = 0;
         progressBar.setProgress(progress);
-        progressBar.setStyle("-fx-accent: #916e09;");
+        progressBar.setStyle("-fx-accent: #dcbe64;");
     }
 
     /**
