@@ -50,7 +50,7 @@
   {
     "id": "lesson_lesson_propositional_translations_easy",
     "name": "Week 4 Propositional Logic - Easier Translations",
-    "description": "PLEASE CHANGE ME",
+    "description": "Propositional logic will test arguments whose validity depends on “if-then,”\n“and,” “or,” “not,” and similar notions",
     "location": "DragonScore:lessons/propositional_translations.json"
   },
   {
@@ -74,7 +74,7 @@
   {
     "id": "lesson_propositional_translations_hard",
     "name": "Week 5 Propositional Logic - Harder Translations",
-    "description": "PLEASE CHANGE ME",
+    "description": "Propositional logic will test arguments whose validity depends on “if-then,”\n“and,” “or,” “not,” and similar notions",
     "location": "DragonScore:lessons/propositional_translations.json"
   },
   {
