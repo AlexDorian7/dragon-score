@@ -1,5 +1,6 @@
 package team.logica_populi.dragonscore.base;
 
+import org.jetbrains.annotations.Nullable;
 import team.logica_populi.dragonscore.base.logic.BaseQuestion;
 import team.logica_populi.dragonscore.base.logic.Question;
 import team.logica_populi.dragonscore.base.logic.generators.QuestionGenerator;
@@ -7,6 +8,7 @@ import team.logica_populi.dragonscore.base.logic.generators.QuestionGenerator;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 import java.util.logging.Logger;
 
 /**
@@ -23,6 +25,9 @@ public class Lesson {
     private final List<QuestionGenerator> questionGenerators;
     private final boolean randomize;
     private final int pointsRequired;
+
+    @Nullable
+    private String formType;
 
     /**
      * Create a lesson using only an internal id.
@@ -199,5 +204,14 @@ public class Lesson {
 
     public int getPointsRequired() {
         return pointsRequired;
+    }
+
+    @Nullable
+    public String getFormType() {
+        return formType;
+    }
+
+    public void setFormType(@Nullable String formType) {
+        this.formType = formType;
     }
 }

@@ -6,12 +6,13 @@ import javafx.scene.text.Text;
 import javafx.scene.control.*;
 import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
+import javafx.scene.input.MouseEvent;
 import team.logica_populi.dragonscore.base.registries.DragonHandler;
 
 import java.util.logging.Logger;
 
 /**
- *
+ * PLEASE COMMENT ME
  */
 public class SubmissionCodeController {
     private static Logger logger;
@@ -28,6 +29,9 @@ public class SubmissionCodeController {
     @FXML
     private Button backToExerciseButton;
 
+    /**
+     * Called by JavaFX.
+     */
     @FXML
     public void initialize(){
         codeArea.setEditable(false);
@@ -64,6 +68,42 @@ public class SubmissionCodeController {
         }
         else{
             logger.info("Current Session is null!");
+        }
+    }
+
+    /** Called when mouse enters either button */
+    @FXML
+    private void handleHover(MouseEvent event) {
+        Button b = (Button) event.getSource();
+        b.setStyle(
+                "-fx-background-color: #000;" +
+                        "-fx-text-fill: #fff;" +
+                        "-fx-border-color: #282828;" +
+                        "-fx-border-width: 2;" +
+                        "-fx-border-radius: 10;" +
+                        "-fx-background-radius: 10;"
+        );
+    }
+
+    @FXML
+    private void handleExit(MouseEvent event) {
+        Button b = (Button) event.getSource();
+        if ("backToExerciseButton".equals(b.getId())) {
+            b.setStyle(
+                    "-fx-background-color: #282828;" +
+                            "-fx-text-fill: white;" +
+                            "-fx-border-radius: 10;" +
+                            "-fx-background-radius: 10;"
+            );
+        } else {  // backToMenuButton
+            b.setStyle(
+                    "-fx-background-color: transparent;" +
+                            "-fx-border-color: #282828;" +
+                            "-fx-border-width: 2;" +
+                            "-fx-border-radius: 10;" +
+                            "-fx-background-radius: 10;" +
+                            "-fx-text-fill: black;"
+            );
         }
     }
 

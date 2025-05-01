@@ -2,7 +2,6 @@ package team.logica_populi.dragonscore.base.points;
 
 import com.google.gson.Gson;
 import team.logica_populi.dragonscore.base.Lesson;
-import team.logica_populi.dragonscore.base.ResourceLocation;
 import team.logica_populi.dragonscore.base.registries.JsonRegistry;
 
 import java.util.*;
@@ -68,7 +67,7 @@ public class PointSystem {
             records.put(name, map);
         }
         // Write to the file.
-        ResourceLocation location = new ResourceLocation("dynamic:points.dat");
-        location.write(gson.toJson(records));
+        //ResourceLocation location = new ResourceLocation("dynamic:points.dat");
+        //location.write(gson.toJson(records));
     }
 }

@@ -1,7 +1,5 @@
 {
-  "requires": [
-    "DragonScore:requires/letters.json"
-  ],
+  "requires": [],
   "terms": {},
   "lessons": [
     {
