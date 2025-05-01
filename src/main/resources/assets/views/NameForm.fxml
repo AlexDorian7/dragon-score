@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
@@ -8,96 +9,38 @@
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
-<?import javafx.geometry.Insets?>
 
-<AnchorPane fx:id="root"
-            prefHeight="600.0"
-            prefWidth="800.0"
-            style="-fx-background-color: #fffce8;"
-            xmlns="http://javafx.com/javafx/23.0.1"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="team.logica_populi.dragonscore.ui.controllers.NameFormController">
+<AnchorPane fx:id="root" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #fffce8;" xmlns="http://javafx.com/javafx/24" xmlns:fx="http://javafx.com/fxml/1" fx:controller="team.logica_populi.dragonscore.ui.controllers.NameFormController">
 
    <!-- Header -->
-   <HBox alignment="CENTER_RIGHT"
-         AnchorPane.leftAnchor="44"
-         AnchorPane.rightAnchor="44"
-         AnchorPane.topAnchor="28">
-      <Label text="LogiQuest"
-             style="-fx-font-family: 'Helvetica';
-               -fx-font-size: 36px;
-               -fx-font-weight: BOLD;
-               -fx-text-fill: #282828;" />
-      <Region fx:id="spacer"
-              HBox.hgrow="ALWAYS" />
+   <HBox alignment="CENTER_RIGHT" AnchorPane.leftAnchor="44" AnchorPane.rightAnchor="44" AnchorPane.topAnchor="28">
+      <Label style="-fx-font-family: 'Helvetica';                -fx-font-size: 36px;                -fx-font-weight: BOLD;                -fx-text-fill: #282828;" text="LogiQuest" />
+      <Region fx:id="spacer" HBox.hgrow="ALWAYS" />
    </HBox>
 
    <!-- Content Area -->
-   <VBox alignment="CENTER"
-         prefWidth="900"
-         AnchorPane.topAnchor="0"
-         AnchorPane.bottomAnchor="0"
-         AnchorPane.leftAnchor="270"
-         AnchorPane.rightAnchor="270"
-         spacing="0">
+   <VBox alignment="CENTER" prefWidth="900" spacing="0" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="270" AnchorPane.rightAnchor="270" AnchorPane.topAnchor="0">
 
-      <Text text="What is your name?"
-            wrappingWidth="600"
-            textAlignment="CENTER"
-            style="-fx-font-size: 42px;
-            -fx-font-weight: 'Segoe UI Semibold';">
+      <Text style="-fx-font-size: 42px;             -fx-font-weight: 'Segoe UI Semibold';" text="What is your name?" textAlignment="CENTER" wrappingWidth="600">
          <VBox.margin>
-            <Insets bottom="28"/>
+            <Insets bottom="28" />
          </VBox.margin>
       </Text>
 
-      <TextField fx:id="fName"
-                 promptText="First Name"
-                 maxWidth="400"
-                 prefHeight="40.0"
-                 style="-fx-background-color: #FDFDFD;
-                      -fx-border-color: #a5a5a5;
-                      -fx-border-width: 1;
-                      -fx-border-style: solid;
-                      -fx-border-radius: 4;
-                      -fx-background-radius: 4;
-                      -fx-prompt-text-fill: #a2a2a2;
-                      -fx-font-size: 16px;">
+      <Label fx:id="nameError" textFill="#da0f00" style="margin-bottom: 20px"/>
+
+      <TextField fx:id="fName" maxWidth="400" onMousePressed="#onFocused" prefHeight="40.0" promptText="First Name" style="-fx-background-color: #FDFDFD;                       -fx-border-color: #a5a5a5;                       -fx-border-width: 1;                       -fx-border-style: solid;                       -fx-border-radius: 4;                       -fx-background-radius: 4;                       -fx-prompt-text-fill: #a2a2a2;                       -fx-font-size: 16px;">
       <VBox.margin>
-         <Insets bottom="14"/>
+         <Insets bottom="14" />
       </VBox.margin>
    </TextField>
 
-      <TextField fx:id="lName"
-                 promptText="Last Name"
-                 maxWidth="400"
-                 prefHeight="40.0"
-                 style="-fx-background-color: #FDFDFD;
-                      -fx-border-color: #a5a5a5;
-                      -fx-border-width: 1;
-                      -fx-border-style: solid;
-                      -fx-border-radius: 4;
-                      -fx-background-radius: 4;
-                      -fx-prompt-text-fill: #a2a2a2;
-                      -fx-font-size: 16px;">
+      <TextField fx:id="lName" maxWidth="400" onMousePressed="#onFocused" prefHeight="40.0" promptText="Last Name" style="-fx-background-color: #FDFDFD;                       -fx-border-color: #a5a5a5;                       -fx-border-width: 1;                       -fx-border-style: solid;                       -fx-border-radius: 4;                       -fx-background-radius: 4;                       -fx-prompt-text-fill: #a2a2a2;                       -fx-font-size: 16px;">
          <VBox.margin>
-            <Insets bottom="20"/>
+            <Insets bottom="20" />
          </VBox.margin>
       </TextField>
 
-      <Button text="Submit"
-              onAction="#submit"
-              prefHeight="50.0"
-              maxWidth="400.0"
-              minWidth="130"
-              style="-fx-background-color: #282828;
-                    -fx-text-fill: white;
-                    -fx-border-radius: 10;
-                    -fx-background-radius: 10;
-                    -fx-font-size: 24px;
-                    -fx-padding: 8 28;
-                    -fx-prompt-text-fill: #a2a2a2;"
-              onMouseEntered="#handleHover"
-              onMouseExited="#handleExit"/>
+      <Button maxWidth="400.0" minWidth="130" onAction="#submit" onMouseEntered="#handleHover" onMouseExited="#handleExit" prefHeight="50.0" style="-fx-background-color: #282828;                     -fx-text-fill: white;                     -fx-border-radius: 10;                     -fx-background-radius: 10;                     -fx-font-size: 24px;                     -fx-padding: 8 28;                     -fx-prompt-text-fill: #a2a2a2;" text="Submit" />
    </VBox>
 </AnchorPane>
