@@ -201,11 +201,11 @@
         },
         {
           "form": "$U{name} $F{type} $U{adj}",
-          "correct": false
+          "correct": true
         },
         {
           "form": "$L{name} $F{type} $L{adj}",
-          "correct": true
+          "correct": false
         },
         {
           "form": "$L{name} $F{type} $U{adj}",
