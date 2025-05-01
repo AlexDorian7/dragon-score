@@ -4,307 +4,223 @@
   "lessons": [
     {
       "id": "informal_fallacies",
-      "name": "Informal Fallacies",
+      "name": "Fallacies",
       "description": "Deal with characteristics of a good argument, recognizing common fallacies, avoiding inconsistency, developing your own arguments, and analyzing arguments that you read.",
       "randomize": false,
       "pointsRequired": 100,
       "questionGenerators": [],
       "staticQuestions": [
-        {
-          "id": 1,
-          "question": "Are you still wasting time with all that book-learning at the university?",
-          "fallacy": "complex question",
-          "abbreviation": "cq"
-        },
-        {
-          "id": 2,
-          "question": "The Bible tells the truth because it’s God’s word. We know the Bible is God’s word because the Bible says so and it tells the truth.",
-          "fallacy": "circular",
-          "abbreviation": "ci"
-        },
-        {
-          "id": 3,
-          "question": "You should vote for this candidate because she’s intelligent and has much experience in politics.",
-          "fallacy": "beside the point",
-          "abbreviation": "bp"
-        },
-        {
-          "id": 4,
-          "question": "The Equal Rights Amendment was foolish because its feminist sponsors were nothing but bra-less bubbleheads.",
-          "fallacy": "ad hominem",
-          "abbreviation": "ah"
-        },
-        {
-          "id": 5,
-          "question": "No one accepts this theory anymore, so it must be wrong.",
-          "fallacy": "appeal to the crowd",
-          "abbreviation": "ac"
-        },
-        {
-          "id": 6,
-          "question": "Either you favor a massive arms buildup, or you aren’t a patriotic American.",
-          "fallacy": "black and white",
-          "abbreviation": "bw"
-        },
-        {
-          "id": 7,
-          "question": "The president’s veto was the right move. In these troubled times we need decisive leadership, even in the face of opposition. We should all thank the president for his courageous move.",
-          "fallacy": "appeal to emotion",
-          "abbreviation": "ae"
-        },
-        {
-          "id": 8,
-          "question": "Each member of this team is unbeatable, so this team must be unbeatable.",
-          "fallacy": "part-whole",
-          "abbreviation": "pw"
-        },
-        {
-          "id": 9,
-          "question": "My doctor told me to lose weight and give up smoking. But she’s an overweight smoker herself, so I can safely ignore her advice.",
-          "fallacy": "ad hominem",
-          "abbreviation": "ah"
-        },
-        {
-          "id": 10,
-          "question": "Belief in God is explained in terms of one’s need for a father figure; so it’s false.",
-          "fallacy": "genetic",
-          "abbreviation": "ge"
-        },
-        {
-          "id": 11,
-          "question": "There are scientific laws. Where there are laws there must be a lawgiver. Hence someone must have set up the scientific laws to govern our universe, and this someone could only be God.",
-          "fallacy": "beside the point",
-          "abbreviation": "bp"
-        },
-        {
-          "id": 12,
-          "question": "The lawyer for the defense claims that there’s doubt that Smith committed the crime. But, I ask, are you going to let this horrible crime go unpunished because of this? Look at the crime; see how horrible it was! So you see clearly that the crime was horrible and that Smith should be convicted.",
-          "fallacy": "appeal to emotion",
-          "abbreviation": "ae"
-        },
-        {
-          "id": 13,
-          "question": "Free speech is for the common good, since unrestrained expression of opinion is in people’s interest.",
-          "fallacy": "circular",
-          "abbreviation": "ci"
-        },
-        {
-          "id": 14,
-          "question": "This is a shocking and stupid proposal. Its author must be either a dishonest bum or a complete idiot.",
-          "fallacy": "ad hominem",
-          "abbreviation": "ah"
-        },
-        {
-          "id": 15,
-          "question": "Aristotle said that heavy objects fall faster than light ones, so it must be true.",
-          "fallacy": "appeal to authority",
-          "abbreviation": "aa"
-        },
-        {
-          "id": 16,
-          "question": "Each of these dozen cookies (or drinks) by itself isn’t harmful; one little one won’t hurt! Hence having these dozen cookies (or drinks) isn’t harmful.",
-          "fallacy": "part-whole",
-          "abbreviation": "pw"
-        },
-        {
-          "id": 17,
-          "question": "Before Barack Obama became the Democratic candidate for US president, he ran in a series of primary elections. He noted that he played basketball before the Iowa primary, and then won the vote, while he neglected to play before the New Hampshire primary, and then lost. He concluded (in jest) “At that point I was certain that we had to play on every primary.”",
-          "fallacy": "post hoc",
-          "abbreviation": "ph"
-        },
-        {
-          "id": 18,
-          "question": "Only men are rational animals. No woman is a man. Therefore no woman is a rational animal.",
-          "fallacy": "false stereotype",
-          "abbreviation": "fs"
-        },
-        {
-          "id": 19,
-          "question": "I’m right, because you flunk if you disagree with me!",
-          "fallacy": "appeal to force",
-          "abbreviation": "af"
-        },
-        {
-          "id": 20,
-          "question": "The discriminating backpacker prefers South Glacier tents.",
-          "fallacy": "ambiguous",
-          "abbreviation": "am"
-        },
-        {
-          "id": 21,
-          "question": "Those who opposed the war were obviously wrong; they were just a bunch of cowardly homosexual Communists.",
-          "fallacy": "ad hominem",
-          "abbreviation": "ah"
-        },
-        {
-          "id": 22,
-          "question": "We should legalize gambling in our state, because it would bring in new tax revenue, encourage tourists to come and spend money here, and cost nothing (just the passing of a new law).",
-          "fallacy": "pro-con",
-          "abbreviation": "pc"
-        },
-        {
-          "id": 23,
-          "question": "Do you want to be a good little boy and go to bed?",
-          "fallacy": "appeal to emotion",
-          "abbreviation": "ae"
-        },
-        {
-          "id": 24,
-          "question": "This man is probably a Communist. After all, nothing in the files disproves his Communist connections.",
-          "fallacy": "appeal to ignorance",
-          "abbreviation": "ai"
-        },
-        {
-          "id": 25,
-          "question": "People who read Fortune magazine make a lot of money. So if I subscribe to Fortune, then I too will make a lot of money.",
-          "fallacy": "post hoc",
-          "abbreviation": "ph"
-        },
-        {
-          "id": 26,
-          "question": "Feminists deny all difference between male and female. But this is absurd, as anyone with eyes can see.",
-          "fallacy": "straw man",
-          "abbreviation": "sm"
-        },
-        {
-          "id": 27,
-          "question": "Each part of life (eyes, feet, and so on) has a purpose. Hence life itself must have a purpose.",
-          "fallacy": "part-whole",
-          "abbreviation": "pw"
-        },
-        {
-          "id": 28,
-          "question": "So you’re a business major? You must be one of those people who care only about the almighty dollar and aren’t concerned about ideas.",
-          "fallacy": "false stereotype",
-          "abbreviation": "fs"
-        },
-        {
-          "id": 29,
-          "question": "My opponent hasn’t proved that I obtained these campaign funds illegally. So we must conclude that I’m innocent.",
-          "fallacy": "appeal to ignorance",
-          "abbreviation": "ai"
-        },
-        {
-          "id": 30,
-          "question": "Those dirty Communists said that we Americans should withdraw from the Panama Canal, so obviously we should have stayed there.",
-          "fallacy": "opposition",
-          "abbreviation": "op"
-        },
-        {
-          "id": 31,
-          "question": "Karl Marx was a personal failure who couldn’t even support his family, so his political theory must be wrong.",
-          "fallacy": "ad hominem",
-          "abbreviation": "ah"
-        },
-        {
-          "id": 32,
-          "question": "Religion originated from myth (which consists of superstitious errors). So religion must be false.",
-          "fallacy": "genetic",
-          "abbreviation": "ge"
-        },
-        {
-          "id": 33,
-          "question": "Suzy brushed with Ultra Brilliant and then attracted boys like a magnet! Wow – I’m going to get some Ultra Brilliant. Then I’ll attract boys too!",
-          "fallacy": "post hoc",
-          "abbreviation": "ph"
-        },
-        {
-          "id": 34,
-          "question": "Did you kill the butler because you hated him or because you were greedy?",
-          "fallacy": "complex question",
-          "abbreviation": "cq"
-        },
-        {
-          "id": 35,
-          "question": "My parents will be mad at me if I get a D, and I’ll feel so stupid. Please? You know how I loved your course. I surely deserve at least a C.",
-          "fallacy": "appeal to emotion",
-          "abbreviation": "ae"
-        },
-        {
-          "id": 36,
-          "question": "Miracles are impossible because they simply can’t happen.",
-          "fallacy": "circular",
-          "abbreviation": "ci"
-        },
-        {
-          "id": 37,
-          "question": "I figure that a person must be a Communist if he doesn’t think the American free-enterprise system is flawless and the greatest system in the world.",
-          "fallacy": "false stereotype",
-          "abbreviation": "fs"
-        },
-        {
-          "id": 38,
-          "question": "Everyone thinks this beer is simply the best. So it must be the best.",
-          "fallacy": "appeal to the crowd",
-          "abbreviation": "ac"
-        },
-        {
-          "id": 39,
-          "question": "We ought to oppose this, since it’s un-American.",
-          "fallacy": "opposition",
-          "abbreviation": "op"
-        },
-        {
-          "id": 40,
-          "question": "Practically every heroin addict first tried marijuana. Therefore, marijuana causes heroin addiction.",
-          "fallacy": "post hoc",
-          "abbreviation": "ph"
-        },
-        {
-          "id": 41,
-          "question": "Most college students are mainly concerned with sports, liquor, and sex. So this is normal. But Duane is mainly concerned with poetry. So he must be abnormal and thus unhealthy.",
-          "fallacy": "false stereotype",
-          "abbreviation": "fs"
-        },
-        {
-          "id": 42,
-          "question": "Each of the things in my backpack is light, so my loaded backpack must be light.",
-          "fallacy": "part-whole",
-          "abbreviation": "pw"
-        },
-        {
-          "id": 43,
-          "question": "You’re wrong in disagreeing with me, because what I said is true.",
-          "fallacy": "circular",
-          "abbreviation": "ci"
-        },
-        {
-          "id": 44,
-          "question": "Everyone thinks the Democrat is the better candidate, so it must be true.",
-          "fallacy": "appeal to the crowd",
-          "abbreviation": "ac"
-        },
-        {
-          "id": 45,
-          "question": "We should reject Mendel’s genetic theories, since he was a monk and thus couldn’t have known anything about science.",
-          "fallacy": "genetic",
-          "abbreviation": "ge"
-        },
-        {
-          "id": 46,
-          "question": "Every time I backpack it seems to rain. I’m going backpacking next week. So this will cause it to rain.",
-          "fallacy": "post hoc",
-          "abbreviation": "ph"
-        },
-        {
-          "id": 47,
-          "question": "It hasn’t been proved that cigarettes are dangerous, so it’s only reasonable to conclude that they aren’t dangerous.",
-          "fallacy": "appeal to ignorance",
-          "abbreviation": "ai"
-        },
-        {
-          "id": 48,
-          "question": "In a commercial filled with superb scenery, sexy girls, and soft music: “Buy a Ford Mustang – it’s a super car!”",
-          "fallacy": "appeal to emotion",
-          "abbreviation": "ae"
-        },
-        {
-          "id": 49,
-          "question": "Atheism is absurd. Atheists deny God because they can’t see him. But who has seen electrons either?",
-          "fallacy": "straw man",
-          "abbreviation": "sm"
-        }
-      ]
-    }
-  ]
-}
+          {
+            "question": "Aristotle said that heavy objects fall faster than light ones, so it must be true.",
+            "answers": [
+              { "answer": "Appeal to authority [aa]", "correct": true },
+              { "answer": "Valid scientific claim", "correct": false }
+            ]
+          },
+          {
+            "question": "No one accepts this theory anymore, so it must be wrong.",
+            "answers": [
+              { "answer": "Appeal to the crowd [ac]", "correct": true },
+              { "answer": "Scientific consensus", "correct": false }
+            ]
+          },
+          {
+            "question": "The president’s veto was the right move. In these troubled times we need decisive leadership, even in the face of opposition. We should all thank the president for his courageous move.",
+            "answers": [
+              { "answer": "Appeal to emotion [ae]", "correct": true },
+              { "answer": "Rational justification", "correct": false }
+            ]
+          },
+          {
+            "question": "I’m right, because you flunk if you disagree with me!",
+            "answers": [
+              { "answer": "Appeal to force [af]", "correct": true },
+              { "answer": "Rational argument", "correct": false }
+            ]
+          },
+          {
+            "question": "This is a shocking and stupid proposal. Its author must be either a dishonest bum or a complete idiot.",
+            "answers": [
+              { "answer": "Ad hominem [ah]", "correct": true },
+              { "answer": "Substantive critique", "correct": false }
+            ]
+          },
+          {
+            "question": "There’s no evidence proving ghosts don’t exist. Therefore, they must exist.",
+            "answers": [
+              { "answer": "Appeal to ignorance [ai]", "correct": true },
+              { "answer": "Scientific argument", "correct": false }
+            ]
+          },
+          {
+            "question": "Free speech is for the common good, since unrestrained expression of opinion is in people’s interest.",
+            "answers": [
+              { "answer": "Circular reasoning [ci]", "correct": true },
+              { "answer": "Valid support", "correct": false }
+            ]
+          },
+          {
+            "question": "Each of these dozen cookies by itself isn’t harmful; one little one won’t hurt! Hence having these dozen cookies isn’t harmful.",
+            "answers": [
+              { "answer": "Part-whole fallacy [pw]", "correct": true },
+              { "answer": "Valid reasoning", "correct": false }
+            ]
+          },
+          {
+            "question": "Belief in God is explained in terms of one’s need for a father figure; so it’s false.",
+            "answers": [
+              { "answer": "Genetic fallacy [ge]", "correct": true },
+              { "answer": "Logical rebuttal", "correct": false }
+            ]
+          },
+          {
+            "question": "Either you favor a massive arms buildup, or you aren’t a patriotic American.",
+            "answers": [
+              { "answer": "Black and white fallacy [bw]", "correct": true },
+              { "answer": "Sound reasoning", "correct": false }
+            ]
+          },
+          {
+              "question": "Are you still wasting time with all that book-learning at the university?",
+              "answers": [
+                { "answer": "Ad hominem [ah]", "correct": true },
+                { "answer": "Genuine inquiry", "correct": false }
+              ]
+            },
+            {
+              "question": "The Bible tells the truth because it’s God’s word. We know the Bible is God’s word because the Bible says so and it tells the truth.",
+              "answers": [
+                { "answer": "Circular reasoning [ci]", "correct": true },
+                { "answer": "Valid theological claim", "correct": false }
+              ]
+            },
+            {
+              "question": "You should vote for this candidate because she’s intelligent and has much experience in politics.",
+              "answers": [
+                { "answer": "No fallacy", "correct": true },
+                { "answer": "Ad hominem [ah]", "correct": false }
+              ]
+            },
+            {
+              "question": "The Equal Rights Amendment was foolish because its feminist sponsors were nothing but bra-less bubbleheads.",
+              "answers": [
+                { "answer": "Ad hominem [ah]", "correct": true },
+                { "answer": "Reasoned opposition", "correct": false }
+              ]
+            },
+            {
+              "question": "No one accepts this theory anymore, so it must be wrong.",
+              "answers": [
+                { "answer": "Appeal to the crowd [ac]", "correct": true },
+                { "answer": "Scientific consensus", "correct": false }
+              ]
+            },
+            {
+              "question": "Either you favor a massive arms buildup, or you aren’t a patriotic American.",
+              "answers": [
+                { "answer": "Black and white fallacy [bw]", "correct": true },
+                { "answer": "Balanced perspective", "correct": false }
+              ]
+            },
+            {
+              "question": "The president’s veto was the right move. In these troubled times we need decisive leadership, even in the face of opposition. We should all thank the president for his courageous move.",
+              "answers": [
+                { "answer": "Appeal to emotion [ae]", "correct": true },
+                { "answer": "Evidence-based analysis", "correct": false }
+              ]
+            },
+            {
+              "question": "Each member of this team is unbeatable, so this team must be unbeatable.",
+              "answers": [
+                { "answer": "Part-whole fallacy [pw]", "correct": true },
+                { "answer": "Logical deduction", "correct": false }
+              ]
+            },
+            {
+              "question": "My doctor told me to lose weight and give up smoking. But she’s an overweight smoker herself, so I can safely ignore her advice.",
+              "answers": [
+                { "answer": "Ad hominem [ah]", "correct": true },
+                { "answer": "Dismissal by evidence", "correct": false }
+              ]
+            },
+            {
+              "question": "Belief in God is explained in terms of one’s need for a father figure; so it’s false.",
+              "answers": [
+                { "answer": "Genetic fallacy [ge]", "correct": true },
+                { "answer": "Reasonable argument", "correct": false }
+              ]
+            },
+            {
+              "question": "There are scientific laws. Where there are laws there must be a lawgiver. Hence someone must have set up the scientific laws to govern our universe, and this someone could only be God.",
+              "answers": [
+                { "answer": "Complex question [cq]", "correct": true },
+                { "answer": "Empirical inference", "correct": false }
+              ]
+            },
+            {
+              "question": "The lawyer for the defense claims that there’s doubt that Smith committed the crime. But, I ask, are you going to let this horrible crime go unpunished because of this?",
+              "answers": [
+                { "answer": "Appeal to emotion [ae]", "correct": true },
+                { "answer": "Due process", "correct": false }
+              ]
+            },
+            {
+              "question": "Free speech is for the common good, since unrestrained expression of opinion is in people’s interest.",
+              "answers": [
+                { "answer": "Circular reasoning [ci]", "correct": true },
+                { "answer": "Defensible position", "correct": false }
+              ]
+            },
+            {
+              "question": "This is a shocking and stupid proposal. Its author must be either a dishonest bum or a complete idiot.",
+              "answers": [
+                { "answer": "Ad hominem [ah]", "correct": true },
+                { "answer": "Reasoned disagreement", "correct": false }
+              ]
+            },
+            {
+              "question": "Aristotle said that heavy objects fall faster than light ones, so it must be true.",
+              "answers": [
+                { "answer": "Appeal to authority [aa]", "correct": true },
+                { "answer": "Scientific basis", "correct": false }
+              ]
+            },
+            {
+              "question": "Each of these dozen cookies by itself isn’t harmful; one little one won’t hurt! Hence having these dozen cookies isn’t harmful.",
+              "answers": [
+                { "answer": "Part-whole fallacy [pw]", "correct": true },
+                { "answer": "Cumulative reasoning", "correct": false }
+              ]
+            },
+            {
+              "question": "Barack Obama joked that playing basketball before a primary led to winning; so they had to play before every primary.",
+              "answers": [
+                { "answer": "Post hoc [ph]", "correct": true },
+                { "answer": "Superstition", "correct": false }
+              ]
+            },
+            {
+              "question": "Only men are rational animals. No woman is a man. Therefore no woman is a rational animal.",
+              "answers": [
+                { "answer": "False stereotype [fs]", "correct": true },
+                { "answer": "Logical deduction", "correct": false }
+              ]
+            },
+            {
+              "question": "I’m right, because you flunk if you disagree with me!",
+              "answers": [
+                { "answer": "Appeal to force [af]", "correct": true },
+                { "answer": "Respect for authority", "correct": false }
+              ]
+            },
+            {
+              "question": "The discriminating backpacker prefers South Glacier tents.",
+              "answers": [
+                { "answer": "Appeal to snobbery [sm]", "correct": true },
+                { "answer": "Expert recommendation", "correct": false }
+              ]
+            }
+          ]
+       }
+    ]
+  }
