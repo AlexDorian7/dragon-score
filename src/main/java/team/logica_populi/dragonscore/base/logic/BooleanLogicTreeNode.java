@@ -59,13 +59,7 @@ public class BooleanLogicTreeNode {
             }
 
             cache = newCache;
-            boolean v1 = getValue();
-            logger.info("Eval: " + v1);
-            boolean val = (v1 == value);
-            logger.info("New Cache: " + newCache);
-            logger.info("Current Cache: " + cache);
-            logger.info("Match: " + val);
-
+            boolean val = (getValue() == value);
             truthful[0] = truthful[0] && val;
         });
 
@@ -89,12 +83,7 @@ public class BooleanLogicTreeNode {
             }
 
             cache = newCache;
-
             boolean val = (getValue() == value);
-//            logger.info("New Cache: " + newCache);
-//            logger.info("Current Cache: " + cache);
-//            logger.info("Match: " + val);
-
             table.put(key, val);
         });
         return table;

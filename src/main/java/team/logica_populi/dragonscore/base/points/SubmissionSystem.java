@@ -1,18 +1,15 @@
 package team.logica_populi.dragonscore.base.points;
 
-import com.google.gson.Gson;
 import team.logica_populi.dragonscore.base.Lesson;
-import team.logica_populi.dragonscore.base.ResourceLocation;
-import team.logica_populi.dragonscore.base.registries.JsonRegistry;
 
 import java.util.HashMap;
 import java.util.logging.Logger;
-import java.util.*;
 
 /**
  * Generates how the submission codes that are stored specific to users when they finish exercises
  */
-public class SubmissionSystem { private static final Logger logger = Logger.getLogger(SubmissionSystem.class.getName());
+public class SubmissionSystem {
+    private static final Logger logger = Logger.getLogger(SubmissionSystem.class.getName());
 
     private final HashMap<String, HashMap<String, String>> submissionRecords;
 
