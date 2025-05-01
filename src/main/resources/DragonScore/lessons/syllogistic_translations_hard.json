@@ -5,7 +5,7 @@
   "terms": {},
   "lessons": [
     {
-      "id": "lesson_syllogistic_translations_hard",
+      "id": "week3a",
       "name": "Syllogistic Translations",
       "description": "Syllogistic logic studies arguments whose validity depends on \"all,\" \"no,\" \"some,\" and similar notions.\nThis lesson is about translating sentences into syllogistic logic. It goes with the \"Syllogistic Logic\" chapter of Harry J. Gensler's Introduction to Logic (Routledge Press).",
       "randomize": true,

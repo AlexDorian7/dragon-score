@@ -3,13 +3,24 @@
   "terms": {},
   "lessons": [
     {
-      "id": "lesson_truth_evaluations",
+      "id": "week4b",
       "name": "Truth Evaluations",
       "description": "Truth Evaluations will test you knowledge of true/false logic.",
       "randomize": false,
       "pointsRequired": 100,
       "questionGenerators": [
         "team.logica_populi.dragonscore.base.logic.generators.TrueFalseGenerator"
+      ],
+      "staticQuestions": []
+    },
+    {
+      "id": "week4c",
+      "name": "Unknown Evaluations",
+      "description": "Unknown Evaluations will test you knowledge of true/false logic.",
+      "randomize": false,
+      "pointsRequired": 100,
+      "questionGenerators": [
+        "team.logica_populi.dragonscore.base.logic.generators.UnknownTrueFalseGenerator"
       ],
       "staticQuestions": []
     }

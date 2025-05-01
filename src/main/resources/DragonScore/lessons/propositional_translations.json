@@ -3,7 +3,7 @@
   "terms": [],
   "lessons": [
     {
-      "id": "lesson_lesson_propositional_translations_easy",
+      "id": "week4a",
       "name": "Propositional Translations Easy",
       "description": "Propositional logic will test arguments whose validity depends on “if-then,”\n“and,” “or,” “not,” and similar notions ",
       "randomize": true,
@@ -1315,7 +1315,7 @@
       ]
     },
     {
-      "id": "lesson_propositional_translations_hard",
+      "id": "week5b",
       "name": "Propositional Translations Hard",
       "description": "PLEASE CHANGE ME",
       "randomize": true,
