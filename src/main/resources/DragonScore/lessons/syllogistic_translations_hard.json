@@ -202,42 +202,6 @@
       ]
     },
     {
-      "id": "no_2",
-      "fields": [
-        {
-          "id": "people_type",
-          "list": "people_types_p"
-        },
-        {
-          "id": "adj_1",
-          "list": "adjectives"
-        },
-        {
-          "id": "adj_2",
-          "list": "adjectives"
-        }
-      ],
-      "form": "<pre>\"None but ${adj_1} people are not ${adj_2} ${people_type}.\"</pre><p>Translates into logic as:</p>",
-      "answerForms": [
-        {
-          "form": "No $U{adj_1} is $U{adj_2}",
-          "correct": false
-        },
-        {
-          "form": "No $U{adj_1} is $L{adj_2}",
-          "correct": false
-        },
-        {
-          "form": "No $U{adj_2} is $U{adj_1}",
-          "correct": true
-        },
-        {
-          "form": "No $L{adj_2} is $U{adj_1}",
-          "correct": false
-        }
-      ]
-    },
-    {
       "id": "some",
       "fields": [
         {
