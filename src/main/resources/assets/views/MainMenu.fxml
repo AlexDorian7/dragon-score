@@ -48,7 +48,6 @@
                wrapText="true"
                textAlignment="CENTER"
                style="-fx-font-size: 32px;
-               -fx-font-weight: 'Segoe UI Semibold';
                -fx-line-spacing: 10px;
                -fx-text-fill: black;">
 
@@ -77,14 +76,14 @@
                       -fx-accent: #635325;" />
 
             <Button text="Start"
-                    prefHeight="35.0"
+                    prefHeight="32.0"
                     minWidth="110.0"
                     onAction="#startLesson"
                     style="-fx-background-color: #282828;
                     -fx-text-fill: white;
                     -fx-border-radius: 10;
                     -fx-background-radius: 10;
-                    -fx-font-size: 24px;
+                    -fx-font-size: 20px;
                     -fx-padding: 8 28;"
                     onMouseEntered="#handleHover"
                     onMouseExited="#handleExit"/>
