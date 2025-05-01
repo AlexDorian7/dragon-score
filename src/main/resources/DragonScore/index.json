@@ -14,13 +14,13 @@
   {
     "id": "lesson_propositional_translations_easy",
     "name": "Propositional Translations Easy",
-    "description": "PLEASE CHANGE ME",
+    "description": "Propositional logic will test arguments whose validity depends on “if-then,”\n“and,” “or,” “not,” and similar notions",
     "location": "DragonScore:lessons/propositional_translations.json"
   },
   {
     "id": "lesson_propositional_translations_hard",
     "name": "Propositional Translations Hard",
-    "description": "PLEASE CHANGE ME",
+    "description": "Propositional logic will test arguments whose validity depends on “if-then,”\n“and,” “or,” “not,” and similar notions",
     "location": "DragonScore:lessons/propositional_translations.json"
   },
   {
