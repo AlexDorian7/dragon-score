@@ -5,6 +5,8 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.input.Clipboard;
+import javafx.scene.input.ClipboardContent;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
@@ -52,6 +54,18 @@ public class MainMenuController {
             });
         }));
         codes.setItems(items);
+
+        for(int i = 0; i < items.size(); i++){
+            int finalI = i;
+            codes.setOnMouseClicked(event ->{
+                Clipboard clipboard = Clipboard.getSystemClipboard();
+                ClipboardContent content = new ClipboardContent();
+                String val = codes.getItems().get(finalI);
+                String trimmedVal = val.substring(val.indexOf(':')+1).trim();
+                content.putString(trimmedVal);
+                clipboard.setContent(content);
+            });
+        }
     }
 
     /**
