@@ -9,6 +9,8 @@ import java.time.LocalDate;
 public class SubmissionCode {
     private final String code;
 
+    private static final char[] ALPHABET = "abcdefghjklmnopqrstuvwxyz".toCharArray();
+
     /**
      * Generates a submission code through an encryption calculations.
      * @param name name of the user
@@ -18,7 +20,7 @@ public class SubmissionCode {
      * @param les index of lesson character in the alphabet
      * @return The generated the submission code
      */
-    private static String generateCode(String name, char lesson, int first, int last, int les) {
+    private static String generateCode(String name, String lesson, int first, int last, int les) {
         Random random = new Random();
         LocalDate date = LocalDate.now();
 
@@ -43,24 +45,21 @@ public class SubmissionCode {
         char lastCh = lName.charAt(lName.length() - 1);
         char lessonCh = lesson.charAt(lesson.length() - 1);
 
-        int firstNameIndex = 0;
-        int lastNameIndex = 0;
-        int lessonIdIndex = 0;
+        int firstNameIndex = firstCh - 96; // a = 97, 0x61
+        int lastNameIndex = lastCh - 96;
+        int lessonIdIndex = lessonCh - 96; // Should note that lesson ids could have an upper case letter. In that case this number will be negative
 
-        char[] alphabet = "abcdefghjklmnopqrstuvwxyz".toCharArray();
+//        for (int i = 0; i < ALPHABET.length; i++) {
+//            if (ALPHABET[i] == firstCh) {
+//                firstNameIndex = i + 1;
+//            } else if (ALPHABET[i] == lastCh) {
+//                lastNameIndex = i + 1;
+//            } else if (ALPHABET[i] == lessonCh) {
+//                lessonIdIndex = i + 1;
+//            }
+//        }
 
-        for (int i = 0; i < alphabet.length; i++) {
-            if (alphabet[i] == firstCh) {
-                firstNameIndex = i + 1;
-            } else if (alphabet[i] == lastCh) {
-                lastNameIndex = i + 1;
-            } else if (alphabet[i] == lessonCh) {
-                lessonIdIndex = i + 1;
-            }
-
-        }
-
-        this.code = generateCode(fullName, lessonCh, firstNameIndex, lastNameIndex, lessonIdIndex);
+        this.code = generateCode(fullName, lesson, firstNameIndex, lastNameIndex, lessonIdIndex);
     }
 
     /**
