@@ -14,14 +14,14 @@
 
    <!-- Header -->
    <HBox alignment="CENTER_RIGHT" AnchorPane.leftAnchor="44" AnchorPane.rightAnchor="44" AnchorPane.topAnchor="28">
-      <Label style="-fx-font-family: 'Helvetica';                -fx-font-size: 36px;                -fx-font-weight: BOLD;                -fx-text-fill: #282828;" text="LogiQuest" />
+      <Label style="-fx-font-family: 'Helvetica'; -fx-font-size: 36px; -fx-font-weight: BOLD; -fx-text-fill: #282828;" text="LogiQuest" />
       <Region fx:id="spacer" HBox.hgrow="ALWAYS" />
    </HBox>
 
    <!-- Content Area -->
    <VBox alignment="CENTER" prefWidth="900" spacing="0" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="270" AnchorPane.rightAnchor="270" AnchorPane.topAnchor="0">
 
-      <Text style="-fx-font-size: 42px;             -fx-font-weight: 'Segoe UI Semibold';" text="What is your name?" textAlignment="CENTER" wrappingWidth="600">
+      <Text style="-fx-font-size: 42px; -fx-font-weight: 'Segoe UI Semibold';" text="What is your name?" textAlignment="CENTER" wrappingWidth="600">
          <VBox.margin>
             <Insets bottom="28" />
          </VBox.margin>
@@ -65,6 +65,7 @@
 
       <Button text="Submit"
               onAction="#submit"
+              defaultButton="true"
               prefHeight="45.0"
               maxWidth="400.0"
               minWidth="130"
