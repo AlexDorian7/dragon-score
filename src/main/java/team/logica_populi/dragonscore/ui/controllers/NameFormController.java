@@ -17,6 +17,8 @@ public class NameFormController {
     @FXML
     public void initialize() {
         // Assuming 'fName' is your container, or replace with your actual root container node:
+        fName.setOnAction(e -> submit(new ActionEvent()));
+        lName.setOnAction(e -> submit(new ActionEvent()));
     }
 
     @FXML
