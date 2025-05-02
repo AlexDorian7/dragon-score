@@ -9,7 +9,7 @@ import java.time.LocalDate;
 public class SubmissionCode {
     private final String code;
 
-    private static final char[] ALPHABET = "abcdefghjklmnopqrstuvwxyz".toCharArray();
+    private static final char[] ALPHABET = "abcdefghijklmnopqrstuvwxyz".toCharArray();
 
     /**
      * Generates a submission code through an encryption calculations.
