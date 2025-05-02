@@ -6,7 +6,7 @@
 
     <groupId>team.logica_populi</groupId>
     <artifactId>dragonscore</artifactId>
-    <version>1.0.1.0-beta</version>
+    <version>0.1.1-beta</version>
     <name>LogiQuest</name>
 
     <properties>
@@ -66,6 +66,11 @@
             <artifactId>gson</artifactId>
             <version>2.12.1</version>
             <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.panteleyev</groupId>
+            <artifactId>jpackage-maven-plugin</artifactId>
+            <version>1.6.6</version>
         </dependency>
     </dependencies>
 
@@ -207,7 +212,6 @@
                 <version>3.6.0</version>
                 <executions>
                     <execution>
-                        <phase>package</phase>
                         <goals>
                             <goal>shade</goal>
                         </goals>
@@ -220,6 +224,29 @@
                         </configuration>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.panteleyev</groupId>
+                <artifactId>jpackage-maven-plugin</artifactId>
+                <version>1.6.6</version>
+                <configuration>
+                    <name>LogiQuest</name>
+                    <appVersion>0.1.1</appVersion>
+                    <vendor>Lindenwood University Students</vendor>
+                    <destination>target/dist</destination>
+                    <module>team.logica_populi.dragonscore/team.logica_populi.dragonscore.Main</module>
+                    <runtimeImage>target/LogiQuest</runtimeImage>
+                    <linuxShortcut>true</linuxShortcut>
+                    <linuxPackageName>LogiQuest</linuxPackageName>
+                    <linuxAppCategory>Utilities</linuxAppCategory>
+                    <linuxMenuGroup>Utilities</linuxMenuGroup>
+                    <winShortcut>true</winShortcut>
+                    <winPerUserInstall>true</winPerUserInstall>
+                    <macSign>true</macSign>
+                    <javaOptions>
+                        <option>-Dfile.encoding=UTF-8</option>
+                    </javaOptions>
+                </configuration>
             </plugin>
         </plugins>
     </build>

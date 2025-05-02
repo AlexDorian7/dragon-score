@@ -3,9 +3,9 @@
   "terms": [],
   "lessons": [
     {
-      "id": "propositional_arguments_english",
-      "name": "Propositional Arguments - English",
-      "description": "PLEASE CHANGE ME",
+      "id": "week5a",
+      "name": "Week 5 Propositional Logic – English",
+      "description": "Propositional logic studies arguments whose validity depends “if-then,” “and,” or,” “not,” and similar notions. This set of exercises has you test validity by using the Truth Assignment Test on numbered arguments written in English.",
       "randomize": false,
       "pointsRequired": 100,
       "questionGenerators": [],

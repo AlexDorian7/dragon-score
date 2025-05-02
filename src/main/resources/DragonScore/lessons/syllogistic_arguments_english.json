@@ -5,9 +5,9 @@
   "terms": {},
   "lessons": [
     {
-      "id": "lesson_syllogistic_arguments_english",
-      "name": "Syllogistic Arguments - English",
-      "description": "Syllogistic Arguments - English will test you knowledge of the star test to tell if an argument is valid.",
+      "id": "week2d",
+      "name": "Week 2 Syllogistic Logic – English Examples",
+      "description": "Syllogistic logic studies arguments whose validity depends on “all,” “no,” some,” and similar notions. This set of exercises has you test validity by using the Star Test on numbered arguments written in English.",
       "randomize": false,
       "pointsRequired": 100,
       "questionGenerators": [

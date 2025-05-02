@@ -3,9 +3,9 @@
   "terms": [],
   "lessons": [
     {
-      "id": "lesson_propositional_translations_easy",
-      "name": "Propositional Translations Easy",
-      "description": "PLEASE CHANGE ME",
+      "id": "week4a",
+      "name": "Week 4 Propositional Logic - Easier Translations",
+      "description": "Propositional logic studies arguments whose validity depends “if-then,” “and,” or,” “not,” and similar notions. This set of exercises helps you translate easier English sentences in the formal language of propositional logic.",
       "randomize": true,
       "pointsRequired": 100,
       "questionGenerators": [],
@@ -242,7 +242,7 @@
           ]
         },
         {
-          "question": "Either both W and C or D",
+          "question": "Either both W and C, or D",
           "answers": [
             {
               "answer": "((W \u00B7 C) \u2228 D)",
@@ -620,7 +620,7 @@
           ]
         },
         {
-          "question": "Either both R and L or N",
+          "question": "Either both R and L, or N",
           "answers": [
             {
               "answer": "(R \u00B7 (L \u2228 N))",
@@ -1315,10 +1315,11 @@
       ]
     },
     {
-      "id": "lesson_propositional_translations_hard",
-      "name": "Propositional Translations Hard",
-      "description": "PLEASE CHANGE ME",
+      "id": "week5b",
+      "name": "Week 5 Propositional Logic - Harder Translations",
+      "description": "Propositional logic studies arguments whose validity depends “if-then,” “and,” or,” “not,” and similar notions. This set of exercises helps you translate harder English sentences in the formal language of propositional logic.",
       "randomize": true,
+      "pointsRequired": 100,
       "questionGenerators": [],
       "staticQuestions": [
         {
@@ -2039,15 +2040,15 @@
           "question": "Either not W or not P",
           "answers": [
             {
-              "answer": "~(W \u2228 \\, ~ P)",
+              "answer": "~(W \u2228 ~ P)",
               "correct": false
             },
             {
-              "answer": "(~ W \u2228 \\, ~ P)",
+              "answer": "(~ W \u2228 ~ P)",
               "correct": true
             },
             {
-              "answer": "~ W \u2228 \\, ~ P",
+              "answer": "~ W \u2228 ~ P",
               "correct": false
             },
             {
@@ -2123,12 +2124,12 @@
           "question": "If you aren't tough then you aren't lonely",
           "answers": [
             {
-              "answer": "(~ T \u2283 \\, ~ L)",
-              "correct": false
+              "answer": "(~ T \u2283, ~ L)",
+              "correct": true
             },
             {
               "answer": "(~ T \u2283 L)",
-              "correct": true
+              "correct": false
             },
             {
               "answer": "~ T \u2283 L",

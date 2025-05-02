@@ -202,15 +202,28 @@ public class Lesson {
         return name;
     }
 
+    /**
+     * Gets the amount of points required for this lesson to be considered complete.
+     * @return The amount of points required
+     */
     public int getPointsRequired() {
         return pointsRequired;
     }
 
+    /**
+     * Gets the type of window form to use for this lesson.
+     * @return The current window form type
+     */
     @Nullable
     public String getFormType() {
         return formType;
     }
 
+    /**
+     * Sets the type of window form to use for this lesson.
+     * Current valid options are {@code null}, and {@code "PARAGRAPH"}
+     * @param formType The window form type to set
+     */
     public void setFormType(@Nullable String formType) {
         this.formType = formType;
     }

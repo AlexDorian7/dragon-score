@@ -3,39 +3,112 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.TextFlow?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.geometry.Insets?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #fffce8;" xmlns="http://javafx.com/javafx/24" xmlns:fx="http://javafx.com/fxml/1" fx:controller="team.logica_populi.dragonscore.ui.controllers.MainMenuController">
+<AnchorPane prefHeight="600.0"
+            prefWidth="800.0"
+            style="-fx-background-color: #fffce8;"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="team.logica_populi.dragonscore.ui.controllers.MainMenuController">
 
-          <!-- Top Menu -->
-    <HBox alignment="CENTER_RIGHT" spacing="20" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20" AnchorPane.topAnchor="10">
-        <Label style="-fx-font-family: 'Arial'; -fx-font-size: 36px; -fx-font-weight: bold;" text="LogiQuest" />
-        <Region fx:id="spacer" HBox.hgrow="ALWAYS" />
+
+
+    <!-- Header -->
+    <HBox alignment="CENTER_RIGHT"
+          AnchorPane.leftAnchor="44"
+          AnchorPane.rightAnchor="44"
+          AnchorPane.topAnchor="28">
+        <Label text="LogiQuest"
+               style="-fx-font-family: 'Helvetica';
+               -fx-font-size: 36px;
+               -fx-font-weight: BOLD;
+               -fx-text-fill: #282828;" />
+        <Region fx:id="spacer"
+                HBox.hgrow="ALWAYS" />
     </HBox>
 
-          <!-- Centered Content -->
-    <VBox fx:id="vbox" alignment="CENTER" spacing="20" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+    <!-- Centered Content -->
+    <VBox alignment="CENTER"
+          prefWidth="700"
+          AnchorPane.topAnchor="0"
+          AnchorPane.bottomAnchor="0"
+          AnchorPane.leftAnchor="160"
+          AnchorPane.rightAnchor="160">
+
         <!-- Welcome Label -->
-        <Label fx:id="nameLabel" text="Welcome NAME HERE!" textAlignment="CENTER">
-            <font>
-                <Font size="24.0" />
-            </font>
+        <Label fx:id="nameLabel"
+               text="Welcome NAME HERE to LogiQuest!"
+               wrapText="true"
+               textAlignment="CENTER"
+               style="-fx-font-size: 32px;
+               -fx-line-spacing: 10px;
+               -fx-text-fill: black;">
+
+            <VBox.margin>
+                <Insets bottom="20"/>
+            </VBox.margin>
+
         </Label>
 
-              <!-- Lesson Selector -->
-        <HBox alignment="CENTER" spacing="10">
-            <ComboBox fx:id="lessonsBox" onAction="#updateSelected" prefWidth="150.0" />
-            <Button onAction="#startLesson" style="-fx-background-color: black; -fx-text-fill: white; -fx-font-weight: bold;" text="Start" />
+        <!-- Lesson Selector -->
+        <HBox alignment="CENTER"
+              spacing="20">
+            <ComboBox fx:id="lessonsBox"
+                      onAction="#updateSelected"
+                      HBox.hgrow="ALWAYS"
+                      maxWidth="Infinity"
+                      prefHeight="40.0"
+                      style="-fx-background-color: #FDFDFD;
+                      -fx-border-color: #a5a5a5;
+                      -fx-border-width: 1;
+                      -fx-border-style: solid;
+                      -fx-border-radius: 4;
+                      -fx-background-radius: 4;
+                      -fx-font-size: 16px;
+                      -fx-selection-bar: #635325;
+                      -fx-accent: #635325;" />
+
+            <Button text="Start"
+                    prefHeight="32.0"
+                    minWidth="110.0"
+                    onAction="#startLesson"
+                    style="-fx-background-color: #282828;
+                    -fx-text-fill: white;
+                    -fx-border-radius: 10;
+                    -fx-background-radius: 10;
+                    -fx-font-size: 20px;
+                    -fx-padding: 8 28;"
+                    onMouseEntered="#handleHover"
+                    onMouseExited="#handleExit"/>
+
+            <VBox.margin>
+                <Insets bottom="8"/>
+            </VBox.margin>
+
         </HBox>
 
-              <!-- Text Area -->
-        <TextFlow fx:id="lessonArea" prefWidth="500" />
-      <ListView fx:id="codes" prefHeight="200.0" prefWidth="200.0" />
+        <ListView fx:id="codes"
+                  prefHeight="120"
+                  maxWidth="Infinity"
+                  style="-fx-background-color: #fdfdfd;
+                      -fx-border-color: #ccc;
+                      -fx-border-radius: 4;
+                      -fx-background-radius: 4;">
+
+        <VBox.margin>
+            <Insets bottom="14"/>
+        </VBox.margin>
+        </ListView>
+
+
+        <!-- Text Area -->
+        <TextFlow fx:id="lessonArea"  />
     </VBox>
 </AnchorPane>
