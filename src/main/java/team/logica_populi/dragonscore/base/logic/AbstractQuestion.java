@@ -1,5 +1,7 @@
 package team.logica_populi.dragonscore.base.logic;
 
+import org.jetbrains.annotations.Nullable;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -16,9 +18,11 @@ public abstract class AbstractQuestion implements Question {
     private String question;
 
     /**
-     * THe internal List of answers for this question
+     * The internal List of answers for this question
      */
     protected final List<Answer> answers;
+
+    private Object extra;
 
 
     /**
@@ -72,5 +76,22 @@ public abstract class AbstractQuestion implements Question {
             i++;
         }
         return string.toString();
+    }
+
+    /**
+     * Gets any extra content tied to this question.
+     * @return The tied extra content
+     */
+    @Override
+    public @Nullable Object getExtra() {
+        return extra;
+    }
+
+    /**
+     * Sets extra content tied to this question
+     * @param extra The extra content to tie
+     */
+    public void setExtra(@Nullable Object extra) {
+        this.extra = extra;
     }
 }

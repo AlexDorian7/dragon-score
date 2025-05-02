@@ -7,7 +7,7 @@ import javax.crypto.spec.GCMParameterSpec;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.PBEKeySpec;
 import javax.crypto.spec.SecretKeySpec;
-import java.io.InputStream;
+import java.io.*;
 import java.nio.ByteBuffer;
 import java.nio.charset.StandardCharsets;
 import java.security.SecureRandom;
@@ -95,10 +95,7 @@ public class EncryptionRegistry {
             byte[] encryptedData = new byte[iv.length + cipherText.length + nowBuffer.length];
             System.arraycopy(nowBuffer, 0, encryptedData, 0, nowBuffer.length);
             System.arraycopy(iv, 0, encryptedData, nowBuffer.length, iv.length);
-
-            logger.info(new String(iv));
-            logger.info(new String(nowBuffer));
-
+            System.arraycopy(cipherText, 0, encryptedData, nowBuffer.length + iv.length, cipherText.length);
 
             return Base64.getEncoder().encodeToString(encryptedData);
         } catch (Exception e) {
@@ -132,9 +129,6 @@ public class EncryptionRegistry {
             System.arraycopy(encryptedData, salt.length, iv, 0, iv.length);
             GCMParameterSpec gcmParameterSpec = new GCMParameterSpec(128, iv);
 
-            logger.info(new String(iv));
-            logger.info(new String(salt));
-
             SecretKeyFactory factory = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA256");
             KeySpec spec = new PBEKeySpec(s.toCharArray(), salt, ITERATION_COUNT, KEY_LENGTH);
             SecretKey tmp = factory.generateSecret(spec);
@@ -154,4 +148,5 @@ public class EncryptionRegistry {
             return null;
         }
     }
+
 }

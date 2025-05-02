@@ -1,32 +1,72 @@
 package team.logica_populi.dragonscore.ui.controllers;
 
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
+import javafx.scene.input.Clipboard;
+import javafx.scene.input.ClipboardContent;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
-import team.logica_populi.dragonscore.base.Lesson;
 import team.logica_populi.dragonscore.base.json.LessonHeader;
+import javafx.scene.text.FontWeight;
+
+import team.logica_populi.dragonscore.base.registries.DragonHandler;
+import team.logica_populi.dragonscore.base.registries.JsonRegistry;
 
 import java.util.List;
 import java.util.function.Consumer;
+import java.util.logging.Logger;
+import javafx.scene.input.MouseEvent;
+import java.util.function.BiConsumer;
+
 
 /**
  * Controller for the Main Menu.
  */
 public class MainMenuController {
+    private static Logger logger;
+
     @FXML
     private ComboBox<LessonHeader> lessonsBox;
     @FXML
     private TextFlow lessonArea;
     @FXML
     private Label nameLabel;
+    @FXML
+    private ListView<String> codes;
 
     private Consumer<LessonHeader> callback;
 
+
+    public void initialize(){
+    }
+
+    public void setCodes(){
+        ObservableList<String> items =FXCollections.observableArrayList();
+        JsonRegistry.getInstance().getSubmissionSystem().getSubmissions().forEach(((s, map) -> {
+            map.forEach((String key, String val) ->{
+                //logger.info(val);
+                items.add(key + " : " + val);
+            });
+        }));
+        codes.setItems(items);
+
+        for(int i = 0; i < items.size(); i++){
+            int finalI = i;
+            codes.setOnMouseClicked(event ->{
+                Clipboard clipboard = Clipboard.getSystemClipboard();
+                ClipboardContent content = new ClipboardContent();
+                String val = codes.getItems().get(finalI);
+                String trimmedVal = val.substring(val.indexOf(':')+1).trim();
+                content.putString(trimmedVal);
+                clipboard.setContent(content);
+            });
+        }
+    }
 
     /**
      * Sets the lessons to display in the lessons box.
@@ -70,9 +110,43 @@ public class MainMenuController {
     @FXML
     private void updateSelected(ActionEvent actionEvent) {
         lessonArea.getChildren().clear();
+        lessonArea.setLineSpacing(8);
+
         Text title = new Text(lessonsBox.getValue().name() + "\n");
-        title.setStroke(Color.BLACK);
+        title.setFill(Color.web("#282828"));
+        title.setFont(Font.font("Helvetica", FontWeight.BOLD, 16));
+
         Text description = new Text(lessonsBox.getValue().description());
+        description.setFill(Color.web("#282828"));
+        description.setFont(Font.font("Helvetica", 14));
+
         lessonArea.getChildren().addAll(title, description);
     }
+
+    @FXML
+    private void handleHover(MouseEvent ev) {
+        Button b = (Button)ev.getSource();
+        b.setStyle(
+                "-fx-background-color: black;" +
+                        "-fx-text-fill: white;" +
+                        "-fx-border-radius: 10;" +
+                        "-fx-background-radius: 10;" +
+                        "-fx-font-size: 20px;" +
+                        "-fx-padding: 8 28;"
+        );
+    }
+
+    @FXML
+    private void handleExit(MouseEvent ev) {
+        Button b = (Button)ev.getSource();
+        b.setStyle(
+                "-fx-background-color: #282828;" +
+                        "-fx-text-fill: white;" +
+                        "-fx-border-radius: 10;" +
+                        "-fx-background-radius: 10;" +
+                        "-fx-font-size: 20px;" +
+                        "-fx-padding: 8 28;"
+        );
+    }
+
 }

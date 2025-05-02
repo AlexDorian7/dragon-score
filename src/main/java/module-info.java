@@ -13,6 +13,7 @@ module team.logica_populi.dragonscore {
     requires com.google.gson;
     requires java.sql;
     requires javafx.web;
+    requires java.desktop;
 
     opens team.logica_populi.dragonscore to javafx.fxml;
     opens team.logica_populi.dragonscore.ui to javafx.fxml;

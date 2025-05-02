@@ -1,5 +1,6 @@
 package team.logica_populi.dragonscore.base;
 
+import org.jetbrains.annotations.Nullable;
 import team.logica_populi.dragonscore.base.logic.BaseQuestion;
 import team.logica_populi.dragonscore.base.logic.Question;
 import team.logica_populi.dragonscore.base.logic.generators.QuestionGenerator;
@@ -7,6 +8,7 @@ import team.logica_populi.dragonscore.base.logic.generators.QuestionGenerator;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 import java.util.logging.Logger;
 
 /**
@@ -23,6 +25,9 @@ public class Lesson {
     private final List<QuestionGenerator> questionGenerators;
     private final boolean randomize;
     private final int pointsRequired;
+
+    @Nullable
+    private String formType;
 
     /**
      * Create a lesson using only an internal id.
@@ -197,7 +202,29 @@ public class Lesson {
         return name;
     }
 
+    /**
+     * Gets the amount of points required for this lesson to be considered complete.
+     * @return The amount of points required
+     */
     public int getPointsRequired() {
         return pointsRequired;
+    }
+
+    /**
+     * Gets the type of window form to use for this lesson.
+     * @return The current window form type
+     */
+    @Nullable
+    public String getFormType() {
+        return formType;
+    }
+
+    /**
+     * Sets the type of window form to use for this lesson.
+     * Current valid options are {@code null}, and {@code "PARAGRAPH"}
+     * @param formType The window form type to set
+     */
+    public void setFormType(@Nullable String formType) {
+        this.formType = formType;
     }
 }

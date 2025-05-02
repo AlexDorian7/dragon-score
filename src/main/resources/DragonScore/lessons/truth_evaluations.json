@@ -1,17 +1,37 @@
 {
-  "requires": [
-    "DragonScore:requires/letters.json"
-  ],
+  "requires": [],
   "terms": {},
   "lessons": [
     {
-      "id": "truth_evaluations",
-      "name": "Truth Evaluations",
-      "description": "Truth Evaluations will test you knowledge of true/false logic.",
+      "id": "week4b",
+      "name": "Week 4 Propositional Logic – Truth Evaluations",
+      "description": "Propositional logic studies arguments whose validity depends “if-then,” “and,” or,” “not,” and similar notions. The exercises in this set deal with calculating truth values of propositions made up of at least two atomic propositions where the truth value of each atomic proposition is known.",
       "randomize": false,
       "pointsRequired": 100,
       "questionGenerators": [
         "team.logica_populi.dragonscore.base.logic.generators.TrueFalseGenerator"
+      ],
+      "staticQuestions": []
+    },
+    {
+      "id": "week4c",
+      "name": "Week 4 Propositional Logic – Unknown Evaluations",
+      "description": "Propositional logic studies arguments whose validity depends “if-then,” “and,” or,” “not,” and similar notions. The exercises in this set deal with calculating truth values of propositions made up of at least two atomic propositions where the truth value of some of the atomic proposition is unknown.",
+      "randomize": false,
+      "pointsRequired": 100,
+      "questionGenerators": [
+        "team.logica_populi.dragonscore.base.logic.generators.UnknownTrueFalseGenerator"
+      ],
+      "staticQuestions": []
+    },
+    {
+      "id": "week4d",
+      "name": "Week 4 Propositional Logic – Complex Evaluations",
+      "description": "Propositional logic studies arguments whose validity depends “if-then,” “and,” or,” “not,” and similar notions. The exercises in this set deal with calculating truth values of propositions made up of at least three atomic propositions where the truth value of the atomic proposition is known.",
+      "randomize": false,
+      "pointsRequired": 100,
+      "questionGenerators": [
+        "team.logica_populi.dragonscore.base.logic.generators.TruthTableGenerator"
       ],
       "staticQuestions": []
     }
