@@ -95,7 +95,7 @@
         </HBox>
 
         <ListView fx:id="codes"
-                  prefHeight="150"
+                  prefHeight="120"
                   maxWidth="Infinity"
                   style="-fx-background-color: #fdfdfd;
                       -fx-border-color: #ccc;
