@@ -208,6 +208,7 @@ public class DragonHandler {
          setLesson(lesson);
          logger.finer("Points required: " + lesson.getPointsRequired());
          updatePoints();
+         setPointsToGive(10); // Fixes bug. Each time you start a new lesson your selected difficulty defaults to 10
          if (lesson.getFormType() != null) {
              switch (lesson.getFormType()) {
                  case("PARAGRAPH"):

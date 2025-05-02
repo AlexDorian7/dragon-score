@@ -6,8 +6,8 @@
   "lessons": [
     {
       "id": "week2b",
-      "name": "Syllogistic Arguments - How to Star",
-      "description": "Syllogistic Arguments - How to star will test you knowledge of the star test.",
+      "name": "Week 2 Syllogistic Logic - How to Star",
+      "description": "Syllogistic logic studies arguments who validity depends on “all,” “no,” some,” and similar notions. This set of exercises deals with how to star the correct terms in the Star Test.",
       "randomize": false,
       "pointsRequired": 100,
       "questionGenerators": [

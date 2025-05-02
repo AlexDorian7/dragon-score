@@ -6,8 +6,8 @@
   "lessons": [
     {
       "id": "week3b",
-      "name": "Syllogistic Arguments - Find Conclusion",
-      "description": "Syllogistic Arguments - Find Conclusion will test if you can find the conclusion in a syllogistic argument.",
+      "name": "Week 3 Syllogistic Logic – Finding the Conclusion",
+      "description": "Syllogistic logic studies arguments whose validity depends on “all,” “no,” some,” and similar notions. These exercises will ask you to locate the conclusion of an English argument written in idiomatic form.",
       "randomize": false,
       "pointsRequired": 100,
       "formType": "PARAGRAPH",

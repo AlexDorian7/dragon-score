@@ -6,8 +6,8 @@
   "lessons": [
     {
       "id": "week5c",
-      "name": "Propositional Arguments - Find Conclusion",
-      "description": "Propositional Arguments - Find Conclusion will test if you can find the conclusion in a propositional argument.",
+      "name": "Week 5 Propositional Logic – Find the Conclusion",
+      "description": "Propositional logic studies arguments whose validity depends “if-then,” “and,” or,” “not,” and similar notions. These exercises will ask you to locate the conclusion of an English argument written in idiomatic form.",
       "randomize": false,
       "pointsRequired": 100,
       "formType": "PARAGRAPH",

@@ -5,7 +5,7 @@
     {
       "id": "week6",
       "name": "Week 6 Fallacies",
-      "description": "PLEASE CHANGE ME",
+      "description": "This set of exercises will help you recognize and identify some common errors in thinking. Some examples commit more than one fallacy and so have more than one correct answer.",
       "randomize": false,
       "pointsRequired": 100,
       "questionGenerators": [],

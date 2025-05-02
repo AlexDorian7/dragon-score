@@ -6,8 +6,8 @@
   "lessons": [
     {
       "id": "week2a",
-      "name": "Syllogistic Translations",
-      "description": "Syllogistic logic studies arguments whose validity depends on \"all,\" \"no,\" \"some,\" and similar notions.\nThis lesson is about translating sentences into syllogistic logic. It goes with the \"Syllogistic Logic\" chapter of Harry J. Gensler's Introduction to Logic (Routledge Press).",
+      "name": "Week 2 Syllogistic Logic - Easier Translations",
+      "description": "Syllogistic logic studies arguments whose validity depends on “all,” “no,” some,” and similar notions. This set of exercises helps you translate easier English sentences in the formal language of the Star Test.",
       "randomize": true,
       "pointsRequired": 100,
       "questionGenerators": [

@@ -6,8 +6,8 @@
   "lessons": [
     {
       "id": "week2c",
-      "name": "Syllogistic Arguments - Symbolic",
-      "description": "Syllogistic Arguments - Symbolic will test you knowledge of the star test to tell if an argument is valid.",
+      "name": "Week 2 Syllogistic Logic – Symbolic Examples",
+      "description": "Syllogistic logic studies arguments whose validity depends on “all,” “no,” some,” and similar notions. This set of exercises has you test validity by using the Star Test on numbered arguments which have already been translated into well-formed formula.",
       "randomize": false,
       "pointsRequired": 100,
       "questionGenerators": [

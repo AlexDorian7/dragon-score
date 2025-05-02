@@ -2,109 +2,109 @@
   {
     "id": "week1",
     "name": "Week 1 Definitions",
-    "description": "",
+    "description": "This set of exercises deals with common errors about definitions. Assume that these definitions try to explain current usage and don’t stipulate how a term should be used.",
     "location": "DragonScore:lessons/definitions.json"
   },
   {
     "id": "week2a",
     "name": "Week 2 Syllogistic Logic - Easier Translations",
-    "description": "",
+    "description": "Syllogistic logic studies arguments whose validity depends on “all,” “no,” some,” and similar notions. This set of exercises helps you translate easier English sentences in the formal language of the Star Test.",
     "location": "DragonScore:lessons/syllogistic_translations_easy.json"
   },
   {
     "id": "week2b",
     "name": "Week 2 Syllogistic Logic - How to Star",
-    "description": "",
+    "description": "Syllogistic logic studies arguments who validity depends on “all,” “no,” some,” and similar notions. This set of exercises deals with how to star the correct terms in the Star Test.",
     "location": "DragonScore:lessons/syllogistic_arguments_how_to_star.json"
   },
   {
     "id": "week2c",
     "name": "Week 2 Syllogistic Logic – Symbolic Examples",
-    "description": "",
+    "description": "Syllogistic logic studies arguments whose validity depends on “all,” “no,” some,” and similar notions. This set of exercises has you test validity by using the Star Test on numbered arguments which have already been translated into well-formed formula.",
     "location": "DragonScore:lessons/syllogistic_arguments_symbolic.json"
   },
   {
     "id": "week2d",
     "name": "Week 2 Syllogistic Logic – English Examples",
-    "description": "",
+    "description": "Syllogistic logic studies arguments whose validity depends on “all,” “no,” some,” and similar notions. This set of exercises has you test validity by using the Star Test on numbered arguments written in English.",
     "location": "DragonScore:lessons/syllogistic_arguments_english.json"
   },
   {
     "id": "week3a",
     "name": "Week 3 Syllogistic Logic – Harder Translations",
-    "description": "",
+    "description": "Syllogistic logic studies arguments whose validity depends on “all,” “no,” some,” and similar notions. This set of exercises helps you translate harder English sentences in the formal language of the Star Test.",
     "location": "DragonScore:lessons/syllogistic_translations_hard.json"
   },
   {
     "id": "week3b",
     "name": "Week 3 Syllogistic Logic – Finding the Conclusion",
-    "description": "",
+    "description": "Syllogistic logic studies arguments whose validity depends on “all,” “no,” some,” and similar notions. These exercises will ask you to locate the conclusion of an English argument written in idiomatic form.",
     "location": "DragonScore:lessons/syllogistic_arguments_find_conclusion.json"
   },
   {
     "id": "week3c",
     "name": "Week 3 Syllogistic Logic – Idiomatic Examples",
-    "description": "",
+    "description": "Syllogistic logic studies arguments whose validity depends on “all,” “no,” some,” and similar notions. This set of exercises has you test validity by using the Star Test on idiomatic arguments written in English.",
     "location": "DragonScore:lessons/syllogistic_arguments_idiomatic.json"
   },
   {
     "id": "week4a",
     "name": "Week 4 Propositional Logic - Easier Translations",
-    "description": "",
+    "description": "Propositional logic studies arguments whose validity depends “if-then,” “and,” or,” “not,” and similar notions. This set of exercises helps you translate easier English sentences in the formal language of propositional logic.",
     "location": "DragonScore:lessons/propositional_translations.json"
   },
   {
     "id": "week4b",
     "name": "Week 4 Propositional Logic – Truth Evaluations",
-    "description": "",
+    "description": "Propositional logic studies arguments whose validity depends “if-then,” “and,” or,” “not,” and similar notions. The exercises in this set deal with calculating truth values of propositions made up of at least two atomic propositions where the truth value of each atomic proposition is known.",
     "location": "DragonScore:lessons/truth_evaluations.json"
   },
   {
     "id": "week4c",
     "name": "Week 4 Propositional Logic – Unknown Evaluations",
-    "description": "",
+    "description": "Propositional logic studies arguments whose validity depends “if-then,” “and,” or,” “not,” and similar notions. The exercises in this set deal with calculating truth values of propositions made up of at least two atomic propositions where the truth value of some of the atomic proposition is unknown.",
     "location": "DragonScore:lessons/truth_evaluations.json"
   },
   {
     "id": "week4d",
     "name": "Week 4 Propositional Logic – Complex Evaluations",
-    "description": "",
-    "location": "DragonScore:lessons/truth_tables.json"
+    "description": "Propositional logic studies arguments whose validity depends “if-then,” “and,” or,” “not,” and similar notions. The exercises in this set deal with calculating truth values of propositions made up of at least three atomic propositions where the truth value of the atomic proposition is known.",
+    "location": "DragonScore:lessons/truth_evaluations.json"
   },
   {
     "id": "week5a",
     "name": "Week 5 Propositional Logic – English",
-    "description": "",
+    "description": "Propositional logic studies arguments whose validity depends “if-then,” “and,” or,” “not,” and similar notions. This set of exercises has you test validity by using the Truth Assignment Test on numbered arguments written in English.",
     "location": "DragonScore:lessons/propositional_arguments_english.json"
   },
   {
     "id": "week5b",
     "name": "Week 5 Propositional Logic - Harder Translations",
-    "description": "",
+    "description": "Propositional logic studies arguments whose validity depends “if-then,” “and,” or,” “not,” and similar notions. This set of exercises helps you translate harder English sentences in the formal language of propositional logic.",
     "location": "DragonScore:lessons/propositional_translations.json"
   },
   {
     "id": "week5c",
     "name": "Week 5 Propositional Logic – Find the Conclusion",
-    "description": "",
+    "description": "Propositional logic studies arguments whose validity depends “if-then,” “and,” or,” “not,” and similar notions. These exercises will ask you to locate the conclusion of an English argument written in idiomatic form.",
     "location": "DragonScore:lessons/propositional_arguments_find_conclusion.json"
   },
   {
     "id": "week5d",
     "name": "Week 5 Propositional Logic – Idiomatic Examples",
-    "description": "",
+    "description": "Propositional logic studies arguments whose validity depends “if-then,” “and,” or,” “not,” and similar notions. This set of exercises has you test validity by using the Truth Assignment Test on idiomatic arguments written in English.",
     "location": "DragonScore:lessons/propositional_arguments_idiomatic.json"
   },
   {
     "id": "week6",
     "name": "Week 6 Fallacies",
-    "description": "",
+    "description": "This set of exercises will help you recognize and identify some common errors in thinking. Some examples commit more than one fallacy and so have more than one correct answer.",
     "location": "DragonScore:lessons/informal_fallacies.json"
   },
   {
     "id": "week7",
     "name": "Week 7 Statistical, Analogical, & Causal Reasoning",
-    "description": "",
+    "description": "This set of exercises will help you recognize and identify the most common forms of inductive reasoning – statistical syllogisms, sample projection syllogisms, analogical syllogisms, and the four methods of causal reasoning (by agreement, disagreement, difference, and variance). You will first identify the kind of reasoning in the example, and then determine whether that kind of reasoning has all of its essential features to make it a correct version of the form.",
     "location": "DragonScore:lessons/probability.json"
   }
 ]
