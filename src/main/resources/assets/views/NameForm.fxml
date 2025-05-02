@@ -41,7 +41,7 @@
             <Insets bottom="20" />
          </VBox.margin>
       </TextField>
-      
+
       <Button maxWidth="400.0" minWidth="130" onAction="#submit" onMouseEntered="#handleHover" onMouseExited="#handleExit" prefHeight="50.0" style="-fx-background-color: #282828;                     -fx-text-fill: white;                     -fx-border-radius: 10;                     -fx-background-radius: 10;                     -fx-font-size: 22px;                     -fx-padding: 8 28;                     -fx-prompt-text-fill: #a2a2a2;" text="Submit" />
    </VBox>
 </AnchorPane>
