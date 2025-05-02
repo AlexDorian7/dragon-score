@@ -231,7 +231,7 @@
                 <version>1.6.6</version>
                 <configuration>
                     <name>LogiQuest</name>
-                    <appVersion>0.1.0-beta</appVersion>
+                    <appVersion>0.1.0</appVersion>
                     <vendor>Lindenwood University Students</vendor>
                     <destination>target/dist</destination>
                     <module>team.logica_populi.dragonscore/team.logica_populi.dragonscore.Main</module>
