@@ -115,18 +115,26 @@ public class QuestionFormController implements IQuestionFormController {
         this.question = question;
         resultsShown = false;
         questionArea.getEngine().loadContent(
-                "<html><head>" +
+                "<html style=\"width: 700px;\"><head>" +
                         "  <style>" +
-                        "    body {" +
+                        "    body,html {" +
                         "      font-family: Verdana;" +
                         "      font-size: 18px;" +
                         "      line-height: 24px;" +
                         "      background: #fdfdfd;" +
                         "      margin: 0;" +
-                        "      maxWidth: 700;" +
+                        "      max-width: 700px;" +
                         "      padding: 10px;" +
                         "      color: #000000;" +
+                        "      box-sizing: border-box;" +
+                        "      overflow-x: hidden;" +
                         "    }" +
+                        "   p, pre {" +
+                        "       max-width: 700px;" +
+                        "   }" +
+                        "   pre {" +
+                        "     white-space: pre-wrap;" +
+                        "   }" +
                         "  </style>" +
                         "</head><body>" +
                         question.getQuestion() +

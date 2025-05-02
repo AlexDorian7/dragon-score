@@ -2,109 +2,109 @@
   {
     "id": "week1",
     "name": "Week 1 Definitions",
-    "description": "This lesson with the \"Meaning and Definitions\" chapter of Harry J.Gensler's Introduction to Logic (Routledge Press).\nAssume that these definitions try to explain current usage and don't stipulate how a term will be used.\n\nSOMEONE PLEASE UPDATE THIS DESC",
+    "description": "",
     "location": "DragonScore:lessons/definitions.json"
   },
   {
     "id": "week2a",
     "name": "Week 2 Syllogistic Logic - Easier Translations",
-    "description": "Syllogistic logic studies arguments whose validity depends on \"all,\" \"no,\" \"some,\" and similar notions.\nThis lesson is about translating sentences into syllogistic logic. It goes with the \"Syllogistic Logic\" chapter of Harry J. Gensler's Introduction to Logic (Routledge Press).",
+    "description": "",
     "location": "DragonScore:lessons/syllogistic_translations_easy.json"
   },
   {
     "id": "week2b",
     "name": "Week 2 Syllogistic Logic - How to Star",
-    "description": "Syllogistic Arguments - How to star will test you knowledge of the star test.",
+    "description": "",
     "location": "DragonScore:lessons/syllogistic_arguments_how_to_star.json"
   },
   {
     "id": "week2c",
     "name": "Week 2 Syllogistic Logic – Symbolic Examples",
-    "description": "Syllogistic Arguments - Symbolic will test you knowledge of the star test to tell if an argument is valid.",
+    "description": "",
     "location": "DragonScore:lessons/syllogistic_arguments_symbolic.json"
   },
   {
     "id": "week2d",
     "name": "Week 2 Syllogistic Logic – English Examples",
-    "description": "Syllogistic Arguments - Eymbolic will test you knowledge of the star test to tell if an argument is valid.",
+    "description": "",
     "location": "DragonScore:lessons/syllogistic_arguments_english.json"
   },
   {
     "id": "week3a",
     "name": "Week 3 Syllogistic Logic – Harder Translations",
-    "description": "Syllogistic logic studies arguments whose validity depends on \"all,\" \"no,\" \"some,\" and similar notions.\nThis lesson is about translating sentences into syllogistic logic. It goes with the \"Syllogistic Logic\" chapter of Harry J. Gensler's Introduction to Logic (Routledge Press).",
+    "description": "",
     "location": "DragonScore:lessons/syllogistic_translations_hard.json"
   },
   {
     "id": "week3b",
     "name": "Week 3 Syllogistic Logic – Finding the Conclusion",
-    "description": "Syllogistic Arguments - Find Conclusion will test if you can find the conclusion in a syllogistic argument.",
+    "description": "",
     "location": "DragonScore:lessons/syllogistic_arguments_find_conclusion.json"
   },
   {
     "id": "week3c",
     "name": "Week 3 Syllogistic Logic – Idiomatic Examples",
-    "description": "PLEASE CHANGE ME",
+    "description": "",
     "location": "DragonScore:lessons/syllogistic_arguments_idiomatic.json"
   },
   {
     "id": "week4a",
     "name": "Week 4 Propositional Logic - Easier Translations",
-    "description": "Propositional logic will test arguments whose validity depends on “if-then,”\n“and,” “or,” “not,” and similar notions",
+    "description": "",
     "location": "DragonScore:lessons/propositional_translations.json"
   },
   {
     "id": "week4b",
     "name": "Week 4 Propositional Logic – Truth Evaluations",
-    "description": "Truth Evaluations will test you knowledge of true/false logic.",
+    "description": "",
     "location": "DragonScore:lessons/truth_evaluations.json"
   },
   {
     "id": "week4c",
     "name": "Week 4 Propositional Logic – Unknown Evaluations",
-    "description": "Unknown Evaluations will test you knowledge of true/false logic.",
+    "description": "",
     "location": "DragonScore:lessons/truth_evaluations.json"
   },
   {
     "id": "week4d",
-    "name": "Truth Tables",
-    "description": "Truth Tables will test you knowledge of true/false logic.",
+    "name": "Week 4 Propositional Logic – Complex Evaluations",
+    "description": "",
     "location": "DragonScore:lessons/truth_tables.json"
   },
   {
     "id": "week5a",
     "name": "Week 5 Propositional Logic – English",
-    "description": "PLEASE CHANGE ME",
+    "description": "",
     "location": "DragonScore:lessons/propositional_arguments_english.json"
   },
   {
     "id": "week5b",
     "name": "Week 5 Propositional Logic - Harder Translations",
-    "description": "Propositional logic will test arguments whose validity depends on “if-then,”\n“and,” “or,” “not,” and similar notions",
+    "description": "",
     "location": "DragonScore:lessons/propositional_translations.json"
   },
   {
     "id": "week5c",
     "name": "Week 5 Propositional Logic – Find the Conclusion",
-    "description": "Propositional Arguments - Find Conclusion will test if you can find the conclusion in a propositional argument.",
+    "description": "",
     "location": "DragonScore:lessons/propositional_arguments_find_conclusion.json"
   },
   {
     "id": "week5d",
     "name": "Week 5 Propositional Logic – Idiomatic Examples",
-    "description": "PLEASE CHANGE ME",
+    "description": "",
     "location": "DragonScore:lessons/propositional_arguments_idiomatic.json"
   },
   {
     "id": "week6",
     "name": "Week 6 Fallacies",
-    "description": "PLEASE CHANGE ME",
+    "description": "",
     "location": "DragonScore:lessons/informal_fallacies.json"
   },
   {
     "id": "week7",
     "name": "Week 7 Statistical, Analogical, & Causal Reasoning",
-    "description": "Probability - Mill/Induction CHANGE ME!",
+    "description": "",
     "location": "DragonScore:lessons/probability.json"
   }
 ]

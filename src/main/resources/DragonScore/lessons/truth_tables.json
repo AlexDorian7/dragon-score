@@ -4,7 +4,7 @@
   "lessons": [
     {
       "id": "week4d",
-      "name": "Truth Tables",
+      "name": "Week 4 Propositional Logic – Complex Evaluations",
       "description": "Truth Tables will test you knowledge of true/false logic.",
       "randomize": false,
       "pointsRequired": 100,

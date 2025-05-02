@@ -237,7 +237,8 @@
       { "word": "Adam", "type": "PRO_NOUN" },
       { "word": "Jay", "type": "PRO_NOUN" },
       { "word": "Marcus", "type": "PRO_NOUN" },
-      { "word": "George", "type": "PRO_NOUN" }
+      { "word": "George", "type": "PRO_NOUN" },
+      { "word": "Versel", "type": "PRO_NOUN" }
     ],
     "is": [
       { "word": "is", "type": "VERB" },
