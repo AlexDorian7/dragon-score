@@ -13,16 +13,11 @@ import team.logica_populi.dragonscore.base.logic.Answer;
 import team.logica_populi.dragonscore.base.logic.BooleanLogicTreeNode;
 import team.logica_populi.dragonscore.base.logic.Question;
 import team.logica_populi.dragonscore.base.points.SubmissionCode;
-import team.logica_populi.dragonscore.base.points.SubmissionSystem;
 import team.logica_populi.dragonscore.ui.UiComponentCreator;
 import team.logica_populi.dragonscore.ui.controllers.*;
 
-import java.io.File;
-import java.io.IOException;
-import java.nio.file.Files;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Objects;
 import java.util.logging.Logger;
 
 /**
@@ -92,6 +87,10 @@ public class DragonHandler {
      */
     protected void addPoints(int points) {
         setPoints(Integer.max(0, points + getPoints())); // Using max call here to make sure points.dat can never go negative
+    }
+
+    public Stage getStage(){
+        return stage;
     }
 
     /**
