@@ -295,6 +295,479 @@
               "correct": false
             }
           ]
+        },
+        {
+          "question": "Please find the conclusion in this argument.",
+          "answers": [
+            {
+              "answer": "On the assumption that P is a bachelor, P would be strong but careful.| This proves that",
+              "correct": false
+            },
+            {
+              "answer": "P isn't strong,| because",
+              "correct": true
+            },
+            {
+              "answer": "P isn't a bachelor.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Please find the conclusion in this argument.",
+          "answers": [
+            {
+              "answer": "Provided that you're a carpenter, then if you're dull then you're frightened.",
+              "correct": false
+            },
+            {
+              "answer": "You're a carpenter.| This means that",
+              "correct": false
+            },
+            {
+              "answer": "you aren't frightened| - inasmuch as",
+              "correct": true
+            },
+            {
+              "answer": "you aren't dull.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Please find the conclusion in this argument.",
+          "answers": [
+            {
+              "answer": "You aren't poor, unless you aren't boastful.",
+              "correct": false
+            },
+            {
+              "answer": "You're poor.| We may infer that",
+              "correct": false
+            },
+            {
+              "answer": "you aren't boastful.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "Please find the conclusion in this argument.",
+          "answers": [
+            {
+              "answer": "Keith is bright.| I say this because of the following facts.",
+              "correct": true
+            },
+            {
+              "answer": "Being a dentist is necessary in order for Keith to be bright.| And",
+              "correct": false
+            },
+            {
+              "answer": "Keith is a dentist.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Please find the conclusion in this argument.",
+          "answers": [
+            {
+              "answer": "You wouldn't be bitter if you were either slow or not famous.| As a consequence,",
+              "correct": false
+            },
+            {
+              "answer": "you must be famous| - since clearly",
+              "correct": true
+            },
+            {
+              "answer": "you're bitter.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Please find the conclusion in this argument.",
+          "answers": [
+            {
+              "answer": "I've concluded that",
+              "correct": false
+            },
+            {
+              "answer": "you're a student.| Here are my reasons.",
+              "correct": true
+            },
+            {
+              "answer": "If you aren't a student, then you aren't either cheap or greedy.| And",
+              "correct": false
+            },
+            {
+              "answer": "you aren't cheap.| But",
+              "correct": false
+            },
+            {
+              "answer": "you're greedy.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Please find the conclusion in this argument.",
+          "answers": [
+            {
+              "answer": "A necessary and sufficient condition for Donna being both clean and fortunate is that Donna isn't selfish.| Thus",
+              "correct": false
+            },
+            {
+              "answer": "Donna isn't clean.| My evidence for this is that",
+              "correct": true
+            },
+            {
+              "answer": "Donna is selfish.| And obviously",
+              "correct": false
+            },
+            {
+              "answer": "Donna isn't fortunate.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Please find the conclusion in this argument.",
+          "answers": [
+            {
+              "answer": "Provided that you're a cannibal, then if you're dull then you're loveable.",
+              "correct": false
+            },
+            {
+              "answer": "You're a cannibal.| This means that",
+              "correct": false
+            },
+            {
+              "answer": "you aren't dull| - inasmuch as",
+              "correct": true
+            },
+            {
+              "answer": "you aren't loveable.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Please find the conclusion in this argument.",
+          "answers": [
+            {
+              "answer": "Sally must be poor.| This is true because of the following reasons. First,",
+              "correct": true
+            },
+            {
+              "answer": "Sally is logical if Sally is both poor and comical.| Second,",
+              "correct": false
+            },
+            {
+              "answer": "Sally is logical| Finally,",
+              "correct": false
+            },
+            {
+              "answer": "Sally is comical.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Please find the conclusion in this argument.",
+          "answers": [
+            {
+              "answer": "Jim can't be rough| -- due to these facts.",
+              "correct": true
+            },
+            {
+              "answer": "Assuming that Jim is rough, then it can't be that Jim is both poetic and not dangerous.| Also,",
+              "correct": false
+            },
+            {
+              "answer": "Jim isn't poetic.| Finally,",
+              "correct": false
+            },
+            {
+              "answer": "Jim isn't dangerous.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Please find the conclusion in this argument.",
+          "answers": [
+            {
+              "answer": "Donna is slow or a customer, only if Donna is bashful but romantic.",
+              "correct": false
+            },
+            {
+              "answer": "Donna must be bashful,| since obviously",
+              "correct": true
+            },
+            {
+              "answer": "Donna is slow.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Please find the conclusion in this argument.",
+          "answers": [
+            {
+              "answer": "Provided that it's true that if you're a clown then you're strong, then you're boring but not frivolous.| Of course",
+              "correct": false
+            },
+            {
+              "answer": "you're frivolous.| These are my reasons for saying that",
+              "correct": false
+            },
+            {
+              "answer": "you aren't strong.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "Please find the conclusion in this argument.",
+          "answers": [
+            {
+              "answer": "You can't be generous.",
+              "correct": true
+            },
+            {
+              "answer": "If you were a librarian, then you'd be clean or generous.| Naturally",
+              "correct": false
+            },
+            {
+              "answer": "you aren't clean.| Similarly,",
+              "correct": false
+            },
+            {
+              "answer": "you aren't a librarian.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Please find the conclusion in this argument.",
+          "answers": [
+            {
+              "answer": "You're cruel and boastful, only if you're also remarkable.",
+              "correct": false
+            },
+            {
+              "answer": "You aren't remarkable.| Consequently",
+              "correct": false
+            },
+            {
+              "answer": "you aren't boastful.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "Please find the conclusion in this argument.",
+          "answers": [
+            {
+              "answer": "Harry isn't both a pessimist and also either dull or creative.",
+              "correct": false
+            },
+            {
+              "answer": "Harry must be a pessimist,| since obviously",
+              "correct": true
+            },
+            {
+              "answer": "Harry isn't dull.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Please find the conclusion in this argument.",
+          "answers": [
+            {
+              "answer": "You're both a scientist and poor, unless you're famous but bitter.| This implies that",
+              "correct": false
+            },
+            {
+              "answer": "you're bitter.| I assume that",
+              "correct": true
+            },
+            {
+              "answer": "you aren't a scientist.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Please find the conclusion in this argument.",
+          "answers": [
+            {
+              "answer": "Joseph is greedy, provided that Joseph is both rich and confused.| Now",
+              "correct": false
+            },
+            {
+              "answer": "Joseph is confused.| I conclude that",
+              "correct": false
+            },
+            {
+              "answer": "Joseph isn't rich - since of course",
+              "correct": true
+            },
+            {
+              "answer": "Joseph isn't greedy.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Please find the conclusion in this argument.",
+          "answers": [
+            {
+              "answer": "A necessary and sufficient condition for Keith being both cheap and brilliant is that Keith isn't frantic.| Thus",
+              "correct": false
+            },
+            {
+              "answer": "Keith isn't cheap.| My evidence for this is that",
+              "correct": true
+            },
+            {
+              "answer": "Keith is frantic.| And",
+              "correct": false
+            },
+            {
+              "answer": "obviously Keith is brilliant.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Please find the conclusion in this argument.",
+          "answers": [
+            {
+              "answer": "You aren't a doctor.",
+              "correct": true
+            },
+            {
+              "answer": "If you were a doctor, then you'd be cruel or gloomy.| Naturally",
+              "correct": false
+            },
+            {
+              "answer": "you aren't cruel.| Similarly,",
+              "correct": false
+            },
+            {
+              "answer": "you aren't gloomy.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Please find the conclusion in this argument.",
+          "answers": [
+            {
+              "answer": "These two facts prove to us that|* Harry isn't a democrat.| First,",
+              "correct": false
+            },
+            {
+              "answer": "Harry isn't both a democrat and also either short or logical.| Second,",
+              "correct": false
+            },
+            {
+              "answer": "Harry is short.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Please find the conclusion in this argument.",
+          "answers": [
+            {
+              "answer": "You wouldn't be romantic if you were poor but not dangerous.| This is my reason for saying that",
+              "correct": false
+            },
+            {
+              "answer": "you're dangerous| - since of course",
+              "correct": true
+            },
+            {
+              "answer": "you're romantic.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Please find the conclusion in this argument.",
+          "answers": [
+            {
+              "answer": "Perry is sarcastic, provided that Perry is both bold and curious.| Now",
+              "correct": false
+            },
+            {
+              "answer": "Perry is curious.| I conclude that",
+              "correct": false
+            },
+            {
+              "answer": "Perry isn't sarcastic| - since of course",
+              "correct": true
+            },
+            {
+              "answer": "Perry isn't bold.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Please find the conclusion in this argument.",
+          "answers": [
+            {
+              "answer": "Derek is a convict.| I say this because of the following facts.",
+              "correct": true
+            },
+            {
+              "answer": "Being a convict is necessary in order for Derek to be rough.| And",
+              "correct": false
+            },
+            {
+              "answer": "Derek is rough.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "Please find the conclusion in this argument.",
+          "answers": [
+            {
+              "answer": "We know that |Harry isn't both smart and also not frightened.| We also know that",
+              "correct": false
+            },
+            {
+              "answer": "Harry isn't frightened.| Putting these facts together, we conclude that",
+              "correct": false
+            },
+            {
+              "answer": "Harry isn't smart.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "Please find the conclusion in this argument.",
+          "answers": [
+            {
+              "answer": "You must be slow|, for these reasons.",
+              "correct": true
+            },
+            {
+              "answer": "You're a criminal just if you aren't slow.| And",
+              "correct": false
+            },
+            {
+              "answer": "you aren't a criminal.",
+              "correct": false
+            }
+          ]
         }
       ]
     }
