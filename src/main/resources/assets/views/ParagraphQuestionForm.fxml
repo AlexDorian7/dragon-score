@@ -16,9 +16,10 @@
             style="-fx-background-color: #fffce8;"
             xmlns="http://javafx.com/javafx/23.0.1"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="team.logica_populi.dragonscore.ui.controllers.ParagraphQuestionForm">
+            fx:controller="team.logica_populi.dragonscore.ui.controllers.ParagraphQuestionFormController">
 
-    <!-- Top Navigation -->
+
+        <!-- Top Navigation -->
     <HBox alignment="CENTER_RIGHT"
           AnchorPane.leftAnchor="44"
           AnchorPane.rightAnchor="44"
@@ -51,7 +52,7 @@
         <HBox alignment="CENTER">
             <ProgressBar fx:id="progressBar"
                          minHeight="30"
-                         prefWidth="700"
+                         prefWidth="750"
                          progress="0.65"
                          style="-fx-progress-color: #e1c778;" />
             <VBox.margin>
@@ -63,7 +64,7 @@
         <TextFlow fx:id="paragraphArea"
                   minHeight="160.0"
                   maxHeight="300.0"
-                  maxWidth="700"
+                  maxWidth="750"
                   style="-fx-border-color: #a5a5a5;
               -fx-border-radius: 4;
               -fx-background-color: #fdfdfd;
@@ -76,7 +77,7 @@
 
     <!-- Difficulty Buttons -->
     <HBox alignment="CENTER"
-          maxWidth="700"
+          maxWidth="750"
           spacing="16">
 
         <ToggleButton fx:id="easyDif"

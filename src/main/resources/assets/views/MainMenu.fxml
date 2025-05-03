@@ -104,7 +104,8 @@
                       -fx-border-radius: 4;
                       -fx-background-radius: 4;
                       -fx-selection-bar: #635325;
-                      -fx-accent: #635325;">
+                      -fx-accent: #635325;
+                      -fx-font-size: 15px;">
 
         <VBox.margin>
             <Insets bottom="14"/>

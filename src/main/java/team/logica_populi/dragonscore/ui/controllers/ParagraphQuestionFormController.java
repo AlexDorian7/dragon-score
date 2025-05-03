@@ -20,9 +20,9 @@ import java.util.logging.Logger;
 public class ParagraphQuestionFormController implements IQuestionFormController {
 
     private static final Logger logger = Logger.getLogger(ParagraphQuestionFormController.class.getName());
-    private static final Font DEFAULT_FONT = new Font("System Default", 13);
-    private static final Font BOLD_DEFAULT_FONT = new Font("System Bold", 13);
-    private static final Font QUESTION_FONT = new Font("System Default", 16);
+    private static final Font DEFAULT_FONT = new Font("System Default", 16);
+    private static final Font BOLD_DEFAULT_FONT = new Font("System Bold", 16);
+    private static final Font QUESTION_FONT = new Font("System Default", 20);
 
     @FXML
     private Button HomeMenu;
@@ -78,9 +78,19 @@ public class ParagraphQuestionFormController implements IQuestionFormController 
 
         for (ToggleButton btn : buttons) {
             if (btn.isSelected()) {
-                btn.setStyle("-fx-background-radius: 100; -fx-background-color: #645c41; -fx-text-fill: black; -fx-pref-width: 50; -fx-pref-height: 50; -fx-font-size: 1.1em;"); // green
+                btn.setStyle("-fx-background-radius: 100; " +
+                        "-fx-background-color: #635325;" +
+                        " -fx-text-fill: #ffffff; " +
+                        "-fx-pref-width: 50;" +
+                        " -fx-pref-height: 50; " +
+                        "-fx-font-size: 20px;"); // green
             } else {
-                btn.setStyle("-fx-background-radius: 100; -fx-background-color: #fce6a4; -fx-text-fill: black; -fx-pref-width: 50; -fx-pref-height: 50; -fx-font-size: 1.1em;"); // green
+                btn.setStyle("-fx-background-radius: 100; " +
+                        "-fx-background-color: #e0c97d; " +
+                        "-fx-text-fill: #282828; " +
+                        "-fx-pref-width: 50; " +
+                        "-fx-pref-height: 50; " +
+                        "-fx-font-size: 20px;"); // green
             }
         }
     }
