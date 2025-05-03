@@ -17,6 +17,8 @@ public class NameFormController {
     @FXML
     public void initialize() {
         // Assuming 'fName' is your container, or replace with your actual root container node:
+        fName.setOnAction(e -> submit(new ActionEvent()));
+        lName.setOnAction(e -> submit(new ActionEvent()));
     }
 
     @FXML
@@ -70,7 +72,7 @@ public class NameFormController {
                         "-fx-text-fill: white;" +
                         "-fx-border-radius: 10;" +
                         "-fx-background-radius: 10;" +
-                        "-fx-font-size: 24px;" +
+                        "-fx-font-size: 22px;" +
                         "-fx-padding: 8 28;"
         );
     }
@@ -83,7 +85,7 @@ public class NameFormController {
                         "-fx-text-fill: white;" +
                         "-fx-border-radius: 10;" +
                         "-fx-background-radius: 10;" +
-                        "-fx-font-size: 24px;" +
+                        "-fx-font-size: 22px;" +
                         "-fx-padding: 8 28;"
         );
     }

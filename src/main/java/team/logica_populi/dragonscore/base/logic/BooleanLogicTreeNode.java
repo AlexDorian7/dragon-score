@@ -9,37 +9,22 @@ import java.util.logging.Logger;
 public class BooleanLogicTreeNode {
     private static final Logger logger = Logger.getLogger(BooleanLogicTreeNode.class.getName());
 
-    public final Operators operator;
-    public final List<BooleanLogicTreeNode> inputs;
-    public final char constantChar;
+    private final Operators operator;
+    private final List<BooleanLogicTreeNode> inputs;
+    private final char constantChar;
 
     private char nextChar = 'A';
     private HashMap<Character, Boolean> cache = new HashMap<>();
 
-    BooleanLogicTreeNode(Operators operator, List<BooleanLogicTreeNode> inputs) {
+    private BooleanLogicTreeNode(Operators operator, List<BooleanLogicTreeNode> inputs) {
         this(operator, inputs, '0');
     }
 
-    BooleanLogicTreeNode(Operators operator, List<BooleanLogicTreeNode> inputs, char constantChar) {
+    private BooleanLogicTreeNode(Operators operator, List<BooleanLogicTreeNode> inputs, char constantChar) {
         this.operator = operator;
         this.inputs = inputs;
         this.constantChar = constantChar;
     }
-
-
-
-
-    public static HashMap<Character, Boolean> decodeBitmask(int bitmask, List<Character> variables) {
-        HashMap<Character, Boolean> result = new HashMap<>();
-
-        for (int i = 0; i < variables.size(); i++) {
-            boolean value = (bitmask & (1 << i)) != 0; // Check if the bit at index i is set
-            result.put(variables.get(i), value);
-        }
-
-        return result;
-    }
-
 
     /**
      * tests if the provided truth table mapping is truthful.
@@ -51,15 +36,19 @@ public class BooleanLogicTreeNode {
         final boolean[] truthful = {true};
 
         table.forEach((Set<Character> key, Boolean value) -> {
-            HashMap<Character, Boolean> newCache = new HashMap<>();
+            cache.clear();
 
             // Populate newCache based on the set representation
             for (Character var : vars) {
-                newCache.put(var, key.contains(var)); // True if the variable is in the set, false otherwise
+                cache.put(var, key.contains(var)); // True if the variable is in the set, false otherwise
             }
 
-            cache = newCache;
-            boolean val = (getValue() == value);
+            logger.finer("Cache: " + cache);
+            boolean v1 = getValue();
+            logger.finer("Eval: " + v1);
+            boolean val = (v1 == value);
+            logger.finer("Value: " + value);
+            logger.finer("Matches: " + val);
             truthful[0] = truthful[0] && val;
         });
 
@@ -75,15 +64,19 @@ public class BooleanLogicTreeNode {
      */
     public Map<Set<Character>, Boolean> gatherResultsTable(Map<Set<Character>, Boolean> table, List<Character> vars) {
         table.forEach((Set<Character> key, Boolean value) -> {
-            HashMap<Character, Boolean> newCache = new HashMap<>();
+            cache.clear();
 
             // Populate newCache based on the set representation
             for (Character var : vars) {
-                newCache.put(var, key.contains(var)); // True if the variable is in the set, false otherwise
+                cache.put(var, key.contains(var)); // True if the variable is in the set, false otherwise
             }
 
-            cache = newCache;
-            boolean val = (getValue() == value);
+            logger.finer("Cache: " + cache);
+            boolean v1 = getValue();
+            logger.finer("Eval: " + v1);
+            boolean val = (v1 == value);
+            logger.finer("Value: " + value);
+            logger.finer("Matches: " + val);
             table.put(key, val);
         });
         return table;
@@ -113,11 +106,11 @@ public class BooleanLogicTreeNode {
         return operator.transformer.transform(list);
     }
 
-     static void check(int argc, List<Boolean> inputs) {
+     private static void check(int argc, List<Boolean> inputs) {
         if (inputs.size() != argc) throw new IllegalStateException("Expected " + argc + " input booleans, but got " + inputs.size() + ".");
     }
 
-    public static boolean conditional(boolean a, boolean b) {
+    private static boolean conditional(boolean a, boolean b) {
         if (!a) return true; // F F -> T, F T -> T
         return b; // T F -> F, T T -> T
     }

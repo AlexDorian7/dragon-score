@@ -13,11 +13,14 @@ import javafx.scene.layout.VBox;
 import team.logica_populi.dragonscore.base.logic.BooleanLogicTreeNode;
 
 import java.util.*;
+import java.util.logging.Logger;
 
 /**
  * A view to display a truth table for a given boolean expression
  */
 public class TruthTableView extends TableView<TruthTableView.RowData> {
+
+    private static final Logger logger = Logger.getLogger(TruthTableView.class.getName());
 
     private final BooleanLogicTreeNode expression;
     private List<Character> variables;
@@ -85,7 +88,7 @@ public class TruthTableView extends TableView<TruthTableView.RowData> {
         for (RowData row : getItems()) {
             Set<Character> activeVariables = new HashSet<>();
             for (Character var : row.variables) {
-                if (Boolean.parseBoolean(row.getValue(var))) {
+                if (row.getValue(var).equals("1")) { // Also needs to be changed for 1/0 display
                     activeVariables.add(var); // Store only variables that are true
                 }
             }
@@ -117,7 +120,7 @@ public class TruthTableView extends TableView<TruthTableView.RowData> {
                 // Construct a Set<Character> representing the active variables in this row
                 Set<Character> activeVariables = new HashSet<>();
                 for (Character var : row.variables) {
-                    if (Boolean.parseBoolean(row.getValue(var))) {
+                    if (row.getValue(var).equals("1")) { // Also need to be updated for 0/1
                         activeVariables.add(var);
                     }
                 }
@@ -141,7 +144,7 @@ public class TruthTableView extends TableView<TruthTableView.RowData> {
         return variables;
     }
 
-    public static class RowData {
+    protected static class RowData {
         private final SimpleBooleanProperty userInput = new SimpleBooleanProperty(false);
         private final List<SimpleStringProperty> values = new ArrayList<>();
         private final List<Character> variables;
@@ -149,14 +152,14 @@ public class TruthTableView extends TableView<TruthTableView.RowData> {
         public RowData(List<Character> variables) {
             this.variables = variables;
             for (Character var : variables) {
-                values.add(new SimpleStringProperty("false"));
+                values.add(new SimpleStringProperty("0"));
             }
         }
 
         public void setValue(Character var, boolean val) {
             int index = variables.indexOf(var);
             if (index != -1) {
-                values.get(index).set(String.valueOf(val));
+                values.get(index).set(val ? "1" : "0");
             }
         }
 

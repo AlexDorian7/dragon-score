@@ -14,22 +14,6 @@ import java.util.logging.Logger;
 public class UiComponentCreator {
     private static final Logger logger = Logger.getLogger(UiComponentCreator.class.getName());
 
-    /**
-     * Create a new Example Question pane
-     * @return A pair where the key is the pane and the value is the controller for the pane
-     */
-    public static Pair<Parent, ExampleQuestionPane> createExampleQuestionPane() {
-        FXMLLoader fxmlLoader = new FXMLLoader(UiComponentCreator.class.getResource("/assets/views/ExampleQuestionPane.fxml"));
-        Parent parent;
-        try {
-            parent = fxmlLoader.load();
-        } catch (IOException e) {
-            throw new RuntimeException(e); // If we failed to load the View then it is likely the rest of the program will not work. Throw error.
-        }
-        ExampleQuestionPane controller = fxmlLoader.getController();
-        return new Pair<>(parent, controller);
-    }
-
     public static Pair<Parent, QuestionFormController> createQuestionFormPane() {
         FXMLLoader fxmlLoader = new FXMLLoader(UiComponentCreator.class.getResource("/assets/views/QuestionForm.fxml"));
         Parent parent;
@@ -42,7 +26,7 @@ public class UiComponentCreator {
         return new Pair<>(parent, controller);
     }
 
-    public static Pair<Parent, ParagraphQuestionForm> createParagraphQuestionFormPane() {
+    public static Pair<Parent, ParagraphQuestionFormController> createParagraphQuestionFormPane() {
         FXMLLoader fxmlLoader = new FXMLLoader(UiComponentCreator.class.getResource("/assets/views/ParagraphQuestionForm.fxml"));
         Parent parent;
         try {
@@ -50,19 +34,7 @@ public class UiComponentCreator {
         } catch (IOException e) {
             throw new RuntimeException(e); // If we failed to load the View then it is likely the rest of the program will not work. Throw error.
         }
-        ParagraphQuestionForm controller = fxmlLoader.getController();
-        return new Pair<>(parent, controller);
-    }
-
-    public static Pair<Parent, DefinitionsExampleController> createDefinitionExamplePane() {
-        FXMLLoader fxmlLoader = new FXMLLoader(UiComponentCreator.class.getResource("/assets/views/DefinitionsExample.fxml"));
-        Parent parent;
-        try {
-            parent = fxmlLoader.load();
-        } catch (IOException e) {
-            throw new RuntimeException(e); // If we failed to load the View then it is likely the rest of the program will not work. Throw error.
-        }
-        DefinitionsExampleController controller = fxmlLoader.getController();
+        ParagraphQuestionFormController controller = fxmlLoader.getController();
         return new Pair<>(parent, controller);
     }
 

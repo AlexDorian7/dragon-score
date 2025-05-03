@@ -85,7 +85,7 @@ lines.forEach(line => {
                 "list": `${cmds.charAt(2)}_letters`
             }
         ],
-        "form": `<p>Which letters are ${type} here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t${cmds.charAt(3) === "1" ? str : "____"}\n\t${cmds.charAt(3) === "2" ? str : "____"}\n\\u2234\t${cmds.charAt(3) === "3" ? str : "____"}</pre>`,
+        "form": `<p>Which letters are ${type} here?<br/><span style='font-size:0.7em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t${cmds.charAt(3) === "1" ? str : "____"}\n\t${cmds.charAt(3) === "2" ? str : "____"}\n\\u2234\t${cmds.charAt(3) === "3" ? str : "____"}</pre>`,
         "answerForms": [
             {
                 "form": `Neither letter is ${type}`,

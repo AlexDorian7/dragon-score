@@ -14,14 +14,14 @@
 
    <!-- Header -->
    <HBox alignment="CENTER_RIGHT" AnchorPane.leftAnchor="44" AnchorPane.rightAnchor="44" AnchorPane.topAnchor="28">
-      <Label style="-fx-font-family: 'Helvetica';                -fx-font-size: 36px;                -fx-font-weight: BOLD;                -fx-text-fill: #282828;" text="LogiQuest" />
+      <Label style="-fx-font-family: 'Helvetica'; -fx-font-size: 36px; -fx-font-weight: BOLD; -fx-text-fill: #282828;" text="LogiQuest" />
       <Region fx:id="spacer" HBox.hgrow="ALWAYS" />
    </HBox>
 
    <!-- Content Area -->
    <VBox alignment="CENTER" prefWidth="900" spacing="0" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="270" AnchorPane.rightAnchor="270" AnchorPane.topAnchor="0">
 
-      <Text style="-fx-font-size: 42px;             -fx-font-weight: 'Segoe UI Semibold';" text="What is your name?" textAlignment="CENTER" wrappingWidth="600">
+      <Text style="-fx-font-size: 42px; -fx-font-weight: 'Segoe UI Semibold';" text="What is your name?" textAlignment="CENTER" wrappingWidth="600">
          <VBox.margin>
             <Insets bottom="28" />
          </VBox.margin>
@@ -36,11 +36,12 @@
    </TextField>
 
       <TextField fx:id="lName" maxWidth="400" onMousePressed="#onFocused" prefHeight="40.0" promptText="Last Name" style="-fx-background-color: #FDFDFD;                       -fx-border-color: #a5a5a5;                       -fx-border-width: 1;                       -fx-border-style: solid;                       -fx-border-radius: 4;                       -fx-background-radius: 4;                       -fx-prompt-text-fill: #a2a2a2;                       -fx-font-size: 16px;">
+
          <VBox.margin>
             <Insets bottom="20" />
          </VBox.margin>
       </TextField>
 
-      <Button maxWidth="400.0" minWidth="130" onAction="#submit" onMouseEntered="#handleHover" onMouseExited="#handleExit" prefHeight="50.0" style="-fx-background-color: #282828;                     -fx-text-fill: white;                     -fx-border-radius: 10;                     -fx-background-radius: 10;                     -fx-font-size: 24px;                     -fx-padding: 8 28;                     -fx-prompt-text-fill: #a2a2a2;" text="Submit" />
+      <Button maxWidth="400.0" minWidth="130" onAction="#submit" onMouseEntered="#handleHover" onMouseExited="#handleExit" prefHeight="50.0" style="-fx-background-color: #282828;                     -fx-text-fill: white;                     -fx-border-radius: 10;                     -fx-background-radius: 10;                     -fx-font-size: 22px;                     -fx-padding: 8 28;                     -fx-prompt-text-fill: #a2a2a2;" text="Submit" />
    </VBox>
 </AnchorPane>

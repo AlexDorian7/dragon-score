@@ -210,12 +210,13 @@ public class DragonHandler {
              throw new IllegalStateException("Attempt to show question menu before session was set up!");
          }
          setLesson(lesson);
-         logger.info("Points required: " + lesson.getPointsRequired());
+         logger.finer("Points required: " + lesson.getPointsRequired());
          updatePoints();
+         setPointsToGive(10); // Fixes bug. Each time you start a new lesson your selected difficulty defaults to 10
          if (lesson.getFormType() != null) {
              switch (lesson.getFormType()) {
                  case("PARAGRAPH"):
-                     Pair<Parent, ParagraphQuestionForm> paragraphQuestionFormPane = UiComponentCreator.createParagraphQuestionFormPane();
+                     Pair<Parent, ParagraphQuestionFormController> paragraphQuestionFormPane = UiComponentCreator.createParagraphQuestionFormPane();
                      questionController = paragraphQuestionFormPane.getValue();
                      questionScene = new Scene(paragraphQuestionFormPane.getKey());
                      break;
@@ -320,10 +321,9 @@ public class DragonHandler {
             logger.fine("Creating new Point System.");
             JsonRegistry.getInstance().createNewPointSystem();
         } else {
-            String data = null;
+            String data;
             try{
                 data = EncryptionRegistry.getInstance().decrypt(location.tryGetResource());
-                logger.info(data);
             } catch (Exception e) {
                 JsonRegistry.getInstance().createNewPointSystem();
                 return;
@@ -342,10 +342,9 @@ public class DragonHandler {
             logger.fine("Creating new Submission System.");
             JsonRegistry.getInstance().createSubmissionSystem();
         } else {
-            String data = null;
+            String data;
             try{
                 data = EncryptionRegistry.getInstance().decrypt(location.tryGetResource());
-                logger.info(data);
             } catch (Exception e) {
                 JsonRegistry.getInstance().createSubmissionSystem();
                 return;
