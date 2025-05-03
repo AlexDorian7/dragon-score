@@ -13,16 +13,11 @@ import team.logica_populi.dragonscore.base.logic.Answer;
 import team.logica_populi.dragonscore.base.logic.BooleanLogicTreeNode;
 import team.logica_populi.dragonscore.base.logic.Question;
 import team.logica_populi.dragonscore.base.points.SubmissionCode;
-import team.logica_populi.dragonscore.base.points.SubmissionSystem;
 import team.logica_populi.dragonscore.ui.UiComponentCreator;
 import team.logica_populi.dragonscore.ui.controllers.*;
 
-import java.io.File;
-import java.io.IOException;
-import java.nio.file.Files;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Objects;
 import java.util.logging.Logger;
 
 /**
@@ -211,12 +206,12 @@ public class DragonHandler {
              throw new IllegalStateException("Attempt to show question menu before session was set up!");
          }
          setLesson(lesson);
-         logger.info("Points required: " + lesson.getPointsRequired());
+         logger.finer("Points required: " + lesson.getPointsRequired());
          updatePoints();
          if (lesson.getFormType() != null) {
              switch (lesson.getFormType()) {
                  case("PARAGRAPH"):
-                     Pair<Parent, ParagraphQuestionForm> paragraphQuestionFormPane = UiComponentCreator.createParagraphQuestionFormPane();
+                     Pair<Parent, ParagraphQuestionFormController> paragraphQuestionFormPane = UiComponentCreator.createParagraphQuestionFormPane();
                      questionController = paragraphQuestionFormPane.getValue();
                      questionScene = new Scene(paragraphQuestionFormPane.getKey());
                      break;
@@ -321,10 +316,9 @@ public class DragonHandler {
             logger.fine("Creating new Point System.");
             JsonRegistry.getInstance().createNewPointSystem();
         } else {
-            String data = null;
+            String data;
             try{
                 data = EncryptionRegistry.getInstance().decrypt(location.tryGetResource());
-                logger.info(data);
             } catch (Exception e) {
                 JsonRegistry.getInstance().createNewPointSystem();
                 return;
@@ -343,10 +337,9 @@ public class DragonHandler {
             logger.fine("Creating new Submission System.");
             JsonRegistry.getInstance().createSubmissionSystem();
         } else {
-            String data = null;
+            String data;
             try{
                 data = EncryptionRegistry.getInstance().decrypt(location.tryGetResource());
-                logger.info(data);
             } catch (Exception e) {
                 JsonRegistry.getInstance().createSubmissionSystem();
                 return;

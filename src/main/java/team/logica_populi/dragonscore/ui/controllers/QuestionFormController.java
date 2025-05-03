@@ -50,7 +50,6 @@ public class QuestionFormController implements IQuestionFormController {
     // Initialize the controller
     @FXML
     public void initialize() {
-
         ToggleGroup difficultyGroup = new ToggleGroup();
         easyDif.setToggleGroup(difficultyGroup);
         normDif.setToggleGroup(difficultyGroup);
@@ -116,18 +115,26 @@ public class QuestionFormController implements IQuestionFormController {
         this.question = question;
         resultsShown = false;
         questionArea.getEngine().loadContent(
-                "<html><head>" +
+                "<html style=\"width: 700px;\"><head>" +
                         "  <style>" +
-                        "    body {" +
+                        "    body,html {" +
                         "      font-family: Verdana;" +
                         "      font-size: 18px;" +
                         "      line-height: 24px;" +
                         "      background: #fdfdfd;" +
                         "      margin: 0;" +
-                        "      maxWidth: 700;" +
+                        "      max-width: 700px;" +
                         "      padding: 10px;" +
                         "      color: #000000;" +
+                        "      box-sizing: border-box;" +
+                        "      overflow-x: hidden;" +
                         "    }" +
+                        "   p, pre {" +
+                        "       max-width: 700px;" +
+                        "   }" +
+                        "   pre {" +
+                        "     white-space: pre-wrap;" +
+                        "   }" +
                         "  </style>" +
                         "</head><body>" +
                         question.getQuestion() +
@@ -211,13 +218,7 @@ public class QuestionFormController implements IQuestionFormController {
     public void showCorrect() {
         resultsShown = true;
         if (tableView != null) {
-            tableView.applyRowColors(
-                    tableView.getExpression()
-                            .gatherResultsTable(
-                                    tableView.getTruthMapping(),
-                                    tableView.getVariables()
-                            )
-            );
+            tableView.applyRowColors(tableView.getExpression().gatherResultsTable(tableView.getTruthMapping(), tableView.getVariables()));
         } else {
             for (int i = 0; i < answerButtons.size(); i++) {
                 RadioButton btn = answerButtons.get(i);
@@ -225,14 +226,14 @@ public class QuestionFormController implements IQuestionFormController {
                 if (isCorrect) {
                     // correct answer → green
                     btn.setStyle(
-                            "-fx-background-color: #9FD4A3;" +
+                            "-fx-background-color: lightgreen;" +
                                     "-fx-padding: 1 4 1 4;" +
                                     "-fx-background-radius: 2;"
                     );
                 } else if (btn.isSelected()) {
                     // wrong selection → red
                     btn.setStyle(
-                            "-fx-background-color: #FF7770;" +
+                            "-fx-background-color: lightcoral;" +
                                     "-fx-padding: 1 4 1 4;" +
                                     "-fx-background-radius: 2;"
                     );
@@ -241,7 +242,6 @@ public class QuestionFormController implements IQuestionFormController {
         }
         submitButton.setText("Next Question");
     }
-
 
     /**
      * Sets the on submitted callback consumer.

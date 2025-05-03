@@ -1,4 +1,4 @@
-const data = [
+const BF = [
     `You're the cheapest person in Missouri| andthe cheapest person in Missouri doesn't forget professors.| This implies that*you must be talented.| After all,whoever forgets professors isn't talented.`,
     `*Tom is a scholarly professor.| How do I know this? Well,Tom is clean| andonly those who are clean are scholarly professors.`,
     `Since |prosperous convicts are weak| andit's false that some weak person is remarkable,| as a result*no remarkable person is a prosperous convict.`,
@@ -47,9 +47,27 @@ const data = [
     `*No bold person is frivolous.| For\u001Fcharitable druggists are bold| and\u001Fit's false that there is some charitable druggist who is frivolous.`
 ];
 
+const EF = [
+    `You wouldn't be frivolous if you were either cheap or not scholarly.| As a consequence,*you must be scholarly| - since clearlyyou're frivolous.`,
+    `George isn't both a carpenter and also either strong or frightened.*George must be a carpenter,| since obviouslyGeorge isn't strong.`,
+    `A necessary and sufficient condition for Donna being both cruel and realistic is that Donna isn't boastful.| Thus*Donna isn't cruel.| My evidence for this is thatDonna is boastful.| And obviouslyDonna isn't realistic.`,
+    `It is sufficient that you be a dentist, in order for you to be short and remarkable.You aren't short.| It follows that*you can't be a dentist.`,
+    `*These two facts prove to us that |Jim is poor.| First,Jim isn't both poor and not faithful.| Second,Jim is faithful.`,
+    `*Harry can't be clean| - due to these facts.Assuming that Harry is clean, then it can't be that Harry is both scholarly and not frivolous.| Also,Harry is scholarly.| Finally,Harry isn't frivolous.`,
+    `A necessary and sufficient condition for Donna being both short and gentle is that Donna isn't cheerful.| Thus*Donna isn't short.| My evidence for this is thatDonna is cheerful.| And obviouslyDonna isn't gentle.`,
+    `Provided that you're a lifeguard, then if you're rich then you're cowardly.You're a lifeguard.| This means that*you aren't rich| - inasmuch asyou aren't cowardly.`,
+    `On the assumption that Jim is a convict, Jim would be rough but fanatical.| This proves that*Jim isn't rough,| becauseJim isn't a convict.`,
+    `We know that |Alex isn't both bright and also not greedy.| We also know thatAlex isn't greedy.| Putting these facts together, we conclude that*Alex isn't bright.`,
+    `*These two facts prove to us that |Harry isn't a criminal.| First,Harry isn't both a criminal and also either slow or fortunate.| Second,Harry is slow.`,
+    `*Donna is clean.| I say this because of the following facts.Being a foreigner is necessary in order for Donna to be clean.| AndDonna is a foreigner.`,
+    `Alex is poetic, provided that Alex is both dull and likeable.| NowAlex is likeable.| I conclude that*Alex isn't dull| - since of courseAlex isn't poetic.`,
+    `*Harry can't be rich| - due to these facts.Assuming that Harry is rich, then it can't be that Harry is both dangerous and not sarcastic.| Also,Harry isn't dangerous.| Finally,Harry isn't sarcastic.`,
+    `*Jim must be careful.| This is true because of the following reasons. First,Jim is careful if Jim is both rough and sociable.| Second,Jim is rough.| Finally,Jim is sociable.`
+]
+
 const array = []
 
-data.forEach(question => {
+EF.forEach(question => {
     parts = question.split("\u001F");
     let ret = {
         question: "Please find the conclusion in this argument.",

@@ -5,7 +5,7 @@
   "terms": {},
   "lessons": [
     {
-      "id": "lesson_syllogistic_arguments_symbolic",
+      "id": "week2c",
       "name": "Syllogistic Arguments - Symbolic",
       "description": "Syllogistic Arguments - Symbolic will test you knowledge of the star test to tell if an argument is valid.",
       "randomize": false,
@@ -16,26 +16,5 @@
       "staticQuestions": []
     }
   ],
-  "forms": [
-    {
-      "id": "AAA-1",
-      "name": "Barbara",
-      "figure": 1,
-      "premises": [
-        { "type": "A", "subject": "M", "predicate": "P" },
-        { "type": "A", "subject": "S", "predicate": "M" }
-      ],
-      "conclusion": { "type": "A", "subject": "S", "predicate": "P" }
-    },
-    {
-      "id": "EAE-1",
-      "name": "Celarent",
-      "figure": 1,
-      "premises": [
-        { "type": "E", "subject": "M", "predicate": "P" },
-        { "type": "A", "subject": "S", "predicate": "M" }
-      ],
-      "conclusion": { "type": "E", "subject": "S", "predicate": "P" }
-    }
-  ]
+  "forms": []
 }

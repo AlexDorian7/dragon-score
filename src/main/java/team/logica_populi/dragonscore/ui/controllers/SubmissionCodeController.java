@@ -18,10 +18,10 @@ public class SubmissionCodeController {
     private static Logger logger;
 
     @FXML
-    public Label codeElement;
+    private Label codeElement;
 
     @FXML
-    public TextArea codeArea;
+    private TextArea codeArea;
 
     @FXML
     private Button backToMenuButton;

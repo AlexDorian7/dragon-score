@@ -141,7 +141,6 @@ public class ResourceLocation {
      * This will create the file if it does not exist.
      *
      * @param data The data to write
-     * @return
      */
     public void write(String data) {
         createIfNotExists();

@@ -117,6 +117,7 @@ public class Form {
      * Applies The form fields to the {@link AnswerForm}s and returns it as a list of answers.
      * The form format (for uppercase) is {@code $U{list_name_1}} or {@code $U{list_name_1|list_name_2}} or more.
      * The form format (for lowercase) is {@code $L{list_name_1}} or {@code $L{list_name_1|list_name_2}} or more.
+     * The form format (for the entire word) is {@code $F{list_name_1}} or {@code $F{list_name_1|list_name_2}} or more.
      * Using something other than {@code U} or {@code L} will result in the case being unchanged.
      * Note using the or (|) might result in a different word being picked than what the question picked.
      * @return The filled answers.
@@ -125,7 +126,7 @@ public class Form {
 
         ArrayList<Answer> answers = new ArrayList<>();
         for (AnswerForm answerForm : answerForms) {
-            Pattern pattern = Pattern.compile("\\$[UL]\\{[A-Za-z0-9_|]+}");
+            Pattern pattern = Pattern.compile("\\$[ULF]\\{[A-Za-z0-9_|]+}");
             Matcher matcher = pattern.matcher(answerForm.getForm());
 
             StringBuilder result = new StringBuilder();
@@ -140,14 +141,15 @@ public class Form {
                         possibleTerms.add(fields.get(name).getWord());
                     }
                 }
-                char first = possibleTerms.get((int) (Math.random() * possibleTerms.size())).getWord().charAt(0);
+                String word = possibleTerms.get((int) (Math.random() * possibleTerms.size())).getWord();
+                char first = word.charAt(0);
                 if (cmd == 'U') {
                     first = Character.toUpperCase(first);
                 } else if (cmd == 'L') {
                     first = Character.toLowerCase(first);
                 }
                 if (!possibleTerms.isEmpty()) {
-                    matcher.appendReplacement(result, String.valueOf(first));
+                    matcher.appendReplacement(result, (cmd != 'F') ? String.valueOf(first) : word);
                 } else {
                     matcher.appendReplacement(result, "ERROR");
                 }

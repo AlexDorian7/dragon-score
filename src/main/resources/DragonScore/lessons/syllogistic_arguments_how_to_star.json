@@ -5,7 +5,7 @@
   "terms": {},
   "lessons": [
     {
-      "id": "lesson_syllogistic_arguments_how_to_star",
+      "id": "week2b",
       "name": "Syllogistic Arguments - How to Star",
       "description": "Syllogistic Arguments - How to star will test you knowledge of the star test.",
       "randomize": false,
@@ -29,7 +29,7 @@
           "list": "u_letters"
         }
       ],
-      "form": "<p>Which letters are distributed here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\tAll ${letter_1} is ${letter_2}\n\t____\n\u2234\t____</pre>",
+      "form": "<p>Which letters are distributed here?<br/><span style='font-size:0.7em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\tAll ${letter_1} is ${letter_2}\n\t____\n\u2234\t____</pre>",
       "answerForms": [
         {
           "form": "Neither letter is distributed",
@@ -61,7 +61,7 @@
           "list": "u_letters"
         }
       ],
-      "form": "<p>Which letters are distributed here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\tNo ${letter_1} is ${letter_2}\n\t____\n\u2234\t____</pre>",
+      "form": "<p>Which letters are distributed here?<br/><span style='font-size:0.7em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\tNo ${letter_1} is ${letter_2}\n\t____\n\u2234\t____</pre>",
       "answerForms": [
         {
           "form": "Neither letter is distributed",
@@ -93,7 +93,7 @@
           "list": "u_letters"
         }
       ],
-      "form": "<p>Which letters are distributed here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\tSome ${letter_1} is ${letter_2}\n\t____\n\u2234\t____</pre>",
+      "form": "<p>Which letters are distributed here?<br/><span style='font-size:0.7em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\tSome ${letter_1} is ${letter_2}\n\t____\n\u2234\t____</pre>",
       "answerForms": [
         {
           "form": "Neither letter is distributed",
@@ -125,7 +125,7 @@
           "list": "u_letters"
         }
       ],
-      "form": "<p>Which letters are distributed here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\tsome ${letter_1} is not ${letter_2}\n\t____\n\u2234\t____</pre>",
+      "form": "<p>Which letters are distributed here?<br/><span style='font-size:0.7em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\tsome ${letter_1} is not ${letter_2}\n\t____\n\u2234\t____</pre>",
       "answerForms": [
         {
           "form": "Neither letter is distributed",
@@ -157,7 +157,7 @@
           "list": "u_letters"
         }
       ],
-      "form": "<p>Which letters are distributed here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t${letter_1} is ${letter_2}\n\t____\n\u2234\t____</pre>",
+      "form": "<p>Which letters are distributed here?<br/><span style='font-size:0.7em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t${letter_1} is ${letter_2}\n\t____\n\u2234\t____</pre>",
       "answerForms": [
         {
           "form": "Neither letter is distributed",
@@ -189,7 +189,7 @@
           "list": "u_letters"
         }
       ],
-      "form": "<p>Which letters are distributed here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t${letter_1} is not ${letter_2}\n\t____\n\u2234\t____</pre>",
+      "form": "<p>Which letters are distributed here?<br/><span style='font-size:0.7em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t${letter_1} is not ${letter_2}\n\t____\n\u2234\t____</pre>",
       "answerForms": [
         {
           "form": "Neither letter is distributed",
@@ -221,7 +221,7 @@
           "list": "l_letters"
         }
       ],
-      "form": "<p>Which letters are distributed here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t${letter_1} is ${letter_2}\n\t____\n\u2234\t____</pre>",
+      "form": "<p>Which letters are distributed here?<br/><span style='font-size:0.7em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t${letter_1} is ${letter_2}\n\t____\n\u2234\t____</pre>",
       "answerForms": [
         {
           "form": "Neither letter is distributed",
@@ -253,7 +253,7 @@
           "list": "l_letters"
         }
       ],
-      "form": "<p>Which letters are distributed here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t${letter_1} is not ${letter_2}\n\t____\n\u2234\t____</pre>",
+      "form": "<p>Which letters are distributed here?<br/><span style='font-size:0.7em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t${letter_1} is not ${letter_2}\n\t____\n\u2234\t____</pre>",
       "answerForms": [
         {
           "form": "Neither letter is distributed",
@@ -285,7 +285,7 @@
           "list": "u_letters"
         }
       ],
-      "form": "<p>Which letters are distributed here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t____\n\t____\n\u2234\tAll ${letter_1} is ${letter_2}</pre>",
+      "form": "<p>Which letters are distributed here?<br/><span style='font-size:0.7em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t____\n\t____\n\u2234\tAll ${letter_1} is ${letter_2}</pre>",
       "answerForms": [
         {
           "form": "Neither letter is distributed",
@@ -317,7 +317,7 @@
           "list": "u_letters"
         }
       ],
-      "form": "<p>Which letters are distributed here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t____\n\t____\n\u2234\tNo ${letter_1} is ${letter_2}</pre>",
+      "form": "<p>Which letters are distributed here?<br/><span style='font-size:0.7em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t____\n\t____\n\u2234\tNo ${letter_1} is ${letter_2}</pre>",
       "answerForms": [
         {
           "form": "Neither letter is distributed",
@@ -349,7 +349,7 @@
           "list": "u_letters"
         }
       ],
-      "form": "<p>Which letters are distributed here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t____\n\t____\n\u2234\tSome ${letter_1} is ${letter_2}</pre>",
+      "form": "<p>Which letters are distributed here?<br/><span style='font-size:0.7em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t____\n\t____\n\u2234\tSome ${letter_1} is ${letter_2}</pre>",
       "answerForms": [
         {
           "form": "Neither letter is distributed",
@@ -381,7 +381,7 @@
           "list": "u_letters"
         }
       ],
-      "form": "<p>Which letters are distributed here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t____\n\t____\n\u2234\tsome ${letter_1} is not ${letter_2}</pre>",
+      "form": "<p>Which letters are distributed here?<br/><span style='font-size:0.7em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t____\n\t____\n\u2234\tsome ${letter_1} is not ${letter_2}</pre>",
       "answerForms": [
         {
           "form": "Neither letter is distributed",
@@ -413,7 +413,7 @@
           "list": "u_letters"
         }
       ],
-      "form": "<p>Which letters are distributed here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t____\n\t____\n\u2234\t${letter_1} is ${letter_2}</pre>",
+      "form": "<p>Which letters are distributed here?<br/><span style='font-size:0.7em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t____\n\t____\n\u2234\t${letter_1} is ${letter_2}</pre>",
       "answerForms": [
         {
           "form": "Neither letter is distributed",
@@ -445,7 +445,7 @@
           "list": "u_letters"
         }
       ],
-      "form": "<p>Which letters are distributed here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t____\n\t____\n\u2234\t${letter_1} is not ${letter_2}</pre>",
+      "form": "<p>Which letters are distributed here?<br/><span style='font-size:0.7em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t____\n\t____\n\u2234\t${letter_1} is not ${letter_2}</pre>",
       "answerForms": [
         {
           "form": "Neither letter is distributed",
@@ -477,7 +477,7 @@
           "list": "l_letters"
         }
       ],
-      "form": "<p>Which letters are distributed here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t____\n\t____\n\u2234\t${letter_1} is ${letter_2}</pre>",
+      "form": "<p>Which letters are distributed here?<br/><span style='font-size:0.7em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t____\n\t____\n\u2234\t${letter_1} is ${letter_2}</pre>",
       "answerForms": [
         {
           "form": "Neither letter is distributed",
@@ -509,7 +509,7 @@
           "list": "l_letters"
         }
       ],
-      "form": "<p>Which letters are distributed here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t____\n\t____\n\u2234\t${letter_1} is not ${letter_2}</pre>",
+      "form": "<p>Which letters are distributed here?<br/><span style='font-size:0.7em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t____\n\t____\n\u2234\t${letter_1} is not ${letter_2}</pre>",
       "answerForms": [
         {
           "form": "Neither letter is distributed",
@@ -541,7 +541,7 @@
           "list": "u_letters"
         }
       ],
-      "form": "<p>Which letters are starred here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\tAll <span style='text-decoration:underline;'>${letter_1}</span> is ${letter_2}\n\t____\n\u2234\t____</pre>",
+      "form": "<p>Which letters are starred here?<br/><span style='font-size:0.7em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\tAll <span style='text-decoration:underline;'>${letter_1}</span> is ${letter_2}\n\t____\n\u2234\t____</pre>",
       "answerForms": [
         {
           "form": "Neither letter is starred",
@@ -573,7 +573,7 @@
           "list": "u_letters"
         }
       ],
-      "form": "<p>Which letters are starred here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\tNo <span style='text-decoration:underline;'>${letter_1}</span> is <span style='text-decoration:underline;'>${letter_2}</span>\n\t____\n\u2234\t____</pre>",
+      "form": "<p>Which letters are starred here?<br/><span style='font-size:0.7em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\tNo <span style='text-decoration:underline;'>${letter_1}</span> is <span style='text-decoration:underline;'>${letter_2}</span>\n\t____\n\u2234\t____</pre>",
       "answerForms": [
         {
           "form": "Neither letter is starred",
@@ -605,7 +605,7 @@
           "list": "u_letters"
         }
       ],
-      "form": "<p>Which letters are starred here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\tSome ${letter_1} is ${letter_2}\n\t____\n\u2234\t____</pre>",
+      "form": "<p>Which letters are starred here?<br/><span style='font-size:0.7em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\tSome ${letter_1} is ${letter_2}\n\t____\n\u2234\t____</pre>",
       "answerForms": [
         {
           "form": "Neither letter is starred",
@@ -637,7 +637,7 @@
           "list": "u_letters"
         }
       ],
-      "form": "<p>Which letters are starred here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\tsome ${letter_1} is not <span style='text-decoration:underline;'>${letter_2}</span>\n\t____\n\u2234\t____</pre>",
+      "form": "<p>Which letters are starred here?<br/><span style='font-size:0.7em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\tsome ${letter_1} is not <span style='text-decoration:underline;'>${letter_2}</span>\n\t____\n\u2234\t____</pre>",
       "answerForms": [
         {
           "form": "Neither letter is starred",
@@ -669,7 +669,7 @@
           "list": "u_letters"
         }
       ],
-      "form": "<p>Which letters are starred here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t${letter_1} is ${letter_2}\n\t____\n\u2234\t____</pre>",
+      "form": "<p>Which letters are starred here?<br/><span style='font-size:0.7em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t${letter_1} is ${letter_2}\n\t____\n\u2234\t____</pre>",
       "answerForms": [
         {
           "form": "Neither letter is starred",
@@ -701,7 +701,7 @@
           "list": "u_letters"
         }
       ],
-      "form": "<p>Which letters are starred here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t${letter_1} is not <span style='text-decoration:underline;'>${letter_2}</span>\n\t____\n\u2234\t____</pre>",
+      "form": "<p>Which letters are starred here?<br/><span style='font-size:0.7em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t${letter_1} is not <span style='text-decoration:underline;'>${letter_2}</span>\n\t____\n\u2234\t____</pre>",
       "answerForms": [
         {
           "form": "Neither letter is starred",
@@ -733,7 +733,7 @@
           "list": "l_letters"
         }
       ],
-      "form": "<p>Which letters are starred here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t${letter_1} is ${letter_2}\n\t____\n\u2234\t____</pre>",
+      "form": "<p>Which letters are starred here?<br/><span style='font-size:0.7em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t${letter_1} is ${letter_2}\n\t____\n\u2234\t____</pre>",
       "answerForms": [
         {
           "form": "Neither letter is starred",
@@ -765,7 +765,7 @@
           "list": "l_letters"
         }
       ],
-      "form": "<p>Which letters are starred here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t${letter_1} is not <span style='text-decoration:underline;'>${letter_2}</span>\n\t____\n\u2234\t____</pre>",
+      "form": "<p>Which letters are starred here?<br/><span style='font-size:0.7em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t${letter_1} is not <span style='text-decoration:underline;'>${letter_2}</span>\n\t____\n\u2234\t____</pre>",
       "answerForms": [
         {
           "form": "Neither letter is starred",
@@ -797,7 +797,7 @@
           "list": "u_letters"
         }
       ],
-      "form": "<p>Which letters are starred here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t____\n\t____\n\u2234\tAll <span style='text-decoration:underline;'>${letter_1}</span> is ${letter_2}</pre>",
+      "form": "<p>Which letters are starred here?<br/><span style='font-size:0.7em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t____\n\t____\n\u2234\tAll <span style='text-decoration:underline;'>${letter_1}</span> is ${letter_2}</pre>",
       "answerForms": [
         {
           "form": "Neither letter is starred",
@@ -829,7 +829,7 @@
           "list": "u_letters"
         }
       ],
-      "form": "<p>Which letters are starred here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t____\n\t____\n\u2234\tNo <span style='text-decoration:underline;'>${letter_1}</span> is <span style='text-decoration:underline;'>${letter_2}</span></pre>",
+      "form": "<p>Which letters are starred here?<br/><span style='font-size:0.7em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t____\n\t____\n\u2234\tNo <span style='text-decoration:underline;'>${letter_1}</span> is <span style='text-decoration:underline;'>${letter_2}</span></pre>",
       "answerForms": [
         {
           "form": "Neither letter is starred",
@@ -861,7 +861,7 @@
           "list": "u_letters"
         }
       ],
-      "form": "<p>Which letters are starred here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t____\n\t____\n\u2234\tSome ${letter_1} is ${letter_2}</pre>",
+      "form": "<p>Which letters are starred here?<br/><span style='font-size:0.7em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t____\n\t____\n\u2234\tSome ${letter_1} is ${letter_2}</pre>",
       "answerForms": [
         {
           "form": "Neither letter is starred",
@@ -893,7 +893,7 @@
           "list": "u_letters"
         }
       ],
-      "form": "<p>Which letters are starred here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t____\n\t____\n\u2234\tsome ${letter_1} is not <span style='text-decoration:underline;'>${letter_2}</span></pre>",
+      "form": "<p>Which letters are starred here?<br/><span style='font-size:0.7em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t____\n\t____\n\u2234\tsome ${letter_1} is not <span style='text-decoration:underline;'>${letter_2}</span></pre>",
       "answerForms": [
         {
           "form": "Neither letter is starred",
@@ -925,7 +925,7 @@
           "list": "u_letters"
         }
       ],
-      "form": "<p>Which letters are starred here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t____\n\t____\n\u2234\t${letter_1} is ${letter_2}</pre>",
+      "form": "<p>Which letters are starred here?<br/><span style='font-size:0.7em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t____\n\t____\n\u2234\t${letter_1} is ${letter_2}</pre>",
       "answerForms": [
         {
           "form": "Neither letter is starred",
@@ -957,7 +957,7 @@
           "list": "u_letters"
         }
       ],
-      "form": "<p>Which letters are starred here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t____\n\t____\n\u2234\t${letter_1} is not <span style='text-decoration:underline;'>${letter_2}</span></pre>",
+      "form": "<p>Which letters are starred here?<br/><span style='font-size:0.7em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t____\n\t____\n\u2234\t${letter_1} is not <span style='text-decoration:underline;'>${letter_2}</span></pre>",
       "answerForms": [
         {
           "form": "Neither letter is starred",
@@ -989,7 +989,7 @@
           "list": "l_letters"
         }
       ],
-      "form": "<p>Which letters are starred here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t____\n\t____\n\u2234\t${letter_1} is ${letter_2}</pre>",
+      "form": "<p>Which letters are starred here?<br/><span style='font-size:0.7em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t____\n\t____\n\u2234\t${letter_1} is ${letter_2}</pre>",
       "answerForms": [
         {
           "form": "Neither letter is starred",
@@ -1021,7 +1021,7 @@
           "list": "l_letters"
         }
       ],
-      "form": "<p>Which letters are starred here?<br/><span style='font-size:0.5em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t____\n\t____\n\u2234\t${letter_1} is not <span style='text-decoration:underline;'>${letter_2}</span></pre>",
+      "form": "<p>Which letters are starred here?<br/><span style='font-size:0.7em;'>Treat like letters as if they were different.</span></p><pre style='tab-size:4;'>\n\t____\n\t____\n\u2234\t${letter_1} is not <span style='text-decoration:underline;'>${letter_2}</span></pre>",
       "answerForms": [
         {
           "form": "Neither letter is starred",
@@ -1042,5 +1042,4 @@
       ]
     }
   ]
-
 }

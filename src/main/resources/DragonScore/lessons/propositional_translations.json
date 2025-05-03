@@ -3,9 +3,9 @@
   "terms": [],
   "lessons": [
     {
-      "id": "lesson_propositional_translations_easy",
+      "id": "week4a",
       "name": "Propositional Translations Easy",
-      "description": "PLEASE CHANGE ME",
+      "description": "Propositional logic will test arguments whose validity depends on “if-then,”\n“and,” “or,” “not,” and similar notions ",
       "randomize": true,
       "pointsRequired": 100,
       "questionGenerators": [],
@@ -242,7 +242,7 @@
           ]
         },
         {
-          "question": "Either both W and C or D",
+          "question": "Either both W and C, or D",
           "answers": [
             {
               "answer": "((W \u00B7 C) \u2228 D)",
@@ -620,7 +620,7 @@
           ]
         },
         {
-          "question": "Either both R and L or N",
+          "question": "Either both R and L, or N",
           "answers": [
             {
               "answer": "(R \u00B7 (L \u2228 N))",
@@ -1315,10 +1315,11 @@
       ]
     },
     {
-      "id": "lesson_propositional_translations_hard",
+      "id": "week5b",
       "name": "Propositional Translations Hard",
       "description": "PLEASE CHANGE ME",
       "randomize": true,
+      "pointsRequired": 100,
       "questionGenerators": [],
       "staticQuestions": [
         {
