@@ -3,6 +3,7 @@ package team.logica_populi.dragonscore.ui.controllers;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
@@ -95,6 +96,32 @@ public class ParagraphQuestionFormController implements IQuestionFormController 
         }
     }
 
+    @FXML
+    private void handleHover(MouseEvent ev) {
+        Button b = (Button)ev.getSource();
+        b.setStyle(
+                "-fx-background-color: black;" +
+                        "-fx-text-fill: white;" +
+                        "-fx-border-radius: 10;" +
+                        "-fx-background-radius: 10;" +
+                        "-fx-font-size: 20px;" +
+                        "-fx-padding: 8 28;"
+        );
+    }
+
+    @FXML
+    private void handleExit(MouseEvent ev) {
+        Button b = (Button)ev.getSource();
+        b.setStyle(
+                "-fx-background-color: #282828;" +
+                        "-fx-text-fill: white;" +
+                        "-fx-border-radius: 10;" +
+                        "-fx-background-radius: 10;" +
+                        "-fx-font-size: 20px;" +
+                        "-fx-padding: 8 28;"
+        );
+    }
+
     /**
      * Sets the question that this view is to display.
      *
@@ -160,6 +187,7 @@ public class ParagraphQuestionFormController implements IQuestionFormController 
         if (progress > 1) progress = 1;
         if (progress < 0) progress = 0;
         progressBar.setProgress(progress);
+        progressBar.setStyle("-fx-accent: #dcbe64;");
     }
 
     /**

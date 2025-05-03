@@ -7,17 +7,39 @@
 <?import javafx.scene.layout.StackPane?>
 
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #fffce8;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="team.logica_populi.dragonscore.ui.controllers.QuestionFormController">
+<AnchorPane prefHeight="600.0"
+            prefWidth="800.0"
+            style="-fx-background-color: #fffce8;"
+            xmlns="http://javafx.com/javafx/17.0.12"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="team.logica_populi.dragonscore.ui.controllers.QuestionFormController">
 
     <!-- Top Navigation -->
-    <HBox alignment="CENTER_RIGHT" AnchorPane.leftAnchor="44" AnchorPane.rightAnchor="44" AnchorPane.topAnchor="28">
-        <Label style="-fx-font-family: 'Helvetica';                 -fx-font-size: 36px;                 -fx-font-weight: BOLD;                 -fx-text-fill: #282828;" text="LogiQuest" />
+    <HBox alignment="CENTER_RIGHT"
+          AnchorPane.leftAnchor="44"
+          AnchorPane.rightAnchor="44"
+          AnchorPane.topAnchor="28">
+        <Label style="-fx-font-family: 'Helvetica';
+        -fx-font-size: 36px;
+        -fx-font-weight: BOLD;
+        -fx-text-fill: #282828;"
+               text="LogiQuest" />
         <Region HBox.hgrow="ALWAYS" />
-        <Button fx:id="HomeMenu" onAction="#goHome" style="-fx-font-family: 'Helvetica';                 -fx-font-size: 24px;                 -fx-font-weight: BOLD;                 -fx-background-color: #fffce8;                 -fx-text-fill: #424242;" text="Home" />
+        <Button fx:id="HomeMenu"
+                onAction="#goHome"
+                style="-fx-font-family: 'Helvetica';
+                -fx-font-size: 24px;
+                -fx-font-weight: BOLD;
+                -fx-background-color: #fffce8;
+                -fx-text-fill: #424242;" text="Home" />
     </HBox>
 
     <!-- Centered Content -->
-    <VBox alignment="CENTER" AnchorPane.bottomAnchor="40" AnchorPane.leftAnchor="44" AnchorPane.rightAnchor="44" AnchorPane.topAnchor="60">
+    <VBox alignment="CENTER"
+          AnchorPane.bottomAnchor="40"
+          AnchorPane.leftAnchor="44"
+          AnchorPane.rightAnchor="44"
+          AnchorPane.topAnchor="60">
 
         <!-- Question Box -->
         <HBox alignment="CENTER">
@@ -29,8 +51,7 @@
                       -fx-border-color: #ead8a2;
                       -fx-border-width: 8;
                       -fx-border-radius: 10;
-                      -fx-background-radius: 10;
-                   ">
+                      -fx-background-radius: 10;">
                 <WebView fx:id="questionArea"
                          minHeight="80.0"
                          maxHeight="280.0"
@@ -46,14 +67,30 @@
 
         <!-- Progress Bar -->
         <HBox alignment="CENTER">
-            <ProgressBar fx:id="progressBar" minHeight="30" prefWidth="700" progress="0.65" style="-fx-progress-color: #e1c778;" />
+            <ProgressBar fx:id="progressBar"
+                         minHeight="30"
+                         prefWidth="700"
+                         progress="0.65"
+                         style="-fx-progress-color: #e1c778;" />
             <VBox.margin>
                 <Insets top="12" />
             </VBox.margin>
         </HBox>
 
         <!-- Answer Block //// need to backend the answer-radio-->
-        <VBox fx:id="answerArea" minHeight="160.0" maxHeight="220.0" maxWidth="700" spacing="10" VBox.vgrow="ALWAYS" style="-fx-border-color: #a5a5a5;               -fx-border-radius: 4;               -fx-background-color: #fdfdfd;               -fx-background-radius: 4;               -fx-font-size: 16px;               -fx-font-family: 'Verdana';               -fx-padding: 24 20 16 20;" >
+        <VBox fx:id="answerArea"
+              minHeight="160.0"
+              maxHeight="220.0"
+              maxWidth="700"
+              spacing="10"
+              VBox.vgrow="ALWAYS"
+              style="-fx-border-color: #a5a5a5;
+              -fx-border-radius: 4;
+              -fx-background-color: #fdfdfd;
+              -fx-background-radius: 4;
+              -fx-font-size: 16px;
+              -fx-font-family: 'Verdana';
+              -fx-padding: 16;" >
 
 
 
@@ -62,19 +99,55 @@
             </VBox.margin>
         </VBox>
 
-        <!-- Difficulty Buttons (Outside Main VBox) -->
-        <HBox alignment="CENTER" maxWidth="700" spacing="16">
+        <!-- Difficulty Buttons  -->
+        <HBox alignment="CENTER"
+              maxWidth="700"
+              spacing="16">
 
             <!-- Difficulty toggles on the left -->
-            <ToggleButton fx:id="easyDif" style="-fx-background-radius: 100;                              -fx-background-color: #e0c97d;                              -fx-text-fill: #282828;                              -fx-pref-width: 45;                              -fx-pref-height: 45;                              -fx-font-size: 18;" text="0" />
-            <ToggleButton fx:id="normDif" selected="true" style="-fx-background-radius: 100;                              -fx-background-color: #e0c97d;                              -fx-text-fill: #282828;                              -fx-pref-width: 45;                              -fx-pref-height: 45;                              -fx-font-size: 18;" text="10" />
-            <ToggleButton fx:id="hardDif" style="-fx-background-radius: 100;                              -fx-background-color: #e0c97d;                              -fx-text-fill: #282828;                              -fx-pref-width: 45;                              -fx-pref-height: 45;                              -fx-font-size: 18;" text="15" />
+            <ToggleButton fx:id="easyDif"
+                          style="-fx-background-radius: 100;
+                          -fx-background-color: #e0c97d;
+                          -fx-text-fill: #282828;
+                          -fx-pref-width: 45;
+                          -fx-pref-height: 45;
+                          -fx-font-size: 18;"
+                          text="0" />
+            <ToggleButton fx:id="normDif"
+                          selected="true"
+                          style="-fx-background-radius: 100;
+                          -fx-background-color: #e0c97d;
+                          -fx-text-fill: #282828;
+                          -fx-pref-width: 45;
+                          -fx-pref-height: 45;
+                          -fx-font-size: 18;"
+                          text="10" />
+            <ToggleButton fx:id="hardDif"
+                          style="-fx-background-radius: 100;
+                          -fx-background-color: #e0c97d;
+                          -fx-text-fill: #282828;
+                          -fx-pref-width: 45;
+                          -fx-pref-height: 45;
+                          -fx-font-size: 18;"
+                          text="15" />
 
             <!-- push Submit to the right -->
             <Region HBox.hgrow="ALWAYS" />
 
             <!-- Submit button on the right -->
-            <Button fx:id="submitButton" minWidth="120.0" onAction="#onSubmit" onMouseEntered="#handleHover" onMouseExited="#handleExit" prefHeight="45.0" style="-fx-background-color: #282828;                        -fx-text-fill: white;                        -fx-border-radius: 10;                        -fx-background-radius: 10;                        -fx-font-size: 20px;                        -fx-padding: 8 28;" text="Submit" />
+            <Button fx:id="submitButton"
+                    minWidth="120.0"
+                    onAction="#onSubmit"
+                    onMouseEntered="#handleHover"
+                    onMouseExited="#handleExit"
+                    prefHeight="45.0"
+                    style="-fx-background-color: #282828;
+                    -fx-text-fill: white;
+                    -fx-border-radius: 10;
+                    -fx-background-radius: 10;
+                    -fx-font-size: 20px;
+                    -fx-padding: 8 28;"
+                    text="Submit" />
 
             <VBox.margin>
                 <Insets top="14" />

@@ -38,7 +38,7 @@ public class NameFormController {
             if(fName.getText().trim().isEmpty() || lName.getText().trim().isEmpty()){
                 fName.setStyle("-fx-background-color: #FDFDFD; -fx-border-color: red; -fx-border-width: 1; -fx-border-style: solid; -fx-border-radius: 4; -fx-background-radius: 4; -fx-prompt-text-fill: #a2a2a2; -fx-font-size: 16px;");
                 lName.setStyle("-fx-background-color: #FDFDFD; -fx-border-color: red; -fx-border-width: 1; -fx-border-style: solid; -fx-border-radius: 4; -fx-background-radius: 4; -fx-prompt-text-fill: #a2a2a2; -fx-font-size: 16px;");
-                nameError.setText("Please enter in both your First and Last Name!");
+                nameError.setText("Please enter your First and Last Name!");
                 return;
             }
             submitCallback.accept(fName.getText(), lName.getText());
