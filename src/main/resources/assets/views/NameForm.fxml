@@ -21,7 +21,7 @@
    <!-- Content Area -->
    <VBox alignment="CENTER" prefWidth="900" spacing="0" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="270" AnchorPane.rightAnchor="270" AnchorPane.topAnchor="0">
 
-      <Text style="-fx-font-size: 42px; -fx-font-weight: 'Segoe UI Semibold';" text="What is your name?" textAlignment="CENTER" wrappingWidth="600">
+      <Text style="-fx-font-size: 42px; -fx-font-family: 'Segue UI Semibold'; -fx-font-weight: Bold;" text="What is your name?" textAlignment="CENTER" wrappingWidth="600">
          <VBox.margin>
             <Insets bottom="28" />
          </VBox.margin>
