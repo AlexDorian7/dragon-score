@@ -6,7 +6,7 @@
 
     <groupId>team.logica_populi</groupId>
     <artifactId>dragonscore</artifactId>
-    <version>0.1.1-beta</version>
+    <version>1.0.0</version>
     <name>LogiQuest</name>
 
     <properties>
