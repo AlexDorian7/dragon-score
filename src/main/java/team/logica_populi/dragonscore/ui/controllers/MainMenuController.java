@@ -144,6 +144,10 @@ public class MainMenuController {
         lessonArea.getChildren().addAll(title, description);
     }
 
+    /**
+     *
+     * @param ev
+     */
     @FXML
     private void handleHover(MouseEvent ev) {
         Button b = (Button)ev.getSource();
@@ -157,6 +161,10 @@ public class MainMenuController {
         );
     }
 
+    /**
+     *
+     * @param ev
+     */
     @FXML
     private void handleExit(MouseEvent ev) {
         Button b = (Button)ev.getSource();

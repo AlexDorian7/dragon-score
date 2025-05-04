@@ -47,6 +47,10 @@ public class NameFormController {
         }
     }
 
+    /**
+     * Removal of error message handler
+     * @param ev The Mouse event from User
+     */
     @FXML
     private void onFocused(MouseEvent ev){
         if (fName.isFocused() || lName.isFocused()){
