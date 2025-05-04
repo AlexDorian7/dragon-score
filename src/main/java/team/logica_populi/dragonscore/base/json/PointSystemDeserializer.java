@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * TODO: COMMENT ME!
+ * Used to Deserialize an {@link PointSystem} object
  */
 public class PointSystemDeserializer implements JsonDeserializer<PointSystem> {
     @Override

@@ -12,7 +12,7 @@ import team.logica_populi.dragonscore.base.registries.DragonHandler;
 import java.util.logging.Logger;
 
 /**
- * PLEASE COMMENT ME
+ * Controller of Submission Code Popup Page
  */
 public class SubmissionCodeController {
     private static Logger logger;
@@ -46,7 +46,7 @@ public class SubmissionCodeController {
     }
 
     /**
-     * OnClick return to the Main Menu
+     * Handler that returns user to Main Menu
      */
     @FXML
     private void backToMenu(){
@@ -59,7 +59,7 @@ public class SubmissionCodeController {
     }
 
     /**
-     * OnClick return to the exercise the user finished
+     * Handle that returns the user to the exercise they previously finished
      */
     @FXML
     private void backToExercise(){

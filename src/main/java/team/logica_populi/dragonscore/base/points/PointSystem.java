@@ -66,8 +66,5 @@ public class PointSystem {
             map.put(lesson.getId(), points);
             records.put(name, map);
         }
-        // Write to the file.
-        //ResourceLocation location = new ResourceLocation("dynamic:points.dat");
-        //location.write(gson.toJson(records));
     }
 }
