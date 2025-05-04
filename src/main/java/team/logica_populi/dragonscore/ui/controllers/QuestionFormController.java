@@ -196,6 +196,7 @@ public class QuestionFormController implements IQuestionFormController {
         answerButtons.clear();
         answerArea.getChildren().clear();
         tableView = new TruthTableView(root);
+        tableView.setStyle("-fx-accent: #635325;");
         answerArea.getChildren().add(tableView);
         submitButton.setText("Submit");
     }
