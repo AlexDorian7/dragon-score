@@ -150,6 +150,14 @@ public class DragonHandler {
      */
     private void handleOnName(String fName, String lName) {
         name = fName + " " + lName;
+        ResourceLocation location = new ResourceLocation("dynamic:user.dat");
+        if (location.exists()){
+            String data = location.tryGetResource();
+            if(data != name){
+                logger.info("Not the same name!");
+                location.write(name);
+            }
+        }
         name = name.toLowerCase();
         showMainMenu();
     }

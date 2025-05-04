@@ -7,10 +7,15 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 import javafx.scene.input.MouseEvent;
+import team.logica_populi.dragonscore.base.ResourceLocation;
+import team.logica_populi.dragonscore.base.points.PointSystem;
+import team.logica_populi.dragonscore.base.registries.DragonHandler;
+import team.logica_populi.dragonscore.base.registries.JsonRegistry;
 
-import javax.print.DocFlavor;
+import java.util.concurrent.atomic.AtomicReference;
 import java.util.function.BiConsumer;
 import java.io.*;
+import java.util.logging.Logger;
 
 /**
  * Controller for the name form.
@@ -28,84 +33,34 @@ public class NameFormController {
 
     private static final String FILE_PATH = "user.json";
 
-    // User Class
-    private static class User {
-        String firstName;
-        String lastName;
+    private static final Logger logger = Logger.getLogger(NameFormController.class.getName());
 
-        User(String firstName, String lastName) {
-            this.firstName = firstName;
-            this.lastName = lastName;
+    public void fillInName(){
+        ResourceLocation location = new ResourceLocation("dynamic:user.dat");
+        if(location.exists()){
+            String name = location.tryGetResource();
+            logger.info(name);
+            String firstName = name.substring(0, name.indexOf(" "));
+            String lastName = name.substring(name.indexOf(" ")+1);
+
+            fName.setText(firstName);
+            lName.setText(lastName);
         }
     }
 
-    // Simple JSON string value extractor
-    private String extractValue(String json, String key) {
-        String pattern = "\"" + key + "\":\"";
-        int start = json.indexOf(pattern);
-        if (start == -1) return null;
-
-        start += pattern.length();
-        int end = json.indexOf("\"", start);
-        if (end == -1) return null;
-
-        return unescapeJson(json.substring(start, end));
-    }
-
-    private String escapeJson(String value) {
-        return value.replace("\"", "\\\"");
-    }
-
-    private String unescapeJson(String value) {
-        return value.replace("\\\"", "\"");
-    }
-
-    // Save user data to JSON manually
-    private void saveUser(User user) {
-        String json = "{\n" +
-                "  \"firstName\": \"" + escapeJson(user.firstName) + "\",\n" +
-                "  \"lastName\": \"" + escapeJson(user.lastName) + "\"\n" +
-                "}";
-        try (Writer writer = new FileWriter(FILE_PATH)) {
-            writer.write(json);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-    // Load user data from JSON manually
-    private User loadUser() {
-        File file = new File(FILE_PATH);
-        if (!file.exists()) return null;
-
-        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
-            StringBuilder jsonBuilder = new StringBuilder();
-            String line;
-            while ((line = reader.readLine()) != null) {
-                jsonBuilder.append(line.trim());
-            }
-            String json = jsonBuilder.toString();
-            String firstName = extractValue(json, "firstName");
-            String lastName = extractValue(json, "lastName");
-            if (firstName != null && lastName != null) {
-                return new User(firstName, lastName);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
     @FXML
     public void initialize() {
         // Assuming 'fName' is your container, or replace with your actual root container node:
         fName.setOnAction(e -> submit(new ActionEvent()));
         lName.setOnAction(e -> submit(new ActionEvent()));
 
-        //load user data
-        User savedUser = loadUser();
-        if(savedUser != null) {
-            fName.setText(savedUser.firstName);
-            lName.setText(savedUser.lastName);
+        ResourceLocation location = new ResourceLocation("dynamic:user.dat");
+        location.createIfNotExists();
+
+        if(!location.tryGetResource().isEmpty()){
+            fillInName();
         }
+
     }
 
     /**
@@ -126,7 +81,6 @@ public class NameFormController {
             submitCallback.accept(fName.getText(), lName.getText());
 
             // Save user data
-            saveUser(new User(first, last));
             submitCallback.accept(first, last);
         }
     }
