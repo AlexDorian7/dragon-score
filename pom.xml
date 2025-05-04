@@ -243,6 +243,7 @@
                     <winShortcut>true</winShortcut>
                     <winPerUserInstall>true</winPerUserInstall>
                     <macSign>true</macSign>
+                    <icon>${project.basedir}/src/main/resources/assets/textures/logo.png</icon>
                     <javaOptions>
                         <option>-Dfile.encoding=UTF-8</option>
                     </javaOptions>
