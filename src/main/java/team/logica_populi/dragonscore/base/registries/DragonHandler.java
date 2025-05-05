@@ -240,9 +240,6 @@ public class DragonHandler {
              questionScene = new Scene(questionFormPane.getKey());
          }
 
-
-
-
          questionController.setNextQuestionCallback(() -> {
              // Check for lesson completion
              if(getPoints() >= lesson.getPointsRequired()) {
