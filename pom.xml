@@ -6,7 +6,7 @@
 
     <groupId>team.logica_populi</groupId>
     <artifactId>dragonscore</artifactId>
-    <version>0.1.1-beta</version>
+    <version>1.0.0</version>
     <name>LogiQuest</name>
 
     <properties>
@@ -231,7 +231,7 @@
                 <version>1.6.6</version>
                 <configuration>
                     <name>LogiQuest</name>
-                    <appVersion>0.1.1</appVersion>
+                    <appVersion>1.0.0</appVersion>
                     <vendor>Lindenwood University Students</vendor>
                     <destination>target/dist</destination>
                     <module>team.logica_populi.dragonscore/team.logica_populi.dragonscore.Main</module>
@@ -243,6 +243,9 @@
                     <winShortcut>true</winShortcut>
                     <winPerUserInstall>true</winPerUserInstall>
                     <macSign>true</macSign>
+                    <icon>launcher.png</icon>
+                    <winMenu>true</winMenu>
+                    <winMenuGroup>Logic</winMenuGroup>
                     <javaOptions>
                         <option>-Dfile.encoding=UTF-8</option>
                     </javaOptions>

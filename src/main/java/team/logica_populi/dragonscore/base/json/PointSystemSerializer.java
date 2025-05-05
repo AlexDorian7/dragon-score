@@ -6,7 +6,7 @@ import team.logica_populi.dragonscore.base.points.PointSystem;
 import java.lang.reflect.Type;
 
 /**
- * TODO: COMMENT ME!
+ * Used to Serialize an {@link PointSystem} object
  */
 public class PointSystemSerializer implements JsonSerializer<PointSystem>{
     @Override

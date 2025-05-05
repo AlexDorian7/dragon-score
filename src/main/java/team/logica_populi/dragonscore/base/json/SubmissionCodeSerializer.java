@@ -6,7 +6,7 @@ import team.logica_populi.dragonscore.base.points.SubmissionSystem;
 import java.lang.reflect.Type;
 
 /**
- * PLEASE COMMENT ME
+ * Used to Serialize a {@link SubmissionSystem}
  */
 public class SubmissionCodeSerializer implements JsonSerializer<SubmissionSystem> {
     @Override

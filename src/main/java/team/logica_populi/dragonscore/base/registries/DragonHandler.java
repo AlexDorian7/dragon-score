@@ -89,6 +89,10 @@ public class DragonHandler {
         setPoints(Integer.max(0, points + getPoints())); // Using max call here to make sure points.dat can never go negative
     }
 
+    public Stage getStage(){
+        return stage;
+    }
+
     /**
      * Sets the current amount of points.dat tied to this session.
      * @param points The new point count
@@ -146,6 +150,14 @@ public class DragonHandler {
      */
     private void handleOnName(String fName, String lName) {
         name = fName + " " + lName;
+        ResourceLocation location = new ResourceLocation("dynamic:user.dat");
+        if (location.exists()){
+            String data = location.tryGetResource();
+            if(!data.equals(name)) {
+                logger.finer("Not the same name!");
+                location.write(name);
+            }
+        }
         name = name.toLowerCase();
         showMainMenu();
     }
@@ -174,7 +186,7 @@ public class DragonHandler {
     /**
      * Sets up the scene for Submission code as well as generates the code
      */
-    private void loadSubmissionCode(){
+    private void loadSubmissionCode() {
         if(stage == null) {
             throw new IllegalStateException("Attempt to show submission code pane before session was set up!");
         }
@@ -227,9 +239,6 @@ public class DragonHandler {
              questionController = questionFormPane.getValue();
              questionScene = new Scene(questionFormPane.getKey());
          }
-
-
-
 
          questionController.setNextQuestionCallback(() -> {
              // Check for lesson completion
@@ -317,10 +326,9 @@ public class DragonHandler {
             logger.fine("Creating new Point System.");
             JsonRegistry.getInstance().createNewPointSystem();
         } else {
-            String data;
-            try{
-                data = EncryptionRegistry.getInstance().decrypt(location.tryGetResource());
-            } catch (Exception e) {
+            String data = EncryptionRegistry.getInstance().decrypt(location.tryGetResource());
+            if (data == null) {
+                logger.warning("Failed to decrypt point file. Creating new point system.");
                 JsonRegistry.getInstance().createNewPointSystem();
                 return;
             }
@@ -338,10 +346,9 @@ public class DragonHandler {
             logger.fine("Creating new Submission System.");
             JsonRegistry.getInstance().createSubmissionSystem();
         } else {
-            String data;
-            try{
-                data = EncryptionRegistry.getInstance().decrypt(location.tryGetResource());
-            } catch (Exception e) {
+            String data = EncryptionRegistry.getInstance().decrypt(location.tryGetResource());
+            if (data == null) {
+                logger.warning("Failed to decrypt submission file. Creating new submission system.");
                 JsonRegistry.getInstance().createSubmissionSystem();
                 return;
             }

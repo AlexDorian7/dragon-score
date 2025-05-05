@@ -39,8 +39,8 @@
           prefWidth="700"
           AnchorPane.topAnchor="0"
           AnchorPane.bottomAnchor="0"
-          AnchorPane.leftAnchor="160"
-          AnchorPane.rightAnchor="160">
+          AnchorPane.leftAnchor="200"
+          AnchorPane.rightAnchor="200">
 
         <!-- Welcome Label -->
         <Label fx:id="nameLabel"
@@ -64,6 +64,7 @@
                       onAction="#updateSelected"
                       HBox.hgrow="ALWAYS"
                       maxWidth="Infinity"
+                      minWidth="420"
                       prefHeight="40.0"
                       style="-fx-background-color: #FDFDFD;
                       -fx-border-color: #a5a5a5;
@@ -97,10 +98,14 @@
         <ListView fx:id="codes"
                   prefHeight="120"
                   maxWidth="Infinity"
+                  minWidth="550"
                   style="-fx-background-color: #fdfdfd;
                       -fx-border-color: #ccc;
                       -fx-border-radius: 4;
-                      -fx-background-radius: 4;">
+                      -fx-background-radius: 4;
+                      -fx-selection-bar: #635325;
+                      -fx-accent: #635325;
+                      -fx-font-size: 15px;">
 
         <VBox.margin>
             <Insets bottom="14"/>
@@ -109,6 +114,8 @@
 
 
         <!-- Text Area -->
-        <TextFlow fx:id="lessonArea"  />
+        <TextFlow fx:id="lessonArea"
+                  maxWidth="Infinity"
+                  minWidth="550"/>
     </VBox>
 </AnchorPane>

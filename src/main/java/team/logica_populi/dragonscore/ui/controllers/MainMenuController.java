@@ -3,6 +3,7 @@ package team.logica_populi.dragonscore.ui.controllers;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.input.Clipboard;
@@ -11,8 +12,12 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
+import javafx.stage.Popup;
+import javafx.stage.PopupWindow;
+import javafx.util.Duration;
 import team.logica_populi.dragonscore.base.json.LessonHeader;
 import javafx.scene.text.FontWeight;
+import javafx.animation.PauseTransition;
 
 import team.logica_populi.dragonscore.base.registries.DragonHandler;
 import team.logica_populi.dragonscore.base.registries.JsonRegistry;
@@ -41,11 +46,13 @@ public class MainMenuController {
 
     private Consumer<LessonHeader> callback;
 
-
-    public void initialize(){
-    }
-
+    /**
+     * Shows all the submission codes from each lesson in a ListView.
+     * Each row on click copies the code to the clipboard as well as
+     * shows message for it.
+     */
     public void setCodes(){
+        // Retrieves submission codes
         ObservableList<String> items =FXCollections.observableArrayList();
         JsonRegistry.getInstance().getSubmissionSystem().getSubmissions().forEach(((s, map) -> {
             map.forEach((String key, String val) ->{
@@ -55,6 +62,13 @@ public class MainMenuController {
         }));
         codes.setItems(items);
 
+        // copy new label to clipboard in main menu
+        Label msg = new Label("Copied Submission Code to the Clipboard");
+        msg.setStyle("-fx-background-color: white; -fx-border: 2; -fx-border-radius: 5; -fx-border-color: black; -fx-font-size: 20;");
+        Popup popup = new Popup();
+        popup.getContent().add(msg);
+
+        //loop through and get items in menu
         for(int i = 0; i < items.size(); i++){
             int finalI = i;
             codes.setOnMouseClicked(event ->{
@@ -64,6 +78,14 @@ public class MainMenuController {
                 String trimmedVal = val.substring(val.indexOf(':')+1).trim();
                 content.putString(trimmedVal);
                 clipboard.setContent(content);
+                if (!popup.isShowing())
+                    popup.show(DragonHandler.getCurrentSession().getStage(),
+                            DragonHandler.getCurrentSession().getStage().getX() + DragonHandler.getCurrentSession().getStage().getWidth() / 2-230,
+                            DragonHandler.getCurrentSession().getStage().getY() + DragonHandler.getCurrentSession().getStage().getHeight() / 2-200);
+
+                PauseTransition delay = new PauseTransition(Duration.seconds(1.5));
+                delay.setOnFinished(eventHide -> popup.hide());
+                delay.play();
             });
         }
     }
@@ -123,6 +145,10 @@ public class MainMenuController {
         lessonArea.getChildren().addAll(title, description);
     }
 
+    /**
+     *
+     * @param ev
+     */
     @FXML
     private void handleHover(MouseEvent ev) {
         Button b = (Button)ev.getSource();
@@ -136,6 +162,10 @@ public class MainMenuController {
         );
     }
 
+    /**
+     *
+     * @param ev
+     */
     @FXML
     private void handleExit(MouseEvent ev) {
         Button b = (Button)ev.getSource();
