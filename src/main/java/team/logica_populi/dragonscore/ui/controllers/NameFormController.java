@@ -8,13 +8,8 @@ import javafx.scene.control.TextField;
 
 import javafx.scene.input.MouseEvent;
 import team.logica_populi.dragonscore.base.ResourceLocation;
-import team.logica_populi.dragonscore.base.points.PointSystem;
-import team.logica_populi.dragonscore.base.registries.DragonHandler;
-import team.logica_populi.dragonscore.base.registries.JsonRegistry;
 
-import java.util.concurrent.atomic.AtomicReference;
 import java.util.function.BiConsumer;
-import java.io.*;
 import java.util.logging.Logger;
 
 /**
