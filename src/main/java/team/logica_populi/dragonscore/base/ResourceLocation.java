@@ -19,6 +19,8 @@ import java.util.logging.Logger;
 public class ResourceLocation {
     private static final Logger logger = Logger.getLogger(ResourceLocation.class.getName());
 
+    private static final boolean ON_MAC = System.getProperty("os.name").toLowerCase().contains("mac");
+
     private final String namespace;
     private final String path;
 
@@ -72,7 +74,12 @@ public class ResourceLocation {
      * @return The path for this resource location.
      */
     public File getAsFile() {
-        return new File(namespace + "/" + path);
+        if (ON_MAC) { // On mac we cannot trust the working directory. use the user's home instead
+            return new File(System.getProperty("user.home"), "LogiQuestData/" + namespace + "/" + path);
+        } else {
+            return new File(namespace + "/" + path);
+        }
+
     }
 
     /**
