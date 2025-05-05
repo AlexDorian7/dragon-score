@@ -38,6 +38,7 @@ public class DragonHandler {
 
     private Stage stage;
     private Scene mainMenuScene;
+    private MainMenuController mainMenuController;
     private Scene questionScene;
     private Scene submissionCodeScene;
     private IQuestionFormController questionController;
@@ -286,7 +287,6 @@ public class DragonHandler {
         assert JsonRegistry.getInstance().getDataFile() != null; // If there is no loaded data file we should not even be here
         mainMenuPane.getValue().setLessons(lessonHeaders);
         mainMenuPane.getValue().setName(name);
-        mainMenuPane.getValue().setCodes();
         mainMenuPane.getValue().setStartCallback((LessonHeader lessonHeader) -> {
             JsonRegistry.getInstance().loadDataFile(lessonHeader.location().tryGetResource(), true);
             // Load the lesson
@@ -301,6 +301,7 @@ public class DragonHandler {
             logger.warning("No lesson found with id: " + lessonHeader.id());
         });
         mainMenuScene = new Scene(mainMenuPane.getKey());
+        mainMenuController = mainMenuPane.getValue();
     }
 
     /**
@@ -313,6 +314,7 @@ public class DragonHandler {
         if (mainMenuScene == null) {
             setupMainMenu();
         }
+        mainMenuController.setCodes();
         stage.setScene(mainMenuScene);
         stage.show();
     }
