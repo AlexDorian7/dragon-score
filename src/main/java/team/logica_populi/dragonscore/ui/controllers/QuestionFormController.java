@@ -60,6 +60,7 @@ public class QuestionFormController implements IQuestionFormController {
         setDifficultlyHandler(hardDif);
         updateDifficultyStyles();
     }
+    //controls the difficulty button toggles
     private void setDifficultlyHandler(ToggleButton button) {
         button.setOnAction(event -> {
 

@@ -31,8 +31,7 @@ public class NameFormController {
 
     private BiConsumer<String, String> submitCallback;
 
-    private static final String FILE_PATH = "user.json";
-
+    // Name logger that gets the store name
     private static final Logger logger = Logger.getLogger(NameFormController.class.getName());
 
     /**
@@ -52,15 +51,18 @@ public class NameFormController {
         }
     }
 
+    // initialize action event for enter button for submission
     @FXML
     public void initialize() {
         // Assuming 'fName' is your container, or replace with your actual root container node:
         fName.setOnAction(e -> submit(new ActionEvent()));
         lName.setOnAction(e -> submit(new ActionEvent()));
 
+        //stores user data into dat file
         ResourceLocation location = new ResourceLocation("dynamic:user.dat");
         location.createIfNotExists();
 
+        //if the location is empty then fill the name
         if(!location.tryGetResource().isEmpty()){
             fillInName();
         }

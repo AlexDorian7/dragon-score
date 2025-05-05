@@ -62,12 +62,13 @@ public class MainMenuController {
         }));
         codes.setItems(items);
 
+        // copy new label to clipboard in main menu
         Label msg = new Label("Copied Submission Code to the Clipboard");
         msg.setStyle("-fx-background-color: white; -fx-border: 2; -fx-border-radius: 5; -fx-border-color: black; -fx-font-size: 20;");
         Popup popup = new Popup();
         popup.getContent().add(msg);
 
-
+        //loop through and get items in menu
         for(int i = 0; i < items.size(); i++){
             int finalI = i;
             codes.setOnMouseClicked(event ->{
