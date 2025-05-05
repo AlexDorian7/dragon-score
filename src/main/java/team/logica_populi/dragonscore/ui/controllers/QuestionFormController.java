@@ -80,7 +80,6 @@ public class QuestionFormController implements IQuestionFormController {
         ToggleButton[] buttons = { easyDif, normDif, hardDif };
 
         for (ToggleButton btn : buttons) {
-            HBox.setHgrow(btn, Priority.SOMETIMES);
             if (btn.isSelected()) {
                 btn.setStyle("-fx-background-radius: 100; " +
                         "-fx-background-color: #635325;" +
