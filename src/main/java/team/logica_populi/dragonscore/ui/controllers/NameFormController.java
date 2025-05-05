@@ -35,6 +35,10 @@ public class NameFormController {
 
     private static final Logger logger = Logger.getLogger(NameFormController.class.getName());
 
+    /**
+     * Stores the name of the current user.
+     * If there is a name, fills the TextField.
+     */
     public void fillInName(){
         ResourceLocation location = new ResourceLocation("dynamic:user.dat");
         if(location.exists()){
