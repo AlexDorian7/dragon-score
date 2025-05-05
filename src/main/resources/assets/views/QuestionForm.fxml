@@ -111,7 +111,7 @@
                           -fx-text-fill: #282828;
                           -fx-pref-width: 45;
                           -fx-pref-height: 45;
-                          -fx-font-size: 18;"
+                          -fx-font-size: 16;"
                           text="0" />
             <ToggleButton fx:id="normDif"
                           selected="true"
@@ -120,7 +120,7 @@
                           -fx-text-fill: #282828;
                           -fx-pref-width: 45;
                           -fx-pref-height: 45;
-                          -fx-font-size: 18;"
+                          -fx-font-size: 16;"
                           text="10" />
             <ToggleButton fx:id="hardDif"
                           style="-fx-background-radius: 100;
@@ -128,7 +128,7 @@
                           -fx-text-fill: #282828;
                           -fx-pref-width: 45;
                           -fx-pref-height: 45;
-                          -fx-font-size: 18;"
+                          -fx-font-size: 16;"
                           text="15" />
 
             <!-- push Submit to the right -->

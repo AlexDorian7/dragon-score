@@ -83,14 +83,14 @@ public class ParagraphQuestionFormController implements IQuestionFormController 
                         " -fx-text-fill: #ffffff; " +
                         "-fx-pref-width: 50;" +
                         " -fx-pref-height: 50; " +
-                        "-fx-font-size: 20px;"); // green
+                        "-fx-font-size: 16px;"); // green
             } else {
                 btn.setStyle("-fx-background-radius: 100; " +
                         "-fx-background-color: #e0c97d; " +
                         "-fx-text-fill: #282828; " +
                         "-fx-pref-width: 50; " +
                         "-fx-pref-height: 50; " +
-                        "-fx-font-size: 20px;"); // green
+                        "-fx-font-size: 16px;"); // green
             }
         }
     }
