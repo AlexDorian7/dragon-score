@@ -249,6 +249,7 @@
                     <winMenuGroup>Logic</winMenuGroup>
                     <javaOptions>
                         <option>-Dfile.encoding=UTF-8</option>
+                        <option>--enable-native-access=javafx.graphics,javafx.web,javafx.fxml</option>
                     </javaOptions>
                 </configuration>
             </plugin>
