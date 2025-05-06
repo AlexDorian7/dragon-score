@@ -97,7 +97,7 @@ public class ResourceLocation {
                 throw new RuntimeException(e);
             }
         } else {
-            InputStream resource = getClass().getResourceAsStream("/" + file.getPath().replaceAll("\\\\", "/"));
+            InputStream resource = getClass().getResourceAsStream("/" + namespace + "/" + path);
             try {
                 String data = new String(Objects.requireNonNull(resource).readAllBytes());
                 resource.close();
