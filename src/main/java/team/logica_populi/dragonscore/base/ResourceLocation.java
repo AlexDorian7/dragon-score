@@ -19,6 +19,8 @@ import java.util.logging.Logger;
 public class ResourceLocation {
     private static final Logger logger = Logger.getLogger(ResourceLocation.class.getName());
 
+    private static final boolean ON_MAC = System.getProperty("os.name").toLowerCase().contains("mac");
+
     private final String namespace;
     private final String path;
 
@@ -72,7 +74,12 @@ public class ResourceLocation {
      * @return The path for this resource location.
      */
     public File getAsFile() {
-        return new File(namespace + "/" + path);
+        if (ON_MAC) { // On mac we cannot trust the working directory. use the user's home instead
+            return new File(System.getProperty("user.home"), "LogiQuestData/" + namespace + "/" + path);
+        } else {
+            return new File(namespace + "/" + path);
+        }
+
     }
 
     /**
@@ -82,18 +89,7 @@ public class ResourceLocation {
      * @return The resource contents as a string.
      */
     public String tryGetResource() {
-        return tryGetResource("");
-    }
-
-    /**
-     * Tries to get the resource this resource location is pointing to.
-     * The search order will first search the current working directory (Allows for file overriding)
-     * then inside the jar resources.
-     * @param pathPrefix A prefix to put after the namespace but before the path.
-     * @return The resource contents as a string
-     */
-    public String tryGetResource(String pathPrefix) {
-        File file = new File(namespace + "/" + pathPrefix + (pathPrefix.isEmpty() ? "" : "/") + path);
+        File file = getAsFile();
         if (file.exists() && file.canRead()) {
             try {
                 return Files.readString(file.toPath());
@@ -101,7 +97,7 @@ public class ResourceLocation {
                 throw new RuntimeException(e);
             }
         } else {
-            InputStream resource = getClass().getResourceAsStream("/" + file.getPath().replaceAll("\\\\", "/"));
+            InputStream resource = getClass().getResourceAsStream("/" + namespace + "/" + path);
             try {
                 String data = new String(Objects.requireNonNull(resource).readAllBytes());
                 resource.close();
