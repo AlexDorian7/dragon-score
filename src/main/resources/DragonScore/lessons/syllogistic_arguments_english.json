@@ -1,0 +1,21 @@
+{
+  "requires": [
+    "DragonScore:requires/terms.json"
+  ],
+  "terms": {},
+  "lessons": [
+    {
+      "id": "week2d",
+      "name": "Week 2 Syllogistic Logic – English Examples",
+      "description": "Syllogistic logic studies arguments whose validity depends on “all,” “no,” some,” and similar notions. This set of exercises has you test validity by using the Star Test on numbered arguments written in English.",
+      "randomize": false,
+      "pointsRequired": 100,
+      "questionGenerators": [
+        "team.logica_populi.dragonscore.base.logic.generators.StarLogicWordGenerator"
+      ],
+      "staticQuestions": []
+    }
+  ],
+  "forms": [
+  ]
+}

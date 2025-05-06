@@ -1,0 +1,20 @@
+{
+  "requires": [
+    "DragonScore:requires/letters.json"
+  ],
+  "terms": {},
+  "lessons": [
+    {
+      "id": "week2c",
+      "name": "Week 2 Syllogistic Logic – Symbolic Examples",
+      "description": "Syllogistic logic studies arguments whose validity depends on “all,” “no,” some,” and similar notions. This set of exercises has you test validity by using the Star Test on numbered arguments which have already been translated into well-formed formula.",
+      "randomize": false,
+      "pointsRequired": 100,
+      "questionGenerators": [
+        "team.logica_populi.dragonscore.base.logic.generators.StarLogicGenerator"
+      ],
+      "staticQuestions": []
+    }
+  ],
+  "forms": []
+}

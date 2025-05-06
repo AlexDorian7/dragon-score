@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.input.MouseEvent?>
+
+<AnchorPane prefHeight="600.0"
+            prefWidth="800.0"
+            style="-fx-background-color: #fffce8;"
+            xmlns="http://javafx.com/javafx/17.0.12"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="team.logica_populi.dragonscore.ui.controllers.SubmissionCodeController">
+
+   <!-- Header -->
+   <HBox alignment="CENTER_RIGHT"
+         AnchorPane.leftAnchor="44"
+         AnchorPane.rightAnchor="44"
+         AnchorPane.topAnchor="28">
+      <Label text="LogiQuest"
+             style="-fx-font-family: 'Helvetica';
+               -fx-font-size: 36px;
+               -fx-font-weight: BOLD;
+               -fx-text-fill: #282828;" />
+      <Region fx:id="spacer"
+              HBox.hgrow="ALWAYS" />
+   </HBox>
+
+
+   <children>
+      <VBox alignment="CENTER"
+            spacing="0"
+            AnchorPane.topAnchor="0"
+            AnchorPane.bottomAnchor="0"
+            AnchorPane.leftAnchor="270"
+            AnchorPane.rightAnchor="270">
+
+         <!-- Heading -->
+         <Text text="Congratulations! You have finished the exercise!"
+               wrappingWidth="600"
+               textAlignment="CENTER"
+               style="-fx-font-family: 'Helvetica';
+               -fx-font-size: 32px;
+               -fx-prompt-text-fill: #282828;
+               -fx-line-spacing: 12px;
+               -fx-font-weight: BOLD;">
+
+         <VBox.margin>
+            <Insets bottom="36"/>
+         </VBox.margin>
+      </Text>
+
+
+
+
+         <Text text="Here is your submission code:"
+               wrappingWidth="600"
+               textAlignment="CENTER"
+               style="-fx-font-family: 'Verdana';
+               -fx-font-size: 20px;
+               -fx-prompt-text-fill: #282828; " >
+
+            <VBox.margin>
+               <Insets bottom="12"/>
+            </VBox.margin>
+         </Text>
+
+         <!-- Code label and area -->
+         <Label fx:id="codeElement"
+                textAlignment="CENTER">
+         </Label>
+
+         <TextArea fx:id="codeArea"
+                   maxWidth="Infinity"
+                   minWidth="600"
+                   prefHeight="40.0"
+                   wrapText="true"
+                   style="-fx-background-color: #FDFDFD;
+                 -fx-border-color: #a5a5a5;
+                 -fx-border-width: 1;
+                 -fx-border-style: solid;
+                 -fx-border-radius: 4;
+                 -fx-background-radius: 4;
+                 -fx-prompt-text-fill: #a2a2a2;
+                 -fx-font-size: 16px;">
+
+            <VBox.margin>
+               <Insets bottom="24"/>
+            </VBox.margin>
+
+         </TextArea>
+
+         <!-- Buttons side by side -->
+         <HBox alignment="CENTER"
+               maxWidth="Infinity"
+               minWidth="600">
+            <Button fx:id="backToExerciseButton"
+                    onAction="#backToExercise"
+                    text="Back to Exercise"
+                    prefHeight="40.0"
+                    style="-fx-background-color: #282828;
+                       -fx-font-size: 20px;
+                       -fx-text-fill: white;
+                       -fx-border-radius: 10;
+                       -fx-background-radius: 10;
+                       -fx-padding: 8 16;"
+                    onMouseEntered="#handleHover"
+                    onMouseExited="#handleExit"/>
+
+            <Region HBox.hgrow="ALWAYS" />
+
+            <Button fx:id="backToMenuButton"
+                    onAction="#backToMenu"
+                    text="Back To Menu"
+                    prefHeight="36.0"
+                    style="-fx-background-color: transparent;
+                       -fx-border-color: #282828;
+                       -fx-font-size: 20px;
+                       -fx-border-width: 2;
+                       -fx-border-radius: 10;
+                       -fx-background-radius: 10;
+                       -fx-text-fill: black;
+                       -fx-padding: 6 14;"
+                    onMouseEntered="#handleHover"
+                    onMouseExited="#handleExit"/>
+         </HBox>
+
+
+
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dragon Score Docs</title>
+    <style>
+        code,
+        pre {
+            box-sizing: border-box;
+            border: 1px solid grey;
+            background-color: lightgrey;
+            border-radius: 2px;
+            padding: 2px;
+        }
+
+        ol>ol {
+            list-style-type: lower-latin;
+        }
+    </style>
+</head>
+
+<body style="margin: 0;">
+    <div id="sidebar"
+        style="width: calc(15vw - 1em); float: left; clear: right; position: absolute; top: 1em; left: 1em;">
+        <b>Chapters</b>
+        <hr>
+        <ol>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#resource-location">The Resource Location</a></li>
+            <ol>
+                <li><a href="#resource-location-format">Resource Location Format</a></li>
+            </ol>
+            <li><a href="#index-file">The index.json File</a></li>
+            <li><a href="#json-formats">JSON Formats</a></li>
+            <ol>
+                <li><a href="#lesson-record">Lesson Record</a></li>
+                <li><a href="#data-file">Data File</a></li>
+                <li><a href="#term-list">Term List</a></li>
+                <li><a href="#lesson">Lesson</a></li>
+                <li><a href="#question">Question</a></li>
+                <li><a href="#form">Form</a></li>
+            </ol>
+            <li><a href="#api-docs">API Javadocs</a></li>
+        </ol>
+    </div>
+    <div
+        style="width: calc(85vw - 2em); float: right; clear: left; position: absolute; top: 1em; left: calc(15vw + 1em);">
+        <h1>Dragon Score Docs</h1>
+        <hr>
+        <h2 id="overview">Overview</h2>
+        <p>This document is meant to cover the basics of how you can modify this program to add new lessons to it. This
+            program was written in Java using JavaFX for rendering. It uses JSON for data storage.</p>
+        <hr>
+        <h2 id="resource-location">The Resource Location</h2>
+        <p>
+            In its most simple form a resource location is just a string representing a relative path to a file or to an
+            internal resource.
+        </p>
+        <p>
+            LogiQuest always checks for external files before looking for internal resources. This allows for easy
+            resource overriding.
+        </p>
+        <h3 id="resource-location-format">Resource Location Format</h3>
+        <p>
+            The format of a resource location is very simple being made of a namespace and path.
+            <code>namespace:path</code>.<br>
+            A resource location can be translated into a path like so <code>./namespace/path</code> noting that this is
+            a relative path.<br>
+            If the namespace is left blank in a resource location (e.g. <code>path</code>) the default namespace of
+            <q>DragonScore</q> will be assumed.
+        </p>
+        <hr>
+        <h2 id="index-file">The index.json File</h2>
+        <p>
+            The file pointed to by the resource location <code>DragonScore:index.json</code> (from now on called the
+            index file) is the file that tells LogiQuest what lessons exist and in what data files that lesson can be
+            found.
+        </p>
+        <p>
+            The index file is in a JSON array format containing an array of <a href="lesson-record">lesson records</a>.
+        </p>
+        <hr>
+        <h2 id="json-formats">JSON Formats</h2>
+        <h3 id="lesson-record">Lesson Record</h3>
+        <p>The lesson record JSON is defined as follows.</p>
+        <pre>
+{
+    "id": "the_id_of_the_lesson_as_a_string",
+    "name": "The name of the lesson as a string",
+    "description": "The description of the lesson as a string",
+    "location": A <a href="#resource-location">resource location</a> to a <a href="#data-file">data file</a> containing a <a href="#lesson">lesson</a> with a matching id
+}</pre>
+        <h3 id="data-file">Data File</h3>
+        <p>The data file JSON is defined as follows. It should be noted that each data file needs all four parts
+            even if those parts are empty.</p>
+        <pre>
+{
+    "requires": [An array of <a href="#resource-location">resource locations</a> to additional <a href="#data-file">data files</a> to load],
+    "terms": {A key value map of <a id="term-list">term lists</a>},
+    "lessons": [An array of <a href="#lesson">lessons</a>],
+    "forms": [An array of <a href="form">forms</a>]
+}</pre>
+        <h3 id="term-list">Term List</h3>
+        <p>The term list JSON is defined as follows.</p>
+        <pre>
+[
+    {
+        "word": "the word as a string",
+        "type": "The type of term as a string. Any of ["NOUN", "PRO_NOUN", "VERB", "ADJ", "ART_S", "ART_P", "U_LET", "L_LET"]"
+    },
+    ...
+]</pre>
+        <h3 id="lesson">Lesson</h3>
+        <p>The lesson JSON is defined as follows.</p>
+        <pre>
+{
+    "id": "the_id_of_the_lesson_as_a_string",
+    "name": "The name of the lesson as a string",
+    "description": "The description of the lesson as a string",
+    "randomize": true or false, should we randomize the answer order for questions in this lesson,
+    "formType": This is optional the only valid option currently "PARAGRAPH". Leaving this field ommited will default to a mutiple choice question. "PARAGRAPH" is used for the find conclusion questions,
+    "questionGenerators": [An array of class names as strings for java classes that impliment the <a href="/javadocs/team.logica_populi.dragonscore/team/logica_populi/dragonscore/base/logic/generators/QuestionGenerator.html">QuestionGenerator</a> interface],
+    "staticQuestions": [An array of <a href="question">questions</a>]
+}</pre>
+        <h3 id="question">Question</h3>
+        <p>The question JSON is defined as follows.</p>
+        <pre>
+{
+    "question": "The text of the question as a string. This supports HTML formatting",
+    "answers": [
+        {
+            "answer": "The text of the answer as a string",
+            "correct": boolean for if this answer is a correct answer
+        },
+        ...
+    ]
+}</pre>
+        <h3 id="form">Form</h3>
+        <p>The form JSON is defined as follows.</p>
+        <pre>
+{
+    "id": "the_id_of_the_form_as_a_string",
+    "fields": [
+        {
+            "id": "the_id_of_the_field_as_a_string",
+            "list": "the_id_of_a_loaded_term_list"
+        },
+        ...
+    ]
+    "form": "The ${form} of the question as a string. See <a href="javadocs/team.logica_populi.dragonscore/team/logica_populi/dragonscore/base/form/Form.html#toString()">this</a> for a format guide",
+    "answerForms": [
+        {
+            "form": "The $U{form} of this answer as a string. See <a href="/javadocs/team.logica_populi.dragonscore/team/logica_populi/dragonscore/base/form/Form.html#getAnswers()">this</a> for a format guide",
+            "correct": boolean for if this answer is a correct answer
+        },
+        ...
+    ]
+}</pre>
+        <hr>
+        <h2 id="api-docs">API Javadocs</h2>
+        <p>
+            <a href="./javadocs/team.logica_populi.dragonscore/module-summary.html">DragonScore API Docs</a>
+        </p>
+    </div>
+</body>
+
+</html>

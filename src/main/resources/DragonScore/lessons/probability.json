@@ -1,0 +1,21 @@
+{
+  "requires": [
+    "DragonScore:requires/terms.json"
+  ],
+  "terms": {},
+  "lessons": [
+    {
+      "id": "week7",
+      "name": "Week 7 Statistical, Analogical, & Causal Reasoning",
+      "description": "This set of exercises will help you recognize and identify the most common forms of inductive reasoning – statistical syllogisms, sample projection syllogisms, analogical syllogisms, and the four methods of causal reasoning (by agreement, disagreement, difference, and variance). You will first identify the kind of reasoning in the example, and then determine whether that kind of reasoning has all of its essential features to make it a correct version of the form.",
+      "randomize": false,
+      "pointsRequired": 200,
+      "questionGenerators": [
+        "team.logica_populi.dragonscore.base.logic.generators.ProbabilityReasoningGenerator"
+      ],
+      "staticQuestions": []
+    }
+  ],
+  "forms": [
+  ]
+}

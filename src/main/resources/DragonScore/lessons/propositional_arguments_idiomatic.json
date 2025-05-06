@@ -1,0 +1,1317 @@
+{
+  "requires": [],
+  "terms": [],
+  "lessons": [
+    {
+      "id": "week5d",
+      "name": "Week 5 Propositional Logic – Idiomatic Examples",
+      "description": "Propositional logic studies arguments whose validity depends “if-then,” “and,” or,” “not,” and similar notions. This set of exercises has you test validity by using the Truth Assignment Test on idiomatic arguments written in English.",
+      "randomize": false,
+      "pointsRequired": 100,
+      "questionGenerators": [],
+      "staticQuestions": [
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>You're cruel or lively, only if you're\r\nalso famous. You aren't famous.\r\nConsequently you aren't lively. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>I've concluded that you're a foreigner. Here\r\nare my reasons. If you aren't a foreigner,\r\nthen you aren't either poor or bitter. And\r\nyou aren't poor. But you're bitter. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>These two facts prove to us that Carol isn't a lunatic.\r\nFirst, Carol isn't both a lunatic and also either\r\nrough or greedy. Second, Carol is rough. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>You aren't smart, unless you aren't\r\nfrantic. You're smart. We may\r\ninfer that you aren't frantic. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>You're both a cannibal and strong, unless you're\r\ngloomy but humorous. This implies that you're\r\nhumorous. I assume that you aren't a cannibal. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Sally is a detective. I say this because of the\r\nfollowing facts. Being a detective is necessary in\r\norder for Sally to be cruel. And Sally is cruel. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>You wouldn't be sarcastic if you were dull but not\r\npolite. This is my reason for saying that you're\r\npolite -- since of course you're sarcastic. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Jim can't be rich -- due to these facts. Assuming\r\nthat Jim is rich, then it can't be that Jim is\r\nboth bashful and not careful. Also, Jim is\r\nbashful. Finally, Jim isn't careful. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Donna is rough. I say this because of the following\r\nfacts. Being a customer is necessary in order for\r\nDonna to be rough. And Donna is a customer. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Provided that you're a guitarist, then if\r\nyou're slow then you're boastful. You're a\r\nguitarist. This means that you aren't slow\r\n-- inasmuch as you aren't boastful. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>A necessary and sufficient condition for Harry being\r\nboth strong and powerful is that Harry isn't remarkable.\r\nThus Harry isn't strong. My evidence for this is that\r\nHarry is remarkable. And obviously Harry is powerful. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>These two facts prove to us that George is\r\ncruel. First, George isn't both cruel and\r\nnot dishonest. Second, George is dishonest. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>A necessary and sufficient condition for Keith being both\r\ndull and childish is that Keith isn't fanatical. Thus\r\nKeith isn't dull. My evidence for this is that Keith\r\nis fanatical. And obviously Keith isn't childish. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>You must be rich, for these reasons.\r\nYou're a pessimist just if you aren't\r\nrich. And you aren't a pessimist. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>It is sufficient that you be a pharmacist, in order\r\nfor you to be smart and forgetful. You aren't\r\nsmart. It follows that you can't be a pharmacist. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>You're both a scholar and cheap, unless you're\r\nfortunate but beautiful. This implies that you\r\naren't beautiful. I assume that you're a scholar. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Donna is loveable, provided that Donna is both\r\nclean and frantic. Now Donna is frantic.\r\nI conclude that Donna isn't loveable -- since\r\nof course Donna isn't clean. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Sally is dangerous, provided that Sally is both\r\nrich and likeable. Now Sally is likeable.\r\nI conclude that Sally isn't rich -- since\r\nof course Sally isn't dangerous. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>On the assumption that Jim is a biologist,\r\nJim would be rough but demented. This proves that\r\nJim isn't rough, because Jim isn't a biologist. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Provided that you're a carpenter, then if\r\nyou're smart then you're boring. You're a\r\ncarpenter. This means that you aren't boring\r\n-- inasmuch as you aren't smart. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>If you aren't a lifeguard, then you aren't either\r\nslow or frightened. As a consequence, you must be\r\nfrightened -- since clearly you aren't slow.\r\nAnd we all know that you're a lifeguard. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Provided that it's true that if you're a convict then you're strong,\r\nthen you're boastful but not remarkable. Of course you're remarkable.\r\nThese are my reasons for saying that you aren't strong. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Jim isn't both a criminal and also either\r\ndull or faithful. Jim must be a criminal,\r\nsince obviously Jim isn't dull. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>You aren't a poet. If you were a\r\npoet, then you'd be bright or\r\ncandid. Naturally you aren't\r\nbright. Similarly, you aren't candid. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>George must be friendly. This is true because of\r\nthe following reasons. First, George is friendly\r\nif George is both smart and loveable. Second,\r\nGeorge is smart. Finally, George is loveable. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>It is sufficient that you be a lawyer, in\r\norder for you to be slow and comical. You're\r\nslow. It follows that you must be a lawyer. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Sally is clean or a guitarist, only if Sally\r\nis romantic but poetic. Sally must be\r\nromantic, since obviously Sally is clean. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>You aren't cruel, unless you aren't\r\nbashful. You're cruel. We may\r\ninfer that you aren't bashful. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>You're short or boring, only if you're\r\nalso careful. You aren't careful.\r\nConsequently you aren't boring. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Assuming that Harry is slow, then Harry\r\nis cheerful or powerful. Harry isn't powerful.\r\nThis proves that Harry isn't slow. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>George can't be strong -- due to these facts. Assuming\r\nthat George is strong, then it can't be that George is\r\nboth lively and not dishonest. Also, George is\r\nlively. Finally, George isn't dishonest. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>You can't be famous. If you were\r\na doctor, then you'd be cruel or\r\nfamous. Naturally you aren't cruel.\r\nSimilarly, you aren't a doctor. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>A necessary and sufficient condition for Harry being both\r\nrich and fortunate is that Harry isn't selfish. Thus\r\nHarry isn't rich. My evidence for this is that Harry\r\nis selfish. And obviously Harry isn't fortunate. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Jim is a bachelor. I say this because of the\r\nfollowing facts. Being a bachelor is necessary in\r\norder for Jim to be smart. And Jim is smart. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>These two facts prove to us that Keith is\r\nslow. First, Keith isn't both slow and\r\nnot likeable. Second, Keith is likeable. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Assuming that Harry is cheap, then Harry\r\nis demented and sarcastic. Harry is\r\ndemented. But Harry isn't sarcastic. This\r\nproves that Harry isn't cheap. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>You're both a dancer and cruel, unless you're\r\nbashful but scholarly. This implies that you\r\naren't scholarly. I assume that you're a dancer. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>We know that Keith isn't both poor and also not cautious.\r\nWe also know that Keith isn't cautious. Putting these\r\nfacts together, we conclude that Keith isn't poor. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Sally is faithful, provided that Sally is both\r\nrough and cowardly. Now Sally is cowardly.\r\nI conclude that Sally isn't rough -- since\r\nof course Sally isn't faithful. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>On the assumption that Jim is a farmer,\r\nJim would be slow but childish. This proves that\r\nJim isn't slow, because Jim isn't a farmer. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>You wouldn't be greedy if you were either dull\r\nor not filthy. As a consequence, you must be\r\nfilthy -- since clearly you're greedy. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Harry is brilliant, provided that Harry is both\r\nrich and forgetful. Now Harry is forgetful.\r\nI conclude that Harry isn't brilliant -- since\r\nof course Harry isn't rich. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>You're both a grocer and bold, unless you're\r\nselfish but friendly. This implies that you're\r\nfriendly. I assume that you aren't a grocer. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>If you aren't a customer, then you aren't either\r\nslow or gloomy. As a consequence, you must be\r\ngloomy -- since clearly you aren't slow.\r\nAnd we all know that you're a customer. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>You aren't a clown. If you were a\r\nclown, then you'd be strong or\r\nhumorous. Naturally you aren't\r\nstrong. Similarly, you aren't humorous. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Provided that you're a dentist, then if\r\nyou're cruel then you're logical. You're a\r\ndentist. This means that you aren't logical\r\n-- inasmuch as you aren't cruel. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>It is sufficient that you be a pessimist, in\r\norder for you to be dull and romantic. You're\r\ndull. It follows that you must be a pessimist. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Sally must be rich. This is true because of\r\nthe following reasons. First, Sally is careful\r\nif Sally is both rich and bashful. Second,\r\nSally is careful. Finally, Sally is bashful. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Provided that it's true that if you're a senator then you're cheap,\r\nthen you're frivolous but not gentle. Of course you're gentle.\r\nThese are my reasons for saying that you aren't cheap. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>It is sufficient that you be a student, in order\r\nfor you to be clean and prosperous. You aren't\r\nclean. It follows that you can't be a student. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Sally must be famous. This is true because of\r\nthe following reasons. First, Sally is famous\r\nif Sally is both cruel and lively. Second,\r\nSally is cruel. Finally, Sally is lively. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>You aren't dull, unless you aren't\r\nchildish. You're dull. We may\r\ninfer that you aren't childish. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>George can't be rich -- due to these facts. Assuming\r\nthat George is rich, then it can't be that George is both\r\nconfused and not forgetful. Also, George isn't confused.\r\nFinally, George isn't forgetful. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>You wouldn't be fortunate if you were smart but not\r\nconfident. This is my reason for saying that you're\r\nconfident -- since of course you're fortunate. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>On the assumption that Harry is a carpenter, Harry\r\nwould be slow but frantic. This proves that\r\nHarry is slow, because Harry is a carpenter. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Provided that you're a lifeguard, then if\r\nyou're clean then you're friendly. You're a\r\nlifeguard. This means that you aren't clean\r\n-- inasmuch as you aren't friendly. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>I've concluded that you're a dancer. Here\r\nare my reasons. If you aren't a dancer,\r\nthen you aren't either cruel or logical. And\r\nyou aren't cruel. But you're logical. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Keith is poor or a dentist, only if Keith is\r\nsarcastic but romantic. Therefore Keith isn't\r\nsarcastic, since obviously Keith isn't poor. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>You aren't rough, unless you aren't\r\nbashful. You aren't rough. We may\r\ninfer that you're bashful. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Harry is a druggist. I say this because of the\r\nfollowing facts. Being a druggist is necessary in\r\norder for Harry to be slow. And Harry is slow. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>A necessary and sufficient condition for Donna being both\r\nclean and frivolous is that Donna isn't gentle. Thus\r\nDonna isn't clean. My evidence for this is that Donna\r\nis gentle. And obviously Donna isn't frivolous. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Assuming that Keith is dull, then Keith\r\nis prosperous or realistic. Keith isn't realistic.\r\nThis proves that Keith isn't dull. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>You're both a detective and poor, unless you're\r\ncourteous but remarkable. This implies that you\r\naren't remarkable. I assume that you're a detective. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>You must be rich, for these reasons.\r\nYou're a grocer just if you aren't\r\nrich. And you aren't a grocer. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Keith is childish, provided that Keith is both\r\nrough and dishonest. Now Keith is dishonest.\r\nI conclude that Keith isn't rough -- since\r\nof course Keith isn't childish. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Assuming that Sally is cheap, then Sally\r\nis brilliant and fortunate. Sally is\r\nbrilliant. But Sally isn't fortunate. This\r\nproves that Sally isn't cheap. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>We know that Jim isn't both clean and also not beautiful.\r\nWe also know that Jim isn't beautiful. Putting these\r\nfacts together, we conclude that Jim isn't clean. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Carol isn't both a politician and also either\r\ndull or friendly. Carol must be a politician,\r\nsince obviously Carol isn't dull. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>These two facts prove to us that Keith is\r\npoor. First, Keith isn't both poor and\r\nnot humorous. Second, Keith is humorous. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Provided that you're a doctor, then if\r\nyou're bright then you're logical. You're a\r\ndoctor. This means that you aren't logical\r\n-- inasmuch as you aren't bright. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Jim is slow. I say this because of the following\r\nfacts. Being a democrat is necessary in order for\r\nJim to be slow. And Jim is a democrat. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>You wouldn't be frivolous if you were either clean\r\nor not sociable. As a consequence, you must be\r\nsociable -- since clearly you're frivolous. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>These two facts prove to us that Harry isn't a professor.\r\nFirst, Harry isn't both a professor and also either\r\nshort or generous. Second, Harry is short. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Keith must be poor. This is true because of\r\nthe following reasons. First, Keith is dishonest\r\nif Keith is both poor and courteous. Second,\r\nKeith is dishonest. Finally, Keith is courteous. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>You aren't a dancer. If you were a\r\ndancer, then you'd be slow or\r\nbrilliant. Naturally you aren't\r\nslow. Similarly, you aren't brilliant. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>You aren't dull, unless you aren't\r\nloveable. You're dull. We may\r\ninfer that you aren't loveable. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>It is sufficient that you be a druggist, in\r\norder for you to be poor and comical. You're\r\npoor. It follows that you must be a druggist. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>You can't be persistent. If you were\r\na cannibal, then you'd be bold or\r\npersistent. Naturally you aren't bold.\r\nSimilarly, you aren't a cannibal. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Provided that it's true that if you're a detective then you're smart,\r\nthen you're bashful but not careful. Of course you're careful.\r\nThese are my reasons for saying that you aren't smart. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>It is sufficient that you be a bandit, in order\r\nfor you to be slow and cautious. You aren't\r\nslow. It follows that you can't be a bandit. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Sally can't be cheap -- due to these facts. Assuming\r\nthat Sally is cheap, then it can't be that Sally is both\r\nfrightened and not realistic. Also, Sally isn't frightened.\r\nFinally, Sally isn't realistic. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>I've concluded that you're a lawyer. Here\r\nare my reasons. If you aren't a lawyer,\r\nthen you aren't either clean or boastful. And\r\nyou aren't clean. But you're boastful. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Keith is a customer. I say this because of the\r\nfollowing facts. Being a customer is necessary in\r\norder for Keith to be dull. And Keith is dull. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>You wouldn't be greedy if you were poor but not\r\nfilthy. This is my reason for saying that you're\r\nfilthy -- since of course you're greedy. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>You're bold or confident, only if you're\r\nalso selfish. You aren't selfish.\r\nConsequently you aren't confident. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Jim can't be rough -- due to these facts. Assuming\r\nthat Jim is rough, then it can't be that Jim is\r\nboth friendly and not comical. Also, Jim is\r\nfriendly. Finally, Jim isn't comical. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Provided that you're a senator, then if\r\nyou're cheap then you're poetic. You're a\r\nsenator. This means that you aren't cheap\r\n-- inasmuch as you aren't poetic. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Jim is clean or a student, only if Jim is\r\nbashful but romantic. Therefore Jim isn't\r\nbashful, since obviously Jim isn't clean. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>You aren't short, unless you aren't\r\ncareful. You aren't short. We may\r\ninfer that you're careful. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>You're bold and generous, only if you're\r\nalso realistic. You aren't realistic.\r\nConsequently you aren't generous. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>We know that George isn't both bright and also not powerful.\r\nWe also know that George isn't powerful. Putting these\r\nfacts together, we conclude that George isn't bright. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Assuming that Keith is slow, then Keith\r\nis faithful and childish. Keith is\r\nfaithful. But Keith isn't childish. This\r\nproves that Keith isn't slow. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>On the assumption that Harry is a dentist, Harry\r\nwould be clean but bitter. This proves that\r\nHarry is clean, because Harry is a dentist. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Assuming that Jim is dull, then Jim\r\nis hideous or confident. Jim isn't confident.\r\nThis proves that Jim isn't dull. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>A necessary and sufficient condition for Carol being\r\nboth rich and brilliant is that Carol isn't selfish.\r\nThus Carol isn't rich. My evidence for this is that\r\nCarol is selfish. And obviously Carol is brilliant. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>If you aren't a backpacker, then you aren't either\r\nsmart or friendly. As a consequence, you must be\r\nfriendly -- since clearly you aren't smart.\r\nAnd we all know that you're a backpacker. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>These two facts prove to us that George is\r\nslow. First, George isn't both slow and\r\nnot comical. Second, George is comical. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": false
+            },
+            {
+              "answer": "No",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>You're both a bandit and clean, unless you're\r\npoetic but dangerous. This implies that you're\r\ndangerous. I assume that you aren't a bandit. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>Harry is sarcastic, provided that Harry is both\r\ncruel and demented. Now Harry is demented.\r\nI conclude that Harry isn't cruel -- since\r\nof course Harry isn't sarcastic. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "<p>Is this valid?</p><pre style='tab-size:4;'>You must be dull, for these reasons.\r\nYou're a customer just if you aren't\r\ndull. And you aren't a customer. </pre>",
+          "answers": [
+            {
+              "answer": "Yes",
+              "correct": true
+            },
+            {
+              "answer": "No",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "forms": []
+}
