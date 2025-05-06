@@ -89,18 +89,7 @@ public class ResourceLocation {
      * @return The resource contents as a string.
      */
     public String tryGetResource() {
-        return tryGetResource("");
-    }
-
-    /**
-     * Tries to get the resource this resource location is pointing to.
-     * The search order will first search the current working directory (Allows for file overriding)
-     * then inside the jar resources.
-     * @param pathPrefix A prefix to put after the namespace but before the path.
-     * @return The resource contents as a string
-     */
-    public String tryGetResource(String pathPrefix) {
-        File file = new File(namespace + "/" + pathPrefix + (pathPrefix.isEmpty() ? "" : "/") + path);
+        File file = getAsFile();
         if (file.exists() && file.canRead()) {
             try {
                 return Files.readString(file.toPath());
