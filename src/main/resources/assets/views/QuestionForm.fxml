@@ -60,6 +60,7 @@
                          style="-fx-background-color: transparent;"/>
             </StackPane>
 
+            <!-- 20px space to the top -->
             <VBox.margin>
                 <Insets top="20" />
             </VBox.margin>
@@ -72,6 +73,8 @@
                          prefWidth="750"
                          progress="0.65"
                          style="-fx-progress-color: #e1c778;" />
+
+            <!-- 12px space to the top -->
             <VBox.margin>
                 <Insets top="12" />
             </VBox.margin>
@@ -92,19 +95,19 @@
               -fx-font-family: 'Verdana';
               -fx-padding: 16;" >
 
-
-
+            <!-- 12px space to the top -->
             <VBox.margin>
                 <Insets top="12" />
             </VBox.margin>
         </VBox>
 
-        <!-- Difficulty Buttons  -->
+        <!-- Difficulty toggles and Submit button row -->
         <HBox alignment="CENTER"
               maxWidth="750"
               spacing="16">
 
             <!-- Difficulty toggles on the left -->
+            <!-- Easy difficulty toggle -->
             <ToggleButton fx:id="easyDif"
                           style="-fx-background-radius: 100;
                           -fx-background-color: #e0c97d;
@@ -113,6 +116,8 @@
                           -fx-pref-height: 45;
                           -fx-font-size: 16;"
                           text="0" />
+
+            <!-- Normal difficulty toggle -->
             <ToggleButton fx:id="normDif"
                           selected="true"
                           style="-fx-background-radius: 100;
@@ -122,6 +127,8 @@
                           -fx-pref-height: 45;
                           -fx-font-size: 16;"
                           text="10" />
+
+            <!-- Hard difficulty toggle -->
             <ToggleButton fx:id="hardDif"
                           style="-fx-background-radius: 100;
                           -fx-background-color: #e0c97d;
@@ -134,7 +141,7 @@
             <!-- push Submit to the right -->
             <Region HBox.hgrow="ALWAYS" />
 
-            <!-- Submit button on the right -->
+            <!-- Submit button -->
             <Button fx:id="submitButton"
                     minWidth="120.0"
                     onAction="#onSubmit"

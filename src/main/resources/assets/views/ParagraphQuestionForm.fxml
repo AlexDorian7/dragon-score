@@ -24,11 +24,15 @@
           AnchorPane.leftAnchor="44"
           AnchorPane.rightAnchor="44"
           AnchorPane.topAnchor="28">
+
+        <!-- LogiQuest logo -->
         <Label style="-fx-font-family: 'Helvetica';
         -fx-font-size: 36px;
         -fx-font-weight: BOLD;
         -fx-text-fill: #282828;"
                text="LogiQuest" />
+
+        <!-- Spacer to push Home button to the far right -->
         <Region HBox.hgrow="ALWAYS" />
         <Button fx:id="HomeMenu"
                 onAction="#goHome"
@@ -60,7 +64,7 @@
             </VBox.margin>
         </HBox>
 
-        <!-- Answer Block //// need to backend the answer-radio-->
+        <!-- Paragraph display area -->
         <TextFlow fx:id="paragraphArea"
                   minHeight="160.0"
                   maxHeight="300.0"
@@ -73,13 +77,13 @@
               -fx-font-family: 'Verdana';
               -fx-padding: 16;"/>
 
-        <!-- Submit Button -->
 
-    <!-- Difficulty Buttons -->
+  <!--  Controls Row (Difficulty + Submit)  -->
     <HBox alignment="CENTER"
           maxWidth="750"
           spacing="16">
 
+        <!-- Difficulty toggle buttons -->
         <ToggleButton fx:id="easyDif"
                       style="-fx-background-radius: 100;
                           -fx-background-color: #e0c97d;
@@ -109,6 +113,7 @@
         <!-- push Submit to the right -->
         <Region HBox.hgrow="ALWAYS" />
 
+        <!-- Submit Button -->
             <Button fx:id="submitButton"
                     minWidth="120.0"
                     onAction="#onSubmit"
