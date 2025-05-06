@@ -38,6 +38,7 @@ public class DragonHandler {
 
     private Stage stage;
     private Scene mainMenuScene;
+    private MainMenuController mainMenuController;
     private Scene questionScene;
     private Scene submissionCodeScene;
     private IQuestionFormController questionController;
@@ -87,6 +88,10 @@ public class DragonHandler {
      */
     protected void addPoints(int points) {
         setPoints(Integer.max(0, points + getPoints())); // Using max call here to make sure points.dat can never go negative
+    }
+
+    public Stage getStage(){
+        return stage;
     }
 
     /**
@@ -146,6 +151,14 @@ public class DragonHandler {
      */
     private void handleOnName(String fName, String lName) {
         name = fName + " " + lName;
+        ResourceLocation location = new ResourceLocation("dynamic:user.dat");
+        if (location.exists()){
+            String data = location.tryGetResource();
+            if(!data.equals(name)) {
+                logger.finer("Not the same name!");
+                location.write(name);
+            }
+        }
         name = name.toLowerCase();
         showMainMenu();
     }
@@ -174,7 +187,7 @@ public class DragonHandler {
     /**
      * Sets up the scene for Submission code as well as generates the code
      */
-    private void loadSubmissionCode(){
+    private void loadSubmissionCode() {
         if(stage == null) {
             throw new IllegalStateException("Attempt to show submission code pane before session was set up!");
         }
@@ -228,9 +241,6 @@ public class DragonHandler {
              questionScene = new Scene(questionFormPane.getKey());
          }
 
-
-
-
          questionController.setNextQuestionCallback(() -> {
              // Check for lesson completion
              if(getPoints() >= lesson.getPointsRequired()) {
@@ -277,7 +287,6 @@ public class DragonHandler {
         assert JsonRegistry.getInstance().getDataFile() != null; // If there is no loaded data file we should not even be here
         mainMenuPane.getValue().setLessons(lessonHeaders);
         mainMenuPane.getValue().setName(name);
-        mainMenuPane.getValue().setCodes();
         mainMenuPane.getValue().setStartCallback((LessonHeader lessonHeader) -> {
             JsonRegistry.getInstance().loadDataFile(lessonHeader.location().tryGetResource(), true);
             // Load the lesson
@@ -292,6 +301,7 @@ public class DragonHandler {
             logger.warning("No lesson found with id: " + lessonHeader.id());
         });
         mainMenuScene = new Scene(mainMenuPane.getKey());
+        mainMenuController = mainMenuPane.getValue();
     }
 
     /**
@@ -304,6 +314,7 @@ public class DragonHandler {
         if (mainMenuScene == null) {
             setupMainMenu();
         }
+        mainMenuController.setCodes();
         stage.setScene(mainMenuScene);
         stage.show();
     }
@@ -317,10 +328,9 @@ public class DragonHandler {
             logger.fine("Creating new Point System.");
             JsonRegistry.getInstance().createNewPointSystem();
         } else {
-            String data;
-            try{
-                data = EncryptionRegistry.getInstance().decrypt(location.tryGetResource());
-            } catch (Exception e) {
+            String data = EncryptionRegistry.getInstance().decrypt(location.tryGetResource());
+            if (data == null) {
+                logger.warning("Failed to decrypt point file. Creating new point system.");
                 JsonRegistry.getInstance().createNewPointSystem();
                 return;
             }
@@ -338,10 +348,9 @@ public class DragonHandler {
             logger.fine("Creating new Submission System.");
             JsonRegistry.getInstance().createSubmissionSystem();
         } else {
-            String data;
-            try{
-                data = EncryptionRegistry.getInstance().decrypt(location.tryGetResource());
-            } catch (Exception e) {
+            String data = EncryptionRegistry.getInstance().decrypt(location.tryGetResource());
+            if (data == null) {
+                logger.warning("Failed to decrypt submission file. Creating new submission system.");
                 JsonRegistry.getInstance().createSubmissionSystem();
                 return;
             }

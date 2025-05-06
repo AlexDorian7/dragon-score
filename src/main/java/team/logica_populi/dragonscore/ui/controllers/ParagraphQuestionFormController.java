@@ -3,6 +3,9 @@ package team.logica_populi.dragonscore.ui.controllers;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Priority;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
@@ -19,9 +22,9 @@ import java.util.logging.Logger;
 public class ParagraphQuestionFormController implements IQuestionFormController {
 
     private static final Logger logger = Logger.getLogger(ParagraphQuestionFormController.class.getName());
-    private static final Font DEFAULT_FONT = new Font("System Default", 13);
-    private static final Font BOLD_DEFAULT_FONT = new Font("System Bold", 13);
-    private static final Font QUESTION_FONT = new Font("System Default", 16);
+    private static final Font DEFAULT_FONT = new Font("System Default", 16);
+    private static final Font BOLD_DEFAULT_FONT = new Font("System Bold", 16);
+    private static final Font QUESTION_FONT = new Font("System Default", 20);
 
     @FXML
     private Button HomeMenu;
@@ -76,10 +79,17 @@ public class ParagraphQuestionFormController implements IQuestionFormController 
         ToggleButton[] buttons = { easyDif, normDif, hardDif };
 
         for (ToggleButton btn : buttons) {
+            HBox.setHgrow(btn, Priority.SOMETIMES);
             if (btn.isSelected()) {
-                btn.setStyle("-fx-background-radius: 100; -fx-background-color: #645c41; -fx-text-fill: black; -fx-pref-width: 50; -fx-pref-height: 50; -fx-font-size: 1.1em;"); // green
+                btn.setStyle("-fx-background-radius: 100; " +
+                        "-fx-background-color: #635325;" +
+                        "-fx-text-fill: #ffffff;" +
+                        "-fx-font-size: 20px;"); // green
             } else {
-                btn.setStyle("-fx-background-radius: 100; -fx-background-color: #fce6a4; -fx-text-fill: black; -fx-pref-width: 50; -fx-pref-height: 50; -fx-font-size: 1.1em;"); // green
+                btn.setStyle("-fx-background-radius: 100; " +
+                        "-fx-background-color: #e0c97d; " +
+                        "-fx-text-fill: #282828; " +
+                        "-fx-font-size: 20px;"); // green
             }
         }
     }
@@ -93,6 +103,32 @@ public class ParagraphQuestionFormController implements IQuestionFormController 
         if (DragonHandler.getCurrentSession() != null) {
             DragonHandler.getCurrentSession().setPointsToGive(difficulty);
         }
+    }
+
+    @FXML
+    private void handleHover(MouseEvent ev) {
+        Button b = (Button)ev.getSource();
+        b.setStyle(
+                "-fx-background-color: black;" +
+                        "-fx-text-fill: white;" +
+                        "-fx-border-radius: 10;" +
+                        "-fx-background-radius: 10;" +
+                        "-fx-font-size: 20px;" +
+                        "-fx-padding: 8 28;"
+        );
+    }
+
+    @FXML
+    private void handleExit(MouseEvent ev) {
+        Button b = (Button)ev.getSource();
+        b.setStyle(
+                "-fx-background-color: #282828;" +
+                        "-fx-text-fill: white;" +
+                        "-fx-border-radius: 10;" +
+                        "-fx-background-radius: 10;" +
+                        "-fx-font-size: 20px;" +
+                        "-fx-padding: 8 28;"
+        );
     }
 
     /**
@@ -160,6 +196,7 @@ public class ParagraphQuestionFormController implements IQuestionFormController 
         if (progress > 1) progress = 1;
         if (progress < 0) progress = 0;
         progressBar.setProgress(progress);
+        progressBar.setStyle("-fx-accent: #dcbe64;");
     }
 
     /**

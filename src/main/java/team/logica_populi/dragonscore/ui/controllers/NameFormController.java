@@ -7,19 +7,15 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 import javafx.scene.input.MouseEvent;
+import team.logica_populi.dragonscore.base.ResourceLocation;
+
 import java.util.function.BiConsumer;
+import java.util.logging.Logger;
 
 /**
  * Controller for the name form.
  */
 public class NameFormController {
-
-    @FXML
-    public void initialize() {
-        // Assuming 'fName' is your container, or replace with your actual root container node:
-        fName.setOnAction(e -> submit(new ActionEvent()));
-        lName.setOnAction(e -> submit(new ActionEvent()));
-    }
 
     @FXML
     private TextField fName;
@@ -30,6 +26,44 @@ public class NameFormController {
 
     private BiConsumer<String, String> submitCallback;
 
+    // Name logger that gets the store name
+    private static final Logger logger = Logger.getLogger(NameFormController.class.getName());
+
+    /**
+     * Stores the name of the current user.
+     * If there is a name, fills the TextField.
+     */
+    public void fillInName(){
+        ResourceLocation location = new ResourceLocation("dynamic:user.dat");
+        if(location.exists()){
+            String name = location.tryGetResource();
+            logger.info(name);
+            String firstName = name.substring(0, name.indexOf(" "));
+            String lastName = name.substring(name.indexOf(" ")+1);
+
+            fName.setText(firstName);
+            lName.setText(lastName);
+        }
+    }
+
+    // initialize action event for enter button for submission
+    @FXML
+    public void initialize() {
+        // Assuming 'fName' is your container, or replace with your actual root container node:
+        fName.setOnAction(e -> submit(new ActionEvent()));
+        lName.setOnAction(e -> submit(new ActionEvent()));
+
+        //stores user data into dat file
+        ResourceLocation location = new ResourceLocation("dynamic:user.dat");
+        location.createIfNotExists();
+
+        //if the location is empty then fill the name
+        if(!location.tryGetResource().isEmpty()){
+            fillInName();
+        }
+
+    }
+
     /**
      * Submit button handler.
      * @param actionEvent The action from JavaFX
@@ -37,16 +71,25 @@ public class NameFormController {
     @FXML
     private void submit(ActionEvent actionEvent) {
         if (submitCallback != null) {
+            String first = fName.getText().trim();
+            String last = lName.getText().trim();
             if(fName.getText().trim().isEmpty() || lName.getText().trim().isEmpty()){
                 fName.setStyle("-fx-background-color: #FDFDFD; -fx-border-color: red; -fx-border-width: 1; -fx-border-style: solid; -fx-border-radius: 4; -fx-background-radius: 4; -fx-prompt-text-fill: #a2a2a2; -fx-font-size: 16px;");
                 lName.setStyle("-fx-background-color: #FDFDFD; -fx-border-color: red; -fx-border-width: 1; -fx-border-style: solid; -fx-border-radius: 4; -fx-background-radius: 4; -fx-prompt-text-fill: #a2a2a2; -fx-font-size: 16px;");
-                nameError.setText("Please enter in both your First and Last Name!");
+                nameError.setText("Please enter your First and Last Name!");
                 return;
             }
             submitCallback.accept(fName.getText(), lName.getText());
+
+            // Save user data
+            submitCallback.accept(first, last);
         }
     }
 
+    /**
+     * Removal of error message handler
+     * @param ev The Mouse event from User
+     */
     @FXML
     private void onFocused(MouseEvent ev){
         if (fName.isFocused() || lName.isFocused()){

@@ -14,6 +14,10 @@ import java.util.logging.Logger;
 public class UiComponentCreator {
     private static final Logger logger = Logger.getLogger(UiComponentCreator.class.getName());
 
+    /**
+     * Loads the Question Form window
+     * @return The loaded window and controller of the window
+     */
     public static Pair<Parent, QuestionFormController> createQuestionFormPane() {
         FXMLLoader fxmlLoader = new FXMLLoader(UiComponentCreator.class.getResource("/assets/views/QuestionForm.fxml"));
         Parent parent;
@@ -26,6 +30,10 @@ public class UiComponentCreator {
         return new Pair<>(parent, controller);
     }
 
+    /**
+     * Loads the Paragraph Question Form window
+     * @return The loaded window and controller of the window
+     */
     public static Pair<Parent, ParagraphQuestionFormController> createParagraphQuestionFormPane() {
         FXMLLoader fxmlLoader = new FXMLLoader(UiComponentCreator.class.getResource("/assets/views/ParagraphQuestionForm.fxml"));
         Parent parent;
@@ -38,6 +46,10 @@ public class UiComponentCreator {
         return new Pair<>(parent, controller);
     }
 
+    /**
+     * Loads the Name Form window
+     * @return The loaded window and controller of the window
+     */
     public static Pair<Parent, NameFormController> createNameFormPane() {
         FXMLLoader fxmlLoader = new FXMLLoader(UiComponentCreator.class.getResource("/assets/views/NameForm.fxml"));
         Parent parent;
@@ -50,6 +62,10 @@ public class UiComponentCreator {
         return new Pair<>(parent, controller);
     }
 
+    /**
+     * Load the Main Menu window
+     * @return The loaded window and controller of the window
+     */
     public static Pair<Parent, MainMenuController> createMainMenuPane() {
         FXMLLoader fxmlLoader = new FXMLLoader(UiComponentCreator.class.getResource("/assets/views/MainMenu.fxml"));
         Parent parent;
@@ -62,6 +78,10 @@ public class UiComponentCreator {
         return new Pair<>(parent, controller);
     }
 
+    /**
+     * Loads the Submission code popup page
+     * @return The loaded window and controller of the window
+     */
     public static Pair<Parent, SubmissionCodeController> createSubmissionCodePane(){
         FXMLLoader fxmlLoader = new FXMLLoader(UiComponentCreator.class.getResource("/assets/views/SubmissionCode.fxml"));
         Parent parent;

@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * PLEASE COMMENT ME
+ * Used to Deserialize a {@link SubmissionSystem} object
  */
 public class SubmissionCodeDeserializer implements JsonDeserializer<SubmissionSystem> {
     @Override
