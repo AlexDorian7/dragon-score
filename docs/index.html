@@ -58,7 +58,9 @@
         <h2 id="resource-location">The Resource Location</h2>
         <p>
             In its most simple form a resource location is just a string representing a relative path to a file or to an
-            internal resource.
+            internal resource.<br>
+            This path is always relative from the current workng directory (normally the program's launcher directory).<br>
+            <i>Note:</i> On mac this path is instead placed in <code>~/LogiQuestData/</code>
         </p>
         <p>
             LogiQuest always checks for external files before looking for internal resources. This allows for easy
