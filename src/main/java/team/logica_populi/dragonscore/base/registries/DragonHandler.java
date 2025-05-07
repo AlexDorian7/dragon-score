@@ -109,7 +109,7 @@ public class DragonHandler {
 
     private void updatePoints() {
         HashMap<String, HashMap<String, Integer>> records = JsonRegistry.getInstance().getPointSystem().getLessonRecords();
-        if (records.containsKey(name)) {
+        if (records.containsKey(name.toLowerCase())) {
             logger.finer("User Record Found for name");
             HashMap<String, Integer> userRecords = records.get(name.toLowerCase());
             if (userRecords.containsKey(lesson.getId())) {
@@ -159,7 +159,7 @@ public class DragonHandler {
                 location.write(name);
             }
         }
-        name = name.toLowerCase();
+        //name = name.toLowerCase();
         showMainMenu();
     }
 
@@ -199,9 +199,9 @@ public class DragonHandler {
 
         String regex = "[\\s]";
 
-        String[] arr = name.split(regex);
+        String[] arr = name.toLowerCase().split(regex);
 
-        code = new SubmissionCode(arr[0], arr[1], getLesson().getId());
+        code = new SubmissionCode(arr[0], arr[1], getLesson().getId(),getLesson().getName());
         setSubmissionCode(code);
 
         submissionCodeController.setCode(code.getCode());

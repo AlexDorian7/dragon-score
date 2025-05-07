@@ -23,7 +23,7 @@ public class ErrorWindow {
     public static boolean makeErrorWindow(Stage stage, Exception e, Main main) {
         VBox box = new VBox();
         TextFlow flow = new TextFlow();
-        Text message = new Text("On no! LogiQuest has crashed! You can attempt to save any progress made during this session or exit without saving.\n\n" + e.getMessage() + "\nSee console for stacktrace.");
+        Text message = new Text("On no! LogiQuest has crashed! You can attempt to save any progress made during this session or exit without saving.\n\n" + e.getMessage() + "\nSee console for more information.");
         logger.log(Level.SEVERE, "LogiaQuest experienced an uncaught Exception.", e);
         flow.getChildren().addAll(message);
 

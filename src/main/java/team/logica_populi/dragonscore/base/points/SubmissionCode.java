@@ -20,7 +20,7 @@ public class SubmissionCode {
      * @param les index of lesson character in the alphabet
      * @return The generated the submission code
      */
-    private static String generateCode(String name, String lesson, int first, int last, int les) {
+    private static String generateCode(String name, String lesson, char lessonLetter, int first, int last, int les) {
         Random random = new Random();
         LocalDate date = LocalDate.now();
 
@@ -28,7 +28,7 @@ public class SubmissionCode {
         String tail = String.valueOf(random.nextInt(1000));
         String data = String.valueOf((first * les) + (last * les));
 
-        return head + "." + data + "." + tail + "(" + name + "-" + lesson + " " + date +")";
+        return head + "." + data + "." + tail + "(" + name + "-" + lesson + "-" + lessonLetter +" " + date +")";
     }
 
     /**
@@ -36,14 +36,16 @@ public class SubmissionCode {
      * Generates a submission code which students will turn in for their assignment
      * @param fName first name of the user
      * @param lName last name of the user
-     * @param lesson the current lesson the user is working on
+     * @param lessonID the current lesson the user is working on
+     * @param lessonName the full name of the lesson
      */
-    public SubmissionCode(String fName, String lName, String lesson) {
+    public SubmissionCode(String fName, String lName, String lessonID, String lessonName) {
         String fullName = fName + " " + lName;
 
         char firstCh = fName.charAt(fName.length() - 1);
         char lastCh = lName.charAt(lName.length() - 1);
-        char lessonCh = lesson.charAt(lesson.length() - 1);
+        char lessonCh = lessonName.toLowerCase().charAt(lessonName.length() - 1);
+
 
         int firstNameIndex = firstCh - 96; // a = 97, 0x61
         int lastNameIndex = lastCh - 96;
@@ -59,7 +61,7 @@ public class SubmissionCode {
 //            }
 //        }
 
-        this.code = generateCode(fullName, lesson, firstNameIndex, lastNameIndex, lessonIdIndex);
+        this.code = generateCode(fullName, lessonID, lessonCh ,firstNameIndex, lastNameIndex, lessonIdIndex);
     }
 
     /**
