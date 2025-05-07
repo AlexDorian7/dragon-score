@@ -57,7 +57,9 @@ public class MainMenuController {
         JsonRegistry.getInstance().getSubmissionSystem().getSubmissions().forEach(((s, map) -> {
             map.forEach((String key, String val) ->{
                 //logger.info(val);
-                items.add(key + " : " + val);
+                if(key.equals(nameLabel.toString().toLowerCase())){
+                    items.add(key + " : " + val);
+                }
             });
         }));
         codes.setItems(items);
