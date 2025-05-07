@@ -4,6 +4,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Priority;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
@@ -77,19 +79,16 @@ public class ParagraphQuestionFormController implements IQuestionFormController 
         ToggleButton[] buttons = { easyDif, normDif, hardDif };
 
         for (ToggleButton btn : buttons) {
+            HBox.setHgrow(btn, Priority.SOMETIMES);
             if (btn.isSelected()) {
                 btn.setStyle("-fx-background-radius: 100; " +
                         "-fx-background-color: #635325;" +
-                        " -fx-text-fill: #ffffff; " +
-                        "-fx-pref-width: 50;" +
-                        " -fx-pref-height: 50; " +
+                        "-fx-text-fill: #ffffff;" +
                         "-fx-font-size: 20px;"); // green
             } else {
                 btn.setStyle("-fx-background-radius: 100; " +
                         "-fx-background-color: #e0c97d; " +
                         "-fx-text-fill: #282828; " +
-                        "-fx-pref-width: 50; " +
-                        "-fx-pref-height: 50; " +
                         "-fx-font-size: 20px;"); // green
             }
         }

@@ -38,6 +38,7 @@ public class DragonHandler {
 
     private Stage stage;
     private Scene mainMenuScene;
+    private MainMenuController mainMenuController;
     private Scene questionScene;
     private Scene submissionCodeScene;
     private IQuestionFormController questionController;
@@ -108,7 +109,7 @@ public class DragonHandler {
 
     private void updatePoints() {
         HashMap<String, HashMap<String, Integer>> records = JsonRegistry.getInstance().getPointSystem().getLessonRecords();
-        if (records.containsKey(name)) {
+        if (records.containsKey(name.toLowerCase())) {
             logger.finer("User Record Found for name");
             HashMap<String, Integer> userRecords = records.get(name.toLowerCase());
             if (userRecords.containsKey(lesson.getId())) {
@@ -158,7 +159,7 @@ public class DragonHandler {
                 location.write(name);
             }
         }
-        name = name.toLowerCase();
+        //name = name.toLowerCase();
         showMainMenu();
     }
 
@@ -198,9 +199,9 @@ public class DragonHandler {
 
         String regex = "[\\s]";
 
-        String[] arr = name.split(regex);
+        String[] arr = name.toLowerCase().split(regex);
 
-        code = new SubmissionCode(arr[0], arr[1], getLesson().getId());
+        code = new SubmissionCode(arr[0], arr[1], getLesson().getId(),getLesson().getName());
         setSubmissionCode(code);
 
         submissionCodeController.setCode(code.getCode());
@@ -286,7 +287,6 @@ public class DragonHandler {
         assert JsonRegistry.getInstance().getDataFile() != null; // If there is no loaded data file we should not even be here
         mainMenuPane.getValue().setLessons(lessonHeaders);
         mainMenuPane.getValue().setName(name);
-        mainMenuPane.getValue().setCodes();
         mainMenuPane.getValue().setStartCallback((LessonHeader lessonHeader) -> {
             JsonRegistry.getInstance().loadDataFile(lessonHeader.location().tryGetResource(), true);
             // Load the lesson
@@ -301,6 +301,7 @@ public class DragonHandler {
             logger.warning("No lesson found with id: " + lessonHeader.id());
         });
         mainMenuScene = new Scene(mainMenuPane.getKey());
+        mainMenuController = mainMenuPane.getValue();
     }
 
     /**
@@ -313,6 +314,7 @@ public class DragonHandler {
         if (mainMenuScene == null) {
             setupMainMenu();
         }
+        mainMenuController.setCodes();
         stage.setScene(mainMenuScene);
         stage.show();
     }

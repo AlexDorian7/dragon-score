@@ -22,8 +22,8 @@ public class SubmissionSystem {
     }
 
     /**
-     * Constructor of submission
-     * @param submissionRecords
+     * Constructor of Submission System
+     * @param submissionRecords return a new Submission System
      */
     public SubmissionSystem(HashMap<String, HashMap<String, String>> submissionRecords) {
         this.submissionRecords = submissionRecords;

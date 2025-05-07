@@ -18,17 +18,20 @@
          AnchorPane.leftAnchor="44"
          AnchorPane.rightAnchor="44"
          AnchorPane.topAnchor="28">
+      <!-- LogiQuest logo -->
       <Label text="LogiQuest"
              style="-fx-font-family: 'Helvetica';
                -fx-font-size: 36px;
                -fx-font-weight: BOLD;
                -fx-text-fill: #282828;" />
+      <!-- Spacer pushes content to the right -->
       <Region fx:id="spacer"
               HBox.hgrow="ALWAYS" />
    </HBox>
 
 
    <children>
+      <!-- Vertical layout for the submission pane -->
       <VBox alignment="CENTER"
             spacing="0"
             AnchorPane.topAnchor="0"
@@ -36,7 +39,7 @@
             AnchorPane.leftAnchor="270"
             AnchorPane.rightAnchor="270">
 
-         <!-- Heading -->
+         <!-- Congratulations message heading -->
          <Text text="Congratulations! You have finished the exercise!"
                wrappingWidth="600"
                textAlignment="CENTER"
@@ -46,21 +49,20 @@
                -fx-line-spacing: 12px;
                -fx-font-weight: BOLD;">
 
+            <!-- 36px space below heading -->
          <VBox.margin>
             <Insets bottom="36"/>
          </VBox.margin>
       </Text>
 
-
-
-
+         <!-- Subheading above the code area -->
          <Text text="Here is your submission code:"
                wrappingWidth="600"
                textAlignment="CENTER"
                style="-fx-font-family: 'Verdana';
                -fx-font-size: 20px;
                -fx-prompt-text-fill: #282828; " >
-
+            <!-- 12px space below subheading -->
             <VBox.margin>
                <Insets bottom="12"/>
             </VBox.margin>
@@ -71,6 +73,7 @@
                 textAlignment="CENTER">
          </Label>
 
+         <!-- Text area displaying the generated code -->
          <TextArea fx:id="codeArea"
                    maxWidth="Infinity"
                    minWidth="600"
@@ -85,6 +88,7 @@
                  -fx-prompt-text-fill: #a2a2a2;
                  -fx-font-size: 16px;">
 
+            <!-- 24px space below code area -->
             <VBox.margin>
                <Insets bottom="24"/>
             </VBox.margin>
@@ -95,6 +99,8 @@
          <HBox alignment="CENTER"
                maxWidth="Infinity"
                minWidth="600">
+
+            <!-- Button to go back to the exercise view -->
             <Button fx:id="backToExerciseButton"
                     onAction="#backToExercise"
                     text="Back to Exercise"
@@ -108,8 +114,10 @@
                     onMouseEntered="#handleHover"
                     onMouseExited="#handleExit"/>
 
+            <!-- Spacer pushes the second button to the right -->
             <Region HBox.hgrow="ALWAYS" />
 
+            <!-- Button to return to main menu -->
             <Button fx:id="backToMenuButton"
                     onAction="#backToMenu"
                     text="Back To Menu"

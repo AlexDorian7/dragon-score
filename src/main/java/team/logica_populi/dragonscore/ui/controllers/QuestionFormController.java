@@ -7,6 +7,8 @@ import javafx.geometry.Pos;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import javafx.scene.web.WebView;
 import team.logica_populi.dragonscore.base.logic.Answer;
@@ -81,16 +83,12 @@ public class QuestionFormController implements IQuestionFormController {
             if (btn.isSelected()) {
                 btn.setStyle("-fx-background-radius: 100; " +
                         "-fx-background-color: #635325;" +
-                        " -fx-text-fill: #ffffff; " +
-                        "-fx-pref-width: 50;" +
-                        " -fx-pref-height: 50; " +
+                        "-fx-text-fill: #ffffff;" +
                         "-fx-font-size: 20px;"); // green
             } else {
                 btn.setStyle("-fx-background-radius: 100; " +
                         "-fx-background-color: #e0c97d; " +
                         "-fx-text-fill: #282828; " +
-                        "-fx-pref-width: 50; " +
-                        "-fx-pref-height: 50; " +
                         "-fx-font-size: 20px;"); // green
             }
         }
