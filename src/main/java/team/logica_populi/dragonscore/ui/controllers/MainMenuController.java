@@ -6,6 +6,8 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.input.Clipboard;
 import javafx.scene.input.ClipboardContent;
 import javafx.scene.paint.Color;
@@ -22,6 +24,7 @@ import javafx.animation.PauseTransition;
 import team.logica_populi.dragonscore.base.registries.DragonHandler;
 import team.logica_populi.dragonscore.base.registries.JsonRegistry;
 
+import java.awt.*;
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.logging.Logger;
@@ -44,6 +47,8 @@ public class MainMenuController {
     @FXML
     private ListView<String> codes;
 
+    private String userName;
+
     private Consumer<LessonHeader> callback;
 
     /**
@@ -53,18 +58,24 @@ public class MainMenuController {
      */
     public void setCodes(){
         // Retrieves submission codes
+        codes.setPlaceholder(new Label("Your previous submission codes will display here!"));
         ObservableList<String> items =FXCollections.observableArrayList();
         JsonRegistry.getInstance().getSubmissionSystem().getSubmissions().forEach(((s, map) -> {
+
             map.forEach((String key, String val) ->{
                 //logger.info(val);
-                items.add(key + " : " + val);
+                if(s.equalsIgnoreCase(userName))
+                {
+                    items.add(key + " : " + val);
+                }
             });
         }));
         codes.setItems(items);
 
+
         // copy new label to clipboard in main menu
         Label msg = new Label("Copied Submission Code to the Clipboard");
-        msg.setStyle("-fx-background-color: white; -fx-border: 2; -fx-border-radius: 5; -fx-border-color: black; -fx-font-size: 20;");
+        msg.setStyle("-fx-background-color: white; -fx-border: 1; -fx-border-radius: 4; -fx-border-color: grey; -fx-font-size: 16;");
         Popup popup = new Popup();
         popup.getContent().add(msg);
 
@@ -78,11 +89,12 @@ public class MainMenuController {
                 String trimmedVal = val.substring(val.indexOf(':')+1).trim();
                 content.putString(trimmedVal);
                 clipboard.setContent(content);
-                if (!popup.isShowing())
-                    popup.show(DragonHandler.getCurrentSession().getStage(),
-                            DragonHandler.getCurrentSession().getStage().getX() + DragonHandler.getCurrentSession().getStage().getWidth() / 2-230,
-                            DragonHandler.getCurrentSession().getStage().getY() + DragonHandler.getCurrentSession().getStage().getHeight() / 2-200);
 
+                if (!popup.isShowing())
+                {
+                    Point mouseLocation = MouseInfo.getPointerInfo().getLocation();
+                    popup.show(DragonHandler.getCurrentSession().getStage(),mouseLocation.getX() -100,mouseLocation.getY() + 25);
+                }
                 PauseTransition delay = new PauseTransition(Duration.seconds(1.5));
                 delay.setOnFinished(eventHide -> popup.hide());
                 delay.play();
@@ -111,6 +123,7 @@ public class MainMenuController {
      * @param name The name to display
      */
     public void setName(String name) {
+        userName = name;
         nameLabel.setText("Welcome " + name + "!");
     }
 

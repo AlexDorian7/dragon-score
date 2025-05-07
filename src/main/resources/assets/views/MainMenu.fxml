@@ -25,11 +25,13 @@
           AnchorPane.leftAnchor="44"
           AnchorPane.rightAnchor="44"
           AnchorPane.topAnchor="28">
+        <!-- LogiQuest logo -->
         <Label text="LogiQuest"
                style="-fx-font-family: 'Helvetica';
                -fx-font-size: 36px;
                -fx-font-weight: BOLD;
                -fx-text-fill: #282828;" />
+        <!-- Spacer pushes subsequent nodes to the right edge -->
         <Region fx:id="spacer"
                 HBox.hgrow="ALWAYS" />
     </HBox>
@@ -51,15 +53,17 @@
                -fx-line-spacing: 10px;
                -fx-text-fill: black;">
 
+            <!-- Space below welcome label -->
             <VBox.margin>
                 <Insets bottom="20"/>
             </VBox.margin>
 
         </Label>
 
-        <!-- Lesson Selector -->
+        <!-- Lesson Selector Row-->
         <HBox alignment="CENTER"
               spacing="20">
+            <!-- Dropdown of lessons -->
             <ComboBox fx:id="lessonsBox"
                       onAction="#updateSelected"
                       HBox.hgrow="ALWAYS"
@@ -76,6 +80,7 @@
                       -fx-selection-bar: #635325;
                       -fx-accent: #635325;" />
 
+            <!-- Start Lesson button -->
             <Button text="Start"
                     prefHeight="32.0"
                     minWidth="110.0"
@@ -89,12 +94,14 @@
                     onMouseEntered="#handleHover"
                     onMouseExited="#handleExit"/>
 
+            <!-- bottom padding 8px -->
             <VBox.margin>
                 <Insets bottom="8"/>
             </VBox.margin>
 
         </HBox>
 
+        <!--  Submission Codes List  -->
         <ListView fx:id="codes"
                   prefHeight="120"
                   maxWidth="Infinity"
@@ -107,13 +114,14 @@
                       -fx-accent: #635325;
                       -fx-font-size: 15px;">
 
+            <!-- 14px space below list -->
         <VBox.margin>
             <Insets bottom="14"/>
         </VBox.margin>
         </ListView>
 
 
-        <!-- Text Area -->
+        <!-- Lesson Descriptions -->
         <TextFlow fx:id="lessonArea"
                   maxWidth="Infinity"
                   minWidth="550"/>
