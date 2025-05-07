@@ -14,7 +14,9 @@
 
    <!-- Header -->
    <HBox alignment="CENTER_RIGHT" AnchorPane.leftAnchor="44" AnchorPane.rightAnchor="44" AnchorPane.topAnchor="28">
+      <!-- LogiQuest logo -->
       <Label style="-fx-font-family: 'Helvetica';                -fx-font-size: 36px;                -fx-font-weight: BOLD;                -fx-text-fill: #282828;" text="LogiQuest" />
+      <!-- Spacer pushes the title to the left -->
       <Region fx:id="spacer" HBox.hgrow="ALWAYS" />
    </HBox>
 
@@ -27,15 +29,19 @@
          AnchorPane.rightAnchor="270"
          AnchorPane.topAnchor="0">
 
+      <!-- Question -->
       <Text style="-fx-font-size: 42px;"
             text="What is your name?"
             textAlignment="CENTER"
             wrappingWidth="600">
          <VBox.margin>
+
+            <!-- Space below the question -->
             <Insets bottom="16" />
          </VBox.margin>
       </Text>
 
+      <!-- Error message label -->
       <Label fx:id="nameError"
              textFill="#da0f00"
              maxWidth="400"
@@ -43,23 +49,29 @@
              wrapText="true"
              style="-fx-font-size: 15px;">
          <VBox.margin>
-            <!-- top, right, bottom, left -->
+
+            <!-- Top, right, bottom, left: 4px space below the error text-->
             <Insets top="0" right="0" bottom="4" left="0"/>
          </VBox.margin>
       </Label>
 
+      <!-- First name input -->
       <TextField fx:id="fName" maxWidth="400" onMousePressed="#onFocused" prefHeight="40.0" promptText="First Name" style="-fx-background-color: #FDFDFD;                       -fx-border-color: #a5a5a5;                       -fx-border-width: 1;                       -fx-border-style: solid;                       -fx-border-radius: 4;                       -fx-background-radius: 4;                       -fx-prompt-text-fill: #a2a2a2;                       -fx-font-size: 16px;">
       <VBox.margin>
+         <!-- Space below 14px -->
          <Insets bottom="14" />
       </VBox.margin>
    </TextField>
 
+      <!-- Last name input -->
       <TextField fx:id="lName" maxWidth="400" onMousePressed="#onFocused" prefHeight="40.0" promptText="Last Name" style="-fx-background-color: #FDFDFD;                       -fx-border-color: #a5a5a5;                       -fx-border-width: 1;                       -fx-border-style: solid;                       -fx-border-radius: 4;                       -fx-background-radius: 4;                       -fx-prompt-text-fill: #a2a2a2;                       -fx-font-size: 16px;">
          <VBox.margin>
+            <!-- Space below 20px -->
             <Insets bottom="20" />
          </VBox.margin>
       </TextField>
 
+      <!-- Submit button -->
       <Button maxWidth="400.0" minWidth="130" onAction="#submit" onMouseEntered="#handleHover" onMouseExited="#handleExit" prefHeight="50.0" style="-fx-background-color: #282828;                     -fx-text-fill: white;                     -fx-border-radius: 10;                     -fx-background-radius: 10;                     -fx-font-size: 22px;                     -fx-padding: 8 28;                     -fx-prompt-text-fill: #a2a2a2;" text="Submit" />
    </VBox>
 </AnchorPane>
